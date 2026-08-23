@@ -51,7 +51,81 @@ const productCases:PortfolioCase[]=[
     {heading:"Operating model",text:"I broke the platform into accountable modules and used daily priorities, ownership tracking and structured status reporting to make blockers visible. Testing focused on connected journeys rather than isolated screens, particularly where identity, wallet, marketplace and settlement services depended on each other."},
     {heading:"Product judgement",text:"My role required balancing urgency with production risk. The priority was not simply to declare features complete, but to confirm that critical user journeys behaved reliably across staging and production conditions and that unresolved issues had clear owners."},
     {heading:"Outcome and learning",text:"The approach improved delivery visibility and production-readiness tracking across a highly connected platform. It deepened my technical product-management experience in environment coordination, system dependencies, regression testing and the communication required to move complex products toward release."}
-  ]}
+  ]},
+{
+  number: "04",
+  title: "Kuda 3.0 — Confidence Layer",
+  label: "FinTech · Independent Product Teardown · Senior / Technical Product Case Study",
+  summary:
+    "An independent product teardown and working prototype exploring how a modern digital bank can improve transaction confidence, service recovery, money-state clarity, smarter search and recurring-money intelligence.",
+
+  images: [],
+
+  tags: [
+    "Product strategy",
+    "FinTech",
+    "Transaction confidence",
+    "Service recovery",
+    "State modelling",
+    "UX systems",
+    "Product metrics",
+    "Interactive prototype",
+  ],
+
+  screenshots: false,
+
+  articleLabel: "Read Kuda 3.0 case study",
+
+  resources: [
+    {
+      title: "Live product case study",
+      description:
+        "Explore the complete teardown, product proposal, opportunity areas, measurement framework and 90-day product plan.",
+      href: "https://kuda-confidence-layer.vercel.app",
+      external: true,
+    },
+    {
+      title: "Interactive prototype",
+      description:
+        "Test the simulated product experience covering transaction states, contextual support, money clarity, search and recurring commitments.",
+      href: "https://kuda-confidence-layer.vercel.app/prototype",
+      external: true,
+    },
+  ],
+
+  journal: [
+    {
+      heading: "The product brief",
+      text:
+        "This project began as an independent teardown of Kuda's digital banking experience. The goal was not to redesign the product for the sake of it, but to identify where the experience could create more confidence for customers when money is delayed, reserved, reversed or difficult to understand.",
+    },
+    {
+      heading: "What changed with Kuda 3.0",
+      text:
+        "Kuda 3.0 improved discoverability and moved parts of the experience forward. That changed the direction of my proposal. Instead of repeating earlier recommendations around navigation and feature discovery, I shifted the focus toward reliability after discovery: helping customers understand what is happening with their money and what they should do next.",
+    },
+    {
+      heading: "The opportunity",
+      text:
+        "The strongest opportunity was a confidence layer across transaction status, contextual support, balance states, search and recurring financial commitments. These areas are closely connected because customers experience them as one financial journey rather than separate product features.",
+    },
+    {
+      heading: "The product proposal",
+      text:
+        "The proposal introduces clearer transaction resolution, contextual support attached to the affected transaction, transparent current versus available balances, smarter search, contextual home guidance and a recurring-money hub for upcoming financial commitments.",
+    },
+    {
+      heading: "Technical product thinking",
+      text:
+        "The prototype uses a shared transaction state model so Pending, Completed, Reversed and Under Review states remain consistent across Home, transaction details, activity, search and the money breakdown. The aim was to demonstrate how one source of product truth should drive multiple customer-facing surfaces.",
+    },
+    {
+      heading: "How I would measure it",
+      text:
+        "Success would be measured through exception-related support contact rate, self-service resolution, duplicate support tickets, exception CSAT, money-state discrepancy reports, search success and recurring-payment detection accuracy. The objective is not more UI; it is lower uncertainty and stronger customer trust.",
+    },
+  ],
+},
 ];
 
 const constructionCases:PortfolioCase[]=[
