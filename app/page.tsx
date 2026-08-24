@@ -59,7 +59,7 @@ const productCases:PortfolioCase[]=[
   summary:
     "An independent product teardown and working prototype exploring how a modern digital bank can improve transaction confidence, service recovery, money-state clarity, smarter search and recurring-money intelligence.",
 
-  images: [],
+  images: ["/portfolio/full/kuda-confidence-layer.png"],
 
   tags: [
     "Product strategy",
