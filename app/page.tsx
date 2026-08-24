@@ -77,8 +77,14 @@ const productCases:PortfolioCase[]=[
   articleLabel: "Read Kuda 3.0 case study",
 
   resources: [
-    {
-      title: "Live product case study",
+    {title:"Product Requirements Document (PRD)",description:"Full product requirements for the Kuda 3.0 Confidence Layer.",href:"/documents/Kuda_3_0_PRD_Confidence_Layer.pdf"},
+{title:"Download PRD",description:"Download the complete Product Requirements Document.",href:"/documents/Kuda_3_0_PRD_Confidence_Layer.pdf",download:true},
+ {title:"MVP & 90-Day Delivery Plan",description:"Minimum viable product scope, priorities and phased 90-day delivery plan.",href:"/documents/Kuda_3_0_MVP_90_Day_Confidence_Plan.pdf"},
+{title:"Download MVP Document",description:"Download the complete MVP and 90-day delivery plan.",href:"/documents/Kuda_3_0_MVP_90_Day_Confidence_Plan.pdf",download:true},
+   {title:"Feature Specification Document",description:"Detailed feature specification including problems, scope, user stories, acceptance criteria and success measures.",href:"/documents/Kuda_3_0_Feature_Specification_Document.pdf"},
+{title:"Download Feature Document",description:"Download the complete Feature Specification Document.",href:"/documents/Kuda_3_0_Feature_Specification_Document.pdf",download:true},
+    { 
+    title: "Live product case study",
       description:
         "Explore the complete teardown, product proposal, opportunity areas, measurement framework and 90-day product plan.",
       href: "https://kuda-confidence-layer.vercel.app",
