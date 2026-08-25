@@ -22,7 +22,7 @@ type PracticeJournal = {
 const imageSet=(name:string,count:number)=>Array.from({length:count},(_,i)=>`/portfolio/full/${name}-${i+1}.jpg`);
 
 const productCases:PortfolioCase[]=[
-  {number:"01",title:"Siiqo",status:"LIVE PRODUCT",label:"E-commerce marketplace · Lead Product Manager and Scrum Master",summary:"A trust-led marketplace for Nigerian buyers, vendors and service providers, combining verified commerce, protected payments and community-driven discovery."",images:imageSet("siiqo",5),tags:["Escrow payments","Vendor storefronts","Community","E-bidding","Disputes","Rewards"],screenshots:true,articleLabel:"Read Siiqo case study",resources:[
+  {number:"01",title:"Siiqo",status:"LIVE PRODUCT",label:"E-commerce marketplace · Lead Product Manager and Scrum Master",summary:"A trust-led marketplace for Nigerian buyers, vendors and service providers, combining verified commerce, protected payments and community-driven discovery.",images:imageSet("siiqo",5),tags:["Escrow payments","Vendor storefronts","Community","E-bidding","Disputes","Rewards"],screenshots:true,articleLabel:"Read Siiqo case study",resources:[
     {title:"Siiqo Product Document",description:"Supporting product thinking, feature definition and delivery documentation for the Siiqo marketplace.",href:"https://docs.google.com/document/d/1SmsFGtIb60wlUKtSlwPwm8ixSl2Egf7G4-Jikkam9ko/edit?usp=drivesdk",external:true}
   ],journal:[
     {heading:"The product brief",text:"Siiqo was conceived as more than a product catalogue. The goal was to create dependable commerce infrastructure for local businesses: a place where buyers could discover products and services, assess seller credibility, pay with confidence and remain protected throughout the transaction."},
