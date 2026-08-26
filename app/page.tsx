@@ -79,8 +79,7 @@ text:"I broke the work into connected but independently testable modules, with c
   resources: [
     {title:"Product Requirements Document (PRD)",description:"Full product requirements for the Kuda 3.0 Confidence Layer.",href:"/documents/Kuda_3_0_PRD_Confidence_Layer.pdf"},
 {title:"Download PRD",description:"Download the complete Product Requirements Document.",href:"/documents/Kuda_3_0_PRD_Confidence_Layer.pdf",download:true},
- {title:"MVP & 90-Day Deliver
-   y Plan",description:"Minimum viable product scope, priorities and phased 90-day delivery plan.",href:"/documents/Kuda_3_0_MVP_90_Day_Confidence_Plan.pdf"},
+ {title:"MVP & 90-Day Delivery Plan",description:"Minimum viable product scope, priorities and phased 90-day delivery plan.",href:"/documents/Kuda_3_0_MVP_90_Day_Confidence_Plan.pdf"},
 {title:"Download MVP Document",description:"Download the complete MVP and 90-day delivery plan.",href:"/documents/Kuda_3_0_MVP_90_Day_Confidence_Plan.pdf",download:true},
    {title:"Feature Specification Document",description:"Detailed feature specification including problems, scope, user stories, acceptance criteria and success measures.",href:"/documents/Kuda_3_0_Feature_Specification_Document.pdf"},
 {title:"Download Feature Document",description:"Download the complete Feature Specification Document.",href:"/documents/Kuda_3_0_Feature_Specification_Document.pdf",download:true},
@@ -168,7 +167,7 @@ function CaseModal({item,onClose,onZoom}:{item:PortfolioCase;onClose:()=>void;on
 const practiceJournals:PracticeJournal[]=[
   {number:"01",title:"Discover",summary:"Research, user needs, problem framing and market context",articleTitle:"Start With the Problem, Not the Feature",readTime:"4 min read",href:"/documents/discover-product-practice-journal.pdf"},
   {number:"02",title:"Define",summary:"Strategy, roadmaps, PRDs, journeys and acceptance criteria",articleTitle:"Clarity Before Commitment",readTime:"5 min read",href:"/documents/define-product-practice-journal.pdf"},
-  {number:"03",title:"Deliver",summary:"Backlogs, sprint planning, Scrum and cross functional execution",articleTitle:"Where Product Thinking Meets Execution",readTime:"5 min read",href:"/documents/deliver-product-practice-journal.pdf"},
+  {number:"03",title:"Deliver",summary:"Backlogs, sprint planning, Scrum and cross-functional execution",articleTitle:"Where Product Thinking Meets Execution",readTime:"5 min read",href:"/documents/deliver-product-practice-journal.pdf"},
   {number:"04",title:"Improve",summary:"Testing, feedback, analytics, prioritisation and optimisation",articleTitle:"Launch Is the Beginning of Learning",readTime:"4 min read",href:"/documents/improve-product-practice-journal.pdf"}
 ];
 
@@ -177,7 +176,7 @@ function PracticeJournalModal({journal,onClose}:{journal:PracticeJournal;onClose
 const linkedinPosts=[
   {title:"Product management starts with the user",topic:"User centred product work",href:"https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-usercentric-uiux-activity-7484933393252700160-dq-m",text:"A reflection on why strong products begin with real user needs, clear flows and decisions that remove friction."},
   {title:"Discovery before delivery",topic:"Product discovery",href:"https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-productdiscovery-userresearch-activity-7483500408246677504-iNQa",text:"Good delivery begins with understanding the problem. This note looks at research, questions and evidence before building."},
-  {title:"Cross functional work is the real work",topic:"Collaboration",href:"https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-collaboration-crossfunctionalteams-activity-7485622429994758145-HYKU",text:"Products move forward when design, engineering, business and product share context and work toward the same outcome."},
+  {title:"Cross-functional work is the real work",topic:"Collaboration",href:"https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-collaboration-cross-functionalteams-activity-7485622429994758145-HYKU",text:"Products move forward when design, engineering, business and product share context and work toward the same outcome."},
   {title:"A Product Manager is a problem solver",topic:"Product judgement",href:"https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanagement-problemsolving-customercentric-activity-7478764586150637568-JoTM",text:"The role is not about having every answer. It is about creating clarity, asking better questions and helping teams solve useful problems."}
 ];
 
