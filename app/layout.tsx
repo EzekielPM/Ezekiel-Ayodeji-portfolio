@@ -3,22 +3,22 @@ import "./globals.css";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
-  "https://olusola-ayodeji-portfolio.vercel.app";
+  "https://ezekiel-ayodeji-portfolio.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Olusola Ayodeji Ezekiel | Product Manager Portfolio",
-  description: "Product Manager across FinTech, digital payments, eCommerce and iGaming, backed by more than ten years of construction and project leadership.",
+  title: "Olusola Ayodeji Ezekiel | Product Manager & Technical Product Delivery",
+  description: "Product Manager specialising in FinTech, digital payments, eCommerce and iGaming, combining product strategy, technical delivery and cross-functional leadership.",
   openGraph: {
-    title: "Olusola Ayodeji Ezekiel | Product Manager",
-    description: "Product strategy and delivery grounded in more than a decade of real-world project leadership.",
+    title: "Olusola Ayodeji Ezekiel | Product Manager & Technical Product Delivery",
+ description: "Product strategy, technical delivery and cross-functional leadership across FinTech, digital payments, eCommerce and iGaming.",
     type: "website",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Olusola Ayodeji Ezekiel, Product Manager" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Olusola Ayodeji Ezekiel | Product Manager",
-    description: "Product strategy and delivery grounded in more than a decade of real-world project leadership.",
+    title: "Olusola Ayodeji Ezekiel | Product Manager & Technical Product Delivery",
+    description: "Product strategy, technical delivery and cross-functional leadership across FinTech, digital payments, eCommerce and iGaming.",
     images: ["/og.png"],
   },
   icons: {
