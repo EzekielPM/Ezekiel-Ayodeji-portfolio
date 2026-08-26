@@ -103,34 +103,34 @@ const productCases:PortfolioCase[]=[
 
   journal: [
     {
-      heading: "The product brief",
+      heading: "Why I explored this",
       text:
-        "This project began as an independent teardown of Kuda's digital banking experience. The goal was not to redesign the product for the sake of it, but to identify where the experience could create more confidence for customers when money is delayed, reserved, reversed or difficult to understand.",
+         "I started this as an independent teardown of Kuda's digital banking experience, not because the product needed another redesign, but because some of the hardest moments in banking happen after a transaction is made. I wanted to explore how the experience could give customers more clarity and confidence when money is delayed, reserved, reversed or simply difficult to understand.",
     },
     {
-      heading: "What changed with Kuda 3.0",
+      heading: "Where I saw the next opportunity",
       text:
-        "Kuda 3.0 improved discoverability and moved parts of the experience forward. That changed the direction of my proposal. Instead of repeating earlier recommendations around navigation and feature discovery, I shifted the focus toward reliability after discovery: helping customers understand what is happening with their money and what they should do next.",
+  "Kuda 3.0 made the experience easier to explore and improved how customers discover key features. Rather than revisiting navigation or feature discovery, I focused on what happens after a customer takes action: understanding a transaction state, knowing why money looks different from the expected balance, and knowing what to do when something goes wrong. That became the starting point for the Confidence Layer.",
     },
     {
-      heading: "The opportunity",
+      heading: "What the Confidence Layer needed to solve",
       text:
-        "The strongest opportunity was a confidence layer across transaction status, contextual support, balance states, search and recurring financial commitments. These areas are closely connected because customers experience them as one financial journey rather than separate product features.",
+  "The pattern I kept coming back to was confidence. Transaction status, support, balance clarity, search and recurring commitments may look like separate features, but to a customer they are connected moments in one financial journey. The opportunity was to make those moments feel clearer, more predictable and easier to recover from when something goes wrong.",
     },
     {
-      heading: "The product proposal",
+      heading: "How I shaped the solution",
       text:
-        "The proposal introduces clearer transaction resolution, contextual support attached to the affected transaction, transparent current versus available balances, smarter search, contextual home guidance and a recurring-money hub for upcoming financial commitments.",
+  "I shaped the Confidence Layer around a few connected moments: clearer transaction resolution, support that understands the affected transaction, transparent current versus available balances, smarter search, contextual home guidance and a recurring-money hub for upcoming commitments. The goal was not to add more surface area, but to help customers understand what is happening and what they can do next.",
     },
     {
-      heading: "Technical product thinking",
+      heading: "How I approached the technical side",
       text:
-        "The prototype uses a shared transaction state model so Pending, Completed, Reversed and Under Review states remain consistent across Home, transaction details, activity, search and the money breakdown. The aim was to demonstrate how one source of product truth should drive multiple customer-facing surfaces.",
+  "For the prototype to feel believable, the same transaction could not mean one thing on Home and something different on the activity or support screens. I used a shared transaction-state model so Pending, Completed, Reversed and Under Review remain consistent across the experience. That gave the prototype one source of truth and showed how product decisions at the system level can shape what customers see and understand.",
     },
     {
-      heading: "How I would measure it",
+      heading: "How I would know it is working",
       text:
-        "Success would be measured through exception-related support contact rate, self-service resolution, duplicate support tickets, exception CSAT, money-state discrepancy reports, search success and recurring-payment detection accuracy. The objective is not more UI; it is lower uncertainty and stronger customer trust.",
+  "I would look for fewer customers needing support to understand transaction exceptions, more issues resolved through self-service, fewer duplicate support tickets and stronger satisfaction after difficult money moments. I would also track balance-state discrepancies, search success and recurring-payment detection accuracy. The real signal of success would be simple: customers feel less uncertain about their money and more confident about what happens next.",
     },
   ],
 },
