@@ -22,7 +22,7 @@ type PracticeJournal = {
 const imageSet=(name:string,count:number)=>Array.from({length:count},(_,i)=>`/portfolio/full/${name}-${i+1}.jpg`);
 
 const productCases:PortfolioCase[]=[
-  {number:"01",title:"Siiqo",status:"LIVE PRODUCT",label:"E-commerce Marketplace · Lead Product Manager · Scrum Master",summary:"A trust-led marketplace for Nigerian buyers, vendors and service providers, combining verified commerce, protected payments and community-driven discovery.",images:imageSet("siiqo",5),tags:["Escrow payments","Vendor storefronts","Community","E-bidding","Disputes","Rewards"],screenshots:true,articleLabel:"View Case Study",resources:[
+  {number:"01",title:"Siiqo",status:"LIVE PRODUCT",label:"Marketplace · Lead Product Manager · Scrum Master",summary:"A trust-led marketplace for Nigerian buyers, vendors and service providers, combining verified sellers, protected payments and community-driven discovery.",images:imageSet("siiqo",5),tags:["Escrow payments","Vendor storefronts","Community","E-bidding","Disputes","Rewards"],screenshots:true,articleLabel:"View Case Study",resources:[
     {title:"Siiqo Product Document",description:"Supporting product thinking, feature definition and delivery documentation for the Siiqo marketplace.",href:"https://docs.google.com/document/d/1SmsFGtIb60wlUKtSlwPwm8ixSl2Egf7G4-Jikkam9ko/edit?usp=drivesdk",external:true}
   ],journal:[
     {heading:"Where Siiqo started",text:"I saw Siiqo as more than a marketplace listing products. The bigger opportunity was to build a dependable commerce environment where buyers could discover products and services, judge whether a seller was credible, pay with confidence and still feel protected after payment.",},
