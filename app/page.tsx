@@ -55,10 +55,10 @@ text:"I broke the work into connected but independently testable modules, with c
   {heading:"What the experience strengthened",text:"Working across a deeply connected product strengthened my technical product-management judgement around environment coordination, system dependencies, regression testing and production readiness. It also reinforced how important clear communication is when multiple teams are trying to move a complex product safely toward release."}, 
   ]},{
     number: "04",
-  title: "Kuda 3.0 — Confidence Layer",
+  title: "Kuda 3.0: Confidence Layer",
   status: "INDEPENDENT CASE STUDY",
   disclaimer: "Independent case study — not affiliated with, commissioned by, or endorsed by Kuda.",
-  label:"FinTech · Product Teardown · Senior / Technical Product Case Study",
+  label:"FinTech · Product Teardown · Technical Product Case Study",
   summary:"An independent product teardown and working prototype focused on helping digital-banking customers understand what is happening with their money, recover from issues faster and make recurring financial activity easier to manage.",
   images: ["/portfolio/full/kuda-confidence-layer.png"],
 
