@@ -84,3 +84,15 @@ html[data-theme="navy"] .media-rail{scrollbar-color:#55c4ad #18344f}
 
 @media(max-width:600px){nav{gap:8px}.theme-toggle{width:52px;height:30px}.theme-toggle-icon{width:22px;height:22px}.theme-toggle-thumb{width:22px;height:22px}.theme-toggle.is-navy .theme-toggle-thumb{transform:translateX(22px)}}
 @media(prefers-reduced-motion:reduce){.theme-toggle,.theme-toggle-thumb,body,.site-header,.section,.case-card,.construction-card,.practice-card,.rough-card{transition:none}}
+.construction-link{
+  display:flex;
+  justify-content:center;
+  margin-top:34px;
+  padding-top:30px;
+  border-top:1px solid var(--line);
+}
+
+.construction-link .button{
+  width:min(100%,380px);
+  justify-content:space-between;
+}
