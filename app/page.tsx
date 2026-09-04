@@ -194,6 +194,7 @@ export default function Home(){
  const [showWelcome,setShowWelcome]=useState(true);
  const [theme,setTheme]=useState<"light"|"navy">("light");
  const [contactOpen,setContactOpen]=useState(false);
+const [mobileMenuOpen,setMobileMenuOpen]=useState(false);
  const [contactPosition,setContactPosition]=useState<{x:number;y:number}|null>(null);
  const [contactDragging,setContactDragging]=useState(false);
  const contactRef=useRef<HTMLElement|null>(null);
@@ -202,9 +203,9 @@ export default function Home(){
  const clampContactPosition=(x:number,y:number)=>{const margin=10;const rect=contactRef.current?.getBoundingClientRect();const width=rect?.width||48;const height=rect?.height||48;return{x:Math.min(Math.max(margin,x),Math.max(margin,window.innerWidth-width-margin)),y:Math.min(Math.max(margin,y),Math.max(margin,window.innerHeight-height-margin))}};
  useEffect(()=>{const saved=window.localStorage.getItem("portfolio-theme");const initial=saved==="light"||saved==="navy"?saved:window.matchMedia("(prefers-color-scheme: dark)").matches?"navy":"light";document.documentElement.dataset.theme=initial;setTheme(initial)},[]);
  useEffect(()=>{const timer=window.setTimeout(()=>setShowWelcome(false),5200);return()=>window.clearTimeout(timer)},[]);
- useEffect(()=>{const fn=(e:KeyboardEvent)=>{if(e.key==="Escape"){if(zoom)setZoom(null);else if(active)setActive(null);else if(activePractice)setActivePractice(null);else setContactOpen(false)}};window.addEventListener("keydown",fn);document.body.style.overflow=active||activePractice||zoom?"hidden":"";return()=>{window.removeEventListener("keydown",fn);document.body.style.overflow=""}},[active,activePractice,zoom]);
- useEffect(()=>{const close=(event:PointerEvent)=>{const target=event.target as HTMLElement;if(contactOpen&&!target.closest(".floating-contact"))setContactOpen(false)};document.addEventListener("pointerdown",close);return()=>document.removeEventListener("pointerdown",close)},[contactOpen]);
- useEffect(()=>{try{const saved=window.localStorage.getItem("portfolio-contact-position");if(saved){const parsed=JSON.parse(saved) as {x:number;y:number};if(Number.isFinite(parsed.x)&&Number.isFinite(parsed.y))window.requestAnimationFrame(()=>setContactPosition(clampContactPosition(parsed.x,parsed.y)))}}catch{}},[]);
+ useEffect(()=>{const fn=(e:KeyboardEvent)=>{if(e.key==="Escape"){if(zoom)setZoom(null);else if(active)setActive(null);else if(activePractice)setActivePractice(null);else if(mobileMenuOpen)setMobileMenuOpen(false);else setContactOpen(false)}};window.addEventListener("keydown",fn);document.body.style.overflow=active||activePractice||zoom?"hidden":"";return()=>{window.removeEventListener("keydown",fn);document.body.style.overflow=""}},[active,activePractice,zoom,mobileMenuOpen]);
+ useEffect(()=>{const close=(event:PointerEvent)=>{const target=event.target as HTMLElement;if(contactOpen&&!target.closest(".floating-contact"))setContactOpen(false);if(mobileMenuOpen&&!target.closest(".site-nav"))setMobileMenuOpen(false)};document.addEventListener("pointerdown",close);return()=>document.removeEventListener("pointerdown",close)},[contactOpen,mobileMenuOpen]);
+ useEffeeEffect(()=>{try{const saved=window.localStorage.getItem("portfolio-contact-position");if(saved){const parsed=JSON.parse(saved) as {x:number;y:number};if(Number.isFinite(parsed.x)&&Number.isFinite(parsed.y))window.requestAnimationFrame(()=>setContactPosition(clampContactPosition(parsed.x,parsed.y)))}}catch{}},[]);
  useEffect(()=>{const keepInView=()=>setContactPosition(current=>current?clampContactPosition(current.x,current.y):current);window.addEventListener("resize",keepInView);return()=>window.removeEventListener("resize",keepInView)},[]);
  const startContactDrag=(event:ReactPointerEvent<HTMLButtonElement>)=>{if(event.button!==0)return;const rect=event.currentTarget.getBoundingClientRect();contactDrag.current={active:true,moved:false,startX:event.clientX,startY:event.clientY,startLeft:rect.left,startTop:rect.top};event.currentTarget.setPointerCapture(event.pointerId)};
  const moveContactDrag=(event:ReactPointerEvent<HTMLButtonElement>)=>{const drag=contactDrag.current;if(!drag.active)return;const dx=event.clientX-drag.startX;const dy=event.clientY-drag.startY;if(!drag.moved&&Math.hypot(dx,dy)<6)return;if(!drag.moved){drag.moved=true;ignoreContactClick.current=true;setContactOpen(false);setContactDragging(true)}setContactPosition(clampContactPosition(drag.startLeft+dx,drag.startTop+dy))};
@@ -213,8 +214,49 @@ export default function Home(){
  const toggleTheme=()=>setTheme(current=>{const next=current==="navy"?"light":"navy";document.documentElement.dataset.theme=next;window.localStorage.setItem("portfolio-theme",next);return next});
  const openZoom=(src:string,alt:string)=>setZoom({src,alt});
  return <main>
-  <header className="site-header"><a className="brand" href="#top"><span>OLUSOLA AYODEJI EZEKIEL</span><small>Product Manager</small></a><nav><a href="#products">Product work</a><a href="#construction">Construction</a><a href="#rough-space">Rough Space</a><a href="#insights">Insights</a><a href="#about">About</a><button className={`theme-toggle ${theme==="navy"?"is-navy":""}`} type="button" onClick={toggleTheme} aria-label={theme==="navy"?"Switch to light mode":"Switch to navy dark mode"} title={theme==="navy"?"Light mode":"Navy dark mode"}><span className="theme-toggle-icon theme-toggle-sun" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg></span><span className="theme-toggle-icon theme-toggle-moon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.2 15.3A8.5 8.5 0 0 1 8.7 3.8 8.5 8.5 0 1 0 20.2 15.3Z"/></svg></span><span className="theme-toggle-thumb" aria-hidden="true"/></button><a className="nav-cta" href="#contact">Let&apos;s talk</a></nav></header>
-  <section className="hero" id="top"><div className="hero-copy"><p className="hero-label">Product strategy · Technical delivery · Cross-functional leadership</p><h1>I turn complex product problems into <em>clear decisions and dependable delivery.</em></h1><p className="hero-intro">I am <strong>Olusola Ayodeji Ezekiel</strong>, a Product Manager working across FinTech, digital payments, eCommerce and iGaming. I combine product strategy, user understanding and technical delivery to move complex work from problem framing through launch and improvement. A decade of project leadership before product sharpened how I manage risk, dependencies, teams and delivery.</p><div className="hero-actions"><a className="button primary" href="#products">View product case studies <span>↘</span></a><a className="button text" href="#contact">Start a conversation <span>↗</span></a></div><div className="hero-cv-actions" aria-label="Download curriculum vitae"><a href="/documents/olusola-ayodeji-product-manager-cv.pdf" download>Download Product Manager CV <span>↓</span></a><a href="/documents/olusola-ayodeji-construction-cv.pdf" download>Download Construction CV <span>↓</span></a></div></div><aside className="portrait-panel"><button className={`portrait-welcome ${showWelcome?"is-welcoming":""}`} onClick={()=>setShowWelcome(value=>!value)} aria-expanded={showWelcome} aria-label="Play Olusola's welcome greeting"><img src="/portfolio/bio-portrait.png" alt="Olusola Ayodeji Ezekiel"/><span className="welcome-message" aria-live="polite"><span className="wave-hand" aria-hidden="true">👋🏾</span><span><strong>Hi, welcome.</strong><small>I am Olusola Ayodeji Ezekiel.</small></span></span><span className="welcome-hint">Tap to say hello</span></button><div className="portrait-caption"><strong>4+ years</strong><span>Product management</span><strong>10+ years</strong><span>Project leadership</span></div></aside></section>
+  <header className="site-header">
+  <a className="brand" href="#top">
+    <span>OLUSOLA AYODEJI EZEKIEL</span>
+    <small>Product Manager</small>
+  </a>
+
+  <nav className="site-nav">
+    <a className="desktop-nav-link" href="#products">Product work</a>
+    <a className="desktop-nav-link" href="#construction">Construction</a>
+    <a className="desktop-nav-link" href="#rough-space">Rough Space</a>
+    <a className="desktop-nav-link" href="#insights">Insights</a>
+    <a className="desktop-nav-link" href="#about">About</a>
+
+    <button className={`theme-toggle ${theme==="navy"?"is-navy":""}`} type="button" onClick={toggleTheme} aria-label={theme==="navy"?"Switch to light mode":"Switch to navy dark mode"} title={theme==="navy"?"Light mode":"Navy dark mode"}>
+      <span className="theme-toggle-icon theme-toggle-sun" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="3.5"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/>
+        </svg>
+      </span>
+      <span className="theme-toggle-icon theme-toggle-moon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M20.2 15.3A8.5 8.5 0 0 1 8.7 3.8 8.5 8.5 0 1 0 20.2 15.3Z"/>
+        </svg>
+      </span>
+      <span className="theme-toggle-thumb" aria-hidden="true"/>
+    </button>
+
+    <a className="nav-cta desktop-nav-link" href="#contact">Let&apos;s talk</a>
+
+    <button className="mobile-menu-toggle" type="button" onClick={()=>setMobileMenuOpen(value=>!value)} aria-expanded={mobileMenuOpen} aria-controls="mobile-site-menu">
+      {mobileMenuOpen?"Close":"Menu"}
+    </button>
+
+    <div className="mobile-menu-panel" id="mobile-site-menu" aria-label="Mobile navigation" hidden={!mobileMenuOpen}>
+      <a href="#products" onClick={()=>setMobileMenuOpen(false)}>Product work</a>
+      <a href="#construction" onClick={()=>setMobileMenuOpen(false)}>Construction</a>
+      <a href="#rough-space" onClick={()=>setMobileMenuOpen(false)}>Rough Space</a>
+      <a href="#insights" onClick={()=>setMobileMenuOpen(false)}>Insights</a>
+      <a href="#contact" onClick={()=>setMobileMenuOpen(false)}>Let&apos;s talk</a>
+    </div>
+  </nav>
+</header>ectionction className="hero" id="top"><div className="hero-copy"><p className="hero-label">Product strategy · Technical delivery · Cross-functional leadership</p><h1>I turn complex product problems into <em>clear decisions and dependable delivery.</em></h1><p className="hero-intro">I am <strong>Olusola Ayodeji Ezekiel</strong>, a Product Manager working across FinTech, digital payments, eCommerce and iGaming. I combine product strategy, user understanding and technical delivery to move complex work from problem framing through launch and improvement. A decade of project leadership before product sharpened how I manage risk, dependencies, teams and delivery.</p><div className="hero-actions"><a className="button primary" href="#products">View product case studies <span>↘</span></a><a className="button text" href="#contact">Start a conversation <span>↗</span></a></div><div className="hero-cv-actions" aria-label="Download curriculum vitae"><a href="/documents/olusola-ayodeji-product-manager-cv.pdf" download>Download Product Manager CV <span>↓</span></a><a href="/documents/olusola-ayodeji-construction-cv.pdf" download>Download Construction CV <span>↓</span></a></div></div><aside className="portrait-panel"><button className={`portrait-welcome ${showWelcome?"is-welcoming":""}`} onClick={()=>setShowWelcome(value=>!value)} aria-expanded={showWelcome} aria-label="Play Olusola's welcome greeting"><img src="/portfolio/bio-portrait.png" alt="Olusola Ayodeji Ezekiel"/><span className="welcome-message" aria-live="polite"><span className="wave-hand" aria-hidden="true">👋🏾</span><span><strong>Hi, welcome.</strong><small>I am Olusola Ayodeji Ezekiel.</small></span></span><span className="welcome-hint">Tap to say hello</span></button><div className="portrait-caption"><strong>4+ years</strong><span>Product management</span><strong>10+ years</strong><span>Project leadership</span></div></aside></section>
   <section className="statement"><p className="section-kicker">My point of view</p><blockquote>Good product management creates enough clarity for a team to solve the <em>right problem</em> and enough structure to deliver it well.</blockquote></section>
   <section className="section" id="products"><div className="section-heading"><div><p className="section-kicker">Selected product work</p><h2>Case studies in trust, payments and platforms.</h2></div><p>Each project is presented as a concise overview with an extended journal explaining the context, decisions, delivery process and lessons.</p></div><div className="case-list">{productCases.map(item=><article className="case-card" key={item.title}><div className="case-top"><span>{item.number}</span><p>{item.label}</p>{item.status&&<span className="case-status">{item.status}</span>}</div><div className="case-intro"><h3 className={item.number==="04"?"kuda-title":undefined}>{item.title}</h3><p>{item.summary}</p></div><Gallery item={item} onZoom={openZoom}/><div className="case-footer"><div className="feature-tags">{item.tags.map(t=><span key={t}>{t}</span>)}</div><button className="case-button" onClick={()=>setActive(item)}>{item.articleLabel}<span>↗</span></button></div></article>)}</div></section>
   <section className="capabilities section"><div className="section-heading compact"><div><p className="section-kicker">My product practice</p><h2>From insight to dependable delivery.</h2></div><p>Four stages I use to move product work from understanding the problem to delivery, learning and continuous improvement. Open any stage to explore the thinking behind it.</p></div><div className="capability-grid">{practiceJournals.map(journal=><article className="practice-card" key={journal.title}><button className="practice-card-open" type="button" onClick={()=>setActivePractice(journal)} aria-label={`Read ${journal.title} product practice journal`}/><span>{journal.number}</span><h3>{journal.title}</h3><p>{journal.summary}</p><div className="practice-card-meta"><small>{journal.readTime}</small><strong>{journal.articleTitle}</strong></div><div className="practice-card-actions"><button type="button" onClick={()=>setActivePractice(journal)}>Read journal <span>↗</span></button><a href={journal.href} download>Download PDF <span>↓</span></a></div></article>)}</div></section>
