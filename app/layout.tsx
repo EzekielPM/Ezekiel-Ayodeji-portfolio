@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     title: "Olusola Ayodeji Ezekiel | Product Manager & Technical Product Delivery",
  description: "Product strategy, technical delivery and cross-functional leadership across FinTech, digital payments, eCommerce and iGaming.",
     type: "website",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Olusola Ayodeji Ezekiel, Product Manager" }],
+    images: [{ url: "/ezekiel-social-preview.png", width: 1200, height: 630, alt: "Olusola Ayodeji Ezekiel, Product Manager" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Olusola Ayodeji Ezekiel | Product Manager & Technical Product Delivery",
     description: "Product strategy, technical delivery and cross-functional leadership across FinTech, digital payments, eCommerce and iGaming.",
-    images: ["/og.png"],
+    images: ["/ezekiel-social-preview.png"],
   },
   icons: {
     icon: "/favicon.svg",
