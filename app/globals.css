@@ -113,6 +113,64 @@ html[data-theme="navy"] .media-rail{scrollbar-color:#55c4ad #18344f}
 
 html[data-theme="navy"] .mobile-menu-panel{background:#17344f}
 html[data-theme="navy"] .mobile-menu-toggle{color:#0e2238;background:#eef4fa;border-color:#eef4fa}
+/* Compact construction portfolio link */
+.construction-cta{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:clamp(32px,6vw,80px);
+  padding-top:72px;
+  padding-bottom:72px;
+}
 
+.construction-cta-copy{
+  max-width:720px;
+}
+
+.construction-cta .section-kicker{
+  margin-bottom:18px;
+}
+
+.construction-cta h2{
+  margin:0;
+  font:500 clamp(34px,4vw,54px)/1.04 Georgia,serif;
+  letter-spacing:-.04em;
+}
+
+.construction-cta-copy>p:last-child{
+  max-width:680px;
+  margin:20px 0 0;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.75;
+}
+
+.construction-cta>.button{
+  min-width:290px;
+  justify-content:space-between;
+}
+
+@media(max-width:850px){
+  .construction-cta{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .construction-cta>.button{
+    width:min(100%,380px);
+  }
+}
+
+@media(max-width:600px){
+  .construction-cta{
+    padding-top:58px;
+    padding-bottom:58px;
+  }
+
+  .construction-cta>.button{
+    width:100%;
+    min-width:0;
+  }
+}
 
 
