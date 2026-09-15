@@ -1,416 +1,77 @@
-const selectedWork = [
-  {
-    number: "01",
-    title: "Siiqo",
-    label: "Marketplace Â· Lead Product Manager Â· Scrum Master",
-    status: "LIVE PRODUCT",
-    summary:
-      "A trust-led marketplace for Nigerian buyers, vendors and service providers, combining verified sellers, protected payments and community-driven discovery.",
-    image: "/portfolio/full/siiqo-1.jpg",
-    tags: ["Escrow payments", "Vendor storefronts", "Community", "E-bidding", "Disputes", "Rewards"],
-    href: "/#products",
-    action: "View case study",
-  },
-  {
-    number: "02",
-    title: "Canvoy Payment",
-    label: "FinTech Â· Product Manager Â· Scrum Master",
-    status: "MVP / DELIVERY",
-    summary:
-      "A digital payments MVP for recurring utility and everyday payments, designed around clear transaction flows, security and dependable payment feedback.",
-    image: "/portfolio/full/canvoy-1.jpg",
-    tags: ["Utility payments", "MVP roadmap", "Jira ownership", "Scrum", "Security", "QA readiness"],
-    href: "/#products",
-    action: "View case study",
-  },
-  {
-    number: "03",
-    title: "From DM to Confirmed Order",
-    label: "Social commerce Â· Product teardown Â· Working prototype",
-    status: "PRODUCT TEARDOWN",
-    summary:
-      "A focused product teardown exploring the messy step after a customer says â€˜I want itâ€™ on WhatsApp or Instagram, and how one structured checkout link could move the order from purchase intent to confirmation.",
-    image: null,
-    tags: ["Problem framing", "User flow", "MVP", "Prioritisation", "Social commerce", "Prototype"],
-    href: "#dm-teardown",
-    action: "View teardown",
-  },
-  {
+"use client";
+
+import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
+
+type PortfolioCase = {
+  number: string; title: string; label: string; summary: string; location?: string;status?: string;disclaimer?: string;
+  images: string[]; tags: string[]; screenshots?: boolean; articleLabel: string;
+  video?: { src: string; poster: string; title: string };
+  resources?: { title: string; description: string; href: string; external?: boolean; download?: boolean; actionLabel?: string }[];
+  journal: { heading: string; text: string }[];
+};
+
+type PracticeJournal = {
+  number: string;
+  title: string;
+  summary: string;
+  articleTitle: string;
+  readTime: string;
+  href: string;
+};
+
+const imageSet=(name:string,count:number)=>Array.from({length:count},(_,i)=>`/portfolio/full/${name}-${i+1}.jpg`);
+
+const productCases:PortfolioCase[]=[
+  {number:"01",title:"Siiqo",status:"LIVE PRODUCT",label:"Marketplace · Lead Product Manager · Scrum Master",summary:"A trust-led marketplace for Nigerian buyers, vendors and service providers, combining verified sellers, protected payments and community-driven discovery.",images:imageSet("siiqo",5),tags:["Escrow payments","Vendor storefronts","Community","E-bidding","Disputes","Rewards"],screenshots:true,articleLabel:"View Case Study",resources:[
+    {title:"Siiqo Product Document",description:"Supporting product thinking, feature definition and delivery documentation for the Siiqo marketplace.",href:"https://docs.google.com/document/d/1SmsFGtIb60wlUKtSlwPwm8ixSl2Egf7G4-Jikkam9ko/edit?usp=drivesdk",external:true}
+  ],journal:[
+    {heading:"Where Siiqo started",text:"I saw Siiqo as more than a marketplace listing products. The bigger opportunity was to build a dependable commerce environment where buyers could discover products and services, judge whether a seller was credible, pay with confidence and still feel protected after payment.",},
+    {heading:"The trust problem we had to solve",text:"Trust was the hard part. Buyers needed confidence that sellers were genuine, products matched expectations and payments would not leave them exposed. Sellers, meanwhile, needed visibility, practical storefront tools and a reliable way to manage orders. The product had to support both sides without weakening buyer protection.",},
+    {heading:"What I owned",text:"As Lead Product Manager and Scrum Master, I shaped the product direction and translated the vision into a delivery plan the team could execute. I led discovery, personas and journeys, wrote PRDs and user stories, defined acceptance criteria, prioritised the backlog and coordinated sprint planning across design, engineering and QA.",},
+    {heading:"How I shaped the product",text:"I centred the experience on trust first: verified sellers, escrow-secured orders and clear dispute paths. Around that foundation, we built vendor storefronts, product and service listings, order management, community content, referrals, rewards and chat. Each feature had to strengthen the marketplace rather than simply add more functionality.",},
+    {heading:"How we delivered it",
+text:"I broke the work into connected but independently testable modules, with clear sprint goals and acceptance criteria to reduce ambiguity. Feedback from vendors and buyers informed iteration, while regular product reviews and QA helped protect consistency across marketplace, community and payment journeys.",},
+    {heading:"What the project taught me",text:"Siiqo progressed into a live multi-sided marketplace with a clear trust proposition. The project reinforced something I now carry into other product work: marketplace growth is not only about adding inventory. It depends on credibility, safe transactions, seller support and an experience that makes those values visible to users.",}
+  ]},
+  {number:"02",title:"Canvoy Payment",status:"MVP / DELIVERY",label:"FinTech · Product Manager · Scrum Master",summary:"A digital payments MVP for recurring utility and everyday payments, designed around clear transaction flows, security and dependable payment feedback.",images:imageSet("canvoy",5),video:{src:"/product-media/canvoy-demo-web.mp4",poster:"/product-media/canvoy-demo-poster.jpg",title:"Canvoy product concept walkthrough"},tags:["Utility payments","MVP roadmap","Jira ownership","Scrum","Security","QA readiness"],screenshots:true,articleLabel:"View Case Study",resources:[
+    {title:"Canvoy Payment 8 Week MVP Roadmap",description:"The delivery roadmap covering product discovery, design, technical setup, security, implementation and release readiness.",href:"/documents/canvoy-mvp-roadmap.pdf"}
+  ],journal:[
+    {heading:"Where Canvoy started",text:"Canvoy began with a simple product question: how can everyday utility and recurring payments feel less stressful and more dependable? The MVP was shaped around giving customers a clear path from registration to payment completion, while creating a foundation that could support more payment services over time.",},
+    {heading:"The payment problem we needed to reduce",text:"Routine payments become frustrating when users are unsure what information is required, whether a transaction is secure, what stage it has reached or what to do when something fails. The experience needed to reduce that uncertainty and make each payment feel clear from start to finish."},
+    {heading:"What I owned",text:"As Product Manager and Scrum Master, I contributed across discovery, MVP definition, requirements, prioritisation and delivery coordination. I also structured and managed the Jira workspace, turning the roadmap into epics, sprint backlogs, user stories, tasks and measurable acceptance criteria the team could work from."},
+
+    {heading:"How I shaped the MVP",text:"I organised the product around the journeys that mattered most for an initial release: authentication, verification, account recovery, dashboards, payment flows, security questions, transaction feedback and profile management. I worked across design, engineering, data and cybersecurity to surface dependencies early and keep product, experience and risk decisions aligned."},
+    {heading:"How we delivered it",text:"I facilitated sprint planning, stand-ups, refinement and progress reviews while keeping requirements visible as questions emerged. QA readiness and risk assessment were treated as part of delivery from the beginning, rather than activities to leave until the end of the build."},
+    {heading:"What the work reinforced for me",text:"The project strengthened my understanding of trust in payment products. Clear flows matter, but so do security, transaction visibility and timely feedback. Those are not supporting details in a financial product; they are part of the product experience itself."},]},
+ 
+  {number:"03",title:"Wayagram",status:"PRODUCTION DELIVERY",label:"FinTech · Social Commerce · Technical Product Manager",summary:"A multi-service platform combining social networking, commerce and financial services, where I coordinated technical delivery, production readiness and release quality across connected customer journeys.",images:imageSet("wayagram",2),video:{src:"/product-media/wayagram-demo-web.mp4",poster:"/product-media/wayagram-demo-poster.jpg",title:"Wayagram product walkthrough"},tags:["Wallet","Marketplace","Social feeds","KYC","Settlement","Production QA"],articleLabel:"View Case Study",resources:[
+    {title:"Wayagram Product and Technical Architecture",description:"A high-level paper mapping the platform modules, service boundaries, data layer and integration approach.",href:"/documents/wayagram-product-architecture.pdf"}
+  ],journal:[
+    {heading:"The platform I stepped into",text:"Wayagram brought social networking, commerce and financial services into one connected product. Accounts and KYC, feeds, messaging, marketplace activity, wallets, virtual accounts, payments, settlements, disputes and notifications all depended on one another, which made reliable end-to-end delivery especially important."}, 
+  {heading:"The delivery challenge",text:"The biggest challenge was visibility across a highly connected platform. Work moved through different modules and environments, and an issue in one journey could affect several others downstream. Production readiness therefore needed clear ownership, stronger regression coverage and a dependable way to surface blockers before release."},
+  {heading:"What I owned",text:"As Technical Product Manager, I coordinated production migration, regression and demo testing, QA, bug triage, staging access, daily stand-ups and module-based reporting. My role was to connect technical readiness with the experience customers were actually expected to have from end to end."},
+  {heading:"How I organised the work",text:"I broke the platform into accountable modules and used daily priorities, ownership tracking and structured status reporting to keep blockers visible. Testing focused on connected journeys rather than isolated screens, particularly where identity, wallet, marketplace and settlement services depended on one another."},
+  {heading:"How I made release decisions",text:"Production delivery required balancing urgency with risk. A feature being marked complete was not enough; I needed confidence that critical journeys behaved reliably across staging and production conditions, and that anything unresolved had a clear owner and path to resolution."},
+  {heading:"What the experience strengthened",text:"Working across a deeply connected product strengthened my technical product-management judgement around environment coordination, system dependencies, regression testing and production readiness. It also reinforced how important clear communication is when multiple teams are trying to move a complex product safely toward release."}, 
+  ]},{
     number: "04",
-    title: "Kuda 3.0: Confidence Layer",
-    label: "FinTech Â· Independent product case study",
-    status: "INDEPENDENT CASE STUDY",
-    summary:
-      "An independent teardown and working prototype focused on clearer transaction states, service recovery, balance confidence and recurring financial activity.",
-    image: "/portfolio/full/kuda-confidence-layer.png",
-    tags: ["Product strategy", "Transaction confidence", "Service recovery", "State modelling", "UX systems", "Product metrics"],
-    href: "https://kuda-confidence-layer.vercel.app",
-    action: "Open live case study",
-  },
-];
+  title: "Kuda 3.0: Confidence Layer",
+  status: "INDEPENDENT CASE STUDY",
+  disclaimer: "Independent case study — not affiliated with, commissioned by, or endorsed by Kuda.",
+  label:"FinTech · Product Teardown · Technical Product Case Study",
+  summary:"An independent product teardown and working prototype focused on helping digital-banking customers understand what is happening with their money, recover from issues faster and make recurring financial activity easier to manage.",
+  images: ["/portfolio/full/kuda-confidence-layer.png"],
 
-const practice = [
-  {
-    number: "01",
-    title: "Discover",
-    statement: "I understand the problem before discussing the feature.",
-    detail: "User behaviour, evidence, market context and the real friction behind the request.",
-  },
-  {
-    number: "02",
-    title: "Define",
-    statement: "I turn evidence into a clear product decision and workable scope.",
-    detail: "Problem framing, journeys, requirements, trade-offs and the smallest useful version worth building.",
-  },
-  {
-    number: "03",
-    title: "Deliver",
-    statement: "I help the team move from requirements to reliable execution.",
-    detail: "Priorities, sprint goals, dependencies, acceptance criteria, QA and cross-functional alignment.",
-  },
-  {
-    number: "04",
-    title: "Improve",
-    statement: "I use feedback and product signals to decide what deserves attention next.",
-    detail: "Adoption, friction, support signals, product metrics and continuous improvement after launch.",
-  },
-];
-
-const insights = [
-  {
-    topic: "User-centred product thinking",
-    title: "Good product management starts with the user",
-    text: "A practical reflection on why useful products begin with real user needs and decisions that reduce friction rather than simply add features.",
-    href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-usercentric-uiux-activity-7484933393252700160-dq-m",
-  },
-  {
-    topic: "Discovery and problem framing",
-    title: "Discovery before delivery",
-    text: "Why strong delivery starts before the backlog, with better questions, useful evidence and enough context to avoid building the wrong thing well.",
-    href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-productdiscovery-userresearch-activity-7483500408246677504-iNQa",
-  },
-  {
-    topic: "Product judgement",
-    title: "A Product Manager is a problem solver",
-    text: "Why the job is less about having every answer and more about creating clarity, making trade-offs and helping teams solve the right problem.",
-    href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanagement-problemsolving-customercentric-activity-7478764586150637568-JoTM",
-  },
-];
-
-export default function PortfolioV2() {
-  return (
-    <main>
-      <header className="site-header">
-        <a className="brand" href="#top">
-          <span>OLUSOLA AYODEJI EZEKIEL</span>
-          <small>Product Manager</small>
-        </a>
-        <nav className="site-nav">
-          <a className="desktop-nav-link" href="#products">Product work</a>
-          <a className="desktop-nav-link" href="#practice">Product practice</a>
-          <a className="desktop-nav-link" href="#experience">Experience</a>
-          <a className="desktop-nav-link" href="#insights">Insights</a>
-          <a className="desktop-nav-link" href="#about">About</a>
-          <a className="nav-cta desktop-nav-link" href="#contact">Let&apos;s talk</a>
-        </nav>
-      </header>
-
-      <section className="hero" id="top">
-        <div className="hero-copy">
-          <p className="hero-label">Product Manager Â· FinTech Â· eCommerce Â· iGaming</p>
-          <h1>I turn complex product problems into <em>clear decisions and dependable delivery.</em></h1>
-          <p className="hero-intro">
-            I am <strong>Olusola Ayodeji Ezekiel</strong>. I work across product strategy, discovery and technical delivery, helping teams move from unclear problems to products people can actually use.
-          </p>
-          <div className="hero-actions">
-            <a className="button primary" href="#products">View product work <span>â†˜</span></a>
-            <a className="button text" href="#contact">Let&apos;s talk <span>â†—</span></a>
-          </div>
-          <div className="hero-cv-actions">
-            <a href="/documents/olusola-ayodeji-product-manager-cv.pdf" download>
-              Download Product Manager CV <span>â†“</span>
-            </a>
-          </div>
-        </div>
-        <aside className="portrait-panel">
-          <button className="portrait-welcome" aria-label="Olusola Ayodeji Ezekiel portrait">
-            <img src="/portfolio/bio-portrait.png" alt="Olusola Ayodeji Ezekiel" />
-            <span className="welcome-message">
-              <span className="wave-hand" aria-hidden="true">ðŸ‘‹ðŸ¾</span>
-              <span><strong>Hi, welcome.</strong><small>I am Olusola Ayodeji Ezekiel.</small></span>
-            </span>
-          </button>
-          <div className="portrait-caption">
-            <strong>4+ years</strong><span>Product management</span>
-            <strong>10+ years</strong><span>Project leadership</span>
-          </div>
-        </aside>
-      </section>
-
-      <section className="statement">
-        <p className="section-kicker">My point of view</p>
-        <blockquote>
-          Good product management creates enough clarity to solve the <em>right problem</em> and enough structure to deliver it well.
-        </blockquote>
-      </section>
-
-      <section className="section" id="products">
-        <div className="section-heading">
-          <div>
-            <p className="section-kicker">Selected product work</p>
-            <h2>Four projects. Four different product strengths.</h2>
-          </div>
-          <p>
-            Real delivery, MVP thinking, technical product work and independent product exploration, without making every project compete for the same attention.
-          </p>
-        </div>
-        <div className="case-list">
-          {selectedWork.map((item) => (
-            <article className="case-card" key={item.title}>
-              <div className="case-top">
-                <span>{item.number}</span>
-                <p>{item.label}</p>
-                <span className="case-status">{item.status}</span>
-              </div>
-              <div className="case-intro">
-                <h3>{item.title}</h3>
-                <p>{item.summary}</p>
-              </div>
-              {item.image ? (
-                <div className="media-rail screenshots" aria-label={`${item.title} preview`}>
-                  <div className="media-frame">
-                    <img src={item.image} alt={`${item.title} preview`} />
-                    <span>Featured work</span>
-                  </div>
-                </div>
-              ) : (
-                <div className="gallery-empty">
-                  Buyer says â€œI want itâ€ â†’ seller creates order â†’ checkout link â†’ buyer details â†’ payment â†’ confirmed order
-                </div>
-              )}
-              <div className="case-footer">
-                <div className="feature-tags">
-                  {item.tags.map((tag) => <span key={tag}>{tag}</span>)}
-                </div>
-                <a className="case-button" href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined}>
-                  {item.action}<span>â†—</span>
-                </a>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-
-      <section className="section" id="dm-teardown">
-        <div className="section-heading">
-          <div>
-            <p className="section-kicker">Featured product teardown</p>
-            <h2>From DM to Confirmed Order</h2>
-          </div>
-          <p>
-            A focused social-commerce case study about the messy moment between purchase intent and an order that is actually ready to fulfil.
-          </p>
-        </div>
-
-        <article className="case-card">
-          <div className="case-top">
-            <span>03</span>
-            <p>Social commerce Â· Product teardown Â· MVP prototype</p>
-            <span className="case-status">WORKING PROTOTYPE</span>
-          </div>
-
-          <div className="case-intro">
-            <h3>The customer already said â€œI want it.â€ Why does completing the order still take so many messages?</h3>
-            <p>
-              The problem is not product discovery. It is what happens next. Small sellers using WhatsApp and Instagram often collect payment proof, buyer details, delivery address and order confirmation manually across multiple messages.
-            </p>
-          </div>
-
-          <div className="timeline">
-            <article>
-              <div><span>01</span><span>Problem</span></div>
-              <div>
-                <h3>Purchase intent is clear, but the order is still unstructured.</h3>
-                <p>Once a buyer agrees to purchase, the seller still has to chase the details needed to actually confirm and fulfil the order.</p>
-              </div>
-            </article>
-
-            <article>
-              <div><span>02</span><span>Product decision</span></div>
-              <div>
-                <h3>Do not replace WhatsApp. Improve the step after â€œI want it.â€</h3>
-                <p>The product stays out of discovery and conversation. It introduces one structured link only when buyer and seller are already aligned on the purchase.</p>
-              </div>
-            </article>
-
-            <article>
-              <div><span>03</span><span>User flow</span></div>
-              <div>
-                <h3>Seller creates order â†’ shares link â†’ buyer completes details â†’ payment â†’ confirmation.</h3>
-                <p>The seller gets one record containing the agreed item, customer information, delivery details, payment state and fulfilment status.</p>
-              </div>
-            </article>
-
-            <article>
-              <div><span>04</span><span>MVP</span></div>
-              <div>
-                <h3>Only the pieces needed to create, send, complete and track an order.</h3>
-                <p>Seller dashboard, create order, shareable checkout link, buyer summary, delivery form, simulated payment, confirmation and order status.</p>
-              </div>
-            </article>
-
-            <article>
-              <div><span>05</span><span>Deliberately excluded</span></div>
-              <div>
-                <h3>No marketplace, inventory suite, CRM, loyalty system or delivery integration.</h3>
-                <p>If a feature does not directly help create, send, complete or track the order, it waits. That keeps the first version focused on the hypothesis.</p>
-              </div>
-            </article>
-
-            <article>
-              <div><span>06</span><span>Success</span></div>
-              <div>
-                <h3>The strongest signal is completed orders through the structured checkout link.</h3>
-                <p>Supporting signals include seller activation, checkout completion, abandonment, payment success, repeat seller usage and time to confirmed order.</p>
-              </div>
-            </article>
-          </div>
-
-          <div className="case-footer">
-            <div className="feature-tags">
-              <span>Problem framing</span>
-              <span>User flow</span>
-              <span>MVP scope</span>
-              <span>Prioritisation</span>
-              <span>Social commerce</span>
-              <span>Product metrics</span>
-            </div>
-            <a
-              className="case-button"
-              href="https://social-order-checkout-assessment.lovable.app"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Open live prototype <span>â†—</span>
-            </a>
-          </div>
-        </article>
-      </section>
-
-      <section className="capabilities section" id="practice">
-        <div className="section-heading compact">
-          <div>
-            <p className="section-kicker">My product practice</p>
-            <h2>How I actually move product work forward.</h2>
-          </div>
-          <p>Less framework theatre. More clarity around what I do at each stage and why it matters.</p>
-        </div>
-        <div className="capability-grid">
-          {practice.map((item) => (
-            <article className="practice-card" key={item.title}>
-              <span>{item.number}</span>
-              <h3>{item.title}</h3>
-              <p>{item.statement}</p>
-              <div className="practice-card-meta">
-                <strong>{item.detail}</strong>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="experience section" id="experience">
-        <div className="section-heading compact">
-          <div>
-            <p className="section-kicker">Experience</p>
-            <h2>Leadership across products, platforms and real-world delivery.</h2>
-          </div>
-        </div>
-        <div className="timeline">
-          <article><div><span>2025 to 2026</span><span>Product leadership</span></div><div><h3>Siiqo Marketplace</h3><p>Led product direction and delivery across marketplace trust, payments, vendor growth, community, sprint execution and continuous optimisation.</p></div></article>
-          <article><div><span>2025</span><span>FinTech product</span></div><div><h3>Canvoy Payment</h3><p>Shaped the MVP, translated payment journeys into delivery-ready work, managed Jira and supported Scrum, QA, security and launch readiness.</p></div></article>
-          <article><div><span>Technical product</span><span>FinTech and iGaming</span></div><div><h3>Wayagram and BetBonanza</h3><p>Worked across production QA, wallet and payment journeys, social commerce, sportsbook operations, release coordination and complex product dependencies.</p></div></article>
-          <article><div><span>10+ years</span><span>Project leadership</span></div><div><h3>Construction and infrastructure</h3><p>Led site and project delivery across residential, commercial and public-sector developments, building the delivery discipline I now bring into product.</p></div></article>
-        </div>
-      </section>
-
-      <section className="insights section" id="insights">
-        <div className="section-heading">
-          <div>
-            <p className="section-kicker">Insights</p>
-            <h2>Product thinking, written in public.</h2>
-          </div>
-          <p>A smaller set of useful reflections is enough on the homepage. The goal is to show how I think, not reproduce my full LinkedIn feed.</p>
-        </div>
-        <div className="insight-grid">
-          {insights.map((post, index) => (
-            <article key={post.href}>
-              <div><span>0{index + 1}</span><small>{post.topic}</small></div>
-              <h3>{post.title}</h3>
-              <p>{post.text}</p>
-              <a href={post.href} target="_blank" rel="noreferrer">Read on LinkedIn â†—</a>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="construction construction-cta section" id="construction">
-        <div className="construction-cta-copy">
-          <p className="section-kicker">Construction background</p>
-          <h2>Ten years of delivery experience still shapes how I manage product work.</h2>
-          <p>The full civil engineering portfolio stays separate, so recruiters can explore it without interrupting the Product Manager journey.</p>
-        </div>
-        <a className="button primary" href="https://ezekiel-ayodeji-construction-portfo.vercel.app/" target="_blank" rel="noreferrer">
-          Explore construction portfolio <span>â†—</span>
-        </a>
-      </section>
-
-      <section className="construction construction-cta section" id="rough-space">
-        <div className="construction-cta-copy">
-          <p className="section-kicker">Rough Space</p>
-          <h2>Not everything starts polished.</h2>
-          <p>Music, product experiments, unfinished thoughts, visual notes and the things I create when I am exploring an idea without a PRD attached to it.</p>
-        </div>
-        <a className="button primary" href="/#rough-space">
-          Enter Rough Space <span>â†—</span>
-        </a>
-      </section>
-
-      <section className="about section" id="about">
-        <div>
-          <p className="section-kicker">About</p>
-          <h2>Product thinking grounded in real-world delivery.</h2>
-        </div>
-        <div className="about-copy">
-          <p className="lead">
-            I am a Product Manager working across FinTech, digital payments, eCommerce and iGaming. I bring structured discovery, clear documentation, technical curiosity and cross-functional coordination to complex product work.
-          </p>
-          <p>
-            Before moving fully into digital products, I spent more than a decade delivering construction and infrastructure projects. That experience still shapes how I manage risk, dependencies, teams, quality and delivery today.
-          </p>
-          <div className="principles"><span>Clarity over noise</span><span>Users before assumptions</span><span>Outcomes over output</span></div>
-        </div>
-      </section>
-
-      <section className="contact section" id="contact">
-        <p className="section-kicker">Lagos, Nigeria Â· Open to opportunities and collaboration</p>
-        <h2>Have a product problem worth solving? Let&apos;s talk.</h2>
-        <p>I am open to Product Manager opportunities, product collaborations and meaningful product work with teams building useful things.</p>
-        <div className="contact-actions">
-          <a className="contact-icon light" href="mailto:Olusola40@gmail.com"><span>Email</span></a>
-          <a className="contact-icon outline" href="https://wa.me/2349015934337" target="_blank" rel="noreferrer"><span>WhatsApp</span></a>
-          <a className="contact-icon outline" href="https://www.linkedin.com/in/ayodeji-ezekiel-olusola/" target="_blank" rel="noreferrer"><span>LinkedIn</span></a>
-        </div>
-      </section>
-
-      <footer>
-        <div className="brand"><span>OLUSOLA AYODEJI EZEKIEL</span><small>Product Manager Â· Technical Product Delivery</small></div>
-        <a href="#top">Back to top â†‘</a>
-      </footer>
-    </main>
-  );
-}
+  tags: [
+    "Product strategy",
+    "FinTech",
+    "Transaction confidence",
+    "Service recovery",
+    "State modelling",
+    "UX systems",
+    "Product metrics",
+    "Interactive prototype",
+  ],
 
   screenshots: false,
 
