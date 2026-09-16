@@ -8,7 +8,7 @@ const selectedWork = [
       "A trust-led marketplace for Nigerian buyers, vendors and service providers, combining verified sellers, protected payments and community-driven discovery.",
     image: "/portfolio/full/siiqo-1.jpg",
     tags: ["Escrow payments", "Vendor storefronts", "Community", "E-bidding", "Disputes", "Rewards"],
-    href: "/#products",
+    href: "/case-studies/siiqo",
     action: "View case study",
   },
   {
@@ -20,7 +20,7 @@ const selectedWork = [
       "A digital payments MVP for recurring utility and everyday payments, designed around clear transaction flows, security and dependable payment feedback.",
     image: "/portfolio/full/canvoy-1.jpg",
     tags: ["Utility payments", "MVP roadmap", "Jira ownership", "Scrum", "Security", "QA readiness"],
-    href: "/#products",
+    href: "/case-studies/canvoy",
     action: "View case study",
   },
   {
