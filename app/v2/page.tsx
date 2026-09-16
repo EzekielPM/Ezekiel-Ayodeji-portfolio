@@ -32,8 +32,8 @@ const selectedWork = [
       "A focused product teardown exploring the messy step after a customer says ‘I want it’ on WhatsApp or Instagram, and how one structured checkout link could move the order from purchase intent to confirmation.",
     image: null,
     tags: ["Problem framing", "User flow", "MVP", "Prioritisation", "Social commerce", "Prototype"],
-    href: "https://social-order-checkout-assessment.lovable.app",
-    action: "Open live prototype",
+    href: "#dm-teardown",
+    action: "View teardown",
   },
   {
     number: "04",
@@ -199,6 +199,103 @@ export default function PortfolioV2() {
             </article>
           ))}
         </div>
+      </section>
+
+
+      <section className="section" id="dm-teardown">
+        <div className="section-heading">
+          <div>
+            <p className="section-kicker">Featured product teardown</p>
+            <h2>From DM to Confirmed Order</h2>
+          </div>
+          <p>
+            A focused social-commerce case study about the messy moment between purchase intent and an order that is actually ready to fulfil.
+          </p>
+        </div>
+
+        <article className="case-card">
+          <div className="case-top">
+            <span>03</span>
+            <p>Social commerce · Product teardown · MVP prototype</p>
+            <span className="case-status">WORKING PROTOTYPE</span>
+          </div>
+
+          <div className="case-intro">
+            <h3>The customer already said “I want it.” Why does completing the order still take so many messages?</h3>
+            <p>
+              The problem is not product discovery. It is what happens next. Small sellers using WhatsApp and Instagram often collect payment proof, buyer details, delivery address and order confirmation manually across multiple messages.
+            </p>
+          </div>
+
+          <div className="timeline">
+            <article>
+              <div><span>01</span><span>Problem</span></div>
+              <div>
+                <h3>Purchase intent is clear, but the order is still unstructured.</h3>
+                <p>Once a buyer agrees to purchase, the seller still has to chase the details needed to actually confirm and fulfil the order.</p>
+              </div>
+            </article>
+
+            <article>
+              <div><span>02</span><span>Product decision</span></div>
+              <div>
+                <h3>Do not replace WhatsApp. Improve the step after “I want it.”</h3>
+                <p>The product stays out of discovery and conversation. It introduces one structured link only when buyer and seller are already aligned on the purchase.</p>
+              </div>
+            </article>
+
+            <article>
+              <div><span>03</span><span>User flow</span></div>
+              <div>
+                <h3>Seller creates order → shares link → buyer completes details → payment → confirmation.</h3>
+                <p>The seller gets one record containing the agreed item, customer information, delivery details, payment state and fulfilment status.</p>
+              </div>
+            </article>
+
+            <article>
+              <div><span>04</span><span>MVP</span></div>
+              <div>
+                <h3>Only the pieces needed to create, send, complete and track an order.</h3>
+                <p>Seller dashboard, create order, shareable checkout link, buyer summary, delivery form, simulated payment, confirmation and order status.</p>
+              </div>
+            </article>
+
+            <article>
+              <div><span>05</span><span>Deliberately excluded</span></div>
+              <div>
+                <h3>No marketplace, inventory suite, CRM, loyalty system or delivery integration.</h3>
+                <p>If a feature does not directly help create, send, complete or track the order, it waits. That keeps the first version focused on the hypothesis.</p>
+              </div>
+            </article>
+
+            <article>
+              <div><span>06</span><span>Success</span></div>
+              <div>
+                <h3>The strongest signal is completed orders through the structured checkout link.</h3>
+                <p>Supporting signals include seller activation, checkout completion, abandonment, payment success, repeat seller usage and time to confirmed order.</p>
+              </div>
+            </article>
+          </div>
+
+          <div className="case-footer">
+            <div className="feature-tags">
+              <span>Problem framing</span>
+              <span>User flow</span>
+              <span>MVP scope</span>
+              <span>Prioritisation</span>
+              <span>Social commerce</span>
+              <span>Product metrics</span>
+            </div>
+            <a
+              className="case-button"
+              href="https://social-order-checkout-assessment.lovable.app"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open live prototype <span>↗</span>
+            </a>
+          </div>
+        </article>
       </section>
 
       <section className="capabilities section" id="practice">
