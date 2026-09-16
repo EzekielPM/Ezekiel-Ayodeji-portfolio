@@ -4,7 +4,7 @@ import "./globals.css";
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
   "https://ezekiel-ayodeji-portfolio.vercel.app";
-const socialImage = `${siteUrl}/ezekiel-social-preview.jpg?v=20260916-1440`;
+const socialImage = `${siteUrl}/ezekiel-social-preview-20260916.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
