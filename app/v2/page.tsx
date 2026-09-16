@@ -30,7 +30,7 @@ const selectedWork = [
     status: "PRODUCT TEARDOWN",
     summary:
       "A focused product teardown exploring the messy step after a customer says ‘I want it’ on WhatsApp or Instagram, and how one structured checkout link could move the order from purchase intent to confirmation.",
-    image: null,
+    image: "/portfolio/full/dm-confirmed-order-preview.webp",
     tags: ["Problem framing", "User flow", "MVP", "Prioritisation", "Social commerce", "Prototype"],
     href: "/v2/dm-confirmed-order",
     action: "View case study",
