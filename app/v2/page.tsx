@@ -275,7 +275,7 @@ export default function PortfolioV2() {
           <h2>Not everything starts polished.</h2>
           <p>Music, product experiments, unfinished thoughts, visual notes and the things I create when I am exploring an idea without a PRD attached to it.</p>
         </div>
-        <a className="button primary" href="/#rough-space">
+        <a className="button primary" href="/rough-space">
           Enter Rough Space <span>↗</span>
         </a>
       </section>
