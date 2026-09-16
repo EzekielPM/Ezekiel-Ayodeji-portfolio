@@ -1,3 +1,5 @@
+import { FloatingContact, V2HeaderControls } from "./PortfolioControls";
+
 const selectedWork = [
   {
     number: "01",
@@ -111,6 +113,7 @@ export default function PortfolioV2() {
           <a className="desktop-nav-link" href="#experience">Experience</a>
           <a className="desktop-nav-link" href="#insights">Insights</a>
           <a className="desktop-nav-link" href="#about">About</a>
+          <V2HeaderControls />
           <a className="nav-cta desktop-nav-link" href="#contact">Let&apos;s talk</a>
         </nav>
       </header>
@@ -306,6 +309,8 @@ export default function PortfolioV2() {
           <a className="contact-icon outline" href="https://www.linkedin.com/in/ayodeji-ezekiel-olusola/" target="_blank" rel="noreferrer"><span>LinkedIn</span></a>
         </div>
       </section>
+
+      <FloatingContact />
 
       <footer>
         <div className="brand"><span>OLUSOLA AYODEJI EZEKIEL</span><small>Product Manager · Technical Product Delivery</small></div>
