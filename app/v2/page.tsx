@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FloatingContact, V2HeaderControls } from "./PortfolioControls";
 
 const selectedWork = [
@@ -27,6 +28,18 @@ const selectedWork = [
   },
   {
     number: "03",
+    title: "Wayagram",
+    label: "FinTech · Technical Product Manager",
+    status: "PRODUCTION DELIVERY",
+    summary:
+      "A connected social, commerce and payments platform where I coordinated production migration, regression testing and delivery across wallet, marketplace and community modules.",
+    image: "/portfolio/full/wayagram-1.jpg",
+    tags: ["Production migration", "Regression QA", "Wallet", "Marketplace", "Release coordination", "Cross-functional delivery"],
+    href: "/case-studies/wayagram",
+    action: "View case study",
+  },
+  {
+    number: "04",
     title: "From DM to Confirmed Order",
     label: "Social commerce · Product teardown · Working prototype",
     status: "PRODUCT TEARDOWN",
@@ -38,7 +51,7 @@ const selectedWork = [
     action: "View case study",
   },
   {
-    number: "04",
+    number: "05",
     title: "Kuda 3.0: Confidence Layer",
     label: "FinTech · Independent product case study",
     status: "INDEPENDENT CASE STUDY",
@@ -137,7 +150,7 @@ export default function PortfolioV2() {
         </div>
         <aside className="portrait-panel">
           <button className="portrait-welcome" aria-label="Olusola Ayodeji Ezekiel portrait">
-            <img src="/portfolio/bio-portrait.webp" alt="Olusola Ayodeji Ezekiel" />
+            <Image src="/portfolio/bio-portrait.webp" alt="Olusola Ayodeji Ezekiel" width={1254} height={1254} sizes="(max-width: 850px) 100vw, 450px" priority />
             <span className="welcome-message">
               <span className="wave-hand" aria-hidden="true">👋🏾</span>
               <span><strong>Hi, welcome.</strong><small>I am Olusola Ayodeji Ezekiel.</small></span>
@@ -161,7 +174,7 @@ export default function PortfolioV2() {
         <div className="section-heading">
           <div>
             <p className="section-kicker">Selected product work</p>
-            <h2>Four projects. Four different product strengths.</h2>
+            <h2>Five projects. Five different product strengths.</h2>
           </div>
           <p>
             Real delivery, MVP thinking, technical product work and independent product exploration, without making every project compete for the same attention.
@@ -182,7 +195,7 @@ export default function PortfolioV2() {
               {item.image ? (
                 <div className="media-rail screenshots" aria-label={`${item.title} preview`}>
                   <div className="media-frame">
-                    <img src={item.image} alt={`${item.title} preview`} />
+                    <Image src={item.image} alt={`${item.title} preview`} fill sizes="(max-width: 600px) 88vw, 500px" />
                     <span>Featured work</span>
                   </div>
                 </div>
@@ -236,7 +249,8 @@ export default function PortfolioV2() {
         <div className="timeline">
           <article><div><span>2025 to 2026</span><span>Product leadership</span></div><div><h3>Siiqo Marketplace</h3><p>Led product direction and delivery across marketplace trust, payments, vendor growth, community, sprint execution and continuous optimisation.</p></div></article>
           <article><div><span>2025</span><span>FinTech product</span></div><div><h3>Canvoy Payment</h3><p>Shaped the MVP, translated payment journeys into delivery-ready work, managed Jira and supported Scrum, QA, security and launch readiness.</p></div></article>
-          <article><div><span>Technical product</span><span>FinTech and iGaming</span></div><div><h3>Wayagram and BetBonanza</h3><p>Worked across production QA, wallet and payment journeys, social commerce, sportsbook operations, release coordination and complex product dependencies.</p></div></article>
+          <article><div><span>2026</span><span>Technical product</span></div><div><h3>Wayagram</h3><p>Coordinated production migration, regression testing and delivery across wallet, payment, marketplace, social and community modules with complex product dependencies.</p></div></article>
+          <article><div><span>2025</span><span>iGaming product</span></div><div><h3>BetBonanza</h3><p>Supported product execution across sportsbook operations, user journeys, prioritisation and cross-functional delivery in a fast-moving iGaming environment.</p></div></article>
           <article><div><span>10+ years</span><span>Project leadership</span></div><div><h3>Construction and infrastructure</h3><p>Led site and project delivery across residential, commercial and public-sector developments, building the delivery discipline I now bring into product.</p></div></article>
         </div>
       </section>
