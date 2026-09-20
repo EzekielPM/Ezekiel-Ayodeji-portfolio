@@ -44,7 +44,7 @@ const selectedWork = [
     status: "INDEPENDENT CASE STUDY",
     summary:
       "An independent teardown and working prototype focused on clearer transaction states, service recovery, balance confidence and recurring financial activity.",
-    image: "/portfolio/full/kuda-confidence-layer.png",
+    image: "/portfolio/full/kuda-confidence-layer.webp",
     tags: ["Product strategy", "Transaction confidence", "Service recovery", "State modelling", "UX systems", "Product metrics"],
     href: "https://kuda-confidence-layer.vercel.app",
     action: "Open live case study",
@@ -137,7 +137,7 @@ export default function PortfolioV2() {
         </div>
         <aside className="portrait-panel">
           <button className="portrait-welcome" aria-label="Olusola Ayodeji Ezekiel portrait">
-            <img src="/portfolio/bio-portrait.png" alt="Olusola Ayodeji Ezekiel" />
+            <img src="/portfolio/bio-portrait.webp" alt="Olusola Ayodeji Ezekiel" />
             <span className="welcome-message">
               <span className="wave-hand" aria-hidden="true">👋🏾</span>
               <span><strong>Hi, welcome.</strong><small>I am Olusola Ayodeji Ezekiel.</small></span>

@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 
 const notes = [
   { src: "/rough-space/insurpe-exploration.jpg", alt: "Insurpe product flow exploration", title: "Insurpe exploration" },
-  { src: "/rough-space/pm-note-problem-solving.png", alt: "Product management as problem solving", title: "Problem solver note" },
-  { src: "/rough-space/pm-note-validation.png", alt: "Feature validation product note", title: "Feature validation note" },
-  { src: "/rough-space/signbridge-interface-1.png", alt: "SignBridge accessibility product interface", title: "SignBridge concept" },
-  { src: "/rough-space/signbridge-interface-2.png", alt: "SignBridge sign language translation interface", title: "SignBridge interface study" },
-  { src: "/rough-space/pm-note-payment-experience.png", alt: "Payment experience product note", title: "Payment experience thinking" },
+  { src: "/rough-space/pm-note-problem-solving.webp", alt: "Product management as problem solving", title: "Problem solver note" },
+  { src: "/rough-space/pm-note-validation.webp", alt: "Feature validation product note", title: "Feature validation note" },
+  { src: "/rough-space/signbridge-interface-1.webp", alt: "SignBridge accessibility product interface", title: "SignBridge concept" },
+  { src: "/rough-space/signbridge-interface-2.webp", alt: "SignBridge sign language translation interface", title: "SignBridge interface study" },
+  { src: "/rough-space/pm-note-payment-experience.webp", alt: "Payment experience product note", title: "Payment experience thinking" },
   { src: "/rough-space/canvoy-design-workspace.jpg", alt: "Canvoy product design workspace", title: "Canvoy design workspace" },
 ];
 
