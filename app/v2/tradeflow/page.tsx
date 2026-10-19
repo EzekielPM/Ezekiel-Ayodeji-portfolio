@@ -2,13 +2,13 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "TradeFlow Commerce | Product Manager Case Study",
+  title: "TradeFlow Commerce | Founder & Product Manager Case Study",
   description:
-    "A product case study by Olusola Ayodeji Ezekiel on buyer and vendor journeys, location-based delivery pricing, order notifications and payment validation in TradeFlow Commerce.",
+    "Founder-led product case study for TradeFlow Commerce, covering buyer and vendor journeys, location-based delivery, order notifications and payment validation.",
   openGraph: {
-    title: "TradeFlow Commerce | Product Manager Case Study",
+    title: "TradeFlow Commerce | Founder & Product Manager Case Study",
     description:
-      "Connecting product discovery, ordering, payment validation, vendor action and location-based delivery in one commerce journey.",
+      "Building a more connected way for buyers to discover products and for vendors to manage orders, delivery and fulfilment.",
     type: "article",
   },
 };
@@ -30,22 +30,23 @@ export default function TradeFlowCaseStudy() {
       <section className="section" id="top">
         <div className="section-heading">
           <div>
-            <p className="section-kicker">eCommerce · Product management · Product delivery</p>
+            <p className="section-kicker">Founder-led product · Multi-vendor commerce · Nigeria</p>
             <h2>TradeFlow Commerce</h2>
           </div>
           <p>
-            A connected commerce experience for buyers and vendors, shaped around product discovery, order handling, payment validation and location-based delivery.
+            One connected marketplace experience for product discovery, vendor operations, checkout and location-based delivery — built to make the next step clearer for buyers and sellers.
           </p>
         </div>
 
         <article className="journal">
           <header className="journal-header">
-            <p>Commerce platform · Buyer and vendor experience · Iterative delivery</p>
+            <p>FOUNDER &amp; PRODUCT MANAGER · PRODUCT STRATEGY · END-TO-END DELIVERY</p>
             <span>06</span>
             <h2>TradeFlow Commerce</h2>
             <p className="journal-deck">
-              TradeFlow connects vendor storefronts and buyers in one commerce journey. My focus has been to make the two user roles clear, keep product discovery straightforward, and make operational details such as delivery pricing and vendor order notifications part of the product experience.
+              I’m building TradeFlow to make buying and selling feel connected. Buyers can discover products across vendors, while vendors need a clear way to manage their storefronts, incoming orders and delivery settings. The product work brings those journeys together instead of treating them as separate problems.
             </p>
+            <p className="case-disclaimer"><strong>My role:</strong> Founder &amp; Product Manager · Product vision, buyer and vendor journeys, delivery logic, payment integration and fulfilment.</p>
             <p className="case-disclaimer">
               Current status: the product build is deployed for review. Paystack remains in Test Mode, so this case study does not claim live payment processing or verified business outcomes.
             </p>
