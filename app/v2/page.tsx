@@ -62,6 +62,18 @@ const selectedWork = [
     href: "https://kuda-confidence-layer.vercel.app",
     action: "Open live case study",
   },
+  {
+    number: "06",
+    title: "TradeFlow Commerce",
+    label: "eCommerce · Product management · Vendor and buyer experience",
+    status: "DEPLOYED BUILD",
+    summary:
+      "A commerce platform connecting vendor storefronts and buyers through product discovery, order handling, vendor notifications and location-based delivery pricing. Paystack remains in Test Mode while payment flows are validated.",
+    image: "/portfolio/full/tradeflow-journey.svg",
+    tags: ["Buyer catalogue", "Vendor storefronts", "Delivery pricing", "Order notifications", "Paystack test mode", "Fulfilment"],
+    href: "/v2/tradeflow",
+    action: "View case study",
+  },
 ];
 
 const practice = [
@@ -174,7 +186,7 @@ export default function PortfolioV2() {
         <div className="section-heading">
           <div>
             <p className="section-kicker">Selected product work</p>
-            <h2>Five projects. Five different product strengths.</h2>
+            <h2>Six projects. Six different product strengths.</h2>
           </div>
           <p>
             Real delivery, MVP thinking, technical product work and independent product exploration, without making every project compete for the same attention.
