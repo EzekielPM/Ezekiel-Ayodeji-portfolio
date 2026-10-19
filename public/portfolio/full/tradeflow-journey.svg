@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">TradeFlow Commerce product journey</title>
+  <desc id="desc">A six-step commerce journey connecting vendors, product discovery, orders, payments, fulfilment and delivery.</desc>
+  <rect width="1200" height="520" rx="24" fill="#f7f5ef"/>
+  <text x="52" y="58" fill="#0d6658" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="4">TRADEFLOW COMMERCE</text>
+  <text x="52" y="104" fill="#102038" font-family="Georgia, serif" font-size="34">One connected journey, from discovery to delivery</text>
+  <text x="52" y="137" fill="#66716f" font-family="Arial, sans-serif" font-size="15">Clear roles, transparent delivery pricing and dependable order handoffs.</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(35 180)">
+      <rect width="165" height="196" rx="16" fill="#ffffff" stroke="#dcded8" stroke-width="1.5"/>
+      <circle cx="25" cy="27" r="14" fill="#0d6658"/><text x="25" y="32" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">01</text>
+      <text x="18" y="73" font-size="19" font-weight="700" fill="#102038">Vendor</text>
+      <text x="18" y="105" font-size="14" fill="#66716f">Storefront and</text><text x="18" y="125" font-size="14" fill="#66716f">product setup</text>
+      <path d="M18 154 H147" stroke="#dcded8" stroke-width="1.5"/><text x="18" y="176" font-size="11" font-weight="700" fill="#0d6658">SELLER SIDE</text>
+    </g>
+    <g transform="translate(230 180)">
+      <rect width="165" height="196" rx="16" fill="#ffffff" stroke="#dcded8" stroke-width="1.5"/>
+      <circle cx="25" cy="27" r="14" fill="#0d6658"/><text x="25" y="32" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">02</text>
+      <text x="18" y="73" font-size="19" font-weight="700" fill="#102038">Discover</text>
+      <text x="18" y="105" font-size="14" fill="#66716f">Browse vendors,</text><text x="18" y="125" font-size="14" fill="#66716f">search and filter</text>
+      <path d="M18 154 H147" stroke="#dcded8" stroke-width="1.5"/><text x="18" y="176" font-size="11" font-weight="700" fill="#0d6658">BUYER SIDE</text>
+    </g>
+    <g transform="translate(425 180)">
+      <rect width="165" height="196" rx="16" fill="#ffffff" stroke="#dcded8" stroke-width="1.5"/>
+      <circle cx="25" cy="27" r="14" fill="#0d6658"/><text x="25" y="32" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">03</text>
+      <text x="18" y="73" font-size="19" font-weight="700" fill="#102038">Order</text>
+      <text x="18" y="105" font-size="14" fill="#66716f">Capture purchase</text><text x="18" y="125" font-size="14" fill="#66716f">and delivery details</text>
+      <path d="M18 154 H147" stroke="#dcded8" stroke-width="1.5"/><text x="18" y="176" font-size="11" font-weight="700" fill="#0d6658">ORDER RECORD</text>
+    </g>
+    <g transform="translate(620 180)">
+      <rect width="165" height="196" rx="16" fill="#ffffff" stroke="#dcded8" stroke-width="1.5"/>
+      <circle cx="25" cy="27" r="14" fill="#c7913e"/><text x="25" y="32" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">04</text>
+      <text x="18" y="73" font-size="19" font-weight="700" fill="#102038">Payment</text>
+      <text x="18" y="105" font-size="14" fill="#66716f">Paystack flow</text><text x="18" y="125" font-size="14" fill="#66716f">under validation</text>
+      <path d="M18 154 H147" stroke="#dcded8" stroke-width="1.5"/><text x="18" y="176" font-size="11" font-weight="700" fill="#8b6424">TEST MODE</text>
+    </g>
+    <g transform="translate(815 180)">
+      <rect width="165" height="196" rx="16" fill="#ffffff" stroke="#dcded8" stroke-width="1.5"/>
+      <circle cx="25" cy="27" r="14" fill="#0d6658"/><text x="25" y="32" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">05</text>
+      <text x="18" y="73" font-size="19" font-weight="700" fill="#102038">Fulfilment</text>
+      <text x="18" y="105" font-size="14" fill="#66716f">Vendor receives</text><text x="18" y="125" font-size="14" fill="#66716f">an order alert</text>
+      <path d="M18 154 H147" stroke="#dcded8" stroke-width="1.5"/><text x="18" y="176" font-size="11" font-weight="700" fill="#0d6658">VENDOR ACTION</text>
+    </g>
+    <g transform="translate(1010 180)">
+      <rect width="155" height="196" rx="16" fill="#ffffff" stroke="#dcded8" stroke-width="1.5"/>
+      <circle cx="25" cy="27" r="14" fill="#0d6658"/><text x="25" y="32" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">06</text>
+      <text x="18" y="73" font-size="19" font-weight="700" fill="#102038">Delivery</text>
+      <text x="18" y="105" font-size="14" fill="#66716f">Vendor-set zones</text><text x="18" y="125" font-size="14" fill="#66716f">and delivery fees</text>
+      <path d="M18 154 H137" stroke="#dcded8" stroke-width="1.5"/><text x="18" y="176" font-size="11" font-weight="700" fill="#0d6658">LOCATION-BASED</text>
+    </g>
+    <g fill="none" stroke="#c7913e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M204 278 H221 M215 272 L221 278 L215 284"/>
+      <path d="M399 278 H416 M410 272 L416 278 L410 284"/>
+      <path d="M594 278 H611 M605 272 L611 278 L605 284"/>
+      <path d="M789 278 H806 M800 272 L806 278 L800 284"/>
+      <path d="M984 278 H1001 M995 272 L1001 278 L995 284"/>
+    </g>
+  </g>
+  <rect x="35" y="408" width="1130" height="62" rx="14" fill="#e2ebe6"/>
+  <text x="58" y="434" fill="#0d6658" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">PRODUCT PRINCIPLE</text>
+  <text x="58" y="455" fill="#102038" font-family="Georgia, serif" font-size="19">Make the next step clear for both the buyer and the vendor.</text>
+  <text x="52" y="497" fill="#66716f" font-family="Arial, sans-serif" font-size="11">Illustrative product journey · Payment processing remains in Test Mode.</text>
+</svg>
