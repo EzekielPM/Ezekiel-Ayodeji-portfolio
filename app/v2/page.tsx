@@ -65,12 +65,12 @@ const selectedWork = [
   {
     number: "06",
     title: "TradeFlow Commerce",
-    label: "eCommerce · Product management · Vendor and buyer experience",
+    label: "Founder & Product Manager · Multi-vendor commerce",
     status: "DEPLOYED BUILD",
     summary:
-      "A commerce platform connecting vendor storefronts and buyers through product discovery, order handling, vendor notifications and location-based delivery pricing. Paystack remains in Test Mode while payment flows are validated.",
+      "I’m building TradeFlow to connect product discovery, vendor storefronts, order handling and location-based delivery. Paystack remains in Test Mode while payment flows are validated.",
     image: "/portfolio/full/tradeflow-journey.svg",
-    tags: ["Buyer catalogue", "Vendor storefronts", "Delivery pricing", "Order notifications", "Paystack test mode", "Fulfilment"],
+    tags: ["Buyer catalogue", "Vendor storefronts", "Delivery zones", "Order alerts", "Fulfilment", "Paystack test mode"],
     href: "/v2/tradeflow",
     action: "View case study",
   },
