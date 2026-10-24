@@ -347,3 +347,6 @@ html[data-theme="navy"] .statement blockquote em{color:#08252a}
   .all-project-card,.case-card,.practice-card,.insight-grid article,.case-card .media-frame img{transition:none}
   .all-project-card:hover,.all-project-card:focus-within,.case-card:hover,.case-card .media-frame:hover img{transform:none}
 }
+
+.contact-actions>.copy-email-button{padding:13px 16px;cursor:pointer;font:inherit}
+.contact-actions>.copy-email-button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
