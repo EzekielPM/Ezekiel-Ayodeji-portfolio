@@ -193,3 +193,47 @@ html[data-theme="navy"] .theme-toggle.is-navy{background:#0e171f;border-color:#1
 html[data-theme="navy"] .theme-toggle.is-navy .theme-toggle-thumb{background:#64e7e2}
 html[data-theme="navy"] .theme-toggle.is-navy .theme-toggle-moon{color:#08252a}
 @media(max-width:700px){.all-projects-grid{grid-template-columns:1fr}.section-heading-actions{max-width:none}.all-projects{padding-top:8px}}
+
+
+/* Dark-theme button contrast: pair bright teal surfaces with dark ink text. */
+html[data-theme="navy"] .button.primary,
+html[data-theme="navy"] .nav-cta,
+html[data-theme="navy"] .case-button,
+html[data-theme="navy"] .practice-card-actions button,
+html[data-theme="navy"] .practice-reader-actions a:first-child,
+html[data-theme="navy"] .handbook-card,
+html[data-theme="navy"] .statement,
+html[data-theme="navy"] .contact{
+  color:#08252a;
+  background:#64e7e2;
+  border-color:#64e7e2;
+}
+html[data-theme="navy"] .button.primary:hover,
+html[data-theme="navy"] .nav-cta:hover,
+html[data-theme="navy"] .case-button:hover,
+html[data-theme="navy"] .practice-card-actions button:hover,
+html[data-theme="navy"] .practice-reader-actions a:first-child:hover{
+  color:#080d12;
+  background:#b8dad4;
+  border-color:#b8dad4;
+}
+html[data-theme="navy"] .button.text,
+html[data-theme="navy"] .hero-cv-actions a,
+html[data-theme="navy"] .practice-card-actions a,
+html[data-theme="navy"] .practice-reader-actions a:last-child,
+html[data-theme="navy"] .resource-panel a,
+html[data-theme="navy"] .resume-cards a{
+  color:#64e7e2;
+  background:#0e171f;
+  border-color:#31505a;
+}
+html[data-theme="navy"] .hero-cv-actions a:hover,
+html[data-theme="navy"] .practice-card-actions a:hover,
+html[data-theme="navy"] .resource-panel a:hover,
+html[data-theme="navy"] .resume-cards a:hover{
+  color:#08252a;
+  background:#b8dad4;
+  border-color:#b8dad4;
+}
+html[data-theme="navy"] .statement .section-kicker{color:#08252a}
+html[data-theme="navy"] .statement blockquote em{color:#08252a}
