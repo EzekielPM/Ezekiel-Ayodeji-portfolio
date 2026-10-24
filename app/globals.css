@@ -250,12 +250,14 @@ html[data-theme="navy"] .statement blockquote em{color:#08252a}
 /* Premium portfolio motion: scroll reveals */
 .motion-ready .motion-reveal{
   opacity:0;
-  transform:translate3d(0,16px,0);
-  transition:opacity .62s cubic-bezier(.2,.7,.2,1),transform .62s cubic-bezier(.2,.7,.2,1);
+  transform:translate3d(0,26px,0);
+  transition:opacity .78s cubic-bezier(.2,.7,.2,1),transform .78s cubic-bezier(.2,.7,.2,1);
+  will-change:opacity,transform;
 }
 .motion-ready .motion-reveal.is-visible{
   opacity:1;
   transform:translate3d(0,0,0);
+  will-change:auto;
 }
 .motion-ready #products .case-card:nth-child(2),
 .motion-ready #all-projects .all-project-card:nth-child(2),
