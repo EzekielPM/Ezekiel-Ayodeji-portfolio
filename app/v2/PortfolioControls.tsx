@@ -106,6 +106,27 @@ export function V2HeaderControls() {
   );
 }
 
+
+export function CopyEmailButton() {
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText("Olusola40@gmail.com");
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1800);
+    } catch {
+      window.location.href = "mailto:Olusola40@gmail.com";
+    }
+  };
+
+  return (
+    <button className="contact-icon outline copy-email-button" type="button" onClick={copyEmail}>
+      <span aria-live="polite">{copied ? "Email copied ✓" : "Copy email"}</span>
+    </button>
+  );
+}
+
 export function FloatingContact() {
   const [contactOpen, setContactOpen] = useState(false);
   const [contactPosition, setContactPosition] = useState<{ x: number; y: number } | null>(null);
