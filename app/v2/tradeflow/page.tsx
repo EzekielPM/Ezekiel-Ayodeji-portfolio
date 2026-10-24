@@ -67,9 +67,9 @@ export default function TradeFlowCaseStudy() {
           <section className="resource-panel">
             <p>Explore the product</p>
             <div>
-              <a href="https://tradeflow-commerce.vercel.app" target="_blank" rel="noreferrer">
+              <a href="https://tradeflow-commerce.vercel.app/shop" target="_blank" rel="noreferrer">
                 <span>
-                  <strong>TradeFlow Commerce</strong>
+                  <strong>Open the buyer shop</strong>
                   <small>Open the deployed build to explore the buyer and vendor experience. Payment flows are still in Test Mode.</small>
                 </span>
                 <b>Open product ↗</b>
@@ -193,8 +193,8 @@ export default function TradeFlowCaseStudy() {
             <p>Olusola Ayodeji Ezekiel · TradeFlow Commerce</p>
             <div className="hero-actions">
               <a className="button text" href="/v2">Go Back Home <span>↖</span></a>
-              <a className="case-button" href="https://tradeflow-commerce.vercel.app" target="_blank" rel="noreferrer">
-                Open TradeFlow <span>↗</span>
+              <a className="case-button" href="https://tradeflow-commerce.vercel.app/shop" target="_blank" rel="noreferrer">
+                Open buyer shop <span>↗</span>
               </a>
             </div>
           </footer>
