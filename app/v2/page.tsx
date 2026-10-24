@@ -1,4 +1,5 @@
 import Image from "next/image";
+import MotionEnhancements from "./MotionEnhancements";
 import { FloatingContact, V2HeaderControls } from "./PortfolioControls";
 
 const selectedWork = [
@@ -127,6 +128,7 @@ const insights = [
 export default function PortfolioV2() {
   return (
     <main>
+      <MotionEnhancements />
       <header className="site-header">
         <a className="brand" href="#top">
           <span>OLUSOLA AYODEJI EZEKIEL</span>
