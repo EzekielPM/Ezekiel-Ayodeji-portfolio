@@ -245,3 +245,39 @@ html[data-theme="navy"] .resume-cards a:hover{
 }
 html[data-theme="navy"] .statement .section-kicker{color:#08252a}
 html[data-theme="navy"] .statement blockquote em{color:#08252a}
+
+
+/* Premium portfolio motion: scroll reveals */
+.motion-ready .motion-reveal{
+  opacity:0;
+  transform:translate3d(0,16px,0);
+  transition:opacity .62s cubic-bezier(.2,.7,.2,1),transform .62s cubic-bezier(.2,.7,.2,1);
+}
+.motion-ready .motion-reveal.is-visible{
+  opacity:1;
+  transform:translate3d(0,0,0);
+}
+.motion-ready #products .case-card:nth-child(2),
+.motion-ready #all-projects .all-project-card:nth-child(2),
+.motion-ready #practice .practice-card:nth-child(2),
+.motion-ready #experience .timeline>article:nth-child(even),
+.motion-ready #insights .insight-grid>article:nth-child(even){
+  transition-delay:90ms;
+}
+.motion-ready #all-projects .all-project-card:nth-child(3),
+.motion-ready #practice .practice-card:nth-child(3),
+.motion-ready #insights .insight-grid>article:nth-child(3){
+  transition-delay:150ms;
+}
+.motion-ready #all-projects .all-project-card:nth-child(4),
+.motion-ready #practice .practice-card:nth-child(4){
+  transition-delay:210ms;
+}
+@media(prefers-reduced-motion:reduce){
+  .motion-ready .motion-reveal,
+  .motion-ready .motion-reveal.is-visible{
+    opacity:1;
+    transform:none;
+    transition:none;
+  }
+}
