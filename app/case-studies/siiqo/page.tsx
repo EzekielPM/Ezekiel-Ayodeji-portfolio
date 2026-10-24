@@ -1,3 +1,17 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Siiqo Marketplace Case Study | Olusola Ayodeji Ezekiel",
+  description:
+    "A marketplace product management case study covering buyer trust, protected payments, seller tools, community and product prioritisation.",
+  openGraph: {
+    title: "Siiqo Marketplace Case Study | Olusola Ayodeji Ezekiel",
+    description:
+      "How product decisions around marketplace trust, protected transactions and seller support shaped the Siiqo experience.",
+    type: "article",
+  },
+};
+
 export default function SiiqoCaseStudy() {
   return (
     <main>
