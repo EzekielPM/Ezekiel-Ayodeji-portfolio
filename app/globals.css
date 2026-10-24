@@ -62,7 +62,7 @@ html[data-theme="navy"] .practice-card,html[data-theme="navy"] .insight-grid art
 html[data-theme="navy"] .music-card{background:#0b1e32;border-color:#29425c}
 html[data-theme="navy"] .handbook-card{background:#0b6258;border-color:#0b6258}
 html[data-theme="navy"] .statement,html[data-theme="navy"] .contact{background:#0b6258}
-html[data-theme="navy"] .contact{background:#102b30;color:#f3f6f5}
+html[data-theme="navy"] .contact{background:#155e59;color:#f3f6f5}
 html[data-theme="navy"] .contact .section-kicker{color:#c9b783}
 html[data-theme="navy"] .contact h2{color:#f7faf9}
 html[data-theme="navy"] .contact>p:not(.section-kicker){color:#d3dfdf}
