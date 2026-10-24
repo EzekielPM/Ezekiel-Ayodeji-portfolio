@@ -171,6 +171,16 @@ export default function TradeFlowCaseStudy() {
             <section>
               <span>10</span>
               <div>
+                <h3>Trade-offs and prioritisation</h3>
+                <p>
+                  I treated role clarity, accurate delivery pricing and reliable order handoff as foundations rather than optional polish. That means not inventing a delivery fee when an area is unsupported, keeping vendor tools separate from buyer shopping, and preserving order notifications for vendors who are not online when an order arrives. These decisions favour predictable fulfilment over a superficially frictionless flow.
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <span>11</span>
+              <div>
                 <h3>What this work reinforced</h3>
                 <p>
                   Commerce trust is built in the handoffs. A clean product page cannot compensate for unclear delivery costs, a missed vendor order or an ambiguous payment state. The product needs to make the next step clear for both sides, then give the team evidence to improve the journey after release.
