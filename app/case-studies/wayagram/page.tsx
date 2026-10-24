@@ -12,12 +12,12 @@ export default function WayagramCaseStudy() {
   return (
     <main>
       <header className="site-header">
-        <Link className="brand" href="/">
+        <Link className="brand" href="/v2">
           <span>OLUSOLA AYODEJI EZEKIEL</span>
           <small>Product Manager</small>
         </Link>
         <nav className="site-nav">
-          <Link className="nav-cta desktop-nav-link" href="/#products">Return to portfolio</Link>
+          <Link className="nav-cta desktop-nav-link" href="/v2#products">Return to portfolio</Link>
         </nav>
       </header>
 
@@ -93,7 +93,7 @@ export default function WayagramCaseStudy() {
           <footer className="journal-footer">
             <p>Olusola Ayodeji Ezekiel · Technical product case study</p>
             <div className="hero-actions">
-              <Link className="button text" href="/#products">Return to portfolio <span>↖</span></Link>
+              <Link className="button text" href="/v2#products">Return to portfolio <span>↖</span></Link>
               <a className="case-button" href="/documents/wayagram-product-architecture.pdf" target="_blank" rel="noreferrer">Open architecture PDF <span>↗</span></a>
             </div>
           </footer>
