@@ -186,14 +186,14 @@ export default function PortfolioV2() {
         <div className="section-heading">
           <div>
             <p className="section-kicker">Selected product work</p>
-            <h2>Six projects. Six different product strengths.</h2>
+            <h2>Two projects. Different product challenges.</h2>
           </div>
           <p>
-            Real delivery, MVP thinking, technical product work and independent product exploration, without making every project compete for the same attention.
+            A focused look at two substantial commerce products: marketplace trust and the practical work of building a commerce experience.
           </p>
         </div>
         <div className="case-list">
-          {selectedWork.map((item) => (
+          {[selectedWork[0], selectedWork[5]].map((item) => (
             <article className="case-card" key={item.title}>
               <div className="case-top">
                 <span>{item.number}</span>
