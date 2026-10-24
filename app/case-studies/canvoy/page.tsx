@@ -1,3 +1,17 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Canvoy Payment Case Study | Olusola Ayodeji Ezekiel",
+  description:
+    "A FinTech product management case study covering MVP definition, payment journeys, Jira delivery, security and QA readiness.",
+  openGraph: {
+    title: "Canvoy Payment Case Study | Olusola Ayodeji Ezekiel",
+    description:
+      "Product decisions and delivery practices behind the Canvoy Payment MVP.",
+    type: "article",
+  },
+};
+
 export default function CanvoyCaseStudy() {
   return (
     <main>
