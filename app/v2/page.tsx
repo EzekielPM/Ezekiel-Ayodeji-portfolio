@@ -188,9 +188,10 @@ export default function PortfolioV2() {
             <p className="section-kicker">Selected product work</p>
             <h2>Two projects. Different product challenges.</h2>
           </div>
-          <p>
-            A focused look at two substantial commerce products: marketplace trust and the practical work of building a commerce experience.
-          </p>
+          <div className="section-heading-actions">
+            <p>A focused look at two substantial commerce products: marketplace trust and the practical work of building a commerce experience.</p>
+            <a className="button text" href="#all-projects">View all projects <span>↗</span></a>
+          </div>
         </div>
         <div className="case-list">
           {[selectedWork[0], selectedWork[5]].map((item) => (
@@ -224,6 +225,26 @@ export default function PortfolioV2() {
                   {item.action}<span>↗</span>
                 </a>
               </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="all-projects section" id="all-projects">
+        <div className="section-heading">
+          <div>
+            <p className="section-kicker">Explore more</p>
+            <h2>All product projects.</h2>
+          </div>
+          <p>The featured work is only the starting point. Explore the other product case studies and independent explorations.</p>
+        </div>
+        <div className="all-projects-grid">
+          {selectedWork.filter((item) => item.title !== "Siiqo" && item.title !== "TradeFlow Commerce").map((item) => (
+            <article className="all-project-card" key={item.title}>
+              <div className="all-project-meta"><span>{item.number}</span><span>{item.status}</span></div>
+              <h3>{item.title}</h3>
+              <p>{item.summary}</p>
+              <a href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined}>{item.action} <span>↗</span></a>
             </article>
           ))}
         </div>
