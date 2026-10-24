@@ -283,3 +283,41 @@ html[data-theme="navy"] .statement blockquote em{color:#08252a}
     transition:none;
   }
 }
+
+
+/* Hero intro writing-on reveal — presentation only */
+@keyframes hero-write-on {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+@keyframes hero-intro-rise {
+  from { opacity: 0; transform: translate3d(0, 12px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+.hero-copy .hero-label {
+  animation: hero-intro-rise .55s ease-out both;
+}
+.hero-copy h1 {
+  animation: hero-write-on 1.25s steps(32, end) .35s both;
+}
+.hero-copy .hero-intro {
+  opacity: 0;
+  animation: hero-intro-rise .7s ease-out 1.45s both;
+}
+.hero-copy .hero-actions,
+.hero-copy .hero-cv-actions {
+  opacity: 0;
+  animation: hero-intro-rise .65s ease-out 1.8s both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy .hero-label,
+  .hero-copy h1,
+  .hero-copy .hero-intro,
+  .hero-copy .hero-actions,
+  .hero-copy .hero-cv-actions {
+    animation: none !important;
+    opacity: 1;
+    clip-path: none;
+    transform: none;
+  }
+}
