@@ -23,7 +23,7 @@ export default function TradeFlowCaseStudy() {
         </a>
         <nav className="site-nav">
           <a className="nav-cta desktop-nav-link" href="/v2">Go Back Home</a>
-          <a className="desktop-nav-link" href="https://tradeflow-commerce.vercel.app" target="_blank" rel="noreferrer">Open TradeFlow ↗</a>
+          <a className="desktop-nav-link" href="https://tradeflow-commerce.vercel.app/shop" target="_blank" rel="noreferrer">Open buyer shop ↗</a>
         </nav>
       </header>
 
@@ -163,7 +163,7 @@ export default function TradeFlowCaseStudy() {
               <div>
                 <h3>Current status and next validation</h3>
                 <p>
-                  The TradeFlow build is deployed for review, and the visible buyer experience has been updated to use the TradeFlow brand consistently. Paystack remains in Test Mode. The next release checks are to complete end-to-end payment testing, verify order and notification states across buyer and vendor accounts, test delivery-zone edge cases, and confirm the customer-facing updates before promoting payment processing to live use.
+                  The build is deployed for review. Some live screens still display OrderFlow branding, so brand consistency remains a release check. Paystack remains in Test Mode. The next release checks are to complete end-to-end payment testing, verify order and notification states across buyer and vendor accounts, test delivery-zone edge cases, and confirm the customer-facing updates before promoting payment processing to live use.
                 </p>
               </div>
             </section>
