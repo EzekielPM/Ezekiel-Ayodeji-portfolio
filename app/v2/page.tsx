@@ -259,10 +259,10 @@ export default function PortfolioV2() {
           </div>
         </div>
         <div className="timeline">
-          <article><div><span>2025 to 2026</span><span>Product leadership</span></div><div><h3>Siiqo Marketplace</h3><p>Led product direction and delivery across marketplace trust, payments, vendor growth, community, sprint execution and continuous optimisation.</p></div></article>
+          <article><div><span>2024</span><span>iGaming product</span></div><div><h3>BetBonanza</h3><p>Supported product execution across sportsbook operations, user journeys, prioritisation and cross-functional delivery in a fast-moving iGaming environment.</p></div></article>
           <article><div><span>2025</span><span>FinTech product</span></div><div><h3>Canvoy Payment</h3><p>Shaped the MVP, translated payment journeys into delivery-ready work, managed Jira and supported Scrum, QA, security and launch readiness.</p></div></article>
           <article><div><span>2026</span><span>Technical product</span></div><div><h3>Wayagram</h3><p>Coordinated production migration, regression testing and delivery across wallet, payment, marketplace, social and community modules with complex product dependencies.</p></div></article>
-          <article><div><span>2025</span><span>iGaming product</span></div><div><h3>BetBonanza</h3><p>Supported product execution across sportsbook operations, user journeys, prioritisation and cross-functional delivery in a fast-moving iGaming environment.</p></div></article>
+          <article><div><span>2026</span><span>Product leadership</span></div><div><h3>Siiqoo</h3><p>Led product direction and delivery across marketplace trust, payments, vendor growth, community, sprint execution and continuous optimisation.</p></div></article>
           <article><div><span>10+ years</span><span>Project leadership</span></div><div><h3>Construction and infrastructure</h3><p>Led site and project delivery across residential, commercial and public-sector developments, building the delivery discipline I now bring into product.</p></div></article>
         </div>
       </section>
