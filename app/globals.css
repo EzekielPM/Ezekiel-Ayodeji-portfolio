@@ -350,3 +350,18 @@ html[data-theme="navy"] .statement blockquote em{color:#08252a}
 
 .contact-actions>.copy-email-button{padding:13px 16px;cursor:pointer;font:inherit}
 .contact-actions>.copy-email-button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+
+/* Phase 2 polish: keep the bottom contact panel consistent across themes. */
+html[data-theme="navy"] .contact{
+  color:#fff;
+  background:#155e59;
+  border-color:var(--line);
+}
+html[data-theme="navy"] .contact .section-kicker{color:#e4d2a5}
+html[data-theme="navy"] .contact h2{color:#fff}
+html[data-theme="navy"] .contact>p:not(.section-kicker){color:#e1eeeb}
+html[data-theme="navy"] .contact>p strong,html[data-theme="navy"] .contact>p b{color:#fff}
+html[data-theme="navy"] .contact .button.light,html[data-theme="navy"] .contact .contact-icon.light{color:var(--ink);background:var(--paper);border-color:var(--paper)}
+html[data-theme="navy"] .contact .button.outline,html[data-theme="navy"] .contact .contact-icon.outline{color:#fff;background:transparent;border-color:#a9c2c2}
+html[data-theme="navy"] .contact-actions>a:last-child{color:#fff;border-color:#a9c2c2}
