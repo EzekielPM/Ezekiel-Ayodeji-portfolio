@@ -102,3 +102,48 @@
   .portrait-welcome.is-welcoming{animation:none}
   .portrait-panel,.portrait-panel:before,.hero-actions .button.primary{transition:none}
 }
+
+
+/* Iteration 2: real entrance motion and a genuinely new portrait position */
+@keyframes portraitEnterFromAbove{
+  0%{opacity:0;transform:translate3d(0,-150px,0) rotate(7deg) scale(.96)}
+  65%{opacity:1;transform:translate3d(0,12px,0) rotate(-1.8deg) scale(1.01)}
+  82%{transform:translate3d(0,-5px,0) rotate(.6deg) scale(1)}
+  100%{opacity:1;transform:translate3d(0,0,0) rotate(-1deg) scale(1)}
+}
+@keyframes portraitTapDrop{
+  0%{transform:translate3d(0,-44px,0) rotate(4deg) scale(.985)}
+  60%{transform:translate3d(0,8px,0) rotate(-1.3deg) scale(1.01)}
+  82%{transform:translate3d(0,-3px,0) rotate(.4deg) scale(1)}
+  100%{transform:translate3d(0,0,0) rotate(-1deg) scale(1)}
+}
+@media(min-width:851px){
+  .hero{
+    grid-template-columns:minmax(250px,.72fr) minmax(0,1.28fr);
+    gap:clamp(42px,7vw,110px);
+  }
+  .portrait-panel{
+    grid-column:1;grid-row:1;justify-self:start;align-self:center;
+    width:min(100%,390px);margin:18px 0 0 12px;transform:rotate(-1deg);
+    animation:portraitEnterFromAbove 1.15s cubic-bezier(.18,.82,.22,1) both;
+  }
+  .hero-copy{grid-column:2;grid-row:1;max-width:800px}
+  .portrait-panel:hover{transform:rotate(0) translateY(-4px)}
+}
+.portrait-panel:has(.portrait-welcome.is-welcoming){
+  animation:portraitTapDrop .9s cubic-bezier(.18,.82,.22,1) both;
+}
+.portrait-welcome.is-welcoming:after{opacity:0;transform:translateY(-5px)}
+@media(max-width:850px){
+  .hero{grid-template-columns:minmax(0,1fr);display:flex;flex-direction:column;align-items:stretch}
+  .hero-copy{order:1}
+  .portrait-panel{order:2;align-self:center;justify-self:center;width:min(82%,430px);margin:4px auto 12px;animation:portraitEnterFromAbove 1.05s cubic-bezier(.18,.82,.22,1) both}
+}
+@media(max-width:600px){
+  .hero-copy{width:100%}
+  .portrait-panel{width:min(88%,390px);margin-top:0}
+}
+@media(prefers-reduced-motion:reduce){
+  .portrait-panel{animation:none!important;opacity:1;transform:none}
+  .portrait-panel:has(.portrait-welcome.is-welcoming){animation:none!important}
+}
