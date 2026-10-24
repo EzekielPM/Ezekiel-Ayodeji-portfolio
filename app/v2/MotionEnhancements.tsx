@@ -30,7 +30,9 @@ export default function MotionEnhancements() {
     ));
     const navSections = navLinks
       .map((link) => document.querySelector<HTMLElement>(link.getAttribute("href") || ""))
-      .filter((section): section is HTMLElement => Boolean(section));
+      .filter((section): section is HTMLElement => Boolean(section))
+      .filter((section, index, all) => all.indexOf(section) === index)
+      .sort((a, b) => a.offsetTop - b.offsetTop);
     const updateActiveNav = () => {
       const marker = window.innerHeight * 0.34;
       let activeId = "";
