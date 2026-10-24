@@ -1,6 +1,6 @@
 import Image from "next/image";
 import MotionEnhancements from "./MotionEnhancements";
-import { FloatingContact, V2HeaderControls } from "./PortfolioControls";
+import { CopyEmailButton, FloatingContact, V2HeaderControls } from "./PortfolioControls";
 
 const selectedWork = [
   {
@@ -354,6 +354,7 @@ export default function PortfolioV2() {
         <p>I am open to Product Manager opportunities, product collaborations and meaningful product work with teams building useful things.</p>
         <div className="contact-actions">
           <a className="contact-icon light" href="mailto:Olusola40@gmail.com"><span>Email</span></a>
+          <CopyEmailButton />
           <a className="contact-icon outline" href="https://wa.me/2349015934337" target="_blank" rel="noreferrer"><span>WhatsApp</span></a>
           <a className="contact-icon outline" href="https://www.linkedin.com/in/ayodeji-ezekiel-olusola/" target="_blank" rel="noreferrer"><span>LinkedIn</span></a>
         </div>
