@@ -147,3 +147,22 @@
   .portrait-panel{animation:none!important;opacity:1;transform:none}
   .portrait-panel:has(.portrait-welcome.is-welcoming){animation:none!important}
 }
+
+
+/* Strong, unmistakable drop-in on page open */
+@keyframes portraitEnterFromAbove{
+  0%{opacity:0;transform:translate3d(0,-280px,0) rotate(8deg) scale(.92)}
+  58%{opacity:1;transform:translate3d(0,16px,0) rotate(-2deg) scale(1.015)}
+  76%{transform:translate3d(0,-7px,0) rotate(1deg) scale(1)}
+  90%{transform:translate3d(0,3px,0) rotate(-.4deg) scale(1)}
+  100%{opacity:1;transform:translate3d(0,0,0) rotate(-1deg) scale(1)}
+}
+@media(min-width:851px){
+  .portrait-panel{animation:portraitEnterFromAbove 1.35s cubic-bezier(.18,.82,.22,1) .12s both}
+}
+@media(max-width:850px){
+  .portrait-panel{animation:portraitEnterFromAbove 1.2s cubic-bezier(.18,.82,.22,1) .12s both}
+}
+@media(prefers-reduced-motion:reduce){
+  .portrait-panel{animation:none!important;opacity:1;transform:none}
+}
