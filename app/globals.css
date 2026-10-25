@@ -409,3 +409,43 @@ html:not([data-theme="navy"]) .portrait-panel{
   html:not([data-theme="navy"]) .site-header,
   html:not([data-theme="navy"]) .hero{transition:none}
 }
+
+
+/* Distinct, accessible accents for the clickable product directory cards. */
+.all-project-card{
+  position:relative;
+  text-decoration:none;
+  color:var(--ink);
+  cursor:pointer;
+  outline-offset:4px;
+}
+.all-project-card-02{--project-accent:#176b87;--project-tint:#e7f3f7}
+.all-project-card-03{--project-accent:#087f5b;--project-tint:#e6f5ee}
+.all-project-card-04{--project-accent:#9a4d16;--project-tint:#fff0e3}
+.all-project-card-05{--project-accent:#6941a5;--project-tint:#f0eafd}
+.all-project-card .all-project-meta,
+.all-project-card .all-project-card-link{color:var(--project-accent)}
+.all-project-card .all-project-meta>span:first-child{
+  display:grid;place-items:center;min-width:34px;height:34px;padding:0 7px;
+  color:var(--project-accent);background:var(--project-tint);border-radius:10px;
+}
+.all-project-card h3{transition:color .2s ease}
+.all-project-card .all-project-card-link{
+  display:inline-flex;align-items:center;gap:10px;margin-top:auto;
+  font-size:12px;font-weight:850;
+}
+.all-project-card:focus-visible{outline:3px solid var(--project-accent)}
+.all-project-card:hover,.all-project-card:focus-visible{
+  border-color:var(--project-accent);
+  box-shadow:0 20px 48px rgba(16,32,56,.12);
+}
+.all-project-card:hover h3,.all-project-card:focus-visible h3{color:var(--project-accent)}
+html[data-theme="navy"] .all-project-card-02{--project-accent:#70d8f0;--project-tint:#123748}
+html[data-theme="navy"] .all-project-card-03{--project-accent:#68e0ad;--project-tint:#12382f}
+html[data-theme="navy"] .all-project-card-04{--project-accent:#ffbd83;--project-tint:#3b281d}
+html[data-theme="navy"] .all-project-card-05{--project-accent:#c6a5ff;--project-tint:#2d2245}
+html[data-theme="navy"] .all-project-card .all-project-meta,
+html[data-theme="navy"] .all-project-card .all-project-card-link{color:var(--project-accent)}
+@media(prefers-reduced-motion:reduce){
+  .all-project-card h3{transition:none}
+}
