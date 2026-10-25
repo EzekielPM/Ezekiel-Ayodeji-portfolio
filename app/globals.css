@@ -365,3 +365,47 @@ html[data-theme="navy"] .contact>p strong,html[data-theme="navy"] .contact>p b{c
 html[data-theme="navy"] .contact .button.light,html[data-theme="navy"] .contact .contact-icon.light{color:var(--ink);background:var(--paper);border-color:var(--paper)}
 html[data-theme="navy"] .contact .button.outline,html[data-theme="navy"] .contact .contact-icon.outline{color:#fff;background:transparent;border-color:#a9c2c2}
 html[data-theme="navy"] .contact-actions>a:last-child{color:#fff;border-color:#a9c2c2}
+
+
+/* Cool metallic silver light-mode hero */
+html:not([data-theme="navy"]) .site-header{
+  background:rgba(232,237,242,.94);
+  border-bottom-color:#c8d0d9;
+}
+html:not([data-theme="navy"]) .hero{
+  color:#17212d;
+  background:
+    radial-gradient(ellipse at 78% 18%,rgba(255,255,255,.78) 0%,rgba(255,255,255,0) 36%),
+    linear-gradient(118deg,#dce2e8 0%,#c5cdd6 48%,#e1e6eb 100%);
+}
+html:not([data-theme="navy"]) .hero-label{
+  color:#344b60;
+  background:rgba(245,248,251,.78);
+  border:1px solid rgba(91,111,132,.2);
+}
+html:not([data-theme="navy"]) .hero-intro{color:#465463}
+html:not([data-theme="navy"]) .hero-intro strong{color:#17212d}
+html:not([data-theme="navy"]) .hero .button.primary{
+  color:#f7f9fb;
+  background:#102c49;
+  box-shadow:0 12px 30px rgba(16,44,73,.2);
+}
+html:not([data-theme="navy"]) .hero .button.text{border-color:#526477}
+html:not([data-theme="navy"]) .hero-cv-actions a{
+  color:#243d55;
+  background:rgba(248,250,252,.72);
+  border-color:#b1bdc9;
+}
+html:not([data-theme="navy"]) .hero-cv-actions a:hover{
+  color:#fff;
+  background:#102c49;
+  border-color:#102c49;
+}
+html:not([data-theme="navy"]) .portrait-panel{
+  background:#102c49;
+  box-shadow:0 28px 75px rgba(28,43,60,.2);
+}
+@media(prefers-reduced-motion:reduce){
+  html:not([data-theme="navy"]) .site-header,
+  html:not([data-theme="navy"]) .hero{transition:none}
+}
