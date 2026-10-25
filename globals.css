@@ -166,3 +166,22 @@
 @media(prefers-reduced-motion:reduce){
   .portrait-panel{animation:none!important;opacity:1;transform:none}
 }
+
+
+/* Fix: use independent transform properties so hover/layout transforms cannot cancel the entrance drop. */
+@keyframes portraitDropEntranceFixed{
+  0%{translate:0 -300px;rotate:8deg;scale:.92;opacity:1}
+  56%{translate:0 18px;rotate:-2deg;scale:1.015;opacity:1}
+  74%{translate:0 -8px;rotate:1deg;scale:1}
+  88%{translate:0 4px;rotate:-.5deg;scale:1}
+  100%{translate:0 0;rotate:-1deg;scale:1;opacity:1}
+}
+@media(prefers-reduced-motion:no-preference){
+  .hero .portrait-panel{
+    animation:portraitDropEntranceFixed 1.8s cubic-bezier(.18,.82,.22,1) both !important;
+    animation-delay:.18s !important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .hero .portrait-panel{animation:none!important;translate:0 0;rotate:0deg;scale:1;opacity:1}
+}
