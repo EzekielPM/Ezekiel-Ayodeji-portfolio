@@ -242,12 +242,12 @@ export default function PortfolioV2() {
         </div>
         <div className="all-projects-grid">
           {selectedWork.filter((item) => item.title !== "Siiqo" && item.title !== "TradeFlow Commerce").map((item) => (
-            <article className="all-project-card" key={item.title}>
+            <a className={`all-project-card all-project-card-${item.number}`} key={item.title} href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined} aria-label={`Open ${item.title} project`}>
               <div className="all-project-meta"><span>{item.number}</span><span>{item.status}</span></div>
               <h3>{item.title}</h3>
               <p>{item.summary}</p>
-              <a href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined}>{item.action} <span>↗</span></a>
-            </article>
+              <span className="all-project-card-link">{item.action} <span aria-hidden="true">↗</span></span>
+            </a>
           ))}
         </div>
       </section>
