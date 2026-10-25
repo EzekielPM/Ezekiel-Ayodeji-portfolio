@@ -25,6 +25,15 @@ export default function MotionEnhancements() {
     window.addEventListener("scroll", updateProgress, { passive: true });
     window.addEventListener("resize", updateProgress);
 
+    const portrait = document.querySelector<HTMLButtonElement>(".portrait-welcome");
+    const handlePortraitClick = () => {
+      if (!portrait) return;
+      portrait.classList.remove("is-welcoming");
+      void portrait.offsetWidth;
+      portrait.classList.add("is-welcoming");
+    };
+    portrait?.addEventListener("click", handlePortraitClick);
+
     const navLinks = Array.from(document.querySelectorAll<HTMLAnchorElement>(
       '.site-nav a[href^="#"]',
     ));
@@ -70,6 +79,7 @@ export default function MotionEnhancements() {
     const elements = Array.from(document.querySelectorAll<HTMLElement>(targets.join(",")));
     if (!elements.length) return () => {
       progress.remove();
+      portrait?.removeEventListener("click", handlePortraitClick);
       window.removeEventListener("scroll", updateProgress);
       window.removeEventListener("resize", updateProgress);
       window.removeEventListener("scroll", updateActiveNav);
@@ -100,6 +110,7 @@ export default function MotionEnhancements() {
 
     return () => {
       observer.disconnect();
+      portrait?.removeEventListener("click", handlePortraitClick);
       root.classList.remove("motion-ready");
       progress.remove();
       window.removeEventListener("scroll", updateProgress);

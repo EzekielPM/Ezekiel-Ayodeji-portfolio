@@ -21,3 +21,148 @@
 @media(max-width:850px){nav a:not(.nav-cta){display:none}.hero{grid-template-columns:1fr;min-height:auto}.portrait-panel{max-width:450px}.case-intro,.about,.toolkit{grid-template-columns:1fr;gap:28px}.journal>.media-rail .media-frame{flex-basis:82%}.mentor-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.site-header{padding:14px 18px}.brand small{display:none}.brand>span{font-size:11px}.nav-cta{padding:9px 11px}.hero{padding:68px 20px}h1{font-size:49px}.hero-intro{font-size:15px}.hero-actions,.contact-actions,footer{align-items:flex-start;flex-direction:column}.hero-cv-actions{display:grid;grid-template-columns:1fr;width:100%}.hero-cv-actions a{width:100%}.section,.statement{padding:74px 20px}.section-heading{align-items:flex-start;flex-direction:column;margin-bottom:38px}.case-card{padding:24px 17px;border-radius:17px}.case-intro h3{font-size:45px}.media-frame,.screenshots .media-frame{flex-basis:88%;height:310px}.case-footer{align-items:flex-start;flex-direction:column}.case-button{width:100%}.capability-grid{grid-template-columns:1fr}.capability-grid article{min-height:195px}.capability-grid h3{margin-top:42px}.construction-card .media-frame{flex-basis:88%;height:260px}.construction-copy{padding:25px 20px}.timeline article{grid-template-columns:1fr;gap:18px}.timeline article>div:first-child{flex-direction:row;justify-content:space-between}.modal-shell{padding:0}.journal{min-height:100vh;border-radius:0}.journal-header{padding-top:75px}.journal-body section{grid-template-columns:1fr;gap:12px}.journal-footer{border-radius:0}.journal>.media-rail .media-frame{flex-basis:90%}footer{gap:20px}.resource-panel a{align-items:flex-start;flex-direction:column}.insight-grid article{min-height:280px}.contact-actions .button{width:100%;justify-content:space-between}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.portrait-welcome>img,.welcome-message{transition:none}.portrait-welcome .wave-hand{animation:none!important}}
+
+
+/* Animated portrait hero — isolated overrides for a reversible visual iteration */
+.hero{
+  position:relative;
+  isolation:isolate;
+  grid-template-columns:minmax(0,1.22fr) minmax(300px,.68fr);
+  gap:clamp(28px,5vw,76px);
+  padding-top:clamp(62px,7vw,100px);
+  padding-bottom:clamp(78px,8vw,112px);
+  background:
+    radial-gradient(ellipse at 88% 28%,rgba(220,235,230,.9) 0,rgba(220,235,230,0) 35%),
+    linear-gradient(115deg,rgba(255,255,255,.2),transparent 58%);
+}
+.hero:before{
+  content:"PRODUCT THINKING  /  PRACTICAL DELIVERY";
+  position:absolute;right:clamp(22px,6vw,96px);top:34px;
+  color:#77827e;font-size:9px;font-weight:800;letter-spacing:.18em;
+}
+.hero-copy{position:relative;z-index:2;max-width:850px}
+.hero-label{box-shadow:0 5px 18px rgba(13,102,88,.07)}
+.hero h1{max-width:850px;font-size:clamp(52px,6.4vw,94px);line-height:.99}
+.hero-intro{max-width:720px}
+.hero-actions{gap:24px;flex-wrap:wrap}
+.hero-actions .button.primary{transition:transform .25s ease,box-shadow .25s ease}
+.hero-actions .button.primary:hover{transform:translateY(-3px);box-shadow:0 17px 35px rgba(13,102,88,.28)}
+.portrait-panel{
+  position:relative;z-index:1;align-self:center;justify-self:end;
+  width:min(100%,430px);overflow:visible;
+  background:var(--ink);border-radius:26px;
+  transform:rotate(2.2deg) translateY(10px);
+  box-shadow:0 28px 75px rgba(16,32,56,.19);
+  transition:transform .5s cubic-bezier(.2,.75,.25,1),box-shadow .5s ease;
+}
+.portrait-panel:before{
+  content:"";position:absolute;z-index:-1;inset:18px -15px -15px 18px;
+  border:1px solid rgba(13,102,88,.3);border-radius:28px;
+  transform:rotate(-4deg);transition:transform .5s ease;
+}
+.portrait-panel:hover{transform:rotate(0) translateY(0);box-shadow:0 34px 90px rgba(16,32,56,.23)}
+.portrait-panel:hover:before{transform:rotate(-1deg)}
+.portrait-welcome{border-radius:25px 25px 0 0;overflow:hidden}
+.portrait-welcome>img{transform-origin:50% 0%;will-change:transform}
+.portrait-welcome.is-welcoming{animation:portraitDrop .95s cubic-bezier(.18,.82,.22,1) both}
+.portrait-welcome.is-welcoming>img{transform:scale(1.018);filter:saturate(1.06) contrast(1.02)}
+.portrait-welcome:after{
+  content:"TAP TO MEET ME";position:absolute;top:16px;right:16px;
+  padding:8px 10px;color:#fff;background:rgba(16,32,56,.76);
+  border:1px solid rgba(255,255,255,.24);border-radius:99px;
+  font-size:8px;font-weight:850;letter-spacing:.13em;
+  opacity:.9;transition:opacity .25s ease,transform .25s ease;
+}
+.portrait-welcome:hover:after,.portrait-welcome:focus-visible:after{opacity:0;transform:translateY(-5px)}
+.portrait-caption{border-radius:0 0 25px 25px;grid-template-columns:auto 1fr;padding:20px 23px}
+.portrait-caption strong{font-size:23px}
+@keyframes portraitDrop{
+  0%{transform:translateY(-72px) rotate(3deg);opacity:0}
+  58%{transform:translateY(9px) rotate(-1.1deg);opacity:1}
+  78%{transform:translateY(-4px) rotate(.4deg)}
+  100%{transform:translateY(0) rotate(0);opacity:1}
+}
+@media(max-width:850px){
+  .hero{grid-template-columns:minmax(0,1fr);gap:46px;padding-top:70px}
+  .hero:before{top:22px}
+  .portrait-panel{justify-self:center;width:min(82%,430px);margin:0 auto 8px}
+  .hero-copy{max-width:760px}
+}
+@media(max-width:600px){
+  .hero{gap:36px;padding-top:58px;overflow:hidden}
+  .hero:before{right:20px;top:18px;font-size:7px;letter-spacing:.1em}
+  .hero h1{font-size:clamp(45px,12vw,58px);line-height:1}
+  .hero-actions{align-items:flex-start;gap:17px}
+  .hero-actions .button.primary{justify-content:space-between;min-width:190px}
+  .portrait-panel{width:min(88%,390px);transform:rotate(1.4deg) translateY(5px)}
+  .portrait-panel:before{inset:12px -9px -10px 12px}
+  .portrait-caption{padding:17px 18px}
+}
+@media(prefers-reduced-motion:reduce){
+  .portrait-welcome.is-welcoming{animation:none}
+  .portrait-panel,.portrait-panel:before,.hero-actions .button.primary{transition:none}
+}
+
+
+/* Iteration 2: real entrance motion and a genuinely new portrait position */
+@keyframes portraitEnterFromAbove{
+  0%{opacity:0;transform:translate3d(0,-150px,0) rotate(7deg) scale(.96)}
+  65%{opacity:1;transform:translate3d(0,12px,0) rotate(-1.8deg) scale(1.01)}
+  82%{transform:translate3d(0,-5px,0) rotate(.6deg) scale(1)}
+  100%{opacity:1;transform:translate3d(0,0,0) rotate(-1deg) scale(1)}
+}
+@keyframes portraitTapDrop{
+  0%{transform:translate3d(0,-44px,0) rotate(4deg) scale(.985)}
+  60%{transform:translate3d(0,8px,0) rotate(-1.3deg) scale(1.01)}
+  82%{transform:translate3d(0,-3px,0) rotate(.4deg) scale(1)}
+  100%{transform:translate3d(0,0,0) rotate(-1deg) scale(1)}
+}
+@media(min-width:851px){
+  .hero{
+    grid-template-columns:minmax(250px,.72fr) minmax(0,1.28fr);
+    gap:clamp(42px,7vw,110px);
+  }
+  .portrait-panel{
+    grid-column:1;grid-row:1;justify-self:start;align-self:center;
+    width:min(100%,390px);margin:18px 0 0 12px;transform:rotate(-1deg);
+    animation:portraitEnterFromAbove 1.15s cubic-bezier(.18,.82,.22,1) both;
+  }
+  .hero-copy{grid-column:2;grid-row:1;max-width:800px}
+  .portrait-panel:hover{transform:rotate(0) translateY(-4px)}
+}
+.portrait-panel:has(.portrait-welcome.is-welcoming){
+  animation:portraitTapDrop .9s cubic-bezier(.18,.82,.22,1) both;
+}
+.portrait-welcome.is-welcoming:after{opacity:0;transform:translateY(-5px)}
+@media(max-width:850px){
+  .hero{grid-template-columns:minmax(0,1fr);display:flex;flex-direction:column;align-items:stretch}
+  .hero-copy{order:1}
+  .portrait-panel{order:2;align-self:center;justify-self:center;width:min(82%,430px);margin:4px auto 12px;animation:portraitEnterFromAbove 1.05s cubic-bezier(.18,.82,.22,1) both}
+}
+@media(max-width:600px){
+  .hero-copy{width:100%}
+  .portrait-panel{width:min(88%,390px);margin-top:0}
+}
+@media(prefers-reduced-motion:reduce){
+  .portrait-panel{animation:none!important;opacity:1;transform:none}
+  .portrait-panel:has(.portrait-welcome.is-welcoming){animation:none!important}
+}
+
+
+/* Strong, unmistakable drop-in on page open */
+@keyframes portraitEnterFromAbove{
+  0%{opacity:0;transform:translate3d(0,-280px,0) rotate(8deg) scale(.92)}
+  58%{opacity:1;transform:translate3d(0,16px,0) rotate(-2deg) scale(1.015)}
+  76%{transform:translate3d(0,-7px,0) rotate(1deg) scale(1)}
+  90%{transform:translate3d(0,3px,0) rotate(-.4deg) scale(1)}
+  100%{opacity:1;transform:translate3d(0,0,0) rotate(-1deg) scale(1)}
+}
+@media(min-width:851px){
+  .portrait-panel{animation:portraitEnterFromAbove 1.35s cubic-bezier(.18,.82,.22,1) .12s both}
+}
+@media(max-width:850px){
+  .portrait-panel{animation:portraitEnterFromAbove 1.2s cubic-bezier(.18,.82,.22,1) .12s both}
+}
+@media(prefers-reduced-motion:reduce){
+  .portrait-panel{animation:none!important;opacity:1;transform:none}
+}
