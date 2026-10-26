@@ -23,8 +23,8 @@ export default function MotionEnhancements() {
           window.setTimeout(() => {
             intro?.remove();
             root.classList.remove("portfolio-intro-active");
-          }, 650);
-        }, 3350);
+          }, 250);
+        }, 3750);
       }
     } catch {
       // If session storage is unavailable, the portfolio still loads normally.
