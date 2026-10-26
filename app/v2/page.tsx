@@ -1,6 +1,7 @@
 import Image from "next/image";
 import MotionEnhancements from "./MotionEnhancements";
 import PracticeFlipCards from "./PracticeFlipCards";
+import SelectedExperienceFlipCards from "./SelectedExperienceFlipCards";
 import { CopyEmailButton, FloatingContact, V2HeaderControls } from "./PortfolioControls";
 
 const selectedWork = [
@@ -265,13 +266,7 @@ export default function PortfolioV2() {
           </div>
           <p>A snapshot of product roles and delivery work, alongside the construction leadership that shaped how I manage risk, dependencies and execution.</p>
         </div>
-        <div className="timeline">
-          <article><div><span>2024</span><span>iGaming · Product execution</span></div><div><h3>BetBonanza</h3><p>Contributed to sportsbook product execution, user journeys, prioritisation and cross-functional delivery in a fast-moving iGaming environment.</p></div></article>
-          <article><div><span>2025</span><span>FinTech · MVP delivery</span></div><div><h3>Canvoy Payment</h3><p>Worked on MVP scope, payment journeys, requirements, Jira delivery planning and coordination around security and QA readiness. The roadmap documents planned work, not a verified launch outcome.</p></div></article>
-          <article><div><span>2026</span><span>Technical product · Release delivery</span></div><div><h3>Wayagram</h3><p>During a brief engagement, contributed to production migration activities, regression testing, stand-ups, demos and module reporting for a connected social, marketplace and payments product.</p></div></article>
-          <article><div><span>2026</span><span>Marketplace · Product leadership</span></div><div><h3>Siiqoo</h3><p>Led product direction and sprint delivery across marketplace trust, protected payments, vendor tools, community and prioritisation.</p></div></article>
-          <article><div><span>10+ years</span><span>Construction · Project leadership</span></div><div><h3>Construction and infrastructure</h3><p>Led site and project delivery across residential, commercial and public-sector developments, building practical experience in risk, quality, dependencies and team coordination.</p></div></article>
-        </div>
+        <SelectedExperienceFlipCards />
       </section>
 
       <section className="insights section" id="insights">
