@@ -1012,3 +1012,29 @@ html[data-theme="navy"] #insights .insight-grid article>div span{background:colo
 html[data-theme="navy"] #insights .insight-archive-grid article{background:linear-gradient(145deg,#102632 0%,color-mix(in srgb,var(--insight-accent,var(--green)) 10%,#102632) 160%);border-color:color-mix(in srgb,var(--insight-accent,var(--green)) 30%,#31505a)}
 @media(hover:hover){#insights .insight-featured:hover{transform:translateY(-6px)}#insights .insight-grid article:hover,#insights .insight-archive-grid article:hover{transform:translateY(-7px) scale(1.01)}}
 @media(prefers-reduced-motion:reduce){.motion-ready #insights .insight-featured .insight-meta,.motion-ready #insights .insight-featured h3,.motion-ready #insights .insight-featured p,.motion-ready #insights .insight-featured-copy>a,.motion-ready #insights .insight-grid article>div,.motion-ready #insights .insight-grid article h3,.motion-ready #insights .insight-grid article p,.motion-ready #insights .insight-grid article>a{opacity:1!important;transform:none!important;animation:none!important}#insights .insight-featured,#insights .insight-grid article,#insights .insight-archive-grid article,#insights .insight-grid h3,#insights .insight-archive-grid h3{transition:none!important}}
+
+/* Product Practice cards: deliberate click-to-flip interaction */
+.practice-flip-card{min-height:390px;padding:0;perspective:1200px;overflow:visible;background:transparent;border:0;box-shadow:none}
+.practice-flip-card:hover,.practice-flip-card:focus-within{border-color:transparent;box-shadow:none;transform:none}
+.practice-flip-toggle{display:block;width:100%;height:100%;min-height:390px;padding:0;text-align:left;background:transparent;border:0;border-radius:18px;cursor:pointer;perspective:1200px}
+.practice-flip-toggle:focus-visible{outline:3px solid var(--gold);outline-offset:5px}
+.practice-flip-inner{position:relative;display:block;min-height:390px;height:100%;transform-style:preserve-3d;transition:transform .72s cubic-bezier(.2,.75,.25,1)}
+.practice-flip-card.is-flipped .practice-flip-inner{transform:rotateY(180deg)}
+.practice-flip-face{position:absolute;inset:0;display:flex;flex-direction:column;min-height:390px;padding:28px;overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1px solid #d4dbd4;border-radius:18px;box-shadow:0 12px 30px rgba(16,32,56,.045)}
+.practice-flip-front{background:linear-gradient(145deg,#fbfcf8 0%,#f1f5f0 100%)}
+.practice-flip-back{transform:rotateY(180deg);color:#f6faf8;background:linear-gradient(145deg,#102c36 0%,#155e59 100%);border-color:#286b63}
+.practice-card-number{display:block;color:var(--gold);font:15px Georgia,serif}
+.practice-card-title{display:block;margin:54px 0 14px;font:500 31px Georgia,serif}
+.practice-card-statement{display:block;min-height:62px;color:var(--muted);font-size:12px;line-height:1.7}
+.practice-card-detail{display:block;margin-top:23px;font:500 18px/1.3 Georgia,serif}
+.practice-flip-hint{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:20px;color:var(--green);font-size:9px;font-weight:850;letter-spacing:.09em;text-transform:uppercase}
+.practice-flip-hint>span{font-size:18px}
+.practice-flip-back .practice-flip-hint{color:#e4d2a5}
+.practice-back-heading{display:block;margin:25px 0 16px;font:500 23px/1.15 Georgia,serif}
+.practice-back-points{display:grid;gap:11px}
+.practice-back-points>span{display:block;padding-left:16px;position:relative;color:#e0ece8;font-size:11px;line-height:1.5}
+.practice-back-points>span:before{content:"";position:absolute;left:0;top:.55em;width:5px;height:5px;background:#e4d2a5;border-radius:50%}
+.practice-back-outcome{display:grid;gap:5px;margin-top:auto;padding-top:17px;border-top:1px solid #ffffff35;color:#f5f8f6;font-size:11px;line-height:1.5}
+.practice-back-outcome strong{color:#e4d2a5;font-size:9px;letter-spacing:.12em;text-transform:uppercase}
+@media(max-width:600px){.practice-flip-card,.practice-flip-toggle,.practice-flip-inner,.practice-flip-face{min-height:370px}.practice-flip-face{padding:24px}.practice-card-title{margin-top:42px}.practice-back-heading{font-size:21px}}
+@media(prefers-reduced-motion:reduce){.practice-flip-inner{transition:none}}
