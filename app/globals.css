@@ -474,7 +474,11 @@ html.portfolio-intro-active,html.portfolio-intro-active body{overflow:hidden}
 .case-card .case-intro h3{position:relative}
 .case-card .case-intro h3::after{display:table;width:max-content;max-width:100%;margin-top:18px;padding:7px 10px;border:1px solid var(--line);border-radius:3px;color:var(--green);background:var(--mint);font:800 9px/1.2 Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase}
 .case-card:nth-child(1) .case-intro h3::after{content:"↗ PRODUCT NOTE · TRUST BY DESIGN"}
-.case-card:nth-child(2) .case-intro h3::after{content:"↗ PRODUCT NOTE · VENDOR WORKFLOW"}
+.case-card:nth-child(2) .case-intro h3::after{content:"↗ PRODUCT NOTE · PAYMENT EXPERIENCE"}
+.case-card:nth-child(3) .case-intro h3::after{content:"↗ PRODUCT NOTE · SOCIAL COMMERCE"}
+.case-card:nth-child(4) .case-intro h3::after{content:"↗ PRODUCT NOTE · ORDER CONFIRMATION"}
+.case-card:nth-child(5) .case-intro h3::after{content:"↗ PRODUCT NOTE · FINANCIAL CONFIDENCE"}
+.case-card:nth-child(6) .case-intro h3::after{content:"↗ PRODUCT NOTE · VENDOR WORKFLOW"}
 .case-card .case-intro h3::before{position:absolute;left:0;bottom:-10px;width:42px;height:1px;background:var(--gold);content:"";transform:translateY(10px);opacity:.8}
 @media(max-width:700px){.case-card .case-intro h3::after{margin-top:14px;font-size:8px;letter-spacing:.09em}.case-card .case-intro h3::before{display:none}}
 @media(prefers-reduced-motion:no-preference){.case-card .case-intro h3::after{transition:color .2s ease,border-color .2s ease,transform .2s ease}.case-card:hover .case-intro h3::after{transform:translateX(3px)}}
