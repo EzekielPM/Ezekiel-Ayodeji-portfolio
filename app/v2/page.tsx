@@ -152,9 +152,6 @@ export default function PortfolioV2() {
             <a href="/documents/olusola-ayodeji-product-manager-cv.pdf" download>
               Download Product Manager CV <span>↓</span>
             </a>
-            <a href="https://www.linkedin.com/in/ayodeji-ezekiel-olusola/" target="_blank" rel="noreferrer">
-              View LinkedIn profile <span>↗</span>
-            </a>
           </div>
         </div>
         <aside className="portrait-panel">
