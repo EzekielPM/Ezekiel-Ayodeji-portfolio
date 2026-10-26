@@ -22,9 +22,9 @@ const selectedWork = [
     label: "FinTech · Product Manager · Scrum Master",
     status: "MVP / DELIVERY",
     summary:
-      "A digital payments MVP for recurring utility and everyday payments, designed around clear transaction flows, security and dependable payment feedback.",
+      "An early-stage digital payments MVP focused on utility and everyday payment journeys, with work spanning requirements, Jira delivery planning and security and QA readiness."
     image: "/portfolio/full/canvoy-1.jpg",
-    tags: ["Utility payments", "MVP roadmap", "Jira ownership", "Scrum", "Security", "QA readiness"],
+    tags: ["Utility payments", "MVP definition", "Jira planning", "Scrum", "Security and QA planning"],
     href: "/case-studies/canvoy",
     action: "View case study",
   },
@@ -34,9 +34,9 @@ const selectedWork = [
     label: "FinTech · Technical Product Manager",
     status: "PRODUCTION DELIVERY",
     summary:
-      "A connected social, commerce and payments platform where I coordinated production migration, regression testing and delivery across wallet, marketplace and community modules.",
+      "A social, marketplace and payments platform. During a brief engagement, I contributed to production migration activities, regression testing, team ceremonies and module reporting."
     image: "/portfolio/full/wayagram-1.jpg",
-    tags: ["Production migration", "Regression QA", "Wallet", "Marketplace", "Release coordination", "Cross-functional delivery"],
+    tags: ["Migration support", "Regression testing", "Wallet", "Marketplace", "Delivery coordination"],
     href: "/case-studies/wayagram",
     action: "View case study",
   },
@@ -267,8 +267,8 @@ export default function PortfolioV2() {
         </div>
         <div className="timeline">
           <article><div><span>2024</span><span>iGaming · Product execution</span></div><div><h3>BetBonanza</h3><p>Contributed to sportsbook product execution, user journeys, prioritisation and cross-functional delivery in a fast-moving iGaming environment.</p></div></article>
-          <article><div><span>2025</span><span>FinTech · MVP delivery</span></div><div><h3>Canvoy Payment</h3><p>Shaped MVP scope and payment journeys, translated requirements into delivery-ready work, and coordinated Jira, Scrum, QA and launch-readiness activities.</p></div></article>
-          <article><div><span>2026</span><span>Technical product · Release delivery</span></div><div><h3>Wayagram</h3><p>Coordinated production migration and regression testing across wallet, payments, marketplace, social and community modules, with attention to dependencies and release risk.</p></div></article>
+          <article><div><span>2025</span><span>FinTech · MVP delivery</span></div><div><h3>Canvoy Payment</h3><p>Worked on MVP scope, payment journeys, requirements, Jira delivery planning and coordination around security and QA readiness. The roadmap documents planned work, not a verified launch outcome.</p></div></article>
+          <article><div><span>2026</span><span>Technical product · Release delivery</span></div><div><h3>Wayagram</h3><p>During a brief engagement, contributed to production migration activities, regression testing, stand-ups, demos and module reporting for a connected social, marketplace and payments product.</p></div></article>
           <article><div><span>2026</span><span>Marketplace · Product leadership</span></div><div><h3>Siiqoo</h3><p>Led product direction and sprint delivery across marketplace trust, protected payments, vendor tools, community and prioritisation.</p></div></article>
           <article><div><span>10+ years</span><span>Construction · Project leadership</span></div><div><h3>Construction and infrastructure</h3><p>Led site and project delivery across residential, commercial and public-sector developments, building practical experience in risk, quality, dependencies and team coordination.</p></div></article>
         </div>
