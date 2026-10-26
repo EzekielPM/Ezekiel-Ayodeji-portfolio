@@ -136,15 +136,19 @@ export default function PortfolioV2() {
         </nav>
       </header>
 
-      <section className="hero" id="top">
+      <section className="hero hero-editorial" id="top">
         <div className="hero-copy">
-          <p className="hero-label">Product Manager · FinTech · eCommerce · iGaming</p>
-          <h1>I turn complex product problems into <em>clear decisions and dependable delivery.</em></h1>
+          <p className="hero-label"><span className="hero-label-dot" aria-hidden="true" /> Product Manager · FinTech · eCommerce · iGaming</p>
+          <h1 className="hero-headline">
+            <span className="hero-headline-line">I turn complex</span>
+            <span className="hero-headline-line">problems into</span>
+            <span className="hero-headline-line hero-headline-accent">meaningful products.</span>
+          </h1>
           <p className="hero-intro">
-            I am <strong>Olusola Ayodeji Ezekiel</strong>. I work across product strategy, discovery and technical delivery, helping teams move from unclear problems to products people can actually use.
+            I am <strong>Olusola Ayodeji Ezekiel</strong>. I bring product strategy, technical thinking and over a decade of project leadership together to turn ambitious ideas into clear, useful solutions.
           </p>
           <div className="hero-actions">
-            <a className="button primary" href="#products">View product work <span>↘</span></a>
+            <a className="button primary" href="#products">Explore selected work <span>↗</span></a>
             <a className="button text" href="#contact">Let&apos;s talk <span>↗</span></a>
           </div>
           <div className="hero-cv-actions">
