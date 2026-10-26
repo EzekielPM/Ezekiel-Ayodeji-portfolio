@@ -1090,3 +1090,77 @@ html[data-theme="navy"] .statement::before{background:#62a98a}
   .statement{padding:62px 24px 62px 42px}
   .statement::before{left:20px;top:62px;bottom:62px}
 }
+
+
+
+/* Light mode: coordinated warm ivory and muted green palette.
+   Deliberately scoped so the existing navy theme remains unchanged. */
+html:not([data-theme="navy"]) {
+  --ink:#303936;
+  --paper:#E9E2D4;
+  --card:#F1EBDD;
+  --green:#28765F;
+  --muted:#626A62;
+  --line:#D1C6B3;
+  --mint:#D8E4D8;
+}
+html:not([data-theme="navy"]) body { background:var(--paper); color:var(--ink); }
+html:not([data-theme="navy"]) .site-header {
+  background:rgba(233,226,212,.94);
+  border-bottom-color:var(--line);
+}
+html:not([data-theme="navy"]) .hero-intro,
+html:not([data-theme="navy"]) .case-intro p,
+html:not([data-theme="navy"]) .journal-deck,
+html:not([data-theme="navy"]) .journal-body p { color:#505B55; }
+html:not([data-theme="navy"]) .hero-cv-actions a,
+html:not([data-theme="navy"]) .practice-card-actions a,
+html:not([data-theme="navy"]) .insight-grid article,
+html:not([data-theme="navy"]) .resume-cards a,
+html:not([data-theme="navy"]) .resource-panel a,
+html:not([data-theme="navy"]) .rough-card:not(.music-card):not(.handbook-card),
+html:not([data-theme="navy"]) .mentor-grid article {
+  background:#F1EBDD;
+  border-color:#D1C6B3;
+}
+html:not([data-theme="navy"]) .capabilities,
+html:not([data-theme="navy"]) .construction,
+html:not([data-theme="navy"]) .rough-space,
+html:not([data-theme="navy"]) .mentors {
+  background:#DDD2BF;
+}
+html:not([data-theme="navy"]) .toolkit,
+html:not([data-theme="navy"]) .insights,
+html:not([data-theme="navy"]) .resume {
+  background:#E9E2D4;
+}
+html:not([data-theme="navy"]) .practice-card {
+  background:#F1EBDD;
+  border-color:#D1C6B3;
+}
+html:not([data-theme="navy"]) .tool-cloud span {
+  background:#F1EBDD;
+  border-color:#D1C6B3;
+}
+html:not([data-theme="navy"]) .statement {
+  background:#F1EBDD;
+  border-color:#D1C6B3;
+  color:#303936;
+}
+html:not([data-theme="navy"]) .statement blockquote,
+html:not([data-theme="navy"]) .statement blockquote p { color:#303936; }
+html:not([data-theme="navy"]) .statement .section-kicker,
+html:not([data-theme="navy"]) .statement blockquote em,
+html:not([data-theme="navy"]) .statement blockquote p em { color:#28765F; }
+html:not([data-theme="navy"]) .statement::before { background:#28765F; }
+html:not([data-theme="navy"]) .journal,
+html:not([data-theme="navy"]) .practice-reader,
+html:not([data-theme="navy"]) .practice-reader-header {
+  background:#F1EBDD;
+}
+html:not([data-theme="navy"]) .journal>.media-rail,
+html:not([data-theme="navy"]) .resource-panel {
+  background:#DDD2BF;
+}
+html:not([data-theme="navy"]) .gallery-empty { background:#DDD2BF; border-color:#D1C6B3; }
+html:not([data-theme="navy"]) .theme-toggle { background:#DDD2BF; border-color:#D1C6B3; }
