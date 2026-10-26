@@ -105,24 +105,14 @@ const practice = [
 ];
 
 const insights = [
-  {
-    topic: "User-centred product thinking",
-    title: "Good product management starts with the user",
-    text: "A practical reflection on why useful products begin with real user needs and decisions that reduce friction rather than simply add features.",
-    href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-usercentric-uiux-activity-7484933393252700160-dq-m",
-  },
-  {
-    topic: "Discovery and problem framing",
-    title: "Discovery before delivery",
-    text: "Why strong delivery starts before the backlog, with better questions, useful evidence and enough context to avoid building the wrong thing well.",
-    href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-productdiscovery-userresearch-activity-7483500408246677504-iNQa",
-  },
-  {
-    topic: "Product judgement",
-    title: "A Product Manager is a problem solver",
-    text: "Why the job is less about having every answer and more about creating clarity, making trade-offs and helping teams solve the right problem.",
-    href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanagement-problemsolving-customercentric-activity-7478764586150637568-JoTM",
-  },
+  { topic: "UX & empathy", title: "Product Managers Create Products People Understand", text: "A payment experience can work as designed and still leave people uncertain. Clear feedback and thoughtful user journeys matter just as much as the transaction itself.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-usercentric-uiux-activity-7484933393252700160-dq-m" },
+  { topic: "UX & iGaming", title: "Becoming the User: A UX Lesson in iGaming", text: "Promotions can grab attention, but too many interruptions can get in the way of the task a user came to complete.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-igaming-userexperience-activity-7481301268641226753-etSu" },
+  { topic: "Product discovery", title: "Product Managers Shouldn't Trust Feature Requests Alone", text: "A request is a useful starting point, not the whole problem. Understand the need behind it before committing to a solution.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-productdiscovery-userresearch-activity-7483500408246677504-iNQa" },
+  { topic: "Product strategy", title: "Optimizing vs Innovating: The PM's Dilemma", text: "Knowing when to improve an existing experience and when to explore something new is a product judgement call, not a default rule.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanagement-activity-7391033448427171840-kQuU" },
+  { topic: "Product documentation", title: "PRDs Are Just Bets, Not Guarantees", text: "Requirements make assumptions visible and give teams a shared direction. They still need validation, feedback and adjustment.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanagement-productmanager-productstrategy-activity-7479851658903076864-d9Er" },
+  { topic: "Leadership", title: "Surviving Chaos in Product Management with Purpose", text: "When priorities and opinions collide, listening carefully and bringing the conversation back to user value helps restore direction.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-usercentric-problemsolving-activity-7494005541279539200-DIe6" },
+  { topic: "Team alignment", title: "How to Use Meetings to Align and Decide", text: "Good meetings create shared understanding, clarify decisions and give the team a useful next step rather than more noise.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_planning-provides-the-direction-and-focus-activity-7376157467107393537-sG3N" },
+  { topic: "Building products", title: "Building SIIQO Marketplace for Safe and Easy Commerce", text: "A look at marketplace thinking through trust, commerce and the decisions that help buyers and vendors transact with more confidence.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_siiqo-ecommerce-marketplace-activity-7459969658050207744-LgKQ" },
 ];
 
 export default function PortfolioV2() {
@@ -297,21 +287,44 @@ export default function PortfolioV2() {
       <section className="insights section" id="insights">
         <div className="section-heading">
           <div>
-            <p className="section-kicker">Insights</p>
-            <h2>Product thinking, written in public.</h2>
+            <p className="section-kicker">Insights · From LinkedIn</p>
+            <h2>The thinking behind the product.</h2>
           </div>
-          <p>A smaller set of useful reflections is enough on the homepage. The goal is to show how I think, not reproduce my full LinkedIn feed.</p>
+          <p>Practical lessons from product discovery, user experience, team alignment and building digital products. Curated from my writing on LinkedIn.</p>
         </div>
+        <article className="insight-featured">
+          <div className="insight-featured-copy">
+            <div className="insight-meta"><span>FEATURED INSIGHT</span><small>{insights[0].topic}</small></div>
+            <h3>{insights[0].title}</h3>
+            <p>{insights[0].text}</p>
+            <a href={insights[0].href} target="_blank" rel="noreferrer">Read original post <span aria-hidden="true">↗</span></a>
+          </div>
+          <div className="insight-featured-mark" aria-hidden="true"><span>01</span><span>USER</span><span>FIRST</span></div>
+        </article>
         <div className="insight-grid">
-          {insights.map((post, index) => (
-            <article key={post.href}>
-              <div><span>0{index + 1}</span><small>{post.topic}</small></div>
+          {insights.slice(1, 4).map((post, index) => (
+            <article key={post.href} className={"insight-card insight-card-" + (index + 1)}>
+              <div><span>0{index + 2}</span><small>{post.topic}</small></div>
               <h3>{post.title}</h3>
               <p>{post.text}</p>
-              <a href={post.href} target="_blank" rel="noreferrer">Read on LinkedIn ↗</a>
+              <a href={post.href} target="_blank" rel="noreferrer">Read on LinkedIn <span aria-hidden="true">↗</span></a>
             </article>
           ))}
         </div>
+        <details className="insight-archive">
+          <summary><span>View all insights</span><span className="insight-archive-count">+ {insights.length - 4} more posts</span></summary>
+          <div className="insight-archive-grid">
+            {insights.slice(4).map((post, index) => (
+              <article key={post.href}>
+                <div><span>0{index + 5}</span><small>{post.topic}</small></div>
+                <h3>{post.title}</h3>
+                <p>{post.text}</p>
+                <a href={post.href} target="_blank" rel="noreferrer">Read original post <span aria-hidden="true">↗</span></a>
+              </article>
+            ))}
+          </div>
+        </details>
+        <a className="linkedin-profile" href="https://www.linkedin.com/in/ayodeji-ezekiel-olusola/" target="_blank" rel="noreferrer">Explore my LinkedIn profile ↗</a>
       </section>
 
       <section className="construction construction-cta section" id="construction">
