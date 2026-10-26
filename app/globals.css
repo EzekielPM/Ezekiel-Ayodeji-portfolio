@@ -1093,11 +1093,11 @@ html[data-theme="navy"] .statement::before{background:#62a98a}
 
 
 
-/* Light mode: soft cream and muted green palette.
+/* Light mode: warm ivory and muted green palette.
    Deliberately scoped so the existing navy theme remains unchanged. */
 html:not([data-theme="navy"]) {
   --ink:#303936;
-  --paper:#F1EBDD;
+  --paper:#F3F0E7;
   --card:#E9E2D4;
   --green:#28765F;
   --muted:#626A62;
@@ -1106,7 +1106,7 @@ html:not([data-theme="navy"]) {
 }
 html:not([data-theme="navy"]) body { background:var(--paper); color:var(--ink); }
 html:not([data-theme="navy"]) .site-header {
-  background:rgba(241,235,221,.94);
+  background:rgba(243,240,231,.94);
   border-bottom-color:var(--line);
 }
 html:not([data-theme="navy"]) .hero-intro,
@@ -1132,7 +1132,7 @@ html:not([data-theme="navy"]) .mentors {
 html:not([data-theme="navy"]) .toolkit,
 html:not([data-theme="navy"]) .insights,
 html:not([data-theme="navy"]) .resume {
-  background:#F1EBDD;
+  background:#F3F0E7;
 }
 html:not([data-theme="navy"]) .practice-card {
   background:#E9E2D4;
