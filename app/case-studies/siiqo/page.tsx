@@ -82,6 +82,11 @@ export default function SiiqoCaseStudy() {
             <section><span>08</span><div><h3>What the project taught me</h3><p>Siiqo progressed into a live multi-sided marketplace with a clear trust proposition. The project reinforced something I carry into other product work: marketplace growth is not only about adding inventory. It depends on credibility, safe transactions, seller support and an experience that makes those values visible to users.</p></div></section>
           </div>
 
+          <nav className="case-study-next" aria-label="Explore other case studies">
+            <span>Explore another case study</span>
+            <a href="/case-studies/canvoy">Canvoy Payment <b>↗</b></a>
+            <a href="/case-studies/wayagram">Wayagram <b>↗</b></a>
+          </nav>
           <footer className="journal-footer">
             <p>Olusola Ayodeji Ezekiel · Product case study</p>
             <div className="hero-actions">
