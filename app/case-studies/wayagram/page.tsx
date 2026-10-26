@@ -95,6 +95,7 @@ export default function WayagramCaseStudy() {
             <div className="hero-actions">
               <Link className="button text" href="/v2#products">Return to portfolio <span>↖</span></Link>
               <a className="case-button" href="/documents/wayagram-product-architecture.pdf" target="_blank" rel="noreferrer">Open architecture PDF <span>↗</span></a>
+              <a className="case-contact-link" href="/v2#contact">Let’s talk about product <span>↗</span></a>
             </div>
           </footer>
         </article>
