@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "TradeFlow Commerce | Founder & Product Manager Case Study",
   description:
     "Founder-led product case study for TradeFlow Commerce, covering buyer and vendor journeys, location-based delivery, order notifications and payment validation.",
+  alternates: { canonical: "/v2/tradeflow" },
   openGraph: {
     title: "TradeFlow Commerce | Founder & Product Manager Case Study",
     description:
@@ -34,7 +35,7 @@ export default function TradeFlowCaseStudy() {
             <h2>TradeFlow Commerce</h2>
           </div>
           <p>
-            One connected marketplace experience for product discovery, vendor operations, checkout and location-based delivery — built to make the next step clearer for buyers and sellers.
+            TradeFlow is my founder-led commerce build, connecting buyer discovery, vendor operations, checkout and location-based delivery. This case study focuses on the product decisions behind those connected journeys and the release checks still required.
           </p>
         </div>
 
@@ -44,7 +45,7 @@ export default function TradeFlowCaseStudy() {
             <span>06</span>
             <h2>TradeFlow Commerce</h2>
             <p className="journal-deck">
-              I’m building TradeFlow to make buying and selling feel connected. Buyers can discover products across vendors, while vendors need a clear way to manage their storefronts, incoming orders and delivery settings. The product work brings those journeys together instead of treating them as separate problems.
+              I am building TradeFlow as Founder and Product Manager. Buyers need a straightforward path from product discovery to checkout; vendors need a separate workspace to manage listings, orders and delivery coverage. I shaped the product around those linked journeys, with the handoffs between them treated as core product requirements.
             </p>
             <p className="case-disclaimer"><strong>My role:</strong> Founder &amp; Product Manager · Product vision, buyer and vendor journeys, delivery logic, payment integration and fulfilment.</p>
             <p className="case-disclaimer">
@@ -103,7 +104,7 @@ export default function TradeFlowCaseStudy() {
               <div>
                 <h3>The buyer journey</h3>
                 <p>
-                  The shop brings products from different vendors into one browsing experience, supported by vendor search, category filters and product previews. At checkout, delivery details matter: the buyer provides their state, area and address so the delivery charge can follow the vendor’s configured service areas rather than an assumed flat fee.
+                  The buyer shop brings products from different vendors into one browsing experience, supported by vendor search, category filters and product previews. At checkout, the buyer provides location and address details so delivery pricing can use the vendor’s configured service areas. The important decision is to calculate from known coverage rather than show a convenient but potentially incorrect flat fee.
                 </p>
               </div>
             </section>
@@ -113,7 +114,7 @@ export default function TradeFlowCaseStudy() {
               <div>
                 <h3>The vendor journey</h3>
                 <p>
-                  Vendors configure their storefront and products, define the delivery areas they can serve and set the fees for those areas. When an order is placed, the notification is saved in the database so it remains available if the vendor is offline and returns later. This treats order awareness as part of fulfilment, not merely a temporary pop-up.
+                  Vendors configure their storefront and products, define the delivery areas they can serve and set the fees for those areas. Order notifications are persisted so the alert remains available when a vendor returns, instead of disappearing as a temporary pop-up. This makes order awareness part of the fulfilment workflow, not just a momentary interface event.
                 </p>
               </div>
             </section>
@@ -133,7 +134,7 @@ export default function TradeFlowCaseStudy() {
               <div>
                 <h3>Payments, trust and release readiness</h3>
                 <p>
-                  Paystack is part of the payment journey, but it remains in Test Mode. Before treating payments as production-ready, the next validation work should cover successful, failed and pending states, transaction reconciliation, webhook behaviour, duplicate submissions and the customer-facing message for each outcome. A deployed interface is not the same as a fully verified live payment system.
+                  Paystack is integrated into the intended payment journey but remains in Test Mode. Before live release, I need to validate successful, failed and pending states, transaction reconciliation, webhook behaviour, duplicate submissions and the customer-facing message for each outcome. A deployed interface is not evidence that live payment processing has been verified.
                 </p>
               </div>
             </section>
@@ -153,7 +154,7 @@ export default function TradeFlowCaseStudy() {
               <div>
                 <h3>How I would measure success</h3>
                 <p>
-                  I would establish a baseline before setting targets. Core measures include product-view-to-order conversion, checkout completion and abandonment, payment success and failure rates, time from order placement to vendor acknowledgement, delivery completion, support contacts per order and repeat buyer or vendor activity. Delivery-fee accuracy and failed or unsupported delivery-area attempts would help show whether the location rules are clear.
+                  I would establish a reliable baseline before setting targets. Core measures would include product-view-to-order conversion, checkout completion and abandonment, payment success and failure rates, time from order placement to vendor acknowledgement, delivery completion, support contacts per order and repeat buyer or vendor activity. Delivery-fee accuracy and unsupported delivery-area attempts would help test whether the location rules are understandable. These are proposed measures, not reported results.
                 </p>
               </div>
             </section>
@@ -163,7 +164,7 @@ export default function TradeFlowCaseStudy() {
               <div>
                 <h3>Current status and next validation</h3>
                 <p>
-                  The build is deployed for review. Some live screens still display OrderFlow branding, so brand consistency remains a release check. Paystack remains in Test Mode. The next release checks are to complete end-to-end payment testing, verify order and notification states across buyer and vendor accounts, test delivery-zone edge cases, and confirm the customer-facing updates before promoting payment processing to live use.
+                  The build is deployed for review, but it is not yet ready to present as a fully released commerce service. Some live screens still display OrderFlow branding, and Paystack remains in Test Mode. The release checklist is to resolve brand consistency, complete end-to-end payment tests, verify order and notification states across buyer and vendor accounts, test delivery-zone edge cases and confirm customer-facing updates before considering live payment processing.
                 </p>
               </div>
             </section>
