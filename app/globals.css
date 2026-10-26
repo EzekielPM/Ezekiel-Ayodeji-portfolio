@@ -1038,3 +1038,55 @@ html[data-theme="navy"] #insights .insight-archive-grid article{background:linea
 .practice-back-outcome strong{color:#e4d2a5;font-size:9px;letter-spacing:.12em;text-transform:uppercase}
 @media(max-width:600px){.practice-flip-card,.practice-flip-toggle,.practice-flip-inner,.practice-flip-face{min-height:370px}.practice-flip-face{padding:24px}.practice-card-title{margin-top:42px}.practice-back-heading{font-size:21px}}
 @media(prefers-reduced-motion:reduce){.practice-flip-inner{transition:none}}
+
+
+/* Statement section: ivory-and-green editorial redesign */
+.statement{
+  position:relative;
+  padding:clamp(64px,8vw,112px) clamp(22px,10vw,160px);
+  color:#173b35;
+  background:#f3f0e7;
+  border-top:1px solid #dce4d9;
+  border-bottom:1px solid #dce4d9;
+  overflow:hidden;
+}
+.statement::before{
+  content:"";
+  position:absolute;
+  top:clamp(64px,8vw,112px);
+  bottom:clamp(64px,8vw,112px);
+  left:clamp(22px,6vw,92px);
+  width:3px;
+  background:#28765f;
+  border-radius:3px;
+}
+.statement .section-kicker{
+  margin-bottom:28px;
+  color:#28765f;
+  letter-spacing:.2em;
+}
+.statement blockquote, .statement blockquote p{
+  max-width:1000px;
+  color:#173b35;
+  font:400 clamp(34px,4.6vw,66px)/1.16 Georgia,serif;
+  letter-spacing:-.035em;
+}
+.statement blockquote em, .statement blockquote p em{
+  color:#28765f;
+  font-style:normal;
+}
+html[data-theme="navy"] .statement{
+  color:#edf3ef;
+  background:#102c36;
+  border-color:#29454b;
+}
+html[data-theme="navy"] .statement blockquote,
+html[data-theme="navy"] .statement blockquote p{color:#edf3ef}
+html[data-theme="navy"] .statement .section-kicker{color:#a9d5c2}
+html[data-theme="navy"] .statement blockquote em,
+html[data-theme="navy"] .statement blockquote p em{color:#a9d5c2}
+html[data-theme="navy"] .statement::before{background:#62a98a}
+@media(max-width:600px){
+  .statement{padding:62px 24px 62px 42px}
+  .statement::before{left:20px;top:62px;bottom:62px}
+}
