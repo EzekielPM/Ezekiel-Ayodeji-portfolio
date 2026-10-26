@@ -24,7 +24,7 @@ export default function MotionEnhancements() {
             intro?.remove();
             root.classList.remove("portfolio-intro-active");
           }, 650);
-        }, 5350);
+        }, 3350);
       }
     } catch {
       // If session storage is unavailable, the portfolio still loads normally.
