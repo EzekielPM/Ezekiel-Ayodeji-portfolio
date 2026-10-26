@@ -12,7 +12,7 @@ export default function MotionEnhancements() {
     let intro: HTMLDivElement | null = null;
     const motionStyle = document.createElement("style");
     motionStyle.textContent = `
-      .portfolio-intro .portfolio-intro-name{position:relative;z-index:2;transform-origin:center;transition:transform 1.05s cubic-bezier(.16,1,.3,1),opacity .85s ease;will-change:transform,opacity}
+      .portfolio-intro .portfolio-intro-name{position:relative;z-index:2;transform-origin:center;transition:transform 1.8s cubic-bezier(.16,1,.3,1),opacity 1.4s ease;will-change:transform,opacity}
       .portfolio-intro.portfolio-intro-zoom .portfolio-intro-name{transform:scale(18);opacity:0}
       .portfolio-intro.portfolio-intro-zoom{background:radial-gradient(ellipse at 50% 48%,#163d43 0%,#102b35 38%,#081820 100%);transition:opacity .95s ease;opacity:0;pointer-events:none}
       html[data-theme="navy"] .statement{background:#091722!important;color:#e8eff2!important;border-top:1px solid #1c3441;border-bottom:1px solid #1c3441}
@@ -58,7 +58,7 @@ export default function MotionEnhancements() {
               intro?.remove();
               root.classList.remove("portfolio-intro-active");
             }, 950);
-          }, 1050);
+          }, 1800);
         }, 3750);
       }
     } catch {
