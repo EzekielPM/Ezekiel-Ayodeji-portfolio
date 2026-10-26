@@ -22,7 +22,7 @@ const selectedWork = [
     label: "FinTech · Product Manager · Scrum Master",
     status: "MVP / DELIVERY",
     summary:
-      "An early-stage digital payments MVP focused on utility and everyday payment journeys, with work spanning requirements, Jira delivery planning and security and QA readiness."
+      "An early-stage digital payments MVP focused on utility and everyday payment journeys, with work spanning requirements, Jira delivery planning and security and QA readiness.",
     image: "/portfolio/full/canvoy-1.jpg",
     tags: ["Utility payments", "MVP definition", "Jira planning", "Scrum", "Security and QA planning"],
     href: "/case-studies/canvoy",
@@ -34,7 +34,7 @@ const selectedWork = [
     label: "FinTech · Technical Product Manager",
     status: "PRODUCTION DELIVERY",
     summary:
-      "A social, marketplace and payments platform. During a brief engagement, I contributed to production migration activities, regression testing, team ceremonies and module reporting."
+      "A social, marketplace and payments platform. During a brief engagement, I contributed to production migration activities, regression testing, team ceremonies and module reporting.",
     image: "/portfolio/full/wayagram-1.jpg",
     tags: ["Migration support", "Regression testing", "Wallet", "Marketplace", "Delivery coordination"],
     href: "/case-studies/wayagram",
