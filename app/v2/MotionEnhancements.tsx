@@ -15,7 +15,19 @@ export default function MotionEnhancements() {
         intro.className = "portfolio-intro";
         intro.setAttribute("role", "status");
         intro.setAttribute("aria-label", "Welcome to Olusola Ayodeji Ezekiel's portfolio");
-        intro.innerHTML = '<span class="portfolio-intro-mark" aria-hidden="true"><span style="--letter-index:0">O</span><span style="--letter-index:1">L</span><span style="--letter-index:2">U</span><span style="--letter-index:3">S</span><span style="--letter-index:4">O</span><span style="--letter-index:5">L</span><span style="--letter-index:6">A</span></span><span class="portfolio-intro-name">AYODEJI EZEKIEL</span><span class="portfolio-intro-role">PRODUCT MANAGER · PRODUCT LEADERSHIP</span><span class="portfolio-intro-rule" aria-hidden="true"></span>';
+        const assembleText = (value: string, group: "name" | "role") =>
+          Array.from(value).map((character, index) => {
+            const paths = [
+              ["-110vw", "-75vh", "-32deg"], ["108vw", "-70vh", "28deg"],
+              ["-105vw", "68vh", "35deg"], ["110vw", "76vh", "-26deg"],
+              ["0vw", "-110vh", "18deg"], ["0vw", "110vh", "-22deg"],
+              ["-110vw", "0vh", "-40deg"], ["110vw", "0vh", "40deg"],
+            ];
+            const [x, y, rotation] = paths[(index * 5 + (group === "role" ? 3 : 0)) % paths.length];
+            const safeCharacter = character === " " ? "&nbsp;" : character === "&" ? "&amp;" : character;
+            return `<span class="portfolio-flying-letter" style="--start-x:${x};--start-y:${y};--start-rotate:${rotation};--letter-index:${index};--group-delay:${group === "role" ? "760ms" : "0ms"}">${safeCharacter}</span>`;
+          }).join("");
+        intro.innerHTML = `<span class="portfolio-intro-name" aria-label="Olusola Ayodeji Ezekiel">${assembleText("OLUSOLA AYODEJI EZEKIEL", "name")}</span><span class="portfolio-intro-role" aria-label="Product Manager · Product Leadership">${assembleText("PRODUCT MANAGER · PRODUCT LEADERSHIP", "role")}</span><span class="portfolio-intro-rule" aria-hidden="true"></span>`;
         document.body.appendChild(intro);
         root.classList.add("portfolio-intro-active");
         introTimer = window.setTimeout(() => {
