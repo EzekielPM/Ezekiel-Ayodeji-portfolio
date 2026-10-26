@@ -254,16 +254,67 @@ export default function PortfolioV2() {
           <p>Less framework theatre. More clarity around what I do at each stage and why it matters.</p>
         </div>
         <div className="capability-grid">
-          {practice.map((item) => (
-            <article className="practice-card" key={item.title}>
-              <span>{item.number}</span>
-              <h3>{item.title}</h3>
-              <p>{item.statement}</p>
-              <div className="practice-card-meta">
-                <strong>{item.detail}</strong>
-              </div>
-            </article>
-          ))}
+          {practice.map((item) => {
+            const flipContent: Record<string, { heading: string; points: string[]; outcome: string }> = {
+              Discover: {
+                heading: "What this looks like in practice",
+                points: ["Talk to users and map their current journey", "Check support issues, behaviour and market context", "Separate the observed problem from assumed solutions"],
+                outcome: "A clearly evidenced problem worth solving.",
+              },
+              Define: {
+                heading: "What this looks like in practice",
+                points: ["Write the problem statement and desired outcome", "Map the key journey and edge cases", "Prioritise an MVP, document trade-offs and define success"],
+                outcome: "A shared scope the team can build and validate.",
+              },
+              Deliver: {
+                heading: "What this looks like in practice",
+                points: ["Break scope into stories with acceptance criteria", "Align sprint goals, owners and dependencies", "Work with design, engineering and QA through release"],
+                outcome: "A usable release with quality and readiness checked.",
+              },
+              Improve: {
+                heading: "What this looks like in practice",
+                points: ["Review adoption, completion and drop-off signals", "Listen for recurring feedback and support friction", "Run focused experiments and reprioritise from evidence"],
+                outcome: "A clear next improvement tied to user and business value.",
+              },
+            };
+            const extra = flipContent[item.title];
+            return (
+              <article className="practice-card practice-flip-card" key={item.title}>
+                <button
+                  className="practice-flip-toggle"
+                  type="button"
+                  aria-label={`${item.title}: flip card to see practical examples`}
+                  aria-pressed="false"
+                  onClick={(event) => {
+                    const card = event.currentTarget.closest(".practice-flip-card");
+                    if (!card) return;
+                    const flipped = card.classList.toggle("is-flipped");
+                    event.currentTarget.setAttribute("aria-pressed", String(flipped));
+                    event.currentTarget.setAttribute("aria-label", flipped ? `${item.title}: flip back to summary` : `${item.title}: flip card to see practical examples`);
+                  }}
+                >
+                  <span className="practice-flip-inner">
+                    <span className="practice-flip-face practice-flip-front">
+                      <span className="practice-card-number">{item.number}</span>
+                      <span className="practice-card-title">{item.title}</span>
+                      <span className="practice-card-statement">{item.statement}</span>
+                      <span className="practice-card-detail">{item.detail}</span>
+                      <span className="practice-flip-hint">Click to explore <span aria-hidden="true">↻</span></span>
+                    </span>
+                    <span className="practice-flip-face practice-flip-back">
+                      <span className="practice-card-number">{item.number} / {item.title}</span>
+                      <span className="practice-back-heading">{extra.heading}</span>
+                      <span className="practice-back-points">
+                        {extra.points.map((point) => <span key={point}>{point}</span>)}
+                      </span>
+                      <span className="practice-back-outcome"><strong>Result</strong>{extra.outcome}</span>
+                      <span className="practice-flip-hint">Click to return <span aria-hidden="true">↻</span></span>
+                    </span>
+                  </span>
+                </button>
+              </article>
+            );
+          })}
         </div>
       </section>
 
