@@ -96,6 +96,7 @@ export default function CanvoyCaseStudy() {
             <div className="hero-actions">
               <a className="button text" href="/v2#products">Return to portfolio <span>↖</span></a>
               <a className="case-button" href="/documents/canvoy-mvp-roadmap.pdf" target="_blank" rel="noreferrer">Open MVP roadmap <span>↗</span></a>
+              <a className="case-contact-link" href="/v2#contact">Let’s talk about product <span>↗</span></a>
             </div>
           </footer>
         </article>
