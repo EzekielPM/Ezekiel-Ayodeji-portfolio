@@ -18,11 +18,14 @@ export default function MotionEnhancements() {
       html[data-theme="navy"] .statement{background:#091722!important;color:#e8eff2!important;border-top:1px solid #1c3441;border-bottom:1px solid #1c3441}
       html[data-theme="navy"] .statement .section-kicker{color:#8ba99f!important}
       html[data-theme="navy"] .statement blockquote em{color:#a9cbbd!important}
-      .motion-ready .statement .section-kicker,.motion-ready .statement blockquote{opacity:0;transform:translateY(26px)}
-      .motion-ready .statement.is-visible .section-kicker{animation:pointOfViewReveal .65s cubic-bezier(.2,.8,.2,1) both}
-      .motion-ready .statement.is-visible blockquote{animation:pointOfViewReveal .85s .12s cubic-bezier(.2,.8,.2,1) both}
+      .motion-ready .statement{opacity:0;transform:translateY(34px) scale(.985);clip-path:inset(0 0 10% 0);will-change:opacity,transform,clip-path}
+      .motion-ready .statement.is-visible{animation:pointOfViewSectionReveal .9s cubic-bezier(.2,.8,.2,1) both}
+      .motion-ready .statement .section-kicker,.motion-ready .statement blockquote{opacity:0;transform:translateY(22px)}
+      .motion-ready .statement.is-visible .section-kicker{animation:pointOfViewReveal .65s .18s cubic-bezier(.2,.8,.2,1) both}
+      .motion-ready .statement.is-visible blockquote{animation:pointOfViewReveal .85s .32s cubic-bezier(.2,.8,.2,1) both}
+      @keyframes pointOfViewSectionReveal{to{opacity:1;transform:translateY(0) scale(1);clip-path:inset(0 0 0 0)}}
       @keyframes pointOfViewReveal{to{opacity:1;transform:translateY(0)}}
-      @media(prefers-reduced-motion:reduce){.portfolio-intro .portfolio-intro-name,.portfolio-intro.portfolio-intro-zoom{transition:none!important}.motion-ready .statement .section-kicker,.motion-ready .statement blockquote{opacity:1!important;transform:none!important;animation:none!important}}
+      @media(prefers-reduced-motion:reduce){.portfolio-intro .portfolio-intro-name,.portfolio-intro.portfolio-intro-zoom{transition:none!important}.motion-ready .statement,.motion-ready .statement .section-kicker,.motion-ready .statement blockquote{opacity:1!important;transform:none!important;clip-path:none!important;animation:none!important}}
     `;
     document.head.appendChild(motionStyle);
 
