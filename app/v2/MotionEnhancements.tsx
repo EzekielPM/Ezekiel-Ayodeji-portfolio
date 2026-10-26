@@ -7,7 +7,24 @@ export default function MotionEnhancements() {
     const root = document.documentElement;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let introTimer: number | undefined;
+    let zoomTimer: number | undefined;
+    let introCleanupTimer: number | undefined;
     let intro: HTMLDivElement | null = null;
+    const motionStyle = document.createElement("style");
+    motionStyle.textContent = `
+      .portfolio-intro .portfolio-intro-name{position:relative;z-index:2;transform-origin:center;transition:transform 1.05s cubic-bezier(.16,1,.3,1),opacity .85s ease;will-change:transform,opacity}
+      .portfolio-intro.portfolio-intro-zoom .portfolio-intro-name{transform:scale(18);opacity:0}
+      .portfolio-intro.portfolio-intro-zoom{background:radial-gradient(ellipse at 50% 48%,#163d43 0%,#102b35 38%,#081820 100%);transition:opacity .95s ease;opacity:0;pointer-events:none}
+      html[data-theme="navy"] .statement{background:#091722!important;color:#e8eff2!important;border-top:1px solid #1c3441;border-bottom:1px solid #1c3441}
+      html[data-theme="navy"] .statement .section-kicker{color:#8ba99f!important}
+      html[data-theme="navy"] .statement blockquote em{color:#a9cbbd!important}
+      .motion-ready .statement .section-kicker,.motion-ready .statement blockquote{opacity:0;transform:translateY(26px)}
+      .motion-ready .statement.is-visible .section-kicker{animation:pointOfViewReveal .65s cubic-bezier(.2,.8,.2,1) both}
+      .motion-ready .statement.is-visible blockquote{animation:pointOfViewReveal .85s .12s cubic-bezier(.2,.8,.2,1) both}
+      @keyframes pointOfViewReveal{to{opacity:1;transform:translateY(0)}}
+      @media(prefers-reduced-motion:reduce){.portfolio-intro .portfolio-intro-name,.portfolio-intro.portfolio-intro-zoom{transition:none!important}.motion-ready .statement .section-kicker,.motion-ready .statement blockquote{opacity:1!important;transform:none!important;animation:none!important}}
+    `;
+    document.head.appendChild(motionStyle);
 
     try {
       if (!reducedMotion) {
@@ -31,11 +48,14 @@ export default function MotionEnhancements() {
         document.body.appendChild(intro);
         root.classList.add("portfolio-intro-active");
         introTimer = window.setTimeout(() => {
-          intro?.classList.add("portfolio-intro-exit");
-          window.setTimeout(() => {
-            intro?.remove();
-            root.classList.remove("portfolio-intro-active");
-          }, 250);
+          intro?.classList.add("portfolio-intro-zoom");
+          zoomTimer = window.setTimeout(() => {
+            intro?.classList.add("portfolio-intro-exit");
+            introCleanupTimer = window.setTimeout(() => {
+              intro?.remove();
+              root.classList.remove("portfolio-intro-active");
+            }, 950);
+          }, 1050);
         }, 3750);
       }
     } catch {
@@ -96,7 +116,7 @@ export default function MotionEnhancements() {
     window.addEventListener("resize", updateActiveNav);
     updateActiveNav();
     const targets = [
-      ".statement > *",
+      ".statement",
       "#products .section-heading",
       "#products .case-card",
       "#all-projects .section-heading",
@@ -118,6 +138,9 @@ export default function MotionEnhancements() {
     if (!elements.length) return () => {
       progress.remove();
       if (introTimer !== undefined) window.clearTimeout(introTimer);
+      if (zoomTimer !== undefined) window.clearTimeout(zoomTimer);
+      if (introCleanupTimer !== undefined) window.clearTimeout(introCleanupTimer);
+      motionStyle.remove();
       intro?.remove();
       root.classList.remove("portfolio-intro-active");
       portrait?.removeEventListener("click", handlePortraitClick);
@@ -151,6 +174,12 @@ export default function MotionEnhancements() {
 
     return () => {
       observer.disconnect();
+      if (introTimer !== undefined) window.clearTimeout(introTimer);
+      if (zoomTimer !== undefined) window.clearTimeout(zoomTimer);
+      if (introCleanupTimer !== undefined) window.clearTimeout(introCleanupTimer);
+      intro?.remove();
+      root.classList.remove("portfolio-intro-active");
+      motionStyle.remove();
       portrait?.removeEventListener("click", handlePortraitClick);
       root.classList.remove("motion-ready");
       progress.remove();
