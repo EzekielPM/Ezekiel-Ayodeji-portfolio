@@ -3,12 +3,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Canvoy Payment Case Study | Olusola Ayodeji Ezekiel",
   description:
-    "A FinTech product management case study covering MVP definition, payment journeys, Jira delivery, security and QA readiness.",
+    "An account of Olusola Ayodeji Ezekiel's product management and Scrum work on the Canvoy Payment MVP, including requirements, Jira delivery planning and release readiness.",
   alternates: { canonical: "/case-studies/canvoy" },
   openGraph: {
     title: "Canvoy Payment Case Study | Olusola Ayodeji Ezekiel",
     description:
-      "Product decisions and delivery practices behind the Canvoy Payment MVP.",
+      "Product scope, delivery artefacts and practices documented for the Canvoy Payment MVP.",
     type: "article",
     url: "/case-studies/canvoy",
   },
@@ -30,11 +30,11 @@ export default function CanvoyCaseStudy() {
       <section className="section" id="top">
         <div className="section-heading">
           <div>
-            <p className="section-kicker">Featured product case study</p>
+            <p className="section-kicker">FinTech product experience</p>
             <h2>Canvoy Payment</h2>
           </div>
           <p>
-            A FinTech MVP case covering payment journeys, requirements, Jira ownership, sprint delivery, security, QA readiness and the decisions needed to move an early product toward release.
+            A FinTech MVP experience focused on payment journeys, requirements, Jira delivery planning and coordination around security and QA readiness.
           </p>
         </div>
 
@@ -44,7 +44,7 @@ export default function CanvoyCaseStudy() {
             <span>02</span>
             <h2>Canvoy Payment</h2>
             <p className="journal-deck">
-              Canvoy focused on making recurring utility and everyday payments easier to complete and easier to trust. I worked across MVP definition, requirements and delivery coordination, while managing the Jira structure that connected the roadmap to sprint execution.
+              Canvoy Payment focused on utility and everyday payments. My role combined Product Manager and Scrum Master responsibilities, including MVP definition, requirements and delivery coordination. I managed the Jira structure used to organise planned work and connect the roadmap with sprint execution.
             </p>
           </header>
 
@@ -64,7 +64,7 @@ export default function CanvoyCaseStudy() {
           </div>
 
           <div className="feature-tags" aria-label="Canvoy product areas">
-            <span>Utility payments</span><span>MVP roadmap</span><span>Jira ownership</span><span>Scrum</span><span>Security</span><span>QA readiness</span>
+            <span>Utility payments</span><span>MVP definition</span><span>Jira delivery planning</span><span>Scrum</span><span>Security and QA planning</span>
           </div>
 
           <section className="resource-panel">
@@ -73,7 +73,7 @@ export default function CanvoyCaseStudy() {
               <a href="/documents/canvoy-mvp-roadmap.pdf" target="_blank" rel="noreferrer">
                 <span>
                   <strong>Canvoy Payment 8 Week MVP Roadmap</strong>
-                  <small>The delivery roadmap covering product discovery, design, technical setup, security, implementation and release readiness.</small>
+                  <small>An eight-week plan outlining intended discovery, design, technical setup, security, implementation and release-readiness activities.</small>
                 </span>
                 <b>View PDF ↗</b>
               </a>
@@ -85,12 +85,12 @@ export default function CanvoyCaseStudy() {
           </div>
 
           <div className="journal-body">
-            <section><span>01</span><div><h3>Where Canvoy started</h3><p>Canvoy began with a simple product question: how can everyday utility and recurring payments feel less stressful and more dependable? The MVP was shaped around giving customers a clear path from registration to payment completion, while creating a foundation that could support more payment services over time.</p></div></section>
-            <section><span>02</span><div><h3>The payment problem we needed to reduce</h3><p>Routine payments become frustrating when users are unsure what information is required, whether a transaction is secure, what stage it has reached or what to do when something fails. The experience needed to reduce that uncertainty and make each payment feel clear from start to finish.</p></div></section>
-            <section><span>03</span><div><h3>What I owned</h3><p>As Product Manager and Scrum Master, I contributed across discovery, MVP definition, requirements, prioritisation and delivery coordination. I also structured and managed the Jira workspace, turning the roadmap into epics, sprint backlogs, user stories, tasks and measurable acceptance criteria the team could work from.</p></div></section>
-            <section><span>04</span><div><h3>How I shaped the MVP</h3><p>I organised the product around the journeys that mattered most for an initial release: authentication, verification, account recovery, dashboards, payment flows, security questions, transaction feedback and profile management. I worked across design, engineering, data and cybersecurity to surface dependencies early and keep product, experience and risk decisions aligned.</p></div></section>
-            <section><span>05</span><div><h3>How we delivered it</h3><p>I facilitated sprint planning, stand-ups, refinement and progress reviews while keeping requirements visible as questions emerged. QA readiness and risk assessment were treated as part of delivery from the beginning, rather than activities to leave until the end of the build.</p></div></section>
-            <section><span>06</span><div><h3>The decisions behind the MVP</h3><p>I kept the initial scope centred on the end-to-end payment journey: users needed to get into their account, understand the steps required, complete a payment and receive clear transaction feedback. Authentication, verification, recovery and security were treated as connected parts of that journey, not separate checklist items. I also kept QA and risk review inside the delivery process so unresolved security or transaction-state questions could be surfaced before release decisions.</p></div></section>
+            <section><span>01</span><div><h3>The product and its focus</h3><p>Canvoy Payment was an early-stage FinTech product centred on utility and everyday payments. The MVP planning focused on making the core customer journey clear, from account access through payment steps and transaction feedback, while keeping future expansion separate from the initial scope.</p></div></section>
+            <section><span>02</span><div><h3>The experience to plan for</h3><p>The planned payment journey needed clear instructions, appropriate security checks and understandable transaction feedback. Account access, payment status and recovery paths were important considerations in defining what the MVP should cover.</p></div></section>
+            <section><span>03</span><div><h3>My role and contribution</h3><p>As Product Manager and Scrum Master, I worked on discovery, MVP definition, requirements, prioritisation and delivery coordination. I structured and managed the Jira workspace, organising planned work into epics, sprint backlogs, user stories, tasks and acceptance criteria. This describes the product and delivery work, not a claim that the MVP launched or achieved a particular result.</p></div></section>
+            <section><span>04</span><div><h3>How the MVP was structured</h3><p>The planned scope covered authentication, verification, account recovery, dashboards, payment flows, security questions, transaction feedback and profile management. These areas helped organise requirements and highlight where design, engineering, data and security considerations needed to be coordinated.</p></div></section>
+            <section><span>05</span><div><h3>Delivery coordination</h3><p>I supported sprint planning, stand-ups, refinement and progress reviews, using Jira to keep requirements and planned work organised. Security considerations and QA readiness were included in delivery discussions rather than treated only as final-stage checks.</p></div></section>
+            <section><span>06</span><div><h3>Product priorities</h3><p>The planning kept the end-to-end payment journey at the centre: account access, required steps, payment flow and transaction feedback. Authentication, verification, recovery and security were considered as connected parts of that experience. QA and risk review were included in the delivery plan, while release readiness remained something to validate rather than assume.</p></div></section>
             <section><span>07</span><div><h3>Delivery artefacts and outcome assessment</h3><p>The work was translated into an eight-week MVP roadmap and a Jira delivery structure that connected scope to sprint execution. These artefacts make the planned work and delivery approach reviewable; they should not be mistaken for evidence of a live launch or measured customer impact. To assess the product outcome, I would first confirm release status and establish baselines for payment completion, failed transactions, recovery success and support requests before setting targets.</p></div></section>
             <section><span>08</span><div><h3>What the work reinforced for me</h3><p>The project strengthened my understanding of trust in payment products. Clear flows matter, but so do security, transaction visibility and timely feedback. Those are not supporting details in a financial product; they are part of the product experience itself.</p></div></section>
           </div>
