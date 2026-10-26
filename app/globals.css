@@ -1382,3 +1382,213 @@ html[data-theme="navy"] #products .case-button:hover {
   html[data-theme="navy"] #products .case-card { transition: none; }
 }
 
+/* Featured product cards now use the same flip interaction as Product Practice. */
+#products .product-experience-grid { gap: 20px; }
+#products .product-experience-card {
+  min-height: 520px;
+  padding: 0;
+  overflow: visible;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  perspective: 1200px;
+}
+#products .product-experience-card:hover,
+#products .product-experience-card:focus-within {
+  border-color: transparent;
+  box-shadow: none;
+  transform: none;
+}
+#products .product-flip-toggle {
+  display: block;
+  width: 100%;
+  min-height: 455px;
+  padding: 0;
+  text-align: left;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  perspective: 1200px;
+}
+#products .product-flip-toggle:focus-visible {
+  outline: 3px solid #7EA88D;
+  outline-offset: 5px;
+}
+#products .product-flip-inner {
+  position: relative;
+  display: block;
+  min-height: 455px;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform .72s cubic-bezier(.2,.75,.25,1);
+}
+#products .product-experience-card.is-flipped .product-flip-inner {
+  transform: rotateY(180deg);
+}
+#products .product-flip-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 455px;
+  padding: clamp(24px, 3vw, 38px);
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border: 1px solid #B9D0BE;
+  border-radius: 20px;
+  box-shadow: 0 16px 38px rgba(26,68,51,.09);
+}
+#products .product-flip-front {
+  color: #183F33;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(40,118,95,.15), transparent 45%),
+    linear-gradient(145deg, #F7F5EC 0%, #E7EEE3 58%, #D9E7D9 100%);
+}
+#products .product-flip-back {
+  transform: rotateY(180deg);
+  color: #F1F6F1;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(167,203,181,.15), transparent 45%),
+    linear-gradient(145deg, #10251F 0%, #194B39 58%, #24664F 100%);
+  border-color: #3E7459;
+}
+#products .product-flip-face .case-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 26px;
+  color: #286A52;
+}
+#products .product-flip-face .case-top .case-status {
+  margin-left: auto;
+}
+#products .product-card-flip-icon {
+  font-size: 24px;
+  line-height: 1;
+}
+#products .product-flip-face .case-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0 0 22px;
+}
+#products .product-card-title {
+  display: block;
+  font: 500 clamp(34px, 4vw, 52px)/1 Georgia,serif;
+  letter-spacing: -.035em;
+}
+#products .product-card-summary {
+  display: block;
+  max-width: 640px;
+  color: #46564D;
+  font-size: 16px;
+  line-height: 1.75;
+}
+#products .product-card-label {
+  display: block;
+  margin-bottom: 16px;
+  color: #286A52;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.6;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+#products .product-card-tags,
+#products .product-back-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+#products .product-card-tags span {
+  padding: 7px 10px;
+  color: #285B47;
+  background: #E0EADF;
+  border: 1px solid #C5D7C8;
+  border-radius: 999px;
+  font-size: 11px;
+  line-height: 1.4;
+}
+#products .product-flip-back .practice-flip-hint { color: #D4E6D7; }
+#products .product-back-eyebrow {
+  color: #A7CBB5;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .16em;
+}
+#products .product-back-title {
+  display: block;
+  margin: 24px 0 15px;
+  font: 500 clamp(34px, 4vw, 48px)/1 Georgia,serif;
+}
+#products .product-back-summary {
+  display: block;
+  margin-bottom: 22px;
+  color: #E0EAE2;
+  font-size: 15px;
+  line-height: 1.75;
+}
+#products .product-back-tags span {
+  padding: 7px 10px;
+  color: #D7E9DB;
+  background: #1D4938;
+  border: 1px solid #47775A;
+  border-radius: 999px;
+  font-size: 11px;
+  line-height: 1.4;
+}
+#products .product-card-action {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-start;
+  padding: 14px 0 0;
+}
+#products .product-card-action .case-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 12px 15px;
+  color: #fff;
+  background: #24664F;
+  border: 1px solid #24664F;
+  border-radius: 9px;
+  font-size: 11px;
+  font-weight: 850;
+}
+#products .product-card-action .case-button:hover { background: #194B39; }
+html[data-theme="navy"] #products .product-flip-front {
+  color: #E8F0E9;
+  background: linear-gradient(145deg,#19382E 0%,#10251F 65%,#0D1B2A 100%);
+  border-color: #355C49;
+}
+html[data-theme="navy"] #products .product-card-summary { color: #D5DFDB; }
+html[data-theme="navy"] #products .product-card-label,
+html[data-theme="navy"] #products .product-flip-face .case-top { color: #A7CBB5; }
+html[data-theme="navy"] #products .product-card-tags span {
+  color: #D2E5D7;
+  background: #19382E;
+  border-color: #315343;
+}
+html[data-theme="navy"] #products .product-card-action .case-button {
+  color: #10251F;
+  background: #A7CBB5;
+  border-color: #A7CBB5;
+}
+@media (max-width: 700px) {
+  #products .product-experience-card { min-height: 500px; }
+  #products .product-flip-toggle,
+  #products .product-flip-inner,
+  #products .product-flip-face { min-height: 440px; }
+  #products .product-flip-face { padding: 24px 20px; }
+  #products .product-card-title { font-size: 38px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #products .product-flip-inner { transition: none; }
+}
+
