@@ -1164,3 +1164,84 @@ html:not([data-theme="navy"]) .resource-panel {
 }
 html:not([data-theme="navy"]) .gallery-empty { background:#DDD2BF; border-color:#D1C6B3; }
 html:not([data-theme="navy"]) .theme-toggle { background:#DDD2BF; border-color:#D1C6B3; }
+
+
+/* Portfolio-wide readability pass: preserve layout, palette and existing content. */
+body {
+  font-size: 16px;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+p, li {
+  line-height: 1.75;
+}
+small, .case-top, .hero-cv-actions a, .portrait-caption span {
+  line-height: 1.5;
+}
+nav {
+  font-size: 13px;
+  line-height: 1.5;
+}
+.hero-intro {
+  font-size: clamp(16px, 1.15vw, 18px);
+  line-height: 1.8;
+}
+.section-heading > p,
+.case-intro p,
+.journal-deck,
+.journal-body p,
+.case-card p,
+.construction p,
+.construction li {
+  font-size: 16px;
+  line-height: 1.8;
+}
+.section-kicker, .hero-label {
+  font-size: 11px;
+  line-height: 1.5;
+}
+.case-top, .case-top .case-status {
+  font-size: 10px;
+  line-height: 1.5;
+}
+.hero-cv-actions a,
+.tool-cloud span,
+.practice-card-actions a {
+  font-size: 11px;
+  line-height: 1.5;
+}
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 3px;
+}
+html:not([data-theme="navy"]) .hero-intro,
+html:not([data-theme="navy"]) .case-intro p,
+html:not([data-theme="navy"]) .section-heading > p,
+html:not([data-theme="navy"]) .journal-deck,
+html:not([data-theme="navy"]) .journal-body p,
+html:not([data-theme="navy"]) .case-card p,
+html:not([data-theme="navy"]) .construction p,
+html:not([data-theme="navy"]) .construction li {
+  color: #454E49;
+}
+html[data-theme="navy"] .hero-intro,
+html[data-theme="navy"] .case-intro p,
+html[data-theme="navy"] .section-heading > p,
+html[data-theme="navy"] .journal-deck,
+html[data-theme="navy"] .journal-body p,
+html[data-theme="navy"] .case-card p,
+html[data-theme="navy"] .construction p,
+html[data-theme="navy"] .construction li {
+  color: #D5DFDB;
+}
+@media (max-width: 700px) {
+  body { font-size: 16px; }
+  .hero-intro, .section-heading > p, .case-intro p,
+  .journal-deck, .journal-body p, .case-card p,
+  .construction p, .construction li {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  .case-top { font-size: 10px; }
+}
