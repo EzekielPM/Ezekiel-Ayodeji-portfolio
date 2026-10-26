@@ -255,7 +255,6 @@ export default function PortfolioV2() {
           <p>Less framework theatre. More clarity around what I do at each stage and why it matters.</p>
         </div>
         <PracticeFlipCards items={practice} />
-        </div>
       </section>
 
       <section className="experience section" id="experience">
