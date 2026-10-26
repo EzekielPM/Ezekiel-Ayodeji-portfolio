@@ -470,11 +470,11 @@ html.portfolio-intro-active,html.portfolio-intro-active body{overflow:hidden}
 .portfolio-intro-name,.portfolio-intro-role{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;max-width:92vw;text-align:center}
 .portfolio-intro-name{color:#e4fff2;font-size:clamp(17px,3.5vw,34px);font-weight:800;letter-spacing:clamp(.08em,.42vw,.22em);line-height:1.5;text-shadow:0 0 28px rgba(91,238,181,.17)}
 .portfolio-intro-role{color:#a8e8cf;font-size:clamp(8px,1.05vw,11px);font-weight:700;letter-spacing:clamp(.08em,.24vw,.15em);line-height:1.8}
-.portfolio-flying-letter{display:inline-block;white-space:pre;opacity:0;transform:translate3d(var(--start-x),var(--start-y),0) rotate(var(--start-rotate)) scale(.72);animation:portfolioLetterFlyIn 1.05s cubic-bezier(.16,.8,.2,1) calc(var(--group-delay) + var(--letter-index)*25ms) forwards;will-change:transform,opacity}
+.portfolio-flying-letter{display:inline-block;white-space:pre;opacity:0;transform:translate3d(var(--start-x),var(--start-y),0) rotate(var(--start-rotate)) scale(.72);animation:portfolioLetterFlyIn 1.8s cubic-bezier(.16,.8,.2,1) calc(var(--group-delay) + var(--letter-index)*32ms) forwards;will-change:transform,opacity}
 .portfolio-intro-rule{position:relative;z-index:2;width:0;height:2px;margin-top:1px;background:linear-gradient(90deg,transparent,#39dba0,#d5ffec,transparent);box-shadow:0 0 18px rgba(57,219,160,.65);animation:portfolioRuleGrow .7s cubic-bezier(.16,.8,.2,1) 1.95s forwards}
 .portfolio-intro-exit{animation:portfolioIntroExit .65s cubic-bezier(.7,0,.2,1) forwards}
 @keyframes portfolioIntroReveal{from{opacity:0}to{opacity:1}}
-@keyframes portfolioLetterFlyIn{0%{opacity:0;transform:translate3d(var(--start-x),var(--start-y),0) rotate(var(--start-rotate)) scale(.72);filter:blur(5px)}62%{opacity:1;filter:blur(0)}84%{transform:translate3d(0,0,0) rotate(-3deg) scale(1.035)}100%{opacity:1;transform:translate3d(0,0,0) rotate(0) scale(1);filter:blur(0)}}
+@keyframes portfolioLetterFlyIn{0%{opacity:0;transform:translate3d(var(--start-x),var(--start-y),0) rotate(var(--start-rotate)) scale(.72);filter:blur(5px)}68%{opacity:1;filter:blur(0)}86%{transform:translate3d(0,0,0) rotate(-1.5deg) scale(1.012)}100%{opacity:1;transform:translate3d(0,0,0) rotate(0) scale(1);filter:blur(0)}}
 @keyframes portfolioRuleGrow{from{width:0;opacity:.4}to{width:clamp(76px,13vw,154px);opacity:1}}
 @keyframes introGridDrift{from{transform:translateY(0)}to{transform:translateY(34px)}}
 @keyframes introRingBreathe{0%,100%{transform:scale(.96);opacity:.6}50%{transform:scale(1.04);opacity:1}}
