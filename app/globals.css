@@ -1021,7 +1021,7 @@ html[data-theme="navy"] #insights .insight-archive-grid article{background:linea
 .practice-flip-inner{position:relative;display:block;min-height:390px;height:100%;transform-style:preserve-3d;transition:transform .72s cubic-bezier(.2,.75,.25,1)}
 .practice-flip-card.is-flipped .practice-flip-inner{transform:rotateY(180deg)}
 .practice-flip-face{position:absolute;inset:0;display:flex;flex-direction:column;min-height:390px;padding:28px;overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1px solid #d4dbd4;border-radius:18px;box-shadow:0 12px 30px rgba(16,32,56,.045)}
-.practice-flip-front{color:#1e293b!important;background:linear-gradient(145deg,#fbfcf8 0%,#f1f5f0 100%)!important;border-color:#d4dbd4}
+.practice-flip-front{color:#173b3b!important;background:radial-gradient(circle at 100% 0%,rgba(21,94,89,.16),transparent 48%),linear-gradient(145deg,#e2eee7 0%,#c8dfd5 55%,#b7d4cb 100%)!important;border-color:#a9c9bd;box-shadow:0 14px 34px rgba(16,44,54,.10)}
 .practice-flip-back{transform:rotateY(180deg);color:#f6faf8;background:linear-gradient(145deg,#102c36 0%,#155e59 100%);border-color:#286b63}
 .practice-card-number{display:block;color:var(--gold);font:15px Georgia,serif}
 .practice-card-title{display:block;margin:54px 0 14px;font:500 31px Georgia,serif}
