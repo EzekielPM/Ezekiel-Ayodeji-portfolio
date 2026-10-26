@@ -760,3 +760,48 @@ html[data-theme="navy"] .journal-body section:nth-child(6)>div::before{
 .case-study-next a:hover{color:#a8d7ca}
 .case-study-next a:hover b{transform:translate(2px,-2px)}
 @media(max-width:600px){.case-study-next{align-items:flex-start;flex-direction:column;gap:14px;padding:22px 20px}.case-study-next>span{margin-bottom:2px}}
+
+
+/* Main portfolio atmosphere — layered navy depth, coordinated across themes.
+   Intentionally scoped to the page canvas and hero; the intro and all content components stay untouched. */
+body{
+  position:relative;
+  background-color:#f3f6f5;
+  background-image:
+    radial-gradient(ellipse at 82% 7%,rgba(62,151,145,.13),transparent 31%),
+    radial-gradient(ellipse at 7% 30%,rgba(100,145,180,.09),transparent 35%),
+    linear-gradient(135deg,#f4f7f6 0%,#edf2f1 48%,#f7f8f5 100%);
+  background-size:140% 140%,140% 140%,100% 100%;
+  animation:portfolioCanvasDrift 32s ease-in-out infinite alternate;
+}
+html:not([data-theme="navy"]) main{background:transparent}
+html:not([data-theme="navy"]) .hero{
+  background:
+    radial-gradient(ellipse at 82% 48%,rgba(29,125,110,.12),transparent 32%),
+    radial-gradient(ellipse at 52% 5%,rgba(124,164,190,.11),transparent 38%),
+    linear-gradient(125deg,rgba(255,255,255,.3),rgba(231,239,237,.42));
+  border-bottom:1px solid rgba(95,128,133,.12);
+}
+html[data-theme="navy"] body{
+  background-color:#07111b;
+  background-image:
+    radial-gradient(ellipse at 83% 6%,rgba(0,155,143,.18),transparent 32%),
+    radial-gradient(ellipse at 6% 34%,rgba(35,90,139,.2),transparent 36%),
+    linear-gradient(135deg,#07111b 0%,#0a1b2b 52%,#07131d 100%);
+  background-size:140% 140%,140% 140%,100% 100%;
+}
+html[data-theme="navy"] main{background:transparent}
+html[data-theme="navy"] .hero{
+  background:
+    radial-gradient(ellipse at 82% 48%,rgba(0,190,166,.16),transparent 34%),
+    radial-gradient(ellipse at 48% 4%,rgba(43,104,156,.17),transparent 38%),
+    linear-gradient(125deg,rgba(4,15,26,.22),rgba(8,27,42,.5));
+  border-bottom:1px solid rgba(119,196,201,.12);
+}
+@keyframes portfolioCanvasDrift{
+  0%{background-position:0% 0%,100% 0%,0 0}
+  100%{background-position:100% 100%,0% 70%,0 0}
+}
+@media(prefers-reduced-motion:reduce){
+  body{animation:none!important}
+}
