@@ -153,7 +153,7 @@ export default function MotionEnhancements() {
       window.removeEventListener("resize", updateActiveNav);
     };
 
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
+    if (!("IntersectionObserver" in window)) {
       elements.forEach((element) => element.classList.add("motion-reveal", "is-visible"));
       return;
     }
