@@ -10,7 +10,7 @@ export default function MotionEnhancements() {
     let intro: HTMLDivElement | null = null;
 
     try {
-      if (!reducedMotion && !window.sessionStorage.getItem("oae-portfolio-intro-seen")) {
+      if (!reducedMotion) {
         intro = document.createElement("div");
         intro.className = "portfolio-intro";
         intro.setAttribute("role", "status");
@@ -18,14 +18,13 @@ export default function MotionEnhancements() {
         intro.innerHTML = '<span class="portfolio-intro-mark" aria-hidden="true"><span style="--letter-index:0">O</span><span style="--letter-index:1">L</span><span style="--letter-index:2">U</span><span style="--letter-index:3">S</span><span style="--letter-index:4">O</span><span style="--letter-index:5">L</span><span style="--letter-index:6">A</span></span><span class="portfolio-intro-name">AYODEJI EZEKIEL</span><span class="portfolio-intro-role">PRODUCT MANAGER · PRODUCT LEADERSHIP</span><span class="portfolio-intro-rule" aria-hidden="true"></span>';
         document.body.appendChild(intro);
         root.classList.add("portfolio-intro-active");
-        window.sessionStorage.setItem("oae-portfolio-intro-seen", "1");
         introTimer = window.setTimeout(() => {
           intro?.classList.add("portfolio-intro-exit");
           window.setTimeout(() => {
             intro?.remove();
             root.classList.remove("portfolio-intro-active");
           }, 650);
-        }, 1750);
+        }, 5350);
       }
     } catch {
       // If session storage is unavailable, the portfolio still loads normally.
