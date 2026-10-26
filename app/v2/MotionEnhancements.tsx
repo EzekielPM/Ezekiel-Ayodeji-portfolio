@@ -106,6 +106,7 @@ export default function MotionEnhancements() {
       "#experience .section-heading",
       "#experience .timeline > article",
       "#insights .section-heading",
+      "#insights .insight-featured",
       "#insights .insight-grid > article",
       "#construction .construction-cta-copy",
       "#rough-space .construction-cta-copy",
