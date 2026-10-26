@@ -82,14 +82,13 @@ export default function PracticeFlipCards({ items }: { items: PracticeItem[] }) 
             >
               <span className="practice-flip-inner">
                 <span className="practice-flip-face practice-flip-front">
-                  <span className="practice-card-number">{item.number}</span>
                   <span className="practice-card-title">{item.title}</span>
                   <span className="practice-card-statement">{item.statement}</span>
                   <span className="practice-card-detail">{item.detail}</span>
                   <span className="practice-flip-hint">Click to explore <span aria-hidden="true">↻</span></span>
                 </span>
                 <span className="practice-flip-face practice-flip-back">
-                  <span className="practice-card-number">{item.number} / {item.title}</span>
+                  <span className="practice-card-number">{item.title}</span>
                   <span className="practice-back-heading">{extra.heading}</span>
                   <span className="practice-back-points">
                     {extra.points.map((point) => <span key={point}>{point}</span>)}
