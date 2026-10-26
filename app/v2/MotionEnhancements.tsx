@@ -5,6 +5,32 @@ import { useEffect } from "react";
 export default function MotionEnhancements() {
   useEffect(() => {
     const root = document.documentElement;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let introTimer: number | undefined;
+    let intro: HTMLDivElement | null = null;
+
+    try {
+      if (!reducedMotion && !window.sessionStorage.getItem("oae-portfolio-intro-seen")) {
+        intro = document.createElement("div");
+        intro.className = "portfolio-intro";
+        intro.setAttribute("role", "status");
+        intro.setAttribute("aria-label", "Welcome to Olusola Ayodeji Ezekiel's portfolio");
+        intro.innerHTML = '<span class="portfolio-intro-mark" aria-hidden="true"><span style="--letter-index:0">O</span><span style="--letter-index:1">L</span><span style="--letter-index:2">U</span><span style="--letter-index:3">S</span><span style="--letter-index:4">O</span><span style="--letter-index:5">L</span><span style="--letter-index:6">A</span></span><span class="portfolio-intro-name">AYODEJI EZEKIEL</span><span class="portfolio-intro-role">PRODUCT MANAGER · PRODUCT LEADERSHIP</span><span class="portfolio-intro-rule" aria-hidden="true"></span>';
+        document.body.appendChild(intro);
+        root.classList.add("portfolio-intro-active");
+        window.sessionStorage.setItem("oae-portfolio-intro-seen", "1");
+        introTimer = window.setTimeout(() => {
+          intro?.classList.add("portfolio-intro-exit");
+          window.setTimeout(() => {
+            intro?.remove();
+            root.classList.remove("portfolio-intro-active");
+          }, 650);
+        }, 1750);
+      }
+    } catch {
+      // If session storage is unavailable, the portfolio still loads normally.
+    }
+
     const progress = document.createElement("div");
     progress.className = "scroll-progress";
     progress.setAttribute("aria-hidden", "true");
@@ -79,6 +105,9 @@ export default function MotionEnhancements() {
     const elements = Array.from(document.querySelectorAll<HTMLElement>(targets.join(",")));
     if (!elements.length) return () => {
       progress.remove();
+      if (introTimer !== undefined) window.clearTimeout(introTimer);
+      intro?.remove();
+      root.classList.remove("portfolio-intro-active");
       portrait?.removeEventListener("click", handlePortraitClick);
       window.removeEventListener("scroll", updateProgress);
       window.removeEventListener("resize", updateProgress);
