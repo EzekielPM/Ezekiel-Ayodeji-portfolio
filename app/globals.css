@@ -684,3 +684,45 @@ html.portfolio-intro-active,html.portfolio-intro-active body{overflow:hidden}
   .hero-actions .button.primary,.hero-cv-actions a{transition:none}
   .hero-actions .button.primary:hover,.hero-cv-actions a:hover{transform:none}
 }
+
+
+/* Recruiter scan path: surface ownership, delivery and judgement inside each case study. */
+.journal-body section:nth-child(3)>div::before,
+.journal-body section:nth-child(5)>div::before,
+.journal-body section:nth-child(6)>div::before{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin:0 0 12px;
+  color:var(--green);
+  font:800 9px/1.3 Arial,sans-serif;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+.journal-body section:nth-child(3)>div::before{content:"MY CONTRIBUTION"}
+.journal-body section:nth-child(5)>div::before{content:"DELIVERY APPROACH"}
+.journal-body section:nth-child(6)>div::before{content:"PRODUCT JUDGEMENT"}
+.journal-body section:nth-child(3)>div::before,
+.journal-body section:nth-child(5)>div::before,
+.journal-body section:nth-child(6)>div::before{
+  padding:6px 9px;
+  border:1px solid color-mix(in srgb,var(--green) 28%,var(--line));
+  border-radius:3px;
+  background:var(--mint);
+}
+html[data-theme="navy"] .journal-body section:nth-child(3)>div::before,
+html[data-theme="navy"] .journal-body section:nth-child(5)>div::before,
+html[data-theme="navy"] .journal-body section:nth-child(6)>div::before{
+  color:#a8e3d5;
+  border-color:rgba(126,201,181,.28);
+  background:rgba(21,94,89,.22);
+}
+@media(max-width:700px){
+  .journal-body section:nth-child(3)>div::before,
+  .journal-body section:nth-child(5)>div::before,
+  .journal-body section:nth-child(6)>div::before{
+    margin-bottom:9px;
+    font-size:8px;
+    letter-spacing:.12em;
+  }
+}
