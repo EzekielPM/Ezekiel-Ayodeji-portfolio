@@ -1025,11 +1025,11 @@ html[data-theme="navy"] #insights .insight-archive-grid article{background:linea
 .practice-flip-back{transform:rotateY(180deg);color:#f6faf8;background:linear-gradient(145deg,#102c36 0%,#155e59 100%);border-color:#286b63}
 .practice-card-number{display:block;color:var(--gold);font:15px Georgia,serif}
 .practice-card-title{display:block;margin:54px 0 14px;font:500 31px Georgia,serif}
-.practice-card-statement{display:block;min-height:62px;color:var(--muted);font-size:12px;line-height:1.7}
+.practice-card-statement{display:block;min-height:62px;color:#294b49;font-size:14px;font-weight:500;line-height:1.75}
 .practice-card-detail{display:block;margin-top:23px;font:500 18px/1.3 Georgia,serif}
-.practice-flip-hint{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:20px;color:var(--green);font-size:9px;font-weight:850;letter-spacing:.09em;text-transform:uppercase}
+.practice-flip-hint{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:20px;color:#0b514a;font-size:11px;font-weight:900;letter-spacing:.07em;text-transform:uppercase}
 .practice-flip-hint>span{font-size:18px}
-.practice-flip-back .practice-flip-hint{color:#e4d2a5}
+.practice-flip-back .practice-flip-hint{color:#f2dca5}
 .practice-back-heading{display:block;margin:25px 0 16px;font:500 23px/1.15 Georgia,serif}
 .practice-back-points{display:grid;gap:11px}
 .practice-back-points>span{display:block;padding-left:16px;position:relative;color:#e0ece8;font-size:11px;line-height:1.5}
