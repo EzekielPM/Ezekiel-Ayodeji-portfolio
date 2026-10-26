@@ -100,6 +100,7 @@ export function V2HeaderControls() {
         <a href="#construction" onClick={closeMenu}>Construction</a>
         <a href="#rough-space" onClick={closeMenu}>Rough Space</a>
         <a href="#insights" onClick={closeMenu}>Insights</a>
+        <a href="#about" onClick={closeMenu}>About</a>
         <a href="#contact" onClick={closeMenu}>Let&apos;s talk</a>
       </div>
     </>
