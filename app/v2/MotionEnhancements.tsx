@@ -18,13 +18,11 @@ export default function MotionEnhancements() {
       html[data-theme="navy"] .statement{background:#091722!important;color:#e8eff2!important;border-top:1px solid #1c3441;border-bottom:1px solid #1c3441}
       html[data-theme="navy"] .statement .section-kicker{color:#8ba99f!important}
       html[data-theme="navy"] .statement blockquote em{color:#a9cbbd!important}
-      .motion-ready .statement .section-kicker{opacity:0;transform:translateY(26px)}
+      .motion-ready .statement .section-kicker,.motion-ready .statement blockquote{opacity:0;transform:translateY(26px)}
       .motion-ready .statement.is-visible .section-kicker{animation:pointOfViewReveal .65s cubic-bezier(.2,.8,.2,1) both}
-      .pov-letter{display:inline-block;opacity:0;transform:translateY(.45em);animation:povLetterReveal .42s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--letter-index)*22ms)}
-      .statement blockquote em .pov-letter{color:#a9cbbd}
+      .motion-ready .statement.is-visible blockquote{animation:pointOfViewReveal .85s .12s cubic-bezier(.2,.8,.2,1) both}
       @keyframes pointOfViewReveal{to{opacity:1;transform:translateY(0)}}
-      @keyframes povLetterReveal{to{opacity:1;transform:translateY(0)}}
-      @media(prefers-reduced-motion:reduce){.portfolio-intro .portfolio-intro-name,.portfolio-intro.portfolio-intro-zoom{transition:none!important}.motion-ready .statement .section-kicker{opacity:1!important;transform:none!important;animation:none!important}.pov-letter{opacity:1!important;transform:none!important;animation:none!important}}
+      @media(prefers-reduced-motion:reduce){.portfolio-intro .portfolio-intro-name,.portfolio-intro.portfolio-intro-zoom{transition:none!important}.motion-ready .statement .section-kicker,.motion-ready .statement blockquote{opacity:1!important;transform:none!important;animation:none!important}}
     `;
     document.head.appendChild(motionStyle);
 
@@ -136,31 +134,6 @@ export default function MotionEnhancements() {
       "#contact > *",
     ];
 
-    const statement = document.querySelector<HTMLElement>(".statement");
-    const povText = statement?.querySelector("blockquote");
-    const animatePovLetters = () => {
-      if (!povText || povText.dataset.lettersAnimated === "true") return;
-      let letterIndex = 0;
-      const walker = document.createTreeWalker(povText, NodeFilter.SHOW_TEXT);
-      const textNodes: Text[] = [];
-      while (walker.nextNode()) textNodes.push(walker.currentNode as Text);
-      textNodes.forEach((node) => {
-        const value = node.nodeValue || "";
-        if (!value.trim()) return;
-        const fragment = document.createDocumentFragment();
-        Array.from(value).forEach((character) => {
-          const span = document.createElement("span");
-          span.className = "pov-letter";
-          span.style.setProperty("--letter-index", String(letterIndex++));
-          span.setAttribute("aria-hidden", "true");
-          span.textContent = character;
-          fragment.appendChild(span);
-        });
-        node.parentNode?.replaceChild(fragment, node);
-      });
-      povText.dataset.lettersAnimated = "true";
-      povText.setAttribute("aria-label", povText.textContent || "");
-    };
     const elements = Array.from(document.querySelectorAll<HTMLElement>(targets.join(",")));
     if (!elements.length) return () => {
       progress.remove();
@@ -178,7 +151,6 @@ export default function MotionEnhancements() {
     };
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
-      animatePovLetters();
       elements.forEach((element) => element.classList.add("motion-reveal", "is-visible"));
       return;
     }
@@ -190,7 +162,6 @@ export default function MotionEnhancements() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            if (entry.target.matches(".statement")) animatePovLetters();
             entry.target.classList.add("is-visible");
             observer.unobserve(entry.target);
           }
