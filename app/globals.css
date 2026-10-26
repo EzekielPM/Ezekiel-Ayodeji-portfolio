@@ -452,23 +452,22 @@ html[data-theme="navy"] .all-project-card .all-project-card-link{color:var(--pro
 
 /* One-time editorial opening animation for the portfolio */
 html.portfolio-intro-active,html.portfolio-intro-active body{overflow:hidden}
-.portfolio-intro{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(10px,2vw,20px);overflow:hidden;background:#102c36;color:#f3f6f5;animation:portfolioIntroReveal .45s ease-out both}
+.portfolio-intro{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(18px,3vw,30px);overflow:hidden;background:#102c36;color:#f3f6f5;animation:portfolioIntroReveal .45s ease-out both}
 .portfolio-intro::before,.portfolio-intro::after{position:absolute;content:"";pointer-events:none}
 .portfolio-intro::before{inset:clamp(18px,4vw,54px);border:1px solid rgba(184,218,212,.22);border-radius:4px}
 .portfolio-intro::after{width:min(52vw,540px);aspect-ratio:1;border:1px solid rgba(184,218,212,.11);border-radius:50%;box-shadow:0 0 0 36px rgba(184,218,212,.035),0 0 0 72px rgba(184,218,212,.025)}
-.portfolio-intro-mark{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:clamp(0px,.5vw,7px);font:500 clamp(48px,10vw,118px)/.9 Georgia,serif;letter-spacing:-.075em;color:#f3f6f5}
-.portfolio-intro-mark span{display:inline-block;opacity:0;transform:translateY(34px) rotate(7deg);clip-path:inset(0 0 100% 0);animation:portfolioLetterAssemble .7s cubic-bezier(.2,.75,.25,1) forwards;animation-delay:calc(var(--letter-index)*75ms + 120ms)}
-.portfolio-intro-name{position:relative;z-index:1;color:#b8dad4;font-size:clamp(10px,1.5vw,14px);font-weight:800;letter-spacing:clamp(.16em,.7vw,.42em);text-align:center;opacity:0;animation:portfolioTextReveal .6s ease-out .8s forwards}
-.portfolio-intro-role{position:relative;z-index:1;margin-top:6px;color:#e0b96f;font-size:clamp(8px,1vw,10px);font-weight:700;letter-spacing:.19em;text-align:center;opacity:0;animation:portfolioTextReveal .55s ease-out 1s forwards}
-.portfolio-intro-rule{position:relative;z-index:1;width:0;height:2px;margin-top:12px;background:#0f766e;animation:portfolioRuleGrow .55s ease-out 1.05s forwards}
+.portfolio-intro-name,.portfolio-intro-role{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;max-width:92vw;text-align:center}
+.portfolio-intro-name{color:#b8dad4;font-size:clamp(17px,3.5vw,34px);font-weight:800;letter-spacing:clamp(.08em,.45vw,.25em);line-height:1.5}
+.portfolio-intro-role{color:#e0b96f;font-size:clamp(8px,1.15vw,12px);font-weight:700;letter-spacing:clamp(.08em,.25vw,.16em);line-height:1.8}
+.portfolio-flying-letter{display:inline-block;white-space:pre;opacity:0;transform:translate3d(var(--start-x),var(--start-y),0) rotate(var(--start-rotate)) scale(.7);animation:portfolioLetterFlyIn 1.05s cubic-bezier(.16,.8,.2,1) calc(var(--group-delay) + var(--letter-index)*24ms) forwards;will-change:transform,opacity}
+.portfolio-intro-rule{position:relative;z-index:1;width:0;height:2px;margin-top:4px;background:#0f766e;animation:portfolioRuleGrow .55s ease-out 1.95s forwards}
 .portfolio-intro-exit{animation:portfolioIntroExit .65s cubic-bezier(.7,0,.2,1) forwards}
 @keyframes portfolioIntroReveal{from{opacity:0}to{opacity:1}}
-@keyframes portfolioLetterAssemble{0%{opacity:0;transform:translateY(34px) rotate(7deg);clip-path:inset(0 0 100% 0)}65%{opacity:1;clip-path:inset(0 0 0 0)}100%{opacity:1;transform:translateY(0) rotate(0);clip-path:inset(0 0 0 0)}}
-@keyframes portfolioTextReveal{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes portfolioLetterFlyIn{0%{opacity:0;transform:translate3d(var(--start-x),var(--start-y),0) rotate(var(--start-rotate)) scale(.7)}65%{opacity:1}85%{transform:translate3d(0,0,0) rotate(-4deg) scale(1.04)}100%{opacity:1;transform:translate3d(0,0,0) rotate(0) scale(1)}}
 @keyframes portfolioRuleGrow{from{width:0}to{width:clamp(70px,12vw,140px)}}
 @keyframes portfolioIntroExit{to{opacity:0;visibility:hidden;transform:translateY(-1.5%);pointer-events:none}}
-@media(max-width:600px){.portfolio-intro::before{inset:15px}.portfolio-intro-mark{letter-spacing:-.09em}.portfolio-intro-name{letter-spacing:.17em}}
-@media(prefers-reduced-motion:reduce){.portfolio-intro,.portfolio-intro-mark span,.portfolio-intro-name,.portfolio-intro-role,.portfolio-intro-rule{animation:none!important}.portfolio-intro{display:none!important}html.portfolio-intro-active,html.portfolio-intro-active body{overflow:auto}}
+@media(max-width:600px){.portfolio-intro::before{inset:15px}.portfolio-intro-name{letter-spacing:.07em}.portfolio-intro-role{max-width:86vw;letter-spacing:.07em}}
+@media(prefers-reduced-motion:reduce){.portfolio-intro,.portfolio-flying-letter,.portfolio-intro-rule{animation:none!important}.portfolio-intro{display:none!important}html.portfolio-intro-active,html.portfolio-intro-active body{overflow:auto}}
 
 /* Editorial annotations inspired by the reference portfolio */
 .case-card .case-intro h3{position:relative}
