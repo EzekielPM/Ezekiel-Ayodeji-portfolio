@@ -1093,12 +1093,12 @@ html[data-theme="navy"] .statement::before{background:#62a98a}
 
 
 
-/* Light mode: coordinated warm ivory and muted green palette.
+/* Light mode: soft cream and muted green palette.
    Deliberately scoped so the existing navy theme remains unchanged. */
 html:not([data-theme="navy"]) {
   --ink:#303936;
-  --paper:#E9E2D4;
-  --card:#F1EBDD;
+  --paper:#F1EBDD;
+  --card:#E9E2D4;
   --green:#28765F;
   --muted:#626A62;
   --line:#D1C6B3;
@@ -1106,7 +1106,7 @@ html:not([data-theme="navy"]) {
 }
 html:not([data-theme="navy"]) body { background:var(--paper); color:var(--ink); }
 html:not([data-theme="navy"]) .site-header {
-  background:rgba(233,226,212,.94);
+  background:rgba(241,235,221,.94);
   border-bottom-color:var(--line);
 }
 html:not([data-theme="navy"]) .hero-intro,
@@ -1120,7 +1120,7 @@ html:not([data-theme="navy"]) .resume-cards a,
 html:not([data-theme="navy"]) .resource-panel a,
 html:not([data-theme="navy"]) .rough-card:not(.music-card):not(.handbook-card),
 html:not([data-theme="navy"]) .mentor-grid article {
-  background:#F1EBDD;
+  background:#E9E2D4;
   border-color:#D1C6B3;
 }
 html:not([data-theme="navy"]) .capabilities,
@@ -1132,18 +1132,18 @@ html:not([data-theme="navy"]) .mentors {
 html:not([data-theme="navy"]) .toolkit,
 html:not([data-theme="navy"]) .insights,
 html:not([data-theme="navy"]) .resume {
-  background:#E9E2D4;
+  background:#F1EBDD;
 }
 html:not([data-theme="navy"]) .practice-card {
-  background:#F1EBDD;
+  background:#E9E2D4;
   border-color:#D1C6B3;
 }
 html:not([data-theme="navy"]) .tool-cloud span {
-  background:#F1EBDD;
+  background:#E9E2D4;
   border-color:#D1C6B3;
 }
 html:not([data-theme="navy"]) .statement {
-  background:#F1EBDD;
+  background:#E9E2D4;
   border-color:#D1C6B3;
   color:#303936;
 }
@@ -1156,7 +1156,7 @@ html:not([data-theme="navy"]) .statement::before { background:#28765F; }
 html:not([data-theme="navy"]) .journal,
 html:not([data-theme="navy"]) .practice-reader,
 html:not([data-theme="navy"]) .practice-reader-header {
-  background:#F1EBDD;
+  background:#E9E2D4;
 }
 html:not([data-theme="navy"]) .journal>.media-rail,
 html:not([data-theme="navy"]) .resource-panel {
