@@ -91,6 +91,11 @@ export default function CanvoyCaseStudy() {
             <section><span>06</span><div><h3>What the work reinforced for me</h3><p>The project strengthened my understanding of trust in payment products. Clear flows matter, but so do security, transaction visibility and timely feedback. Those are not supporting details in a financial product; they are part of the product experience itself.</p></div></section>
           </div>
 
+          <nav className="case-study-next" aria-label="Explore other case studies">
+            <span>Explore another case study</span>
+            <a href="/case-studies/siiqo">Siiqo Marketplace <b>↗</b></a>
+            <a href="/case-studies/wayagram">Wayagram <b>↗</b></a>
+          </nav>
           <footer className="journal-footer">
             <p>Olusola Ayodeji Ezekiel · Product case study</p>
             <div className="hero-actions">
