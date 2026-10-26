@@ -1381,3 +1381,29 @@ html[data-theme="navy"] #products .case-button:hover {
   html:not([data-theme="navy"]) #products .case-card,
   html[data-theme="navy"] #products .case-card { transition: none; }
 }
+
+
+/* Selected Experience flip cards only */
+#experience .selected-experience-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+#experience .experience-flip-card{min-width:0;min-height:310px;perspective:1200px}
+#experience .experience-flip-button{display:block;width:100%;height:100%;min-height:310px;padding:0;border:0;background:transparent;text-align:left;cursor:pointer}
+#experience .experience-flip-inner{position:relative;display:block;width:100%;height:100%;min-height:310px;transform-style:preserve-3d;transition:transform .65s cubic-bezier(.2,.75,.25,1)}
+#experience .experience-flip-card.is-flipped .experience-flip-inner{transform:rotateY(180deg)}
+#experience .experience-flip-face{position:absolute;inset:0;display:flex;flex-direction:column;align-items:flex-start;min-height:310px;padding:25px;border:1px solid var(--line);border-radius:18px;background:var(--card);box-shadow:0 12px 32px rgba(10,32,44,.055);backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden}
+#experience .experience-flip-front:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--green)}
+#experience .experience-card-top{display:flex;align-items:center;justify-content:space-between;width:100%;color:var(--green);font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+#experience .experience-card-top span:last-child{color:var(--muted);font-size:9px}
+#experience .experience-card-name{display:block;margin-top:35px;font:500 clamp(23px,2.2vw,32px)/1.12 Georgia,serif;letter-spacing:-.025em;color:var(--ink)}
+#experience .experience-card-category{display:block;margin-top:13px;color:var(--green);font-size:10px;font-weight:800;line-height:1.5;letter-spacing:.07em;text-transform:uppercase}
+#experience .experience-card-summary{display:block;margin-top:16px;color:var(--muted);font-size:13px;line-height:1.65}
+#experience .experience-card-hint{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;margin-top:auto;padding-top:22px;color:var(--green);font-size:10px;font-weight:750;letter-spacing:.04em}
+#experience .experience-card-hint span{font-size:17px}
+#experience .experience-flip-back{transform:rotateY(180deg);background:var(--navy);border-color:var(--navy);color:#f5f6f2}
+#experience .experience-flip-back .experience-card-top,#experience .experience-flip-back .experience-card-category,#experience .experience-flip-back .experience-card-hint{color:var(--mint)}
+#experience .experience-flip-back .experience-card-top span:last-child{color:#c4d2d3}
+#experience .experience-card-back-title{display:block;margin-top:25px;font:500 23px/1.2 Georgia,serif;color:#fff}
+#experience .experience-card-detail{display:block;margin-top:16px;color:#d7e1e0;font-size:13px;line-height:1.75}
+#experience .experience-flip-button:focus-visible{outline:3px solid var(--green);outline-offset:4px;border-radius:18px}
+@media(max-width:900px){#experience .selected-experience-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){#experience .selected-experience-grid{grid-template-columns:1fr;gap:14px}#experience .experience-flip-card,#experience .experience-flip-button,#experience .experience-flip-inner,#experience .experience-flip-face{min-height:285px}#experience .experience-flip-face{padding:23px}#experience .experience-card-name{margin-top:27px;font-size:29px}}
+@media(prefers-reduced-motion:reduce){#experience .experience-flip-inner{transition:none}}
