@@ -1283,3 +1283,102 @@ html[data-theme="navy"] body::before {
   body::before { animation: none !important; }
 }
 
+/* Forest-green identity for the Product Experience / selected product work area. */
+html:not([data-theme="navy"]) #products {
+  background:
+    radial-gradient(ellipse at 92% 8%, rgba(40,118,95,.075), transparent 34%),
+    linear-gradient(135deg, #F3F0E7 0%, #EDEFE5 52%, #E4EAE0 100%);
+  border-bottom-color: #C9D7CB;
+}
+html:not([data-theme="navy"]) #products .section-kicker {
+  color: #24664F;
+}
+html:not([data-theme="navy"]) #products .section-heading h2 {
+  color: #183F33;
+}
+html:not([data-theme="navy"]) #products .section-heading-actions > p {
+  color: #46584F;
+}
+html:not([data-theme="navy"]) #products .section-heading-actions .button.text {
+  color: #245F4A;
+  border-bottom-color: #789B87;
+}
+html:not([data-theme="navy"]) #products .case-card {
+  background: rgba(250, 249, 243, .94);
+  border-color: #C7D6C9;
+  box-shadow: 0 18px 48px rgba(26, 68, 51, .07);
+}
+html:not([data-theme="navy"]) #products .case-card:hover {
+  border-color: #6F9A80;
+  box-shadow: 0 24px 58px rgba(26, 68, 51, .12);
+}
+html:not([data-theme="navy"]) #products .case-top {
+  color: #286A52;
+}
+html:not([data-theme="navy"]) #products .case-top .case-status {
+  color: #205B45;
+  background: #E0EADF;
+  border-color: #C5D7C8;
+}
+html:not([data-theme="navy"]) #products .case-intro h3 {
+  color: #183F33;
+}
+html:not([data-theme="navy"]) #products .case-intro p {
+  color: #46564D;
+}
+html:not([data-theme="navy"]) #products .feature-tags span {
+  color: #285B47;
+  background: #E8EEE5;
+  border-color: #D0DDD0;
+}
+html:not([data-theme="navy"]) #products .case-button {
+  color: #fff;
+  background: #24664F;
+  border-color: #24664F;
+}
+html:not([data-theme="navy"]) #products .case-button:hover {
+  background: #194B39;
+  border-color: #194B39;
+}
+html[data-theme="navy"] #products {
+  background:
+    radial-gradient(ellipse at 92% 8%, rgba(83,133,116,.11), transparent 34%),
+    linear-gradient(135deg, #0D1B2A 0%, #10251F 55%, #0D1B2A 100%);
+  border-bottom-color: #29463C;
+}
+html[data-theme="navy"] #products .section-kicker { color: #91B9A5; }
+html[data-theme="navy"] #products .section-heading h2,
+html[data-theme="navy"] #products .case-intro h3 { color: #E8F0E9; }
+html[data-theme="navy"] #products .section-heading-actions > p,
+html[data-theme="navy"] #products .case-intro p { color: #D5DFDB; }
+html[data-theme="navy"] #products .case-card {
+  background: rgba(16, 37, 31, .88);
+  border-color: #2D5143;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, .12);
+}
+html[data-theme="navy"] #products .case-card:hover { border-color: #628D76; }
+html[data-theme="navy"] #products .case-top { color: #9AC4AD; }
+html[data-theme="navy"] #products .case-top .case-status {
+  color: #B9D8C5;
+  background: #18382D;
+  border-color: #355C49;
+}
+html[data-theme="navy"] #products .feature-tags span {
+  color: #C2DDCB;
+  background: #19382E;
+  border-color: #315343;
+}
+html[data-theme="navy"] #products .case-button {
+  color: #10251F;
+  background: #A7CBB5;
+  border-color: #A7CBB5;
+}
+html[data-theme="navy"] #products .case-button:hover {
+  background: #C0DDCA;
+  border-color: #C0DDCA;
+}
+@media (prefers-reduced-motion: reduce) {
+  html:not([data-theme="navy"]) #products .case-card,
+  html[data-theme="navy"] #products .case-card { transition: none; }
+}
+
