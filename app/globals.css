@@ -726,3 +726,11 @@ html[data-theme="navy"] .journal-body section:nth-child(6)>div::before{
     letter-spacing:.12em;
   }
 }
+
+
+/* Case-study closing CTA: make the next step clear without competing with project documents. */
+.journal-footer .hero-actions{flex-wrap:wrap;align-items:center}
+.case-contact-link{display:inline-flex;align-items:center;gap:10px;padding:12px 2px;color:#d6eadf;font-size:11px;font-weight:800;text-decoration:none;border-bottom:1px solid rgba(214,234,223,.38);transition:color .2s ease,border-color .2s ease,transform .2s ease}
+.case-contact-link:hover{color:#fff;border-color:#fff;transform:translateY(-1px)}
+.case-contact-link span{font-size:14px}
+@media(max-width:600px){.journal-footer .hero-actions{align-items:stretch}.journal-footer .case-contact-link{align-self:flex-start}.journal-footer .case-button{width:100%}}
