@@ -5,11 +5,11 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Wayagram Case Study | Olusola Ayodeji Ezekiel",
   description:
-    "A technical product management case study covering production migration, regression QA and delivery across Wayagram's social, marketplace and payment modules.",
+    "A concise account of Olusola Ayodeji Ezekiel's brief technical product management experience with Wayagram, a social, marketplace and payments platform.",
   alternates: { canonical: "/case-studies/wayagram" },
   openGraph: {
     title: "Wayagram Case Study | Olusola Ayodeji Ezekiel",
-    description: "A technical product management case study covering production migration, regression QA and delivery across Wayagram modules.",
+    description: "A concise account of technical product work across Wayagram's connected social, marketplace and payments experience.",
     type: "article",
     url: "/case-studies/wayagram",
   },
@@ -31,21 +31,21 @@ export default function WayagramCaseStudy() {
       <section className="section" id="top">
         <div className="section-heading">
           <div>
-            <p className="section-kicker">Featured technical product case study</p>
+            <p className="section-kicker">Technical product experience</p>
             <h2>Wayagram</h2>
           </div>
           <p>
-            A connected social, marketplace and payments platform where product delivery depended on keeping multiple modules, teams and production risks aligned.
+            A social, marketplace and payments platform. This case study focuses on the product work I contributed during a brief period with the team.
           </p>
         </div>
 
         <article className="journal">
           <header className="journal-header">
-            <p>FinTech · Technical Product Manager · Production Delivery</p>
+            <p>FinTech · Technical Product Management · Brief Engagement</p>
             <span>03</span>
             <h2>Wayagram</h2>
             <p className="journal-deck">
-              I worked across production migration, regression testing, demos, stand-ups and module reporting for a platform combining social interaction, commerce and payments. My role was to make dependencies visible, keep delivery conversations grounded and help the team move complex product areas toward reliable release.
+              During my time with Wayagram, I contributed to production migration activities, regression testing, team ceremonies and module reporting. The engagement was brief, so this page documents the product context and the work I was able to contribute rather than claiming end-to-end ownership or outcomes I cannot verify.
             </p>
           </header>
 
@@ -68,16 +68,16 @@ export default function WayagramCaseStudy() {
           </div>
 
           <div className="feature-tags" aria-label="Wayagram product areas">
-            <span>Production migration</span><span>Regression QA</span><span>Wallet and virtual accounts</span><span>Marketplace</span><span>Social features</span><span>Release coordination</span>
+            <span>Production migration support</span><span>Regression testing</span><span>Wallet and virtual accounts</span><span>Marketplace</span><span>Social features</span>
           </div>
 
           <section className="resource-panel">
-            <p>Supporting technical product work</p>
+            <p>Product context document</p>
             <div>
               <a href="/documents/wayagram-product-architecture.pdf" target="_blank" rel="noreferrer">
                 <span>
                   <strong>Wayagram Product Architecture</strong>
-                  <small>A high-level view of the connected modules, services and product relationships that informed technical discussions and delivery planning.</small>
+                  <small>A high-level view of the product areas and relationships documented for Wayagram.</small>
                 </span>
                 <b>View PDF ↗</b>
               </a>
@@ -89,13 +89,11 @@ export default function WayagramCaseStudy() {
           </div>
 
           <div className="journal-body">
-            <section><span>01</span><div><h3>A product with many connected parts</h3><p>Wayagram brought social interaction, marketplace activity and financial journeys into one platform. Its modules included a social feed, marketplace, requests for quotation and bidding, donations, promotions, polls, contests, events, chat, wallets and virtual accounts. A change in one area could affect several others, so delivery required a clear view of product and technical dependencies.</p></div></section>
-            <section><span>02</span><div><h3>The delivery challenge</h3><p>The work was not simply about adding features. The team also needed to move an interconnected product toward production while protecting journeys that crossed authentication, marketplace activity, wallet actions and communication. The key challenge was maintaining enough visibility to find gaps before they became production issues.</p></div></section>
-            <section><span>03</span><div><h3>What I owned</h3><p>As Technical Product Manager, I coordinated production migration activities, supported regression testing, facilitated stand-ups and demos, and reported progress across product modules. I worked with engineering and other stakeholders to clarify expected behaviour, surface blockers and keep technical concerns connected to the user journey.</p></div></section>
-            <section><span>04</span><div><h3>How I approached technical product delivery</h3><p>I treated each module as part of a wider system rather than an isolated feature. That meant tracing dependencies, checking how data and transaction states moved between experiences, documenting open questions and making sure the team understood the effect of a change beyond the screen being worked on.</p></div></section>
-            <section><span>05</span><div><h3>Regression and release readiness</h3><p>Regression testing helped us revisit critical journeys after changes and identify where connected modules behaved differently from what the product expected. I supported issue triage, tracked readiness and used demos and module-level reporting to create a shared picture of what was working, what remained at risk and what needed attention before release.</p></div></section>
-            <section><span>06</span><div><h3>How I balanced release risk and delivery</h3><p>For a platform with connected social, marketplace and wallet journeys, I treated release readiness as a cross-module question rather than a feature-by-feature sign-off. The practical focus was to make dependencies and open issues visible, revisit critical journeys through regression testing, and use demos and module reporting to align the team on what was ready and what still needed attention. This approach helped structure release decisions without assuming that progress in one module guaranteed readiness across the platform.</p></div></section>
-            <section><span>07</span><div><h3>What the experience strengthened</h3><p>Wayagram strengthened my ability to work between product intent and technical execution. It reinforced the importance of dependency awareness, clear release communication and disciplined regression testing when a platform combines commerce, community and financial activity in one customer experience.</p></div></section>
+            <section><span>01</span><div><h3>The product</h3><p>Wayagram was designed to bring social interaction, marketplace activity and financial services into one experience. The product areas I documented included social features, marketplace and quotation flows, donations, chat, wallets and virtual accounts. This is the product context I worked with during my time there.</p></div></section>
+            <section><span>02</span><div><h3>Where delivery needed attention</h3><p>Because the product covered several connected areas, production migration and regression checks needed to be considered alongside feature work. My focus was on supporting the team's delivery activities and helping keep progress, issues and module-level updates visible.</p></div></section>
+            <section><span>03</span><div><h3>My contribution</h3><p>In my Technical Product Manager role, I contributed to production migration activities, regression testing, stand-ups, demos and reporting across product modules. These activities gave me a view of how product coordination and technical delivery intersected, while the short engagement limited the scope of what I could take through to completion.</p></div></section>
+            <section><span>04</span><div><h3>Working across product areas</h3><p>The experience reinforced the importance of viewing connected modules in context. In product discussions and delivery activities, I kept the broader user experience in mind rather than treating each feature as a standalone screen. I have kept this case study to the responsibilities and product context I can speak to confidently.</p></div></section>
+            <section><span>05</span><div><h3>What I took from the experience</h3><p>Wayagram gave me exposure to the coordination involved in a product spanning social, commerce and payment experiences. It reinforced the value of clear communication, regression checks and understanding the wider product context during technical delivery. This case study reflects that experience without suggesting that I led the entire programme or can verify a final launch outcome.</p></div></section>
           </div>
 
           <nav className="case-study-next" aria-label="Explore other case studies">
