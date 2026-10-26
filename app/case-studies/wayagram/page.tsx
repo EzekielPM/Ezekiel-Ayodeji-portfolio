@@ -90,6 +90,11 @@ export default function WayagramCaseStudy() {
             <section><span>06</span><div><h3>What the experience strengthened</h3><p>Wayagram strengthened my ability to work between product intent and technical execution. It reinforced the importance of dependency awareness, clear release communication and disciplined regression testing when a platform combines commerce, community and financial activity in one customer experience.</p></div></section>
           </div>
 
+          <nav className="case-study-next" aria-label="Explore other case studies">
+            <span>Explore another case study</span>
+            <a href="/case-studies/siiqo">Siiqo Marketplace <b>↗</b></a>
+            <a href="/case-studies/canvoy">Canvoy Payment <b>↗</b></a>
+          </nav>
           <footer className="journal-footer">
             <p>Olusola Ayodeji Ezekiel · Technical product case study</p>
             <div className="hero-actions">
