@@ -25,7 +25,7 @@ export default function MotionEnhancements() {
       .motion-ready .statement.is-visible blockquote{animation:pointOfViewReveal .85s .32s cubic-bezier(.2,.8,.2,1) both}
       @keyframes pointOfViewSectionReveal{to{opacity:1;transform:translateY(0) scale(1);clip-path:inset(0 0 0 0)}}
       @keyframes pointOfViewReveal{to{opacity:1;transform:translateY(0)}}
-      @media(prefers-reduced-motion:reduce){.portfolio-intro .portfolio-intro-name,.portfolio-intro.portfolio-intro-zoom{transition:none!important}.motion-ready .statement,.motion-ready .statement .section-kicker,.motion-ready .statement blockquote{opacity:1!important;transform:none!important;clip-path:none!important;animation:none!important}}
+      @media(prefers-reduced-motion:reduce){.portfolio-intro .portfolio-intro-name,.portfolio-intro.portfolio-intro-zoom{transition:none!important}}
     `;
     document.head.appendChild(motionStyle);
 
