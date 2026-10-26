@@ -1,6 +1,7 @@
 import Image from "next/image";
 import MotionEnhancements from "./MotionEnhancements";
 import PracticeFlipCards from "./PracticeFlipCards";
+import ProductExperienceCards from "./ProductExperienceCards";
 import { CopyEmailButton, FloatingContact, V2HeaderControls } from "./PortfolioControls";
 
 const selectedWork = [
@@ -189,41 +190,7 @@ export default function PortfolioV2() {
             <a className="button text" href="#all-projects">View all projects <span>↗</span></a>
           </div>
         </div>
-        <div className="case-list">
-          {[selectedWork[0], selectedWork[5]].map((item, index) => (
-            <article className="case-card" key={item.title}>
-              <div className="case-top">
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <p>{item.label}</p>
-                <span className="case-status">{item.status}</span>
-              </div>
-              <div className="case-intro">
-                <h3>{item.title}</h3>
-                <p>{item.summary}</p>
-              </div>
-              {item.image ? (
-                <div className="media-rail screenshots" aria-label={`${item.title} preview`}>
-                  <div className="media-frame">
-                    <Image src={item.image} alt={`${item.title} preview`} fill sizes="(max-width: 600px) 88vw, 500px" />
-                    <span>Featured work</span>
-                  </div>
-                </div>
-              ) : (
-                <div className="gallery-empty">
-                  Buyer says “I want it” → seller creates order → checkout link → buyer details → payment → confirmed order
-                </div>
-              )}
-              <div className="case-footer">
-                <div className="feature-tags">
-                  {item.tags.map((tag) => <span key={tag}>{tag}</span>)}
-                </div>
-                <a className="case-button" href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined}>
-                  {item.action}<span>↗</span>
-                </a>
-              </div>
-            </article>
-          ))}
-        </div>
+        <ProductExperienceCards items={[selectedWork[0], selectedWork[5]]} />
       </section>
 
       <section className="all-projects section" id="all-projects">
