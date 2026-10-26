@@ -96,6 +96,7 @@ export function V2HeaderControls() {
 
       <div className="mobile-menu-panel" id="mobile-site-menu" aria-label="Mobile navigation" hidden={!mobileMenuOpen}>
         <a href="#products" onClick={closeMenu}>Product work</a>
+        <a href="#practice" onClick={closeMenu}>Product practice</a>
         <a href="#experience" onClick={closeMenu}>Experience</a>
         <a href="#construction" onClick={closeMenu}>Construction</a>
         <a href="#rough-space" onClick={closeMenu}>Rough Space</a>
