@@ -280,16 +280,17 @@ export default function PortfolioV2() {
       <section className="experience section" id="experience">
         <div className="section-heading compact">
           <div>
-            <p className="section-kicker">Experience</p>
-            <h2>Leadership across products, platforms and real-world delivery.</h2>
+            <p className="section-kicker">Selected experience</p>
+            <h2>Product decisions, technical delivery and project leadership.</h2>
           </div>
+          <p>A snapshot of product roles and delivery work, alongside the construction leadership that shaped how I manage risk, dependencies and execution.</p>
         </div>
         <div className="timeline">
-          <article><div><span>2024</span><span>iGaming product</span></div><div><h3>BetBonanza</h3><p>Supported product execution across sportsbook operations, user journeys, prioritisation and cross-functional delivery in a fast-moving iGaming environment.</p></div></article>
-          <article><div><span>2025</span><span>FinTech product</span></div><div><h3>Canvoy Payment</h3><p>Shaped the MVP, translated payment journeys into delivery-ready work, managed Jira and supported Scrum, QA, security and launch readiness.</p></div></article>
-          <article><div><span>2026</span><span>Technical product</span></div><div><h3>Wayagram</h3><p>Coordinated production migration, regression testing and delivery across wallet, payment, marketplace, social and community modules with complex product dependencies.</p></div></article>
-          <article><div><span>2026</span><span>Product leadership</span></div><div><h3>Siiqoo</h3><p>Led product direction and delivery across marketplace trust, payments, vendor growth, community, sprint execution and continuous optimisation.</p></div></article>
-          <article><div><span>10+ years</span><span>Project leadership</span></div><div><h3>Construction and infrastructure</h3><p>Led site and project delivery across residential, commercial and public-sector developments, building the delivery discipline I now bring into product.</p></div></article>
+          <article><div><span>2024</span><span>iGaming · Product execution</span></div><div><h3>BetBonanza</h3><p>Contributed to sportsbook product execution, user journeys, prioritisation and cross-functional delivery in a fast-moving iGaming environment.</p></div></article>
+          <article><div><span>2025</span><span>FinTech · MVP delivery</span></div><div><h3>Canvoy Payment</h3><p>Shaped MVP scope and payment journeys, translated requirements into delivery-ready work, and coordinated Jira, Scrum, QA and launch-readiness activities.</p></div></article>
+          <article><div><span>2026</span><span>Technical product · Release delivery</span></div><div><h3>Wayagram</h3><p>Coordinated production migration and regression testing across wallet, payments, marketplace, social and community modules, with attention to dependencies and release risk.</p></div></article>
+          <article><div><span>2026</span><span>Marketplace · Product leadership</span></div><div><h3>Siiqoo</h3><p>Led product direction and sprint delivery across marketplace trust, protected payments, vendor tools, community and prioritisation.</p></div></article>
+          <article><div><span>10+ years</span><span>Construction · Project leadership</span></div><div><h3>Construction and infrastructure</h3><p>Led site and project delivery across residential, commercial and public-sector developments, building practical experience in risk, quality, dependencies and team coordination.</p></div></article>
         </div>
       </section>
 
