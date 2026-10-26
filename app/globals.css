@@ -482,3 +482,73 @@ html.portfolio-intro-active,html.portfolio-intro-active body{overflow:hidden}
 .case-card .case-intro h3::before{position:absolute;left:0;bottom:-10px;width:42px;height:1px;background:var(--gold);content:"";transform:translateY(10px);opacity:.8}
 @media(max-width:700px){.case-card .case-intro h3::after{margin-top:14px;font-size:8px;letter-spacing:.09em}.case-card .case-intro h3::before{display:none}}
 @media(prefers-reduced-motion:no-preference){.case-card .case-intro h3::after{transition:color .2s ease,border-color .2s ease,transform .2s ease}.case-card:hover .case-intro h3::after{transform:translateX(3px)}}
+
+
+/* Next phase: give featured project visuals a more deliberate editorial gallery treatment. */
+.case-list{counter-reset:project-gallery}
+.case-card{position:relative}
+.case-card .media-rail{
+  margin:0 -10px;
+  padding:12px 10px 22px;
+  gap:18px;
+  scrollbar-gutter:stable;
+}
+.case-card .media-frame{
+  counter-increment:project-gallery;
+  flex-basis:min(76vw,620px);
+  height:clamp(300px,42vw,460px);
+  border:1px solid color-mix(in srgb,var(--line) 78%,var(--green));
+  border-radius:18px;
+  background:var(--card);
+  box-shadow:0 16px 36px rgba(16,32,56,.09);
+  isolation:isolate;
+}
+.case-card .media-frame::before{
+  position:absolute;
+  z-index:1;
+  inset:0 0 auto;
+  height:76px;
+  content:"";
+  pointer-events:none;
+  background:linear-gradient(180deg,rgba(13,30,39,.48),rgba(13,30,39,0));
+}
+.case-card .media-frame::after{
+  position:absolute;
+  z-index:2;
+  top:17px;
+  left:18px;
+  content:"PROJECT SNAPSHOT  /  0" counter(project-gallery);
+  color:rgba(255,255,255,.92);
+  font:800 9px/1.2 Arial,sans-serif;
+  letter-spacing:.16em;
+  pointer-events:none;
+}
+.case-card .media-frame img{
+  transition:transform .65s cubic-bezier(.2,.75,.25,1),filter .4s ease;
+}
+.case-card .media-frame span{
+  z-index:3;
+  right:16px;
+  bottom:16px;
+  padding:9px 12px;
+  border:1px solid rgba(255,255,255,.24);
+  background:rgba(16,32,56,.84);
+  backdrop-filter:blur(8px);
+}
+.case-card .media-rail::-webkit-scrollbar{height:5px}
+.case-card .media-rail::-webkit-scrollbar-thumb{background:var(--green);border-radius:99px}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+  .case-card .media-frame:hover img{transform:scale(1.025);filter:saturate(1.04)}
+}
+@media(max-width:700px){
+  .case-card .media-rail{margin:0 -5px;padding:8px 5px 18px;gap:12px}
+  .case-card .media-frame,.case-card .screenshots .media-frame{
+    flex-basis:86vw;
+    height:clamp(290px,105vw,390px);
+  }
+  .case-card .media-frame::after{top:13px;left:13px;font-size:8px;letter-spacing:.12em}
+  .case-card .media-frame span{right:12px;bottom:12px}
+}
+@media(prefers-reduced-motion:reduce){
+  .case-card .media-frame img{transition:none}
+}
