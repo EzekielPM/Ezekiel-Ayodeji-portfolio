@@ -848,3 +848,50 @@ html[data-theme="navy"] .hero{
   100%{background-position:100% 100%,0% 70%,80% 60%,0 0}
 }
 @media(prefers-reduced-motion:reduce){html body{animation:none!important}}
+
+
+/* Product Practice refresh: expressive cards, staggered reveals, and tactile hover motion. Scoped to #practice only. */
+#practice .capability-grid{gap:18px;perspective:1100px}
+#practice .practice-card{isolation:isolate;overflow:hidden;min-height:390px;padding:30px 27px 26px;border:1px solid rgba(15,118,110,.22);border-radius:24px;background:linear-gradient(150deg,#fff 0%,#f7fbf8 58%,#e9f4ef 100%);box-shadow:0 10px 28px rgba(16,44,54,.055);transform-style:preserve-3d;transition:transform .55s cubic-bezier(.2,.8,.2,1),box-shadow .55s ease,border-color .35s ease,background .35s ease}
+#practice .practice-card::before{content:"";position:absolute;z-index:-1;inset:0;background:radial-gradient(circle at 100% 0%,rgba(15,118,110,.18),transparent 42%);opacity:.75;transition:opacity .45s ease,transform .7s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+#practice .practice-card::after{content:"";position:absolute;left:0;top:0;width:100%;height:4px;background:linear-gradient(90deg,#0f766e,#b8dad4,#e0b96f);transform:scaleX(.28);transform-origin:left;transition:transform .55s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+#practice .practice-card>span{display:flex;align-items:center;justify-content:center;width:46px;height:46px;border:1px solid rgba(15,118,110,.3);border-radius:15px;background:rgba(255,255,255,.72);color:#0f766e;font:700 13px/1 Inter,Arial,sans-serif;letter-spacing:.08em;box-shadow:0 5px 16px rgba(15,118,110,.08);transition:transform .45s ease,background .35s ease,color .35s ease}
+#practice .practice-card h3{position:relative;margin:44px 0 13px;font:500 clamp(28px,2.4vw,36px)/1.04 Georgia,serif;letter-spacing:-.045em;transition:transform .5s cubic-bezier(.2,.8,.2,1),color .35s ease}
+#practice .practice-card>p{min-height:68px;margin-bottom:0;font-size:13px;line-height:1.75;color:#52665f;transition:transform .5s ease,color .35s ease}
+#practice .practice-card-meta{position:relative;margin:24px 0 0;padding-top:18px;border-top:1px solid rgba(15,118,110,.2);transition:border-color .35s ease}
+#practice .practice-card-meta strong{font:500 17px/1.4 Georgia,serif;color:#254b43}
+#practice .practice-card:hover,#practice .practice-card:focus-within{transform:translateY(-10px) rotateX(1.2deg);border-color:#0f766e;box-shadow:0 26px 55px rgba(16,44,54,.16),0 0 0 1px rgba(15,118,110,.08);background:linear-gradient(150deg,#fff 0%,#f3faf6 52%,#e1f1e9 100%)}
+#practice .practice-card:hover::before,#practice .practice-card:focus-within::before{opacity:1;transform:scale(1.12)}
+#practice .practice-card:hover::after,#practice .practice-card:focus-within::after{transform:scaleX(1)}
+#practice .practice-card:hover>span,#practice .practice-card:focus-within>span{transform:translateY(-3px) rotate(-7deg);background:#0f766e;color:#fff}
+#practice .practice-card:hover h3,#practice .practice-card:focus-within h3{transform:translateX(4px);color:#0f766e}
+#practice .practice-card:hover .practice-card-meta,#practice .practice-card:focus-within .practice-card-meta{border-color:rgba(15,118,110,.42)}
+#practice .practice-card:focus-visible{outline:3px solid #e0b96f;outline-offset:5px}
+#practice .practice-card.motion-reveal>*{transition-delay:0ms}
+.motion-ready #practice .practice-card.motion-reveal:not(.is-visible)>span,
+.motion-ready #practice .practice-card.motion-reveal:not(.is-visible) h3,
+.motion-ready #practice .practice-card.motion-reveal:not(.is-visible)>p,
+.motion-ready #practice .practice-card.motion-reveal:not(.is-visible) .practice-card-meta{opacity:0;transform:translateY(22px)}
+.motion-ready #practice .practice-card.motion-reveal.is-visible>span{animation:practiceContentIn .65s cubic-bezier(.2,.8,.2,1) both}
+.motion-ready #practice .practice-card.motion-reveal.is-visible h3{animation:practiceContentIn .7s .09s cubic-bezier(.2,.8,.2,1) both}
+.motion-ready #practice .practice-card.motion-reveal.is-visible>p{animation:practiceContentIn .7s .17s cubic-bezier(.2,.8,.2,1) both}
+.motion-ready #practice .practice-card.motion-reveal.is-visible .practice-card-meta{animation:practiceContentIn .7s .25s cubic-bezier(.2,.8,.2,1) both}
+@keyframes practiceContentIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+#practice .practice-card:nth-child(2){--practice-accent:#a46d2e}
+#practice .practice-card:nth-child(3){--practice-accent:#4269a5}
+#practice .practice-card:nth-child(4){--practice-accent:#7860a7}
+#practice .practice-card:nth-child(n+2)>span{color:var(--practice-accent);border-color:color-mix(in srgb,var(--practice-accent) 32%,white)}
+#practice .practice-card:nth-child(n+2)::after{background:linear-gradient(90deg,var(--practice-accent),#b8dad4,#e0b96f)}
+#practice .practice-card:nth-child(n+2):hover>span,#practice .practice-card:nth-child(n+2):focus-within>span{background:var(--practice-accent);color:#fff}
+#practice .practice-card:nth-child(n+2):hover h3,#practice .practice-card:nth-child(n+2):focus-within h3{color:var(--practice-accent)}
+html[data-theme="navy"] #practice .practice-card{background:linear-gradient(150deg,#132d39 0%,#102633 60%,#173a42 100%);border-color:rgba(143,204,190,.24);box-shadow:0 12px 30px rgba(0,0,0,.16)}
+html[data-theme="navy"] #practice .practice-card::before{background:radial-gradient(circle at 100% 0%,rgba(85,190,160,.18),transparent 44%)}
+html[data-theme="navy"] #practice .practice-card>span{background:rgba(255,255,255,.05);color:#9dd9c9;border-color:rgba(143,204,190,.3)}
+html[data-theme="navy"] #practice .practice-card h3{color:#f3f7f4}
+html[data-theme="navy"] #practice .practice-card>p{color:#c0d0cd}
+html[data-theme="navy"] #practice .practice-card-meta{border-color:rgba(143,204,190,.23)}
+html[data-theme="navy"] #practice .practice-card-meta strong{color:#dcebe6}
+html[data-theme="navy"] #practice .practice-card:hover,html[data-theme="navy"] #practice .practice-card:focus-within{border-color:#7ccbb6;background:linear-gradient(150deg,#173943 0%,#12313b 58%,#1b4848 100%);box-shadow:0 26px 55px rgba(0,0,0,.3),0 0 0 1px rgba(124,203,182,.1)}
+html[data-theme="navy"] #practice .practice-card:hover h3,html[data-theme="navy"] #practice .practice-card:focus-within h3{color:#9de0ca}
+@media(max-width:600px){#practice .capability-grid{gap:14px}#practice .practice-card{min-height:340px;padding:25px 22px;border-radius:21px}#practice .practice-card h3{margin-top:34px}}
+@media(prefers-reduced-motion:reduce){#practice .practice-card,#practice .practice-card::before,#practice .practice-card::after,#practice .practice-card>*{animation:none!important;transition:none!important}#practice .practice-card.motion-reveal:not(.is-visible)>span,#practice .practice-card.motion-reveal:not(.is-visible) h3,#practice .practice-card.motion-reveal:not(.is-visible)>p,#practice .practice-card.motion-reveal:not(.is-visible) .practice-card-meta{opacity:1!important;transform:none!important}}
