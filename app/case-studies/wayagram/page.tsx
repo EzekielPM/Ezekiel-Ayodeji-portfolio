@@ -6,6 +6,13 @@ export const metadata: Metadata = {
   title: "Wayagram Case Study | Olusola Ayodeji Ezekiel",
   description:
     "A technical product management case study covering production migration, regression QA and delivery across Wayagram's social, marketplace and payment modules.",
+  alternates: { canonical: "/case-studies/wayagram" },
+  openGraph: {
+    title: "Wayagram Case Study | Olusola Ayodeji Ezekiel",
+    description: "A technical product management case study covering production migration, regression QA and delivery across Wayagram modules.",
+    type: "article",
+    url: "/case-studies/wayagram",
+  },
 };
 
 export default function WayagramCaseStudy() {
@@ -88,7 +95,7 @@ export default function WayagramCaseStudy() {
             <section><span>04</span><div><h3>How I approached technical product delivery</h3><p>I treated each module as part of a wider system rather than an isolated feature. That meant tracing dependencies, checking how data and transaction states moved between experiences, documenting open questions and making sure the team understood the effect of a change beyond the screen being worked on.</p></div></section>
             <section><span>05</span><div><h3>Regression and release readiness</h3><p>Regression testing helped us revisit critical journeys after changes and identify where connected modules behaved differently from what the product expected. I supported issue triage, tracked readiness and used demos and module-level reporting to create a shared picture of what was working, what remained at risk and what needed attention before release.</p></div></section>
             <section><span>06</span><div><h3>How I balanced release risk and delivery</h3><p>For a platform with connected social, marketplace and wallet journeys, I treated release readiness as a cross-module question rather than a feature-by-feature sign-off. The practical focus was to make dependencies and open issues visible, revisit critical journeys through regression testing, and use demos and module reporting to align the team on what was ready and what still needed attention. This approach helped structure release decisions without assuming that progress in one module guaranteed readiness across the platform.</p></div></section>
-            <section><span>06</span><div><h3>What the experience strengthened</h3><p>Wayagram strengthened my ability to work between product intent and technical execution. It reinforced the importance of dependency awareness, clear release communication and disciplined regression testing when a platform combines commerce, community and financial activity in one customer experience.</p></div></section>
+            <section><span>07</span><div><h3>What the experience strengthened</h3><p>Wayagram strengthened my ability to work between product intent and technical execution. It reinforced the importance of dependency awareness, clear release communication and disciplined regression testing when a platform combines commerce, community and financial activity in one customer experience.</p></div></section>
           </div>
 
           <nav className="case-study-next" aria-label="Explore other case studies">
@@ -109,7 +116,7 @@ export default function WayagramCaseStudy() {
 
       <footer>
         <div className="brand"><span>OLUSOLA AYODEJI EZEKIEL</span><small>Product Manager · Technical Product Delivery</small></div>
-        <Link href="/#products">Return to portfolio ↑</Link>
+        <Link href="/v2#products">Return to portfolio ↑</Link>
       </footer>
     </main>
   );
