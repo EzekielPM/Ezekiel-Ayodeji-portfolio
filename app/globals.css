@@ -805,3 +805,46 @@ html[data-theme="navy"] .hero{
 @media(prefers-reduced-motion:reduce){
   body{animation:none!important}
 }
+
+
+/* Stronger, visibly layered background treatment for the main portfolio only. */
+html:not([data-theme="navy"]) body{
+  background-color:#eef3f1;
+  background-image:
+    radial-gradient(ellipse 700px 560px at 92% 10%,rgba(32,139,129,.22),transparent 72%),
+    radial-gradient(ellipse 780px 620px at 2% 36%,rgba(73,123,170,.16),transparent 70%),
+    radial-gradient(ellipse 850px 520px at 70% 72%,rgba(111,170,159,.12),transparent 72%),
+    linear-gradient(135deg,#f4f7f5 0%,#e8efee 48%,#f4f6f3 100%);
+  background-size:150% 150%,150% 150%,150% 150%,100% 100%;
+}
+html[data-theme="navy"] body{
+  background-color:#06101b;
+  background-image:
+    radial-gradient(ellipse 760px 620px at 92% 8%,rgba(0,190,166,.27),transparent 70%),
+    radial-gradient(ellipse 900px 720px at 0% 34%,rgba(31,91,151,.31),transparent 70%),
+    radial-gradient(ellipse 900px 560px at 75% 78%,rgba(15,104,103,.18),transparent 72%),
+    linear-gradient(135deg,#060f19 0%,#0a1d30 48%,#07121e 100%);
+  background-size:150% 150%,150% 150%,150% 150%,100% 100%;
+}
+html:not([data-theme="navy"]) .hero{
+  background-image:
+    linear-gradient(rgba(58,100,111,.055) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(58,100,111,.055) 1px,transparent 1px),
+    radial-gradient(ellipse at 85% 42%,rgba(24,137,122,.17),transparent 40%),
+    linear-gradient(125deg,rgba(255,255,255,.24),rgba(225,237,234,.5));
+  background-size:36px 36px,36px 36px,auto,auto;
+}
+html[data-theme="navy"] .hero{
+  background-image:
+    linear-gradient(rgba(115,174,197,.075) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(115,174,197,.075) 1px,transparent 1px),
+    radial-gradient(ellipse at 85% 42%,rgba(0,199,174,.23),transparent 42%),
+    radial-gradient(ellipse at 12% 6%,rgba(47,105,167,.2),transparent 42%),
+    linear-gradient(125deg,rgba(4,15,26,.18),rgba(8,27,42,.42));
+  background-size:36px 36px,36px 36px,auto,auto,auto;
+}
+@keyframes portfolioCanvasDrift{
+  0%{background-position:0% 0%,100% 0%,15% 40%,0 0}
+  100%{background-position:100% 100%,0% 70%,80% 60%,0 0}
+}
+@media(prefers-reduced-motion:reduce){html body{animation:none!important}}
