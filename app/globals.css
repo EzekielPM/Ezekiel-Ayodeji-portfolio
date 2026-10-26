@@ -1245,3 +1245,41 @@ html[data-theme="navy"] .construction li {
   }
   .case-top { font-size: 10px; }
 }
+
+/* Architectural light and shadow: subtle, palette-led ambient motion. */
+body {
+  position: relative;
+  isolation: isolate;
+  background-color: #F3F0E7;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(116deg, transparent 0 27%, rgba(40,118,95,.045) 38%, rgba(40,118,95,.015) 48%, transparent 59%),
+    linear-gradient(66deg, transparent 0 54%, rgba(16,35,54,.035) 66%, rgba(16,35,54,.012) 76%, transparent 86%),
+    radial-gradient(ellipse at 12% 12%, rgba(255,255,255,.52), transparent 42%),
+    #F3F0E7;
+  background-size: 170% 170%, 180% 180%, 100% 100%, 100% 100%;
+  background-position: 0% 0%, 100% 100%, center, center;
+  animation: architecturalLightDrift 32s ease-in-out infinite alternate;
+}
+html[data-theme="navy"] body::before {
+  background:
+    linear-gradient(116deg, transparent 0 27%, rgba(83,133,116,.09) 38%, rgba(83,133,116,.025) 48%, transparent 59%),
+    linear-gradient(66deg, transparent 0 54%, rgba(2,10,20,.20) 66%, rgba(2,10,20,.06) 76%, transparent 86%),
+    radial-gradient(ellipse at 12% 12%, rgba(116,151,143,.07), transparent 42%),
+    #0D1B2A;
+}
+@keyframes architecturalLightDrift {
+  0% { background-position: 0% 0%, 100% 100%, center, center; }
+  50% { background-position: 36% 22%, 68% 44%, center, center; }
+  100% { background-position: 100% 70%, 0% 12%, center, center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body::before { animation: none !important; }
+}
+
