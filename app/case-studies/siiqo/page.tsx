@@ -87,6 +87,7 @@ export default function SiiqoCaseStudy() {
             <div className="hero-actions">
               <a className="button text" href="/v2#products">Return to portfolio <span>↖</span></a>
               <a className="case-button" href="https://docs.google.com/document/d/1SmsFGtIb60wlUKtSlwPwm8ixSl2Egf7G4-Jikkam9ko/edit?usp=drivesdk" target="_blank" rel="noreferrer">Open product document <span>↗</span></a>
+              <a className="case-contact-link" href="/v2#contact">Let’s talk about product <span>↗</span></a>
             </div>
           </footer>
         </article>
