@@ -165,8 +165,34 @@ export default function MotionEnhancements() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
+            const target = entry.target as HTMLElement;
+            target.classList.add("is-visible");
+
+            if (target.matches(".statement")) {
+              target.animate(
+                [
+                  { opacity: 0, transform: "translateY(42px) scale(.97)", clipPath: "inset(0 0 12% 0)" },
+                  { opacity: 1, transform: "translateY(0) scale(1)", clipPath: "inset(0 0 0 0)" },
+                ],
+                { duration: 1050, easing: "cubic-bezier(.16,1,.3,1)", fill: "both" },
+              );
+              target.querySelector(".section-kicker")?.animate(
+                [
+                  { opacity: 0, transform: "translateY(24px)" },
+                  { opacity: 1, transform: "translateY(0)" },
+                ],
+                { duration: 650, delay: 220, easing: "cubic-bezier(.2,.8,.2,1)", fill: "both" },
+              );
+              target.querySelector("blockquote")?.animate(
+                [
+                  { opacity: 0, transform: "translateY(28px)" },
+                  { opacity: 1, transform: "translateY(0)" },
+                ],
+                { duration: 850, delay: 360, easing: "cubic-bezier(.2,.8,.2,1)", fill: "both" },
+              );
+            }
+
+            observer.unobserve(target);
           }
         });
       },
