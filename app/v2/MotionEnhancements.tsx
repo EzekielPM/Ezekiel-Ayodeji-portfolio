@@ -168,6 +168,29 @@ export default function MotionEnhancements() {
             const target = entry.target as HTMLElement;
             target.classList.add("is-visible");
 
+            if (target.matches("#about > div")) {
+              if (!reducedMotion) {
+                const about = target.closest<HTMLElement>("#about");
+                if (about && !about.dataset.writingStarted) {
+                  about.dataset.writingStarted = "true";
+                  const writingItems = Array.from(about.querySelectorAll<HTMLElement>(
+                    ".section-kicker, h2, .about-copy .lead, .about-copy > p:not(.lead), .principles span",
+                  ));
+                  writingItems.forEach((item, index) => {
+                    item.style.opacity = "0";
+                    item.style.clipPath = "inset(0 100% 0 0)";
+                    item.style.transition = "opacity .25s ease, clip-path 1.05s steps(28, end)";
+                    window.setTimeout(() => {
+                      item.style.opacity = "1";
+                      item.style.clipPath = "inset(0 0 0 0)";
+                    }, index * 360);
+                  });
+                }
+              } else {
+                target.closest<HTMLElement>("#about")?.classList.add("about-writing-complete");
+              }
+            }
+
             if (target.matches(".statement")) {
               target.animate(
                 [
