@@ -984,3 +984,31 @@ html[data-theme="navy"] .insight-grid article>div span{background:#203f45;color:
 @media(max-width:800px){.insight-featured{grid-template-columns:minmax(0,1fr) 140px;gap:22px}.insight-featured-mark{min-height:170px;padding:18px}.insight-featured-mark span:first-child{font-size:44px}.insight-featured-mark span:nth-child(3){font-size:22px}.insight-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.insight-featured{grid-template-columns:1fr;padding:25px}.insight-featured-mark{display:none}.insight-grid,.insight-archive-grid{grid-template-columns:1fr}.insight-grid article{min-height:250px}.insight-archive summary{font-size:21px}.insight-archive-count{font-size:9px}}
 @media(prefers-reduced-motion:reduce){.insight-featured,.insight-grid article,.insight-featured-copy>a span,.insight-grid article>a,.insight-archive summary:after{animation:none!important;transition:none!important}}
+
+/* Insights cards: match Product Practice / All Product Projects reveal treatment */
+#insights .insight-featured,#insights .insight-grid article,#insights .insight-archive-grid article{position:relative;isolation:isolate;overflow:hidden;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s ease,border-color .3s ease,background .3s ease}
+#insights .insight-featured::before,#insights .insight-grid article::before,#insights .insight-archive-grid article::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:var(--insight-accent,var(--green));transform:scaleX(.25);transform-origin:left;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+#insights .insight-featured::after,#insights .insight-grid article::after,#insights .insight-archive-grid article::after{content:"";position:absolute;z-index:-1;inset:0;background:radial-gradient(circle at 100% 0%,color-mix(in srgb,var(--insight-accent,var(--green)) 13%,transparent),transparent 48%);opacity:.55;transition:opacity .3s ease}
+#insights .insight-featured:hover::before,#insights .insight-grid article:hover::before,#insights .insight-archive-grid article:hover::before{transform:scaleX(1)}
+#insights .insight-featured:hover::after,#insights .insight-grid article:hover::after,#insights .insight-archive-grid article:hover::after{opacity:1}
+#insights .insight-featured{--insight-accent:#2e8b68;--insight-tint:#e5f1e8}
+#insights .insight-card-1{--insight-accent:#4c86c6;--insight-tint:#e8f0fa}
+#insights .insight-card-2{--insight-accent:#c48a43;--insight-tint:#f7eee1}
+#insights .insight-card-3{--insight-accent:#8d75bf;--insight-tint:#f0ebf8}
+#insights .insight-grid article{background:linear-gradient(145deg,#fff 0%,var(--insight-tint,#f5f7f1) 160%);border-color:color-mix(in srgb,var(--insight-accent,var(--green)) 26%,#d9e1d9)}
+#insights .insight-grid article>div span{color:var(--insight-accent,var(--green));background:color-mix(in srgb,var(--insight-accent,var(--green)) 13%,white);transition:transform .35s cubic-bezier(.2,.8,.2,1),background .3s ease}
+#insights .insight-grid article:hover>div span{transform:rotate(-7deg) scale(1.1);background:color-mix(in srgb,var(--insight-accent,var(--green)) 20%,white)}
+#insights .insight-grid h3,#insights .insight-archive-grid h3{transition:transform .35s cubic-bezier(.2,.8,.2,1),color .3s ease}
+#insights .insight-grid article:hover h3,#insights .insight-archive-grid article:hover h3{transform:translateY(-3px)}
+#insights .insight-grid article>a,#insights .insight-archive-grid article>a{position:relative;z-index:1}
+.motion-ready #insights .insight-featured .insight-meta,.motion-ready #insights .insight-featured h3,.motion-ready #insights .insight-featured p,.motion-ready #insights .insight-featured-copy>a,.motion-ready #insights .insight-grid article>div,.motion-ready #insights .insight-grid article h3,.motion-ready #insights .insight-grid article p,.motion-ready #insights .insight-grid article>a{opacity:0;transform:translateY(20px)}
+.motion-ready #insights .insight-featured.is-visible .insight-meta,.motion-ready #insights .insight-grid article.is-visible>div{animation:practiceContentIn .6s cubic-bezier(.2,.8,.2,1) both}
+.motion-ready #insights .insight-featured.is-visible h3,.motion-ready #insights .insight-grid article.is-visible h3{animation:practiceContentIn .65s .08s cubic-bezier(.2,.8,.2,1) both}
+.motion-ready #insights .insight-featured.is-visible p,.motion-ready #insights .insight-grid article.is-visible p{animation:practiceContentIn .65s .16s cubic-bezier(.2,.8,.2,1) both}
+.motion-ready #insights .insight-featured.is-visible .insight-featured-copy>a,.motion-ready #insights .insight-grid article.is-visible>a{animation:practiceContentIn .65s .23s cubic-bezier(.2,.8,.2,1) both}
+html[data-theme="navy"] #insights .insight-grid article{background:linear-gradient(145deg,#102632 0%,color-mix(in srgb,var(--insight-accent) 10%,#102632) 160%);border-color:color-mix(in srgb,var(--insight-accent) 35%,#31505a)}
+html[data-theme="navy"] #insights .insight-grid article::after{opacity:.8}
+html[data-theme="navy"] #insights .insight-grid article>div span{background:color-mix(in srgb,var(--insight-accent) 20%,#102632);color:color-mix(in srgb,var(--insight-accent) 70%,white)}
+html[data-theme="navy"] #insights .insight-archive-grid article{background:linear-gradient(145deg,#102632 0%,color-mix(in srgb,var(--insight-accent,var(--green)) 10%,#102632) 160%);border-color:color-mix(in srgb,var(--insight-accent,var(--green)) 30%,#31505a)}
+@media(hover:hover){#insights .insight-featured:hover{transform:translateY(-6px)}#insights .insight-grid article:hover,#insights .insight-archive-grid article:hover{transform:translateY(-7px) scale(1.01)}}
+@media(prefers-reduced-motion:reduce){.motion-ready #insights .insight-featured .insight-meta,.motion-ready #insights .insight-featured h3,.motion-ready #insights .insight-featured p,.motion-ready #insights .insight-featured-copy>a,.motion-ready #insights .insight-grid article>div,.motion-ready #insights .insight-grid article h3,.motion-ready #insights .insight-grid article p,.motion-ready #insights .insight-grid article>a{opacity:1!important;transform:none!important;animation:none!important}#insights .insight-featured,#insights .insight-grid article,#insights .insight-archive-grid article,#insights .insight-grid h3,#insights .insight-archive-grid h3{transition:none!important}}
