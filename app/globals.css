@@ -734,3 +734,13 @@ html[data-theme="navy"] .journal-body section:nth-child(6)>div::before{
 .case-contact-link:hover{color:#fff;border-color:#fff;transform:translateY(-1px)}
 .case-contact-link span{font-size:14px}
 @media(max-width:600px){.journal-footer .hero-actions{align-items:stretch}.journal-footer .case-contact-link{align-self:flex-start}.journal-footer .case-button{width:100%}}
+
+
+/* Related case-study links help recruiters continue browsing the product work. */
+.case-study-next{display:flex;align-items:center;flex-wrap:wrap;gap:9px 18px;padding:20px clamp(25px,7vw,86px);background:#102038;border-bottom:1px solid rgba(255,255,255,.12)}
+.case-study-next>span{width:100%;color:#a9bdbb;font-size:9px;font-weight:850;letter-spacing:.13em;text-transform:uppercase}
+.case-study-next a{display:inline-flex;align-items:center;gap:9px;color:#f3f6f5;font-size:11px;font-weight:750}
+.case-study-next a b{color:#a8d7ca;font-size:14px;font-weight:500;transition:transform .2s ease}
+.case-study-next a:hover{color:#a8d7ca}
+.case-study-next a:hover b{transform:translate(2px,-2px)}
+@media(max-width:600px){.case-study-next{align-items:flex-start;flex-direction:column;gap:14px;padding:22px 20px}.case-study-next>span{margin-bottom:2px}}
