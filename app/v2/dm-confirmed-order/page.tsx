@@ -30,6 +30,9 @@ export default function DmConfirmedOrderCaseStudy() {
             <p className="journal-deck">
               The customer has already said “I want it.” This case study explores how a lightweight checkout handoff can turn that purchase intent into a confirmed, trackable order without replacing WhatsApp or Instagram.
             </p>
+            <p className="case-disclaimer">
+              This is an independent product teardown supported by a working prototype. The payment step is simulated, and the success measures below are proposed for validation, not reported results.
+            </p>
           </header>
 
           <div className="gallery-empty">
