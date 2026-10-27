@@ -221,6 +221,10 @@ export default function PortfolioV2() {
                 <a className="case-button" href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined}>
                   {item.action}<span>↗</span>
                 </a>
+                {item.title === "Wayagram" && <div className="hero-actions" style={{ marginTop: "0.75rem" }} aria-label="Download Wayagram app">
+                  <a className="case-button" href="https://play.google.com/store/apps/details?id=ng.wayagram" target="_blank" rel="noreferrer">Google Play <span>↗</span></a>
+                  <a className="case-button" href="https://apps.apple.com/ng/app/wayagram/id6444311693" target="_blank" rel="noreferrer">App Store <span>↗</span></a>
+                </div>}
               </div>
             </article>
           ))}
