@@ -1470,3 +1470,50 @@ html[data-theme="navy"] #experience .experience-flip-front .experience-card-summ
 .rough-space-tab:hover,.rough-space-tab:focus-visible{border-color:var(--green);outline-offset:3px}
 .rough-space-tab.active{background:var(--green);border-color:var(--green);color:#fff}
 @media(prefers-reduced-motion:reduce){.rough-space-tab{transition:none}}
+
+
+/* Rough Space: cinematic studio-library atmosphere */
+.rough-space{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:#0b1720;
+  color:#f4f0e7;
+}
+.rough-space:before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse at 13% 14%,rgba(188,128,61,.34),transparent 28%),
+    radial-gradient(ellipse at 84% 20%,rgba(56,103,79,.28),transparent 30%),
+    radial-gradient(ellipse at 55% 74%,rgba(28,57,71,.5),transparent 42%),
+    linear-gradient(180deg,rgba(7,15,22,.28),rgba(7,15,22,.88)),
+    repeating-linear-gradient(90deg,transparent 0 72px,rgba(192,147,91,.13) 73px 76px,rgba(5,12,18,.5) 77px 88px),
+    repeating-linear-gradient(0deg,#172a31 0 5px,#080f15 6px 12px,#22342f 13px 18px,#101b22 19px 27px);
+  opacity:1;
+}
+.rough-space:after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg,rgba(5,12,18,.78),rgba(5,12,18,.24) 48%,rgba(5,12,18,.62)),
+    repeating-linear-gradient(0deg,transparent 0 145px,rgba(216,177,119,.16) 146px 149px,rgba(0,0,0,.48) 150px 158px);
+  mix-blend-mode:multiply;
+}
+.rough-space .section-heading h2{color:#f7f1e6}
+.rough-space .section-heading>p{color:#c5d0cc}
+.rough-space .section-kicker{color:#d4b77e}
+.rough-space-tabs{position:relative}
+.rough-space-tab{color:#e5e9e3;border-color:#ffffff35;background:rgba(8,18,25,.58);backdrop-filter:blur(10px)}
+.rough-space-tab:hover,.rough-space-tab:focus-visible{border-color:#c9a76d}
+.rough-space-tab.active{background:#477b5c;border-color:#477b5c;color:#fff}
+.rough-space .rough-card{box-shadow:0 24px 60px rgba(0,0,0,.22);border-color:rgba(255,255,255,.14)}
+.rough-space .film-card,.rough-space .notebook-card{background:rgba(244,240,231,.96)}
+.rough-space .statement{background:#0b1720}
+@media(prefers-reduced-motion:reduce){.rough-space:before,.rough-space:after{animation:none!important}}
