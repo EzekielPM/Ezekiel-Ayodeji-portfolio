@@ -90,6 +90,7 @@ export default function MotionEnhancements() {
               zipCleanupTimer = window.setTimeout(() => {
                 zipReveal?.remove();
                 zipReveal = null;
+                root.classList.remove("portfolio-opening-sequence");
               }, 2050);
             }, 950);
           }, 1800);
