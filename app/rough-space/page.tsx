@@ -14,6 +14,7 @@ const notes = [
 
 export default function RoughSpacePage() {
   const [zoom, setZoom] = useState<{ src: string; alt: string } | null>(null);
+  const [activeSection, setActiveSection] = useState<"all" | "ideas" | "experiments" | "library">("all");
 
   useEffect(() => {
     const close = (event: KeyboardEvent) => {
@@ -46,12 +47,25 @@ export default function RoughSpacePage() {
             <h2>Where product thinking meets creative experimentation.</h2>
           </div>
           <p>
-            This is where I explore ideas before they become polished outputs. Music, short films, product notes and practical resources live here as part of how I observe, experiment and think through problems.
+            A working space for unfinished ideas, product experiments and useful references. Not everything here needs to become a case study. Some things are simply worth exploring, saving or returning to later.
           </p>
         </div>
 
+        <div className="rough-space-tabs" role="group" aria-label="Filter Rough Space content">
+          {([
+            { id: "all", label: "Everything" },
+            { id: "ideas", label: "Ideas" },
+            { id: "experiments", label: "Experiments" },
+            { id: "library", label: "Library" },
+          ] as const).map((tab) => (
+            <button key={tab.id} type="button" className={activeSection === tab.id ? "rough-space-tab active" : "rough-space-tab"} aria-pressed={activeSection === tab.id} onClick={() => setActiveSection(tab.id)}>
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
         <div className="rough-grid">
-          <article className="rough-card music-card">
+          {(activeSection === "all" || activeSection === "experiments") && <article className="rough-card music-card">
             <div className="rough-card-heading">
               <span>01</span>
               <div>
@@ -70,9 +84,9 @@ export default function RoughSpacePage() {
                 <audio controls preload="metadata"><source src="/rough-space/nine-to-five-lagos.mp3" type="audio/mpeg" />Your browser does not support audio.</audio>
               </div>
             </div>
-          </article>
+          </article>}
 
-          <article className="rough-card film-card">
+          {(activeSection === "all" || activeSection === "experiments") && <article className="rough-card film-card">
             <div className="rough-card-heading">
               <span>02</span>
               <div>
@@ -95,9 +109,9 @@ export default function RoughSpacePage() {
                 <figcaption><strong>Canvoy concept walkthrough</strong><small>An early product experience in motion</small></figcaption>
               </figure>
             </div>
-          </article>
+          </article>}
 
-          <article className="rough-card notebook-card">
+          {(activeSection === "all" || activeSection === "ideas") && <article className="rough-card notebook-card">
             <div className="rough-card-heading">
               <span>03</span>
               <div>
@@ -114,9 +128,9 @@ export default function RoughSpacePage() {
                 </button>
               ))}
             </div>
-          </article>
+          </article>}
 
-          <article className="rough-card handbook-card">
+          {(activeSection === "all" || activeSection === "library") && <article className="rough-card handbook-card">
             <div className="rough-card-heading">
               <span>04</span>
               <div>
@@ -131,7 +145,7 @@ export default function RoughSpacePage() {
               <a className="button primary" href="/rough-space/pm-toolkit-handbook.pdf" target="_blank" rel="noreferrer">Read the handbook <span>↗</span></a>
               <a className="button text" href="/rough-space/pm-toolkit-handbook.pdf" download>Download PDF <span>↓</span></a>
             </div>
-          </article>
+          </article>}
         </div>
       </section>
 
