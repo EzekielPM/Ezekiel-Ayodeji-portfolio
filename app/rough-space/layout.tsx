@@ -12,6 +12,12 @@ export const metadata: Metadata = {
     type: "website",
     url: "/rough-space",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rough Space | Product Thinking & Experiments",
+    description:
+      "Explore product notes, interface studies and experiments before they become polished work.",
+  },
 };
 
 export default function RoughSpaceLayout({
