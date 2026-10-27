@@ -1,3 +1,18 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "From DM to Confirmed Order | Social Commerce Product Teardown",
+  description:
+    "An independent social-commerce product teardown by Olusola Ayodeji Ezekiel, exploring a structured checkout handoff from WhatsApp or Instagram to a confirmed, trackable order.",
+  alternates: { canonical: "/v2/dm-confirmed-order" },
+  openGraph: {
+    title: "From DM to Confirmed Order | Product Teardown",
+    description:
+      "Explore the product problem, MVP decisions, user journey and working prototype for turning social-commerce purchase intent into a confirmed order.",
+    type: "article",
+  },
+};
+
 export default function DmConfirmedOrderCaseStudy() {
   return (
     <main>
