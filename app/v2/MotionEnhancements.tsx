@@ -15,7 +15,6 @@ export default function MotionEnhancements() {
       .portfolio-intro .portfolio-intro-name{position:relative;z-index:2;transform-origin:center;transition:transform 1.8s cubic-bezier(.16,1,.3,1),opacity 1.4s ease;will-change:transform,opacity}
       .portfolio-intro.portfolio-intro-zoom .portfolio-intro-name{transform:scale(18);opacity:0}
       .portfolio-intro.portfolio-intro-zoom{background:radial-gradient(ellipse at 50% 48%,#163d43 0%,#102b35 38%,#081820 100%);transition:opacity .95s ease;opacity:0;pointer-events:none}
-      html.portfolio-opening-sequence body > :not(.portfolio-intro){visibility:hidden!important}
       html[data-theme="navy"] .statement{background:#091722!important;color:#e8eff2!important;border-top:1px solid #1c3441;border-bottom:1px solid #1c3441}
       html[data-theme="navy"] .statement .section-kicker{color:#8ba99f!important}
       html[data-theme="navy"] .statement blockquote em{color:#a9cbbd!important}
@@ -49,7 +48,6 @@ export default function MotionEnhancements() {
             const safeCharacter = character === " " ? "&nbsp;" : character === "&" ? "&amp;" : character;
             return `<span class="portfolio-flying-letter" style="--start-x:${x};--start-y:${y};--start-rotate:${rotation};--letter-index:${index};--group-delay:${group === "role" ? "760ms" : "0ms"}">${safeCharacter}</span>`;
           }).join("");
-        root.classList.add("portfolio-opening-sequence");
         intro.innerHTML = `<span class="portfolio-intro-orbit portfolio-intro-orbit-one" aria-hidden="true"></span><span class="portfolio-intro-orbit portfolio-intro-orbit-two" aria-hidden="true"></span><span class="portfolio-intro-core" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="portfolio-intro-eyebrow" aria-hidden="true">THINK CLEARLY · BUILD WITH PURPOSE</span><span class="portfolio-intro-name" aria-label="Olusola Ayodeji Ezekiel">${assembleText("OLUSOLA AYODEJI EZEKIEL", "name")}</span><span class="portfolio-intro-role" aria-label="Product Manager · Product Leadership">${assembleText("PRODUCT MANAGER · PRODUCT LEADERSHIP", "role")}</span><span class="portfolio-intro-rule" aria-hidden="true"></span><span class="portfolio-intro-index" aria-hidden="true">STRATEGY / SYSTEMS / DELIVERY</span>`;
         document.body.appendChild(intro);
         root.classList.add("portfolio-intro-active");
@@ -61,7 +59,6 @@ export default function MotionEnhancements() {
               intro?.remove();
               root.classList.remove("portfolio-intro-active");
               root.classList.add("hero-text-ready");
-              root.classList.remove("portfolio-opening-sequence");
             }, 950);
           }, 1800);
         }, 3750);
