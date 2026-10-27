@@ -28,6 +28,7 @@ export default function MotionEnhancements() {
       @media(prefers-reduced-motion:reduce){.portfolio-intro .portfolio-intro-name,.portfolio-intro.portfolio-intro-zoom{transition:none!important}}
     `;
     document.head.appendChild(motionStyle);
+    if (reducedMotion) root.classList.add("hero-text-ready");
 
     try {
       if (!reducedMotion) {
@@ -57,6 +58,7 @@ export default function MotionEnhancements() {
             introCleanupTimer = window.setTimeout(() => {
               intro?.remove();
               root.classList.remove("portfolio-intro-active");
+              root.classList.add("hero-text-ready");
             }, 950);
           }, 1800);
         }, 3750);
