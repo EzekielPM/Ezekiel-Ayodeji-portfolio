@@ -237,13 +237,13 @@ export default function PortfolioV2() {
         </div>
         <div className="all-projects-grid">
           {selectedWork.filter((item) => item.title !== "Siiqo" && item.title !== "TradeFlow Commerce").map((item) => (
-            <a className={`all-project-card all-project-card-${item.number}`} key={item.title} href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined} aria-label={`Open ${item.title} project`}>
+            <article className={`all-project-card all-project-card-${item.number}`} key={item.title}>
               <div className="all-project-meta"><span>{item.number}</span><span>{item.status}</span></div>
               <h3>{item.title}</h3>
               <p>{item.summary}</p>
-              {item.liveUrl && <span className="all-project-card-link">Visit {item.title} live <span aria-hidden="true">↗</span></span>}
-              <span className="all-project-card-link">{item.action} <span aria-hidden="true">↗</span></span>
-            </a>
+              {item.liveUrl && <a className="all-project-card-link" href={item.liveUrl} target="_blank" rel="noreferrer">Visit {item.title} live <span aria-hidden="true">↗</span></a>}
+              <a className="all-project-card-link" href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined}>{item.action} <span aria-hidden="true">↗</span></a>
+            </article>
           ))}
         </div>
       </section>
