@@ -193,7 +193,7 @@ export default function MotionEnhancements() {
               }
             }
 
-            if (target.matches(".statement")) {
+            if (!reducedMotion && target.matches(".statement")) {
               target.animate(
                 [
                   { opacity: 0, transform: "translateY(42px) scale(.97)", clipPath: "inset(0 0 12% 0)" },
