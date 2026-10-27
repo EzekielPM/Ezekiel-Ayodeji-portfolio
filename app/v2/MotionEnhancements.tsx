@@ -18,22 +18,25 @@ export default function MotionEnhancements() {
       .portfolio-intro.portfolio-intro-zoom .portfolio-intro-name{transform:scale(18);opacity:0}
       .portfolio-intro.portfolio-intro-zoom{background:radial-gradient(ellipse at 50% 48%,#163d43 0%,#102b35 38%,#081820 100%);transition:opacity .95s ease;opacity:0;pointer-events:none}
       html.portfolio-opening-sequence body > :not(.portfolio-intro):not(.portfolio-zip-reveal){visibility:hidden!important}
-      .portfolio-zip-reveal{position:fixed;inset:0;z-index:99999;overflow:hidden;pointer-events:none;background:#123b2d}
-      .portfolio-zip-panel{position:absolute;inset:0;width:100%;height:100%;background:linear-gradient(135deg,#1d5a43 0%,#174b38 48%,#103a2d 100%);box-shadow:inset 0 0 90px rgba(0,0,0,.18);will-change:transform;overflow:hidden}
-      .portfolio-zip-panel:after{content:"";position:absolute;inset:0;opacity:.24;background:repeating-linear-gradient(135deg,transparent 0 34px,rgba(220,239,223,.09) 35px 36px,transparent 37px 70px)}
-      .portfolio-zip-panel:before{content:"";position:absolute;inset:0;opacity:.62;background:radial-gradient(ellipse at 50% 50%,rgba(123,220,164,.18),transparent 48%);filter:blur(12px)}
-      .portfolio-zip-panel-left{clip-path:polygon(0 0,58% 0,56% 12%,52% 24%,47% 36%,44% 48%,45% 60%,49% 72%,55% 84%,60% 100%,0 100%)}
-      .portfolio-zip-panel-right{clip-path:polygon(58% 0,100% 0,100% 100%,60% 100%,55% 84%,49% 72%,45% 60%,44% 48%,47% 36%,52% 24%,56% 12%)}
-      .portfolio-zip-seam{position:absolute;inset:0;width:100%;background:linear-gradient(90deg,transparent 0%,rgba(157,177,163,.65) 42%,#f2f5e9 48%,#9aa99d 53%,rgba(218,230,218,.7) 58%,transparent 100%);clip-path:polygon(56.8% 0,59.2% 0,57.2% 12%,53.2% 24%,48.2% 36%,45.2% 48%,46.2% 60%,50.2% 72%,56.2% 84%,61.2% 100%,58.8% 100%,53.8% 84%,47.8% 72%,43.8% 60%,42.8% 48%,45.8% 36%,50.8% 24%,54.8% 12%);filter:drop-shadow(0 0 9px rgba(199,255,216,.3))}
-      .portfolio-zip-teeth{position:absolute;inset:0;background:repeating-linear-gradient(to bottom,transparent 0 9px,rgba(245,249,239,.98) 9px 12px,transparent 12px 18px);clip-path:polygon(56.8% 0,59.2% 0,57.2% 12%,53.2% 24%,48.2% 36%,45.2% 48%,46.2% 60%,50.2% 72%,56.2% 84%,61.2% 100%,58.8% 100%,53.8% 84%,47.8% 72%,43.8% 60%,42.8% 48%,45.8% 36%,50.8% 24%,54.8% 12%);opacity:.9}
-      .portfolio-zip-pull{position:absolute;top:-94px;left:50%;z-index:2;width:66px;height:84px;transform:translateX(-50%);border:3px solid #e5e9df;border-radius:19px 19px 24px 24px;background:linear-gradient(110deg,#7d8d83,#f8fff0 42%,#9ca99f 70%,#d7ddd4);box-shadow:0 8px 30px rgba(0,0,0,.38),0 0 20px rgba(202,255,216,.24)}
-      .portfolio-zip-pull:before{content:"";position:absolute;left:18px;top:11px;width:24px;height:31px;border:5px solid #53675b;border-radius:12px}
-      .portfolio-zip-pull:after{content:"";position:absolute;left:28px;top:42px;width:7px;height:30px;border-radius:5px;background:#6e7d72}
+      .portfolio-zip-reveal{position:fixed;inset:0;z-index:99999;overflow:hidden;pointer-events:none;background:#0b2d22}
+      .portfolio-zip-panel{position:absolute;top:0;bottom:0;width:50.15%;background:linear-gradient(125deg,#245f45 0%,#174b36 45%,#0e3025 100%);box-shadow:inset 0 0 100px rgba(0,0,0,.34);will-change:transform;overflow:hidden}
+      .portfolio-zip-panel:after{content:"";position:absolute;inset:0;opacity:.34;background:repeating-linear-gradient(135deg,transparent 0 24px,rgba(223,245,229,.13) 25px 27px,transparent 28px 50px),linear-gradient(90deg,rgba(0,0,0,.1),transparent 45%,rgba(230,255,238,.08))}
+      .portfolio-zip-panel:before{content:"";position:absolute;top:-8%;height:116%;width:32%;left:58%;background:linear-gradient(180deg,transparent 0%,rgba(190,255,211,.18) 18%,#b8ffd0 28%,#43f58c 38%,rgba(225,255,236,.95) 42%,#48f58e 46%,rgba(125,255,177,.15) 64%,transparent 100%);clip-path:polygon(35% 0,100% 0,62% 22%,82% 22%,10% 64%,36% 40%,0 40%);filter:drop-shadow(0 0 12px rgba(99,255,157,.85));opacity:0;transform:scale(.85);transform-origin:center; }
+      .portfolio-zip-panel-left{left:0}
+      .portfolio-zip-panel-right{left:49.85%;background:linear-gradient(225deg,#245f45 0%,#174b36 45%,#0e3025 100%)}
+      .portfolio-zip-panel-right:before{left:10%;transform:scaleX(-1) scale(.85)}
+      .portfolio-zip-seam{position:absolute;top:0;bottom:0;left:calc(50% - 18px);width:36px;background:linear-gradient(90deg,#58695d 0%,#b9c7bc 15%,#f5f6ec 31%,#8c9c90 48%,#eef2e7 66%,#65766a 86%,#263d30 100%);box-shadow:0 0 22px rgba(0,0,0,.5),0 0 9px rgba(223,255,231,.35)}
+      .portfolio-zip-teeth{position:absolute;inset:0;background:repeating-linear-gradient(to bottom,transparent 0 8px,#eef4e9 8px 14px,#83958a 14px 17px,transparent 17px 24px);opacity:1;filter:drop-shadow(0 0 3px rgba(232,255,238,.4))}
+      .portfolio-zip-pull{position:absolute;top:-112px;left:50%;z-index:2;width:82px;height:104px;transform:translateX(-50%);border:4px solid #e5e9df;border-radius:22px 22px 29px 29px;background:linear-gradient(110deg,#65766b 0%,#e8eee4 24%,#a9b8ad 43%,#fbfff5 56%,#829488 78%,#dbe3d8 100%);box-shadow:0 10px 32px rgba(0,0,0,.48),inset 0 0 0 3px rgba(48,68,54,.42),0 0 18px rgba(196,255,211,.35)}
+      .portfolio-zip-pull:before{content:"";position:absolute;left:21px;top:12px;width:28px;height:35px;border:6px solid #4b5f51;border-radius:13px;background:linear-gradient(135deg,#dbe5d8,#7c8e81);box-shadow:inset 0 0 0 2px #d8e2d6}
+      .portfolio-zip-pull:after{content:"";position:absolute;left:33px;top:48px;width:8px;height:39px;border-radius:5px;background:linear-gradient(90deg,#526456,#dce6da,#66796b);box-shadow:0 0 4px rgba(0,0,0,.3)}
+      .portfolio-zip-reveal.is-opening .portfolio-zip-panel:before{animation:portfolioZipElectric .38s .08s ease-in-out 3}
       .portfolio-zip-reveal.is-opening .portfolio-zip-pull{animation:portfolioZipPullDown .95s cubic-bezier(.2,.75,.25,1) forwards}
       .portfolio-zip-reveal.is-opening .portfolio-zip-panel-left{animation:portfolioZipOpenLeft 1.05s .72s cubic-bezier(.76,0,.24,1) forwards}
       .portfolio-zip-reveal.is-opening .portfolio-zip-panel-right{animation:portfolioZipOpenRight 1.05s .72s cubic-bezier(.76,0,.24,1) forwards}
       .portfolio-zip-reveal.is-opening .portfolio-zip-seam{animation:portfolioZipSeamFade .45s 1.1s ease forwards}
-      @keyframes portfolioZipPullDown{to{top:calc(100% - 100px)}}
+      @keyframes portfolioZipElectric{0%,100%{opacity:0;filter:drop-shadow(0 0 3px rgba(99,255,157,.3))}35%,65%{opacity:1;filter:drop-shadow(0 0 18px rgba(99,255,157,1));transform:scale(1)}50%{opacity:.7;filter:drop-shadow(0 0 28px rgba(238,255,243,1));transform:scale(1.08)}}
+      @keyframes portfolioZipPullDown{to{top:calc(100% - 120px)}}
       @keyframes portfolioZipOpenLeft{to{transform:translateX(-102%)}}
       @keyframes portfolioZipOpenRight{to{transform:translateX(102%)}}
       @keyframes portfolioZipSeamFade{to{opacity:0}}
