@@ -165,6 +165,7 @@ export default function DmConfirmedOrderCaseStudy() {
               <a className="case-button" href="https://social-order-checkout-assessment.lovable.app" target="_blank" rel="noreferrer">
                 Explore working prototype <span>↗</span>
               </a>
+              <a className="case-contact-link" href="/v2#contact">Let’s talk about product <span>↗</span></a>
             </div>
           </footer>
         </article>
