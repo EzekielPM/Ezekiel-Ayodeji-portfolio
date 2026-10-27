@@ -1443,3 +1443,22 @@ html[data-theme="navy"] #experience .experience-flip-card:nth-child(5) .experien
 html[data-theme="navy"] #experience .experience-flip-card:nth-child(5) .experience-card-top,html[data-theme="navy"] #experience .experience-flip-card:nth-child(5) .experience-card-category{color:#C0D0C1}
 html[data-theme="navy"] #experience .experience-flip-front .experience-card-name{color:#F0F4EF}
 html[data-theme="navy"] #experience .experience-flip-front .experience-card-summary{color:#CFDAD3}
+
+
+/* Accessibility: keep the portfolio calm when reduced motion is requested */
+@media(prefers-reduced-motion:reduce){
+  .hero-text-ready .hero-copy .hero-label,
+  .hero-text-ready .hero-copy h1,
+  .hero-text-ready .hero-copy .hero-intro,
+  .hero-text-ready .hero-copy .hero-actions,
+  .hero-text-ready .hero-copy .hero-cv-actions,
+  .motion-ready .statement,
+  .motion-ready .statement .section-kicker,
+  .motion-ready .statement blockquote{
+    animation:none!important;
+    transition:none!important;
+    opacity:1!important;
+    transform:none!important;
+    clip-path:none!important;
+  }
+}
