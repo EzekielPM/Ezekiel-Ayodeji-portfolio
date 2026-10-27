@@ -8,6 +8,7 @@ const selectedWork = [
   {
     number: "01",
     title: "Siiqo",
+    liveUrl: "https://siiqo.com",
     label: "Marketplace · Lead Product Manager · Scrum Master",
     status: "LIVE PRODUCT",
     summary:
@@ -32,6 +33,7 @@ const selectedWork = [
   {
     number: "03",
     title: "Wayagram",
+    liveUrl: "https://wayagram.ng/",
     label: "FinTech · Technical Product Manager",
     status: "PRODUCTION DELIVERY",
     summary:
@@ -215,6 +217,7 @@ export default function PortfolioV2() {
                 <div className="feature-tags">
                   {item.tags.map((tag) => <span key={tag}>{tag}</span>)}
                 </div>
+                {item.liveUrl && <a className="case-button" href={item.liveUrl} target="_blank" rel="noreferrer">Visit {item.title} live <span>↗</span></a>}
                 <a className="case-button" href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined}>
                   {item.action}<span>↗</span>
                 </a>
@@ -238,6 +241,7 @@ export default function PortfolioV2() {
               <div className="all-project-meta"><span>{item.number}</span><span>{item.status}</span></div>
               <h3>{item.title}</h3>
               <p>{item.summary}</p>
+              {item.liveUrl && <span className="all-project-card-link">Visit {item.title} live <span aria-hidden="true">↗</span></span>}
               <span className="all-project-card-link">{item.action} <span aria-hidden="true">↗</span></span>
             </a>
           ))}
