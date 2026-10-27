@@ -9,37 +9,29 @@ export default function MotionEnhancements() {
     let introTimer: number | undefined;
     let zoomTimer: number | undefined;
     let introCleanupTimer: number | undefined;
-    let zipCleanupTimer: number | undefined;
+    let energyCleanupTimer: number | undefined;
     let intro: HTMLDivElement | null = null;
-    let zipReveal: HTMLDivElement | null = null;
+    let energyReveal: HTMLDivElement | null = null;
     const motionStyle = document.createElement("style");
     motionStyle.textContent = `
       .portfolio-intro .portfolio-intro-name{position:relative;z-index:2;transform-origin:center;transition:transform 1.8s cubic-bezier(.16,1,.3,1),opacity 1.4s ease;will-change:transform,opacity}
       .portfolio-intro.portfolio-intro-zoom .portfolio-intro-name{transform:scale(18);opacity:0}
       .portfolio-intro.portfolio-intro-zoom{background:radial-gradient(ellipse at 50% 48%,#163d43 0%,#102b35 38%,#081820 100%);transition:opacity .95s ease;opacity:0;pointer-events:none}
-      html.portfolio-opening-sequence body > :not(.portfolio-intro):not(.portfolio-zip-reveal){visibility:hidden!important}
-      .portfolio-zip-reveal{position:fixed;inset:0;z-index:99999;overflow:hidden;pointer-events:none;background:#0b2d22}
-      .portfolio-zip-panel{position:absolute;top:0;bottom:0;width:50.15%;background:linear-gradient(125deg,#245f45 0%,#174b36 45%,#0e3025 100%);box-shadow:inset 0 0 100px rgba(0,0,0,.34);will-change:transform;overflow:hidden}
-      .portfolio-zip-panel:after{content:"";position:absolute;inset:0;opacity:.34;background:repeating-linear-gradient(135deg,transparent 0 24px,rgba(223,245,229,.13) 25px 27px,transparent 28px 50px),linear-gradient(90deg,rgba(0,0,0,.1),transparent 45%,rgba(230,255,238,.08))}
-      .portfolio-zip-panel:before{content:"";position:absolute;top:-8%;height:116%;width:32%;left:58%;background:linear-gradient(180deg,transparent 0%,rgba(190,255,211,.18) 18%,#b8ffd0 28%,#43f58c 38%,rgba(225,255,236,.95) 42%,#48f58e 46%,rgba(125,255,177,.15) 64%,transparent 100%);clip-path:polygon(35% 0,100% 0,62% 22%,82% 22%,10% 64%,36% 40%,0 40%);filter:drop-shadow(0 0 12px rgba(99,255,157,.85));opacity:0;transform:scale(.85);transform-origin:center; }
-      .portfolio-zip-panel-left{left:0}
-      .portfolio-zip-panel-right{left:49.85%;background:linear-gradient(225deg,#245f45 0%,#174b36 45%,#0e3025 100%)}
-      .portfolio-zip-panel-right:before{left:10%;transform:scaleX(-1) scale(.85)}
-      .portfolio-zip-seam{position:absolute;top:0;bottom:0;left:calc(50% - 18px);width:36px;background:linear-gradient(90deg,#58695d 0%,#b9c7bc 15%,#f5f6ec 31%,#8c9c90 48%,#eef2e7 66%,#65766a 86%,#263d30 100%);box-shadow:0 0 22px rgba(0,0,0,.5),0 0 9px rgba(223,255,231,.35)}
-      .portfolio-zip-teeth{position:absolute;inset:0;background:repeating-linear-gradient(to bottom,transparent 0 8px,#eef4e9 8px 14px,#83958a 14px 17px,transparent 17px 24px);opacity:1;filter:drop-shadow(0 0 3px rgba(232,255,238,.4))}
-      .portfolio-zip-pull{position:absolute;top:-112px;left:50%;z-index:2;width:82px;height:104px;transform:translateX(-50%);border:4px solid #e5e9df;border-radius:22px 22px 29px 29px;background:linear-gradient(110deg,#65766b 0%,#e8eee4 24%,#a9b8ad 43%,#fbfff5 56%,#829488 78%,#dbe3d8 100%);box-shadow:0 10px 32px rgba(0,0,0,.48),inset 0 0 0 3px rgba(48,68,54,.42),0 0 18px rgba(196,255,211,.35)}
-      .portfolio-zip-pull:before{content:"";position:absolute;left:21px;top:12px;width:28px;height:35px;border:6px solid #4b5f51;border-radius:13px;background:linear-gradient(135deg,#dbe5d8,#7c8e81);box-shadow:inset 0 0 0 2px #d8e2d6}
-      .portfolio-zip-pull:after{content:"";position:absolute;left:33px;top:48px;width:8px;height:39px;border-radius:5px;background:linear-gradient(90deg,#526456,#dce6da,#66796b);box-shadow:0 0 4px rgba(0,0,0,.3)}
-      .portfolio-zip-reveal.is-opening .portfolio-zip-panel:before{animation:portfolioZipElectric .38s .08s ease-in-out 3}
-      .portfolio-zip-reveal.is-opening .portfolio-zip-pull{animation:portfolioZipPullDown .95s cubic-bezier(.2,.75,.25,1) forwards}
-      .portfolio-zip-reveal.is-opening .portfolio-zip-panel-left{animation:portfolioZipOpenLeft 1.05s .72s cubic-bezier(.76,0,.24,1) forwards}
-      .portfolio-zip-reveal.is-opening .portfolio-zip-panel-right{animation:portfolioZipOpenRight 1.05s .72s cubic-bezier(.76,0,.24,1) forwards}
-      .portfolio-zip-reveal.is-opening .portfolio-zip-seam{animation:portfolioZipSeamFade .45s 1.1s ease forwards}
-      @keyframes portfolioZipElectric{0%,100%{opacity:0;filter:drop-shadow(0 0 3px rgba(99,255,157,.3))}35%,65%{opacity:1;filter:drop-shadow(0 0 18px rgba(99,255,157,1));transform:scale(1)}50%{opacity:.7;filter:drop-shadow(0 0 28px rgba(238,255,243,1));transform:scale(1.08)}}
-      @keyframes portfolioZipPullDown{to{top:calc(100% - 120px)}}
-      @keyframes portfolioZipOpenLeft{to{transform:translateX(-102%)}}
-      @keyframes portfolioZipOpenRight{to{transform:translateX(102%)}}
-      @keyframes portfolioZipSeamFade{to{opacity:0}}
+      html.portfolio-opening-sequence body > :not(.portfolio-intro):not(.portfolio-energy-burst){visibility:hidden!important}
+      .portfolio-energy-burst{position:fixed;inset:0;z-index:99999;overflow:hidden;pointer-events:none;background:radial-gradient(ellipse at center,#0b3329 0%,#081c20 44%,#07131c 100%);isolation:isolate}
+      .portfolio-energy-burst:before{content:"";position:absolute;inset:-35%;background:conic-gradient(from 0deg at 50% 50%,transparent 0deg,rgba(28,255,143,.03) 18deg,rgba(36,255,167,.8) 24deg,rgba(220,255,235,.96) 26deg,rgba(12,213,135,.58) 29deg,transparent 36deg,transparent 72deg,rgba(24,225,147,.08) 84deg,rgba(31,255,161,.7) 90deg,transparent 96deg,transparent 144deg,rgba(27,242,151,.65) 151deg,rgba(230,255,238,.92) 154deg,transparent 160deg,transparent 220deg,rgba(24,255,146,.65) 228deg,transparent 235deg,transparent 300deg,rgba(32,255,155,.6) 308deg,transparent 316deg);filter:blur(2px);opacity:0;transform:scale(1.4) rotate(-18deg);animation:portfolioEnergySweep 1.28s cubic-bezier(.16,1,.3,1) both}
+      .portfolio-energy-burst:after{content:"";position:absolute;inset:-20%;background:radial-gradient(ellipse at center,rgba(225,255,237,.98) 0%,rgba(84,255,167,.65) 5%,rgba(23,245,145,.2) 15%,transparent 38%);opacity:0;transform:scale(.1);animation:portfolioEnergyFlash .5s .78s ease-out both}
+      .portfolio-energy-core{position:absolute;left:50%;top:50%;width:min(72vw,900px);aspect-ratio:1;border:1px solid rgba(116,255,185,.38);border-radius:50%;transform:translate(-50%,-50%) scale(.12);opacity:0;box-shadow:0 0 28px rgba(39,255,156,.18),inset 0 0 40px rgba(39,255,156,.12);animation:portfolioEnergyCore 1.38s cubic-bezier(.16,1,.3,1) both}
+      .portfolio-energy-core:before,.portfolio-energy-core:after{content:"";position:absolute;inset:12%;border:1px solid rgba(106,255,183,.23);border-radius:50%;transform:rotate(32deg) scaleY(.52)}
+      .portfolio-energy-core:after{inset:23%;transform:rotate(-38deg) scaleY(.62);border-color:rgba(212,255,230,.28)}
+      .portfolio-energy-streaks{position:absolute;inset:-20%;background:repeating-conic-gradient(from 0deg at 50% 50%,transparent 0deg,transparent 4deg,rgba(74,255,162,.82) 4.15deg,rgba(215,255,232,.78) 4.3deg,transparent 4.55deg,transparent 13deg);mask-image:radial-gradient(ellipse at center,transparent 0%,#000 23%,#000 48%,transparent 72%);opacity:0;transform:scale(1.35);animation:portfolioEnergyStreaks 1.32s cubic-bezier(.16,1,.3,1) both}
+      .portfolio-energy-particles{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(229,255,238,.98) 0 1px,transparent 2px),radial-gradient(circle,rgba(38,255,151,.95) 0 1.5px,transparent 2.5px),radial-gradient(circle,rgba(89,255,178,.8) 0 1px,transparent 2px),radial-gradient(circle,rgba(229,255,238,.75) 0 1px,transparent 2px);background-size:71px 83px,113px 97px,149px 127px,191px 163px;background-position:10px 20px,55px 31px,25px 75px,100px 12px;opacity:0;transform:scale(.65);animation:portfolioEnergyParticles 1.55s ease-out both}
+      @keyframes portfolioEnergySweep{0%{opacity:0;transform:scale(1.65) rotate(-28deg)}24%{opacity:1}62%{opacity:1;transform:scale(.9) rotate(12deg)}100%{opacity:0;transform:scale(.25) rotate(28deg)}}
+      @keyframes portfolioEnergyFlash{0%{opacity:0;transform:scale(.1)}22%{opacity:1;transform:scale(1.4)}55%{opacity:.78;transform:scale(1.9)}100%{opacity:0;transform:scale(2.5)}}
+      @keyframes portfolioEnergyCore{0%{opacity:0;transform:translate(-50%,-50%) scale(.12) rotate(-30deg)}35%{opacity:.9}75%{opacity:.55;transform:translate(-50%,-50%) scale(1.15) rotate(24deg)}100%{opacity:0;transform:translate(-50%,-50%) scale(1.55) rotate(42deg)}}
+      @keyframes portfolioEnergyStreaks{0%{opacity:0;transform:scale(1.7) rotate(-22deg)}28%{opacity:.88}58%{opacity:.7;transform:scale(.95) rotate(12deg)}100%{opacity:0;transform:scale(.3) rotate(25deg)}}
+      @keyframes portfolioEnergyParticles{0%{opacity:0;transform:scale(.65)}24%{opacity:.85}68%{opacity:.7;transform:scale(1.08)}100%{opacity:0;transform:scale(1.3)}}
+      @media(prefers-reduced-motion:reduce){.portfolio-energy-burst:before,.portfolio-energy-burst:after,.portfolio-energy-core,.portfolio-energy-streaks,.portfolio-energy-particles{animation-duration:.01ms!important;animation-delay:0ms!important}}
       html[data-theme="navy"] .statement{background:#091722!important;color:#e8eff2!important;border-top:1px solid #1c3441;border-bottom:1px solid #1c3441}
       html[data-theme="navy"] .statement .section-kicker{color:#8ba99f!important}
       html[data-theme="navy"] .statement blockquote em{color:#a9cbbd!important}
@@ -85,15 +77,14 @@ export default function MotionEnhancements() {
               intro?.remove();
               root.classList.remove("portfolio-intro-active");
               root.classList.add("hero-text-ready");
-              zipReveal = document.createElement("div");
-              zipReveal.className = "portfolio-zip-reveal";
-              zipReveal.setAttribute("aria-hidden", "true");
-              zipReveal.innerHTML = '<div class="portfolio-zip-panel portfolio-zip-panel-left"></div><div class="portfolio-zip-panel portfolio-zip-panel-right"></div><div class="portfolio-zip-seam"><span class="portfolio-zip-teeth"></span></div><div class="portfolio-zip-pull"></div>';
-              document.body.appendChild(zipReveal);
-              window.requestAnimationFrame(() => zipReveal?.classList.add("is-opening"));
-              zipCleanupTimer = window.setTimeout(() => {
-                zipReveal?.remove();
-                zipReveal = null;
+              energyReveal = document.createElement("div");
+              energyReveal.className = "portfolio-energy-burst";
+              energyReveal.setAttribute("aria-hidden", "true");
+              energyReveal.innerHTML = '<div class="portfolio-energy-streaks"></div><div class="portfolio-energy-core"></div><div class="portfolio-energy-particles"></div>';
+              document.body.appendChild(energyReveal);
+              energyCleanupTimer = window.setTimeout(() => {
+                energyReveal?.remove();
+                energyReveal = null;
                 root.classList.remove("portfolio-opening-sequence");
               }, 2050);
             }, 950);
@@ -182,8 +173,8 @@ export default function MotionEnhancements() {
       if (introTimer !== undefined) window.clearTimeout(introTimer);
       if (zoomTimer !== undefined) window.clearTimeout(zoomTimer);
       if (introCleanupTimer !== undefined) window.clearTimeout(introCleanupTimer);
-      if (zipCleanupTimer !== undefined) window.clearTimeout(zipCleanupTimer);
-      zipReveal?.remove();
+      if (energyCleanupTimer !== undefined) window.clearTimeout(energyCleanupTimer);
+      energyReveal?.remove();
       motionStyle.remove();
       intro?.remove();
       root.classList.remove("portfolio-intro-active");
@@ -270,8 +261,8 @@ export default function MotionEnhancements() {
       if (introTimer !== undefined) window.clearTimeout(introTimer);
       if (zoomTimer !== undefined) window.clearTimeout(zoomTimer);
       if (introCleanupTimer !== undefined) window.clearTimeout(introCleanupTimer);
-      if (zipCleanupTimer !== undefined) window.clearTimeout(zipCleanupTimer);
-      zipReveal?.remove();
+      if (energyCleanupTimer !== undefined) window.clearTimeout(energyCleanupTimer);
+      energyReveal?.remove();
       intro?.remove();
       root.classList.remove("portfolio-intro-active");
       motionStyle.remove();
