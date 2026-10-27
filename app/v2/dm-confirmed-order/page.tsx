@@ -2,12 +2,12 @@ export default function DmConfirmedOrderCaseStudy() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="/">
+        <a className="brand" href="/v2">
           <span>OLUSOLA AYODEJI EZEKIEL</span>
           <small>Product Manager</small>
         </a>
         <nav className="site-nav">
-          <a className="nav-cta desktop-nav-link" href="/#products">Return to portfolio</a>
+          <a className="nav-cta desktop-nav-link" href="/v2#products">Return to portfolio</a>
         </nav>
       </header>
 
@@ -25,7 +25,7 @@ export default function DmConfirmedOrderCaseStudy() {
         <article className="journal">
           <header className="journal-header">
             <p>Social commerce · Product teardown · Working prototype</p>
-            <span>03</span>
+            <span>04</span>
             <h2>From DM to Confirmed Order</h2>
             <p className="journal-deck">
               The customer has already said “I want it.” This case study explores how a lightweight checkout handoff can turn that purchase intent into a confirmed, trackable order without replacing WhatsApp or Instagram.
@@ -153,7 +153,7 @@ export default function DmConfirmedOrderCaseStudy() {
           <footer className="journal-footer">
             <p>Olusola Ayodeji Ezekiel · Product teardown</p>
             <div className="hero-actions">
-              <a className="button text" href="/#products">Return to portfolio <span>↖</span></a>
+              <a className="button text" href="/v2#products">Return to portfolio <span>↖</span></a>
               <a className="case-button" href="https://social-order-checkout-assessment.lovable.app" target="_blank" rel="noreferrer">
                 Explore working prototype <span>↗</span>
               </a>
@@ -164,7 +164,7 @@ export default function DmConfirmedOrderCaseStudy() {
 
       <footer>
         <div className="brand"><span>OLUSOLA AYODEJI EZEKIEL</span><small>Product Manager · Technical Product Delivery</small></div>
-        <a href="/#products">Return to portfolio ↑</a>
+        <a href="/v2#products">Return to portfolio ↑</a>
       </footer>
     </main>
   );
