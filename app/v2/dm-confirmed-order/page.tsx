@@ -153,6 +153,11 @@ export default function DmConfirmedOrderCaseStudy() {
             </section>
           </div>
 
+          <nav className="case-study-next" aria-label="Explore other case studies">
+            <span>Explore another case study</span>
+            <a href="/v2/tradeflow">TradeFlow Commerce <b>↗</b></a>
+            <a href="/case-studies/canvoy">Canvoy Payment <b>↗</b></a>
+          </nav>
           <footer className="journal-footer">
             <p>Olusola Ayodeji Ezekiel · Product teardown</p>
             <div className="hero-actions">
