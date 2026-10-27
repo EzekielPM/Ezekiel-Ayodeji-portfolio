@@ -188,6 +188,14 @@ export default function TradeFlowCaseStudy() {
                 </p>
               </div>
             </section>
+            <section>
+              <span>12</span>
+              <div>
+                <h3>Evidence of progress versus business impact</h3>
+                <p>The deployed build and linked buyer shop make the current product direction inspectable. The documented scope covers distinct buyer and vendor paths, vendor-configured delivery areas, persisted order notifications and a payment journey kept in Test Mode. These are tangible product outputs and design decisions, not proof of live transaction volume or commercial performance.</p>
+                <p><strong>Evidence available now:</strong> deployed interface, buyer-shop link and documented journey. <strong>Impact still to validate:</strong> successful end-to-end order tests across buyer and vendor accounts, delivery-zone accuracy, vendor acknowledgement time, checkout completion and payment reconciliation. Live-payment and business-impact claims remain out of scope until those checks produce reliable results.</p>
+              </div>
+            </section>
           </div>
 
           <nav className="case-study-next" aria-label="Explore other case studies">
