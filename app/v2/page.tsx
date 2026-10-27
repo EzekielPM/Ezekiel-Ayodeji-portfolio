@@ -155,13 +155,13 @@ export default function PortfolioV2() {
           </div>
         </div>
         <aside className="portrait-panel">
-          <button className="portrait-welcome" aria-label="Olusola Ayodeji Ezekiel portrait">
-            <Image src="/portfolio/bio-portrait.webp" alt="Olusola Ayodeji Ezekiel" width={1254} height={1254} sizes="(max-width: 850px) 100vw, 450px" priority />
-            <span className="welcome-message">
+          <div className="portrait-welcome">
+            <Image src="/portfolio/bio-portrait.webp" alt="Portrait of Olusola Ayodeji Ezekiel" width={1254} height={1254} sizes="(max-width: 850px) 100vw, 450px" priority />
+            <span className="welcome-message" aria-label="Welcome message">
               <span className="wave-hand" aria-hidden="true">👋🏾</span>
               <span><strong>Hi, welcome.</strong><small>I am Olusola Ayodeji Ezekiel.</small></span>
             </span>
-          </button>
+          </div>
           <div className="portrait-caption">
             <strong>4+ years</strong><span>Product management</span>
             <strong>10+ years</strong><span>Project leadership</span>
