@@ -22,7 +22,7 @@ const selectedWork = [
     number: "02",
     title: "Canvoy Payment",
     label: "FinTech · Product Manager · Scrum Master",
-    status: "MVP / DELIVERY",
+    status: "MVP PLANNING",
     summary:
       "An early-stage digital payments MVP focused on utility and everyday payment journeys, with work spanning requirements, Jira delivery planning and security and QA readiness.",
     image: "/portfolio/full/canvoy-1.jpg",
