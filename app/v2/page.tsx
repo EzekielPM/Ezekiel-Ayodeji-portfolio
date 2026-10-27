@@ -217,7 +217,7 @@ export default function PortfolioV2() {
                 <div className="feature-tags">
                   {item.tags.map((tag) => <span key={tag}>{tag}</span>)}
                 </div>
-                {item.liveUrl && <a className="case-button" href={item.liveUrl} target="_blank" rel="noreferrer">Visit {item.title} live <span>↗</span></a>}
+                {item.liveUrl && <a className="case-button" href={item.liveUrl} target="_blank" rel="noreferrer">{item.title === "Siiqo" ? "Visit Siiqo" : `Visit ${item.title} live`} <span>↗</span></a>}
                 <a className="case-button" href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined}>
                   {item.action}<span>↗</span>
                 </a>
