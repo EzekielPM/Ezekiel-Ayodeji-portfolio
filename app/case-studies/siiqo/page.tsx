@@ -56,6 +56,8 @@ export default function SiiqoCaseStudy() {
             <a className="media-frame" href="/portfolio/full/siiqo-5.jpg" target="_blank" rel="noreferrer"><img src="/portfolio/full/siiqo-5.jpg" alt="Siiqo marketplace visual 5" /><span>Product detail</span></a>
           </div>
 
+          <p className="case-contact-link" style={{ marginTop: "1rem" }}><a href="https://siiqo.com" target="_blank" rel="noreferrer">Visit Siiqo live <span>↗</span></a></p>
+
           <div className="feature-tags" aria-label="Siiqo product areas">
             <span>Escrow payments</span><span>Vendor storefronts</span><span>Community</span><span>E-bidding</span><span>Disputes</span><span>Rewards</span>
           </div>
