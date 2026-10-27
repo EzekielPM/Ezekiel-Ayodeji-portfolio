@@ -188,10 +188,10 @@ export default function PortfolioV2() {
           </div>
         </div>
         <div className="case-list">
-          {[selectedWork[0], selectedWork[5]].map((item, index) => (
+          {[selectedWork[0], selectedWork[5]].map((item) => (
             <article className="case-card" key={item.title}>
               <div className="case-top">
-                <span>{String(index + 1).padStart(2, "0")}</span>
+                <span>{item.number}</span>
                 <p>{item.label}</p>
                 <span className="case-status">{item.status}</span>
               </div>
