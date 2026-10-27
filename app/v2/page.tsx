@@ -70,7 +70,7 @@ const selectedWork = [
   {
     number: "06",
     title: "TradeFlow Commerce",
-    label: "Founder & Product Manager · Multi-vendor commerce",
+    label: "Independently built · Multi-vendor commerce",
     status: "DEPLOYED BUILD",
     summary:
       "I’m building TradeFlow to connect product discovery, vendor storefronts, order handling and location-based delivery. Paystack remains in Test Mode while payment flows are validated.",
