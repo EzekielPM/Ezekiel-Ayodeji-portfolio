@@ -84,6 +84,11 @@ export default function WayagramCaseStudy() {
             </div>
           </section>
 
+          <div className="hero-actions" style={{ marginTop: "1.25rem" }} aria-label="Download Wayagram app">
+            <a className="case-button" href="https://play.google.com/store/apps/details?id=ng.wayagram" target="_blank" rel="noreferrer">Get it on Google Play <span>↗</span></a>
+            <a className="case-button" href="https://apps.apple.com/ng/app/wayagram/id6444311693" target="_blank" rel="noreferrer">Download on the App Store <span>↗</span></a>
+          </div>
+
           <div className="hero-cv-actions" aria-label="Download Wayagram architecture document">
             <a href="/documents/wayagram-product-architecture.pdf" download>Download Architecture PDF <span>↓</span></a>
           </div>
