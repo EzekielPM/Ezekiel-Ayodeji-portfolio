@@ -190,6 +190,11 @@ export default function TradeFlowCaseStudy() {
             </section>
           </div>
 
+          <nav className="case-study-next" aria-label="Explore other case studies">
+            <span>Explore another case study</span>
+            <a href="/v2/dm-confirmed-order">From DM to Confirmed Order <b>↗</b></a>
+            <a href="/case-studies/siiqo">Siiqo Marketplace <b>↗</b></a>
+          </nav>
           <footer className="journal-footer">
             <p>Olusola Ayodeji Ezekiel · TradeFlow Commerce</p>
             <div className="hero-actions">
