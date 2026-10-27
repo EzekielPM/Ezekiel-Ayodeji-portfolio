@@ -285,36 +285,36 @@ html[data-theme="navy"] .statement blockquote em{color:#08252a}
 }
 
 
-/* Hero intro writing-on reveal — presentation only */
+/* Hero intro text sequence — starts after the opening name animation */
 @keyframes hero-write-on {
   from { clip-path: inset(0 100% 0 0); }
   to { clip-path: inset(0 0 0 0); }
 }
 @keyframes hero-intro-rise {
-  from { opacity: 0; transform: translate3d(0, 12px, 0); }
+  from { opacity: 0; transform: translate3d(0, 16px, 0); }
   to { opacity: 1; transform: translate3d(0, 0, 0); }
 }
-.hero-copy .hero-label {
-  animation: hero-intro-rise .55s ease-out both;
+.hero-text-ready .hero-copy .hero-label {
+  animation: hero-intro-rise .65s cubic-bezier(.2,.8,.2,1) both;
 }
-.hero-copy h1 {
-  animation: hero-write-on 1.25s steps(32, end) .35s both;
+.hero-text-ready .hero-copy h1 {
+  animation: hero-write-on 1.35s steps(36, end) .22s both;
 }
-.hero-copy .hero-intro {
-  opacity: 0;
-  animation: hero-intro-rise .7s ease-out 1.45s both;
+.hero-text-ready .hero-copy .hero-intro {
+  animation: hero-intro-rise .75s cubic-bezier(.2,.8,.2,1) 1.05s both;
 }
-.hero-copy .hero-actions,
-.hero-copy .hero-cv-actions {
-  opacity: 0;
-  animation: hero-intro-rise .65s ease-out 1.8s both;
+.hero-text-ready .hero-copy .hero-actions {
+  animation: hero-intro-rise .65s cubic-bezier(.2,.8,.2,1) 1.42s both;
+}
+.hero-text-ready .hero-copy .hero-cv-actions {
+  animation: hero-intro-rise .65s cubic-bezier(.2,.8,.2,1) 1.58s both;
 }
 @media (prefers-reduced-motion: reduce) {
-  .hero-copy .hero-label,
-  .hero-copy h1,
-  .hero-copy .hero-intro,
-  .hero-copy .hero-actions,
-  .hero-copy .hero-cv-actions {
+  .hero-text-ready .hero-copy .hero-label,
+  .hero-text-ready .hero-copy h1,
+  .hero-text-ready .hero-copy .hero-intro,
+  .hero-text-ready .hero-copy .hero-actions,
+  .hero-text-ready .hero-copy .hero-cv-actions {
     animation: none !important;
     opacity: 1;
     clip-path: none;
