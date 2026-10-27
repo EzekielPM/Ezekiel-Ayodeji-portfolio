@@ -24,7 +24,7 @@ export default function TradeFlowCaseStudy() {
         </a>
         <nav className="site-nav">
           <a className="nav-cta desktop-nav-link" href="/v2">Go Back Home</a>
-          <a className="desktop-nav-link" href="https://tradeflow-commerce.vercel.app/shop" target="_blank" rel="noreferrer">Open buyer shop ↗</a>
+          <a className="desktop-nav-link" href="https://orderflow-six-sage.vercel.app/" target="_blank" rel="noreferrer">Open buyer shop ↗</a>
         </nav>
       </header>
 
@@ -68,7 +68,7 @@ export default function TradeFlowCaseStudy() {
           <section className="resource-panel">
             <p>Explore the product</p>
             <div>
-              <a href="https://tradeflow-commerce.vercel.app/shop" target="_blank" rel="noreferrer">
+              <a href="https://orderflow-six-sage.vercel.app/" target="_blank" rel="noreferrer">
                 <span>
                   <strong>Open the buyer shop</strong>
                   <small>Open the deployed build to explore the buyer and vendor experience. Payment flows are still in Test Mode.</small>
@@ -207,7 +207,7 @@ export default function TradeFlowCaseStudy() {
             <p>Olusola Ayodeji Ezekiel · TradeFlow Commerce</p>
             <div className="hero-actions">
               <a className="button text" href="/v2">Go Back Home <span>↖</span></a>
-              <a className="case-button" href="https://tradeflow-commerce.vercel.app/shop" target="_blank" rel="noreferrer">
+              <a className="case-button" href="https://orderflow-six-sage.vercel.app/" target="_blank" rel="noreferrer">
                 Open buyer shop <span>↗</span>
               </a>
               <a className="case-contact-link" href="/v2#contact">Let’s talk about product <span>↗</span></a>
