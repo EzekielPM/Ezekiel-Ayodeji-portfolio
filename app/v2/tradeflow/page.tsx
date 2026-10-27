@@ -202,6 +202,7 @@ export default function TradeFlowCaseStudy() {
               <a className="case-button" href="https://tradeflow-commerce.vercel.app/shop" target="_blank" rel="noreferrer">
                 Open buyer shop <span>↗</span>
               </a>
+              <a className="case-contact-link" href="/v2#contact">Let’s talk about product <span>↗</span></a>
             </div>
           </footer>
         </article>
