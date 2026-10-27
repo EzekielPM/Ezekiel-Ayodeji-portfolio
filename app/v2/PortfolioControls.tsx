@@ -27,6 +27,8 @@ function Icon({ name }: { name: IconName }) {
 export function V2HeaderControls() {
   const [theme, setTheme] = useState<"light" | "navy">("light");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const mobileMenuToggleRef = useRef<HTMLButtonElement | null>(null);
+  const mobileMenuPanelRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const saved = window.localStorage.getItem("portfolio-theme");
@@ -38,12 +40,21 @@ export function V2HeaderControls() {
   }, []);
 
   useEffect(() => {
+    if (mobileMenuOpen) {
+      mobileMenuPanelRef.current?.querySelector<HTMLAnchorElement>("a")?.focus();
+    }
+  }, [mobileMenuOpen]);
+
+  useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setMobileMenuOpen(false);
+      if (event.key === "Escape" && mobileMenuOpen) {
+        setMobileMenuOpen(false);
+        mobileMenuToggleRef.current?.focus();
+      }
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, []);
+  }, [mobileMenuOpen]);
 
   useEffect(() => {
     const closeOutside = (event: PointerEvent) => {
@@ -85,6 +96,7 @@ export function V2HeaderControls() {
       </button>
 
       <button
+        ref={mobileMenuToggleRef}
         className="mobile-menu-toggle"
         type="button"
         onClick={() => setMobileMenuOpen((value) => !value)}
@@ -94,7 +106,7 @@ export function V2HeaderControls() {
         {mobileMenuOpen ? "Close" : "Menu"}
       </button>
 
-      <div className="mobile-menu-panel" id="mobile-site-menu" aria-label="Mobile navigation" hidden={!mobileMenuOpen}>
+      <div ref={mobileMenuPanelRef} className="mobile-menu-panel" id="mobile-site-menu" role="navigation" aria-label="Mobile navigation" hidden={!mobileMenuOpen}>
         <a href="#products" onClick={closeMenu}>Product work</a>
         <a href="#practice" onClick={closeMenu}>Product practice</a>
         <a href="#experience" onClick={closeMenu}>Experience</a>
