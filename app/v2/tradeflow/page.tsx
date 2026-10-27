@@ -174,7 +174,7 @@ export default function TradeFlowCaseStudy() {
               <div>
                 <h3>Trade-offs and prioritisation</h3>
                 <p>
-                  I treated role clarity, accurate delivery pricing and reliable order handoff as foundations rather than optional polish. That means not inventing a delivery fee when an area is unsupported, keeping vendor tools separate from buyer shopping, and preserving order notifications for vendors who are not online when an order arrives. These decisions favour predictable fulfilment over a superficially frictionless flow.
+                  I prioritised work by how directly it protects a real order: first, make buyer and vendor responsibilities clear; next, calculate delivery only when a vendor has configured coverage; then preserve order alerts so vendors can return to them. Payment automation and transactional email need separate end-to-end checks before they can be treated as release-ready. This sequencing keeps core order handling ahead of secondary convenience features without implying that the product is ready for live transactions.
                 </p>
               </div>
             </section>
