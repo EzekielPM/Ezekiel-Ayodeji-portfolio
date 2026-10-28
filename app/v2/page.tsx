@@ -74,7 +74,7 @@ const selectedWork = [
     status: "DEPLOYED BUILD",
     summary:
       "I’m building TradeFlow to connect product discovery, vendor storefronts, order handling and location-based delivery. Paystack remains in Test Mode while payment flows are validated.",
-    image: "/portfolio/full/tradeflow-journey.svg",
+    image: "/portfolio/full/tradeflow%20tablet%20mobile%20jpg.jpeg",
     tags: ["Buyer catalogue", "Vendor storefronts", "Delivery zones", "Order alerts", "Fulfilment", "Paystack test mode"],
     href: "/v2/tradeflow",
     liveUrl: "https://orderflow-six-sage.vercel.app/",
