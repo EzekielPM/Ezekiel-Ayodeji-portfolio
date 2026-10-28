@@ -48,6 +48,19 @@ export default function SiiqoCaseStudy() {
             </p>
           </header>
 
+          <section className="siiqo-overview" aria-label="Siiqo project overview">
+            <div className="siiqo-overview-heading">
+              <p className="section-kicker">Project overview</p>
+              <p>A quick view of the challenge, my contribution, the key product decisions and the evidence available.</p>
+            </div>
+            <div className="siiqo-overview-grid">
+              <article><span>01 · CHALLENGE</span><h3>Build buyer trust</h3><p>Help buyers assess seller credibility, pay with confidence and understand what happens if an order goes wrong.</p></article>
+              <article><span>02 · MY ROLE</span><h3>Product leadership</h3><p>Lead Product Manager and Scrum Master, connecting discovery, requirements, backlog priorities and sprint execution.</p></article>
+              <article><span>03 · KEY DECISIONS</span><h3>Trust before breadth</h3><p>Prioritise seller verification, protected transactions, order handling and dispute paths before expanding engagement features.</p></article>
+              <article><span>04 · EVIDENCE</span><h3>Product and process</h3><p>Review the live product experience, gallery and supporting product document. Business impact metrics remain to be validated.</p></article>
+            </div>
+          </section>
+
           <div className="media-rail screenshots" aria-label="Siiqo product gallery">
             <a className="media-frame" href="/portfolio/full/siiqo-1.jpg" target="_blank" rel="noreferrer"><img src="/portfolio/full/siiqo-1.jpg" alt="Siiqo marketplace visual 1" /><span>Marketplace experience</span></a>
             <a className="media-frame" href="/portfolio/full/siiqo-2.jpg" target="_blank" rel="noreferrer"><img src="/portfolio/full/siiqo-2.jpg" alt="Siiqo marketplace visual 2" /><span>Product experience</span></a>
