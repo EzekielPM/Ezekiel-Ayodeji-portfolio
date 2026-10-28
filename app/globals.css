@@ -1546,3 +1546,18 @@ html[data-theme="navy"] #experience .experience-flip-front .experience-card-summ
 .siiqo-overview-grid article>p{margin:0;color:#596562;font-size:12px;line-height:1.75}
 @media(max-width:900px){.siiqo-overview-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.siiqo-overview{padding:28px 20px}.siiqo-overview-heading{display:block}.siiqo-overview-heading>p:last-child{margin-top:10px}.siiqo-overview-grid{grid-template-columns:1fr}.siiqo-overview-grid article{padding:18px}.siiqo-overview-grid h3{margin-top:12px}}
+
+
+/* TradeFlow case-study overview: quick context before the product journey */
+.tradeflow-overview{padding:34px clamp(22px,5vw,55px) 40px;background:#f8f7f2;border-bottom:1px solid var(--line)}
+.tradeflow-overview-heading{display:grid;grid-template-columns:1fr;gap:9px;margin-bottom:20px}
+.tradeflow-overview-heading .section-kicker{margin:0;color:var(--green);font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.tradeflow-overview-heading h3{margin:0;font:500 clamp(28px,3vw,38px)/1.1 Georgia,serif;letter-spacing:-.03em;color:var(--ink)}
+.tradeflow-overview-heading>p:last-child{max-width:680px;margin:0;color:var(--muted);font-size:12px;line-height:1.75}
+.tradeflow-overview-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.tradeflow-overview-grid article{min-width:0;padding:20px 18px;background:#fff;border:1px solid var(--line);border-radius:14px}
+.tradeflow-overview-grid article>span{color:var(--green);font-size:9px;font-weight:800;letter-spacing:.08em;line-height:1.5}
+.tradeflow-overview-grid h4{margin:16px 0 9px;font:500 21px/1.12 Georgia,serif;letter-spacing:-.02em;color:var(--ink)}
+.tradeflow-overview-grid article>p{margin:0;color:#596562;font-size:12px;line-height:1.75}
+@media(max-width:900px){.tradeflow-overview-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.tradeflow-overview{padding:28px 20px}.tradeflow-overview-grid{grid-template-columns:1fr}.tradeflow-overview-grid article{padding:18px}.tradeflow-overview-grid h4{margin-top:12px}}
