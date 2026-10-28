@@ -53,33 +53,16 @@ export default function TradeFlowCaseStudy() {
             </p>
           </header>
 
-          <section className="tradeflow-overview" aria-labelledby="tradeflow-overview-title">
-            <div className="tradeflow-overview-heading">
+          <section className="siiqo-overview" aria-label="TradeFlow project overview">
+            <div className="siiqo-overview-heading">
               <p className="section-kicker">Project overview</p>
-              <h3 id="tradeflow-overview-title">The product, at a glance</h3>
-              <p>A founder-led commerce build focused on clearer buyer and vendor journeys, dependable order handoffs and honest release readiness.</p>
+              <p>A quick view of the challenge, my contribution, the key product decisions and the evidence available.</p>
             </div>
-            <div className="tradeflow-overview-grid">
-              <article>
-                <span>01 · CHALLENGE</span>
-                <h4>Connect the order journey</h4>
-                <p>Help buyers move from discovery to checkout while giving vendors a clear way to manage listings, incoming orders and delivery coverage.</p>
-              </article>
-              <article>
-                <span>02 · MY ROLE</span>
-                <h4>Founder &amp; Product Manager</h4>
-                <p>Set product direction and shape the buyer and vendor journeys, delivery logic, payment flow and fulfilment requirements.</p>
-              </article>
-              <article>
-                <span>03 · KEY DECISIONS</span>
-                <h4>Make handoffs dependable</h4>
-                <p>Separate buyer and vendor paths, calculate delivery from configured service areas, and persist vendor order notifications.</p>
-              </article>
-              <article>
-                <span>04 · EVIDENCE</span>
-                <h4>Show what is verified</h4>
-                <p>The deployed interface and documented product decisions are available to review. Paystack remains in Test Mode; live payments and business impact are not yet validated.</p>
-              </article>
+            <div className="siiqo-overview-grid">
+              <article><span>01 · CHALLENGE</span><h3>Connect the order journey</h3><p>Help buyers move from discovery to checkout while giving vendors a clear way to manage listings, incoming orders and delivery coverage.</p></article>
+              <article><span>02 · MY ROLE</span><h3>Founder &amp; Product Manager</h3><p>Set product direction and shape the buyer and vendor journeys, delivery logic, payment flow and fulfilment requirements.</p></article>
+              <article><span>03 · KEY DECISIONS</span><h3>Make handoffs dependable</h3><p>Separate buyer and vendor paths, calculate delivery from configured service areas, and persist vendor order notifications.</p></article>
+              <article><span>04 · EVIDENCE</span><h3>Product and validation</h3><p>The deployed interface and documented product decisions are available to review. Paystack remains in Test Mode; live payments and business impact are not yet validated.</p></article>
             </div>
           </section>
 
