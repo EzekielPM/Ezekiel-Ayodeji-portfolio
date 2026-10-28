@@ -13,7 +13,7 @@ const selectedWork = [
     status: "LIVE PRODUCT",
     summary:
       "A trust-led marketplace for Nigerian buyers, vendors and service providers, combining verified sellers, protected payments and community-driven discovery.",
-    image: "/portfolio/full/siiqo-1.jpg",
+    image: "/portfolio/full/siiqo%20tablet%20mobile%20showcase%20jpg.jpeg",
     tags: ["Escrow payments", "Vendor storefronts", "Community", "E-bidding", "Disputes", "Rewards"],
     href: "/case-studies/siiqo",
     action: "View case study",
