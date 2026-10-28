@@ -47,7 +47,7 @@ export default function TradeFlowCaseStudy() {
             <p className="journal-deck">
               I am building TradeFlow as Product Builder and Product Manager. Buyers need a straightforward path from product discovery to checkout; vendors need a separate workspace to manage listings, orders and delivery coverage. I shaped the product around those linked journeys, with the handoffs between them treated as core product requirements.
             </p>
-            <p className="case-disclaimer"><strong>My role:</strong> Founder &amp; Product Manager · Product vision, buyer and vendor journeys, delivery logic, payment integration and fulfilment.</p>
+            <p className="case-disclaimer"><strong>My role:</strong> Product Builder &amp; Product Manager · Product vision, buyer and vendor journeys, delivery logic, payment integration and fulfilment.</p>
             <p className="case-disclaimer">
               Current status: the product build is deployed for review. Paystack remains in Test Mode, so this case study does not claim live payment processing or verified business outcomes.
             </p>
@@ -60,7 +60,7 @@ export default function TradeFlowCaseStudy() {
             </div>
             <div className="siiqo-overview-grid">
               <article><span>01 · CHALLENGE</span><h3>Connect the order journey</h3><p>Help buyers move from discovery to checkout while giving vendors a clear way to manage listings, incoming orders and delivery coverage.</p></article>
-              <article><span>02 · MY ROLE</span><h3>Founder &amp; Product Manager</h3><p>Set product direction and shape the buyer and vendor journeys, delivery logic, payment flow and fulfilment requirements.</p></article>
+              <article><span>02 · MY ROLE</span><h3>Product Builder &amp; Product Manager</h3><p>Set product direction and shape the buyer and vendor journeys, delivery logic, payment flow and fulfilment requirements.</p></article>
               <article><span>03 · KEY DECISIONS</span><h3>Make handoffs dependable</h3><p>Separate buyer and vendor paths, calculate delivery from configured service areas, and persist vendor order notifications.</p></article>
               <article><span>04 · EVIDENCE</span><h3>Product and validation</h3><p>The deployed interface and documented product decisions are available to review. Paystack remains in Test Mode; live payments and business impact are not yet validated.</p></article>
             </div>
