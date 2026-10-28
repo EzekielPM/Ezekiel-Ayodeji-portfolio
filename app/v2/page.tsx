@@ -155,6 +155,9 @@ export default function PortfolioV2() {
             <a href="/documents/olusola-ayodeji-product-manager-cv.pdf" download>
               Download Product Manager CV <span>↓</span>
             </a>
+            <a href="/documents/olusola-ayodeji-construction-cv.pdf" download>
+              Download Construction CV <span>↓</span>
+            </a>
           </div>
         </div>
         <aside className="portrait-panel">
