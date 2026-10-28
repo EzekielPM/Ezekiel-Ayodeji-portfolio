@@ -241,9 +241,9 @@ export default function PortfolioV2() {
           <p>The featured work is only the starting point. Explore the other product case studies and independent explorations.</p>
         </div>
         <div className="all-projects-grid">
-          {selectedWork.filter((item) => item.title !== "Siiqo" && item.title !== "TradeFlow Commerce").map((item) => (
+          {selectedWork.filter((item) => item.title !== "Siiqo" && item.title !== "TradeFlow Commerce").map((item, index) => (
             <article className={`all-project-card all-project-card-${item.number}`} key={item.title}>
-              <div className="all-project-meta"><span>{item.number}</span><span>{item.status}</span></div>
+              <div className="all-project-meta"><span>{String(index + 3).padStart(2, "0")}</span><span>{item.status}</span></div>
               <h3>{item.title}</h3>
               <p>{item.summary}</p>
               {item.liveUrl && <a className="all-project-card-link" href={item.liveUrl} target="_blank" rel="noreferrer">Visit {item.title} live <span aria-hidden="true">↗</span></a>}
