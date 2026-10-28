@@ -66,7 +66,7 @@ export default function TradeFlowCaseStudy() {
             </div>
           </section>
 
-          <div className="media-rail screenshots" aria-label="TradeFlow product journey">
+          <div className="media-rail screenshots tradeflow-gallery" aria-label="TradeFlow product screens and journey">
             <div className="media-frame">
               <Image
                 src="/portfolio/full/tradeflow-journey.svg"
@@ -75,6 +75,30 @@ export default function TradeFlowCaseStudy() {
                 sizes="(max-width: 600px) 88vw, 500px"
               />
               <span>Product journey</span>
+            </div>
+            <div className="media-frame">
+              <Image src="/portfolio/full/tradeflow-buyer-login.jpg" alt="TradeFlow buyer login screen" fill sizes="(max-width: 600px) 88vw, 500px" />
+              <span>Buyer login</span>
+            </div>
+            <div className="media-frame">
+              <Image src="/portfolio/full/tradeflow-shop.jpg" alt="TradeFlow multi-vendor buyer shop" fill sizes="(max-width: 600px) 88vw, 500px" />
+              <span>Buyer shop</span>
+            </div>
+            <div className="media-frame">
+              <Image src="/portfolio/full/tradeflow-checkout.jpg" alt="TradeFlow checkout experience" fill sizes="(max-width: 600px) 88vw, 500px" />
+              <span>Checkout</span>
+            </div>
+            <div className="media-frame">
+              <Image src="/portfolio/full/tradeflow-vendor-dashboard.jpg" alt="TradeFlow vendor dashboard" fill sizes="(max-width: 600px) 88vw, 500px" />
+              <span>Vendor dashboard</span>
+            </div>
+            <div className="media-frame">
+              <Image src="/portfolio/full/tradeflow-vendor-orders.jpg" alt="TradeFlow vendor order management screen" fill sizes="(max-width: 600px) 88vw, 500px" />
+              <span>Vendor orders</span>
+            </div>
+            <div className="media-frame">
+              <Image src="/portfolio/full/tradeflow-create-order.jpg" alt="TradeFlow vendor order creation screen" fill sizes="(max-width: 600px) 88vw, 500px" />
+              <span>Create order</span>
             </div>
           </div>
 
