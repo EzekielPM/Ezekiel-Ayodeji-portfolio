@@ -2,12 +2,12 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "TradeFlow Commerce | Founder & Product Manager Case Study",
+  title: "TradeFlow Commerce | Product Builder & Product Manager Case Study",
   description:
-    "Founder-led product case study for TradeFlow Commerce, covering buyer and vendor journeys, location-based delivery, order notifications and payment validation.",
+    "Independently built product case study for TradeFlow Commerce, covering buyer and vendor journeys, location-based delivery, order notifications and payment validation.",
   alternates: { canonical: "/v2/tradeflow" },
   openGraph: {
-    title: "TradeFlow Commerce | Founder & Product Manager Case Study",
+    title: "TradeFlow Commerce | Product Builder & Product Manager Case Study",
     description:
       "Building a more connected way for buyers to discover products and for vendors to manage orders, delivery and fulfilment.",
     type: "article",
@@ -31,21 +31,21 @@ export default function TradeFlowCaseStudy() {
       <section className="section" id="top">
         <div className="section-heading">
           <div>
-            <p className="section-kicker">Founder-led product · Multi-vendor commerce · Nigeria</p>
+            <p className="section-kicker">Independently built product · Multi-vendor commerce · Nigeria</p>
             <h2>TradeFlow Commerce</h2>
           </div>
           <p>
-            TradeFlow is my founder-led commerce build, connecting buyer discovery, vendor operations, checkout and location-based delivery. This case study focuses on the product decisions behind those connected journeys and the release checks still required.
+            TradeFlow is my independently built commerce build, connecting buyer discovery, vendor operations, checkout and location-based delivery. This case study focuses on the product decisions behind those connected journeys and the release checks still required.
           </p>
         </div>
 
         <article className="journal">
           <header className="journal-header">
-            <p>FOUNDER &amp; PRODUCT MANAGER · PRODUCT STRATEGY · END-TO-END DELIVERY</p>
+            <p>PRODUCT BUILDER &amp; PRODUCT MANAGER · PRODUCT STRATEGY · END-TO-END DELIVERY</p>
             <span>06</span>
             <h2>TradeFlow Commerce</h2>
             <p className="journal-deck">
-              I am building TradeFlow as Founder and Product Manager. Buyers need a straightforward path from product discovery to checkout; vendors need a separate workspace to manage listings, orders and delivery coverage. I shaped the product around those linked journeys, with the handoffs between them treated as core product requirements.
+              I am building TradeFlow as Product Builder and Product Manager. Buyers need a straightforward path from product discovery to checkout; vendors need a separate workspace to manage listings, orders and delivery coverage. I shaped the product around those linked journeys, with the handoffs between them treated as core product requirements.
             </p>
             <p className="case-disclaimer"><strong>My role:</strong> Founder &amp; Product Manager · Product vision, buyer and vendor journeys, delivery logic, payment integration and fulfilment.</p>
             <p className="case-disclaimer">
