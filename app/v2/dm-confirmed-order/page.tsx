@@ -172,6 +172,7 @@ export default function DmConfirmedOrderCaseStudy() {
                 <h3>Evidence available and impact still to validate</h3>
                 <p>The working prototype and downloadable product case, user flow and MVP feature list make the problem framing, scope decisions and intended checkout journey reviewable. The prototype demonstrates the proposed handoff from a seller-created order to buyer details, simulated payment and confirmation. It does not prove a live payment integration or a reduction in seller effort.</p>
                 <p><strong>Evidence available now:</strong> interactive prototype and supporting product documents. <strong>Impact to validate with sellers:</strong> time from agreed sale to confirmed order, number of follow-up messages, checkout completion, abandoned checkouts and repeat seller usage.</p>
+                <p><strong>Suggested validation:</strong> observe a small group of sellers completing comparable orders with their usual chat-based process and with the prototype. Record task completion, elapsed time, clarification messages and points where buyers or sellers hesitate. Treat this as directional usability evidence, not proof of business impact; validate payment and order reliability separately before any live pilot.</p>
               </div>
             </section>
           </div>
