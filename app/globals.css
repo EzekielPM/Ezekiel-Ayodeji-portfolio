@@ -1561,3 +1561,16 @@ html[data-theme="navy"] #experience .experience-flip-front .experience-card-summ
 .tradeflow-overview-grid article>p{margin:0;color:#596562;font-size:12px;line-height:1.75}
 @media(max-width:900px){.tradeflow-overview-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.tradeflow-overview{padding:28px 20px}.tradeflow-overview-grid{grid-template-columns:1fr}.tradeflow-overview-grid article{padding:18px}.tradeflow-overview-grid h4{margin-top:12px}}
+
+
+/* Portfolio feedback improvements: clearer proof points and current positioning */
+.hero-current{display:inline-flex;flex-wrap:wrap;gap:5px;margin:0 0 22px;padding:9px 13px;color:#315a50;background:rgba(184,218,212,.42);border:1px solid rgba(15,118,110,.18);border-radius:999px;font-size:11px;line-height:1.5}
+.hero-current strong{font-weight:850}
+.case-intro .case-proof{grid-column:2;margin:-20px 0 0;padding-left:13px;border-left:2px solid var(--green);color:var(--green);font-size:12px;line-height:1.65}
+.all-project-proof{margin:14px 0 15px;padding:11px 13px;background:rgba(184,218,212,.24);border-left:2px solid var(--green);color:var(--green);font-size:11px;line-height:1.65}
+.all-project-card .feature-tags{margin:14px 0 18px}
+.all-project-card .feature-tags span{font-size:9px;padding:7px 9px}
+@media(max-width:700px){
+ .hero-current{border-radius:12px;font-size:10px}
+ .case-intro .case-proof{grid-column:1;margin:0}
+}
