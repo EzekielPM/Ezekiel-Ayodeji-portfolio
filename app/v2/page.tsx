@@ -95,7 +95,9 @@ const selectedWork = [
     status: "LIVE WEB APP · MVP",
     summary:
       "A global football supporter community built around club fanbases, fan discussion, free matchday predictions, banter groups and fan rankings. The MVP deliberately leaves out betting, payments and unverified live scores.",
-    proof: "Evidence: Deployed web app, Android client on a shared Firebase data contract and 36 approved Stitch screen designs; engagement metrics are not yet available.",
+    proof: "Evidence: Deployed web app, a master PRD, an Android client on a shared Firebase data contract and 36 approved Stitch screens; engagement metrics are not yet available.",
+    docUrl: "/documents/ffa-product-requirements.pdf",
+    docLabel: "Read the PRD",
     image: "/portfolio/full/ffa-welcome-feed-clubs.jpg",
     tags: ["Club fanbases", "Matchday predictions", "Banter groups", "Fan rankings", "Moderation", "Web & Android"],
     href: "/v2/football-fan-arena",
@@ -277,6 +279,7 @@ export default function PortfolioV2() {
               <p className="all-project-proof">{item.proof}</p>
               <div className="feature-tags">{item.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
               {item.liveUrl && <a className="all-project-card-link" href={item.liveUrl} target="_blank" rel="noreferrer">Visit {item.title} live <span aria-hidden="true">↗</span></a>}
+              {item.docUrl && <a className="all-project-card-link" href={item.docUrl} target="_blank" rel="noreferrer">{item.docLabel} <span aria-hidden="true">↗</span></a>}
               <a className="all-project-card-link" href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined}>{item.action} <span aria-hidden="true">↗</span></a>
             </article>
           ))}

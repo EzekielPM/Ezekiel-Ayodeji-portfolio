@@ -51,7 +51,7 @@ export default function FootballFanArenaCaseStudy() {
             </p>
             <p className="case-disclaimer"><strong>My role:</strong> Product Builder &amp; Product Manager · Product vision, community model, screen design direction in Google Stitch, shared data contract and delivery across web and Android.</p>
             <p className="case-disclaimer">
-              Current status: the web app is deployed for review and an Android client shares the same Firebase data. The gallery shows the approved Stitch designs the apps are built from. No user or engagement metrics are claimed.
+              Current status: the web app is deployed for review and an Android client shares the same Firebase data. The gallery shows the approved Stitch designs the apps are built from, and the linked PRD sets out the full scope. No user or engagement metrics are claimed.
             </p>
           </header>
 
@@ -64,7 +64,7 @@ export default function FootballFanArenaCaseStudy() {
               <article><span>01 · CHALLENGE</span><h3>Give fans one home</h3><p>Bring club allegiance, discussion, predictions and bragging rights into one community instead of scattered feeds and chats.</p></article>
               <article><span>02 · MY ROLE</span><h3>Product Builder &amp; Product Manager</h3><p>Set the product direction, approved the screen designs, defined the shared data contract and shaped delivery for web and Android.</p></article>
               <article><span>03 · KEY DECISIONS</span><h3>Fun without betting</h3><p>Free predictions with points, locked at kickoff. No betting, payments, private messaging, streaming or unverified live scores in the MVP.</p></article>
-              <article><span>04 · EVIDENCE</span><h3>Product and design</h3><p>Deployed web app, 36 approved Stitch screens across three design batches and a documented data contract. Engagement impact is not yet measured.</p></article>
+              <article><span>04 · EVIDENCE</span><h3>Product and design</h3><p>Deployed web app, a master PRD, 36 approved Stitch screens and a documented data contract. Engagement impact is not yet measured.</p></article>
             </div>
           </section>
 
@@ -98,6 +98,13 @@ export default function FootballFanArenaCaseStudy() {
           <section className="resource-panel">
             <p>Explore the product</p>
             <div>
+              <a href="/documents/ffa-product-requirements.pdf" target="_blank" rel="noreferrer">
+                <span>
+                  <strong>Football Fan Arena Product Requirements Document</strong>
+                  <small>Vision, users, features, the 5 / 3 / 0 prediction rules, quality bar, constraints, success measures, out-of-scope items and open decisions.</small>
+                </span>
+                <b>View PDF ↗</b>
+              </a>
               <a href={LIVE_URL} target="_blank" rel="noreferrer">
                 <span>
                   <strong>Open the web app</strong>
@@ -124,7 +131,7 @@ export default function FootballFanArenaCaseStudy() {
               <div>
                 <h3>Who it is for</h3>
                 <p>
-                  The core user is a supporter who identifies with one club and wants a place to belong to its fanbase. Around them sit casual fans who mainly want to predict and compete, banter group creators who organise rivalries, and administrators who keep the community safe. Each needs a different entry point: joining a club, making a prediction, starting a group or moderating content.
+                  The PRD names four groups: supporters who want to represent their club, active community members who post and comment, competitive supporters who come for predictions and the leaderboard, and fans who prefer focused rivalry inside a Banter Group. Administrators sit behind them, keeping the community safe. Each needs a different way in: choosing a club, joining the conversation, making a prediction or joining a group.
                 </p>
               </div>
             </section>
@@ -134,7 +141,7 @@ export default function FootballFanArenaCaseStudy() {
               <div>
                 <h3>The core experience</h3>
                 <p>
-                  Supporters choose a favourite club during onboarding and join its fanbase space. The feed groups posts by topic, including fan banter, and supports football-themed reactions, reposts, quote reposts and comments. Matchday predictions let fans call the score before kickoff and earn points for exact scores and correct outcomes, which feed a public fan ranking. Notifications bring people back when someone replies, reacts or a prediction is scored.
+                  Supporters choose a favourite club during onboarding and join its fanbase space. The feed has four tabs (For You, Following, Trending and Matchday) plus topic filters. Fans can like a post or pick one football reaction, and comment, repost or quote it. Matchday predictions let fans call the score before kickoff: 5 points for the exact score, 3 for the right result and 0 otherwise, feeding a public leaderboard. Notifications bring people back when someone replies, reacts or a prediction is scored.
                 </p>
               </div>
             </section>
@@ -164,7 +171,7 @@ export default function FootballFanArenaCaseStudy() {
               <div>
                 <h3>Trust, safety and running cost</h3>
                 <p>
-                  A fan community lives or dies on how it handles rivalry. The design includes privacy and moderation controls for supporters and a dedicated moderation dashboard for administrators. On the technical side, likes, reactions and reposts run as atomic database transactions protected by security rules, which keeps engagement counts accurate and lets the product run on Firebase’s free tier. Server functions are used only where they are needed, such as comments.
+                  A fan community lives or dies on how it handles rivalry. The design includes privacy and moderation controls for supporters and a dedicated moderation dashboard for administrators. Cost is a hard constraint too: the PRD keeps FFA on Firebase’s free Spark plan, with no paid services. Likes, reactions and reposts already run as atomic database transactions protected by security rules, which keeps counts accurate within that plan. Comment creation still relies on Cloud Functions, which need a paid plan, so moving comments to a free-plan approach is an open item.
                 </p>
               </div>
             </section>
@@ -203,8 +210,8 @@ export default function FootballFanArenaCaseStudy() {
               <span>10</span>
               <div>
                 <h3>Evidence of progress versus impact</h3>
-                <p>The deployed web app, the 36 approved Stitch designs and the documented data contract make the product direction inspectable. They show what has been designed and built, not how many fans use it.</p>
-                <p><strong>Evidence available now:</strong> deployed web app, approved screen designs, shared data contract and automated build checks. <strong>Impact still to validate:</strong> active supporters, prediction participation, retention and moderation load once real fans are using the product.</p>
+                <p>The documentation labels every feature by how far it has got: specified, designed, implemented or verified. That keeps this case study honest. The PRD shows what is specified, the 36 Stitch screens show what is designed, and the deployed web app and data contract show what is built. None of it shows how many fans use the product.</p>
+                <p><strong>Evidence available now:</strong> master PRD, deployed web app, approved screen designs, shared data contract and automated build checks. <strong>Impact still to validate:</strong> active supporters, prediction participation, retention and moderation load once real fans are using the product.</p>
               </div>
             </section>
           </div>
