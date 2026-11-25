@@ -72,8 +72,15 @@ export default function WayagramCaseStudy() {
           </div>
 
           <section className="resource-panel">
-            <p>Product context document</p>
+            <p>Product context documents</p>
             <div>
+              <a href="/documents/wayagram-product-paper.pdf" target="_blank" rel="noreferrer">
+                <span>
+                  <strong>Wayagram Product &amp; Technology Overview</strong>
+                  <small>A plain-language guide to the customer journey, wallet and money flow, marketplace and escrow, PRD breakdown and Now / Next / Later roadmap.</small>
+                </span>
+                <b>View PDF ↗</b>
+              </a>
               <a href="/documents/wayagram-product-architecture.pdf" target="_blank" rel="noreferrer">
                 <span>
                   <strong>Wayagram Product Architecture</strong>
@@ -99,7 +106,7 @@ export default function WayagramCaseStudy() {
             <section><span>03</span><div><h3>My contribution</h3><p>In my Technical Product Manager role, I contributed to production migration activities, regression testing, stand-ups, demos and reporting across product modules. These activities gave me a view of how product coordination and technical delivery intersected, while the short engagement limited the scope of what I could take through to completion.</p></div></section>
             <section><span>04</span><div><h3>Working across product areas</h3><p>The experience reinforced the importance of viewing connected modules in context. In product discussions and delivery activities, I kept the broader user experience in mind rather than treating each feature as a standalone screen. I have kept this case study to the responsibilities and product context I can speak to confidently.</p></div></section>
             <section><span>05</span><div><h3>What I took from the experience</h3><p>Wayagram gave me exposure to the coordination involved in a product spanning social, commerce and payment experiences. It reinforced the value of clear communication, regression checks and understanding the wider product context during technical delivery. This case study reflects that experience without suggesting that I led the entire programme or can verify a final launch outcome.</p></div></section>
-            <section><span>06</span><div><h3>Evidence and how contribution could be assessed</h3><p>The evidence presented here is deliberately scoped to my brief engagement: production migration support, regression testing, team ceremonies and module-level reporting, alongside the linked product architecture document. This describes my contribution without implying ownership of the full programme or a verified launch outcome.</p><p><strong>Evidence to review:</strong> product architecture PDF and the responsibilities documented above. <strong>Records needed to assess delivery:</strong> migration completion logs, regression-test pass and fail counts, defects found and resolved, severity of outstanding issues, and release sign-off. These records would need to be checked against the period I contributed before attributing any result to my work.</p></div></section>
+            <section><span>06</span><div><h3>Evidence and how contribution could be assessed</h3><p>The evidence presented here is deliberately scoped to my brief engagement: production migration support, regression testing, team ceremonies and module-level reporting, alongside the linked product architecture and product overview documents. This describes my contribution without implying ownership of the full programme or a verified launch outcome.</p><p><strong>Evidence to review:</strong> product architecture PDF and the responsibilities documented above. <strong>Records needed to assess delivery:</strong> migration completion logs, regression-test pass and fail counts, defects found and resolved, severity of outstanding issues, and release sign-off. These records would need to be checked against the period I contributed before attributing any result to my work.</p></div></section>
           </div>
 
           <nav className="case-study-next" aria-label="Explore other case studies">
