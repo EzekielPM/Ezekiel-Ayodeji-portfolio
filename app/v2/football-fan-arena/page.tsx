@@ -82,6 +82,10 @@ export default function FootballFanArenaCaseStudy() {
               <span>Live app · Supporter profile and settings</span>
             </div>
             <div className="media-frame">
+              <Image src="/portfolio/full/ffa-live-rankings.jpg" alt="Football Fan Arena running app: Top Fan Predictors leaderboard with podium and accuracy" fill sizes="(max-width: 600px) 88vw, 500px" />
+              <span>Live app · Top fan predictors leaderboard</span>
+            </div>
+            <div className="media-frame">
               <Image src="/portfolio/full/ffa-welcome-feed-clubs.jpg" alt="Football Fan Arena approved Stitch designs for the welcome screen, home feed and club discovery" fill sizes="(max-width: 600px) 88vw, 500px" />
               <span>Approved design · Welcome, feed and clubs</span>
             </div>
