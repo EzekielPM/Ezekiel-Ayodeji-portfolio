@@ -12,7 +12,7 @@ const experiences = [
     number: "01",
   },
   {
-    year: "Jun 2023 – Dec 2024",
+    year: "Jun 2022 – Dec 2024",
     name: "Canvoy Payment",
     category: "Lead Product Manager · Scrum Master",
     front: "Defining a practical MVP for everyday digital payments.",
@@ -28,7 +28,7 @@ const experiences = [
     number: "03",
   },
   {
-    year: "Jan 2026 – May 2026",
+    year: "Jan 2026 – May 2026 (Contract)",
     name: "Wayagram",
     category: "Technical Product Manager · Social platform",
     front: "Supporting release readiness across connected product modules.",
