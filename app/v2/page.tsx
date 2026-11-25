@@ -13,6 +13,7 @@ const selectedWork = [
     status: "LIVE PRODUCT",
     summary:
       "A trust-led marketplace for Nigerian buyers, vendors and service providers, combining verified sellers, protected payments and community-driven discovery.",
+    proof: "Evidence: Live marketplace, product gallery and supporting product document; business impact metrics are not yet verified.",
     image: "/portfolio/full/siiqo%20tablet%20mobile%20showcase%20jpg.jpeg",
     tags: ["Escrow payments", "Vendor storefronts", "Community", "E-bidding", "Disputes", "Rewards"],
     href: "/case-studies/siiqo",
@@ -25,6 +26,7 @@ const selectedWork = [
     status: "MVP PLANNING",
     summary:
       "An early-stage digital payments MVP focused on utility and everyday payment journeys, with work spanning requirements, Jira delivery planning and security and QA readiness.",
+    proof: "Evidence: Eight-week MVP roadmap and Jira delivery structure; the MVP had not launched.",
     image: "/portfolio/full/canvoy-1.jpg",
     tags: ["Utility payments", "MVP definition", "Jira planning", "Scrum", "Security and QA planning"],
     href: "/case-studies/canvoy",
@@ -38,6 +40,7 @@ const selectedWork = [
     status: "PRODUCTION DELIVERY",
     summary:
       "A social, marketplace and payments platform. During a brief engagement, I contributed to production migration activities, regression testing, team ceremonies and module reporting.",
+    proof: "Evidence: Migration support and regression-testing contribution; release metrics were not available to quantify impact.",
     image: "/portfolio/full/wayagram-1.jpg",
     tags: ["Migration support", "Regression testing", "Wallet", "Marketplace", "Delivery coordination"],
     href: "/case-studies/wayagram",
@@ -50,6 +53,7 @@ const selectedWork = [
     status: "PRODUCT TEARDOWN",
     summary:
       "A focused product teardown exploring the messy step after a customer says ‘I want it’ on WhatsApp or Instagram, and how one structured checkout link could move the order from purchase intent to confirmation.",
+    proof: "Evidence: A documented problem teardown and working prototype of the order-confirmation journey.",
     image: "/portfolio/full/dm-confirmed-order-preview.webp",
     tags: ["Problem framing", "User flow", "MVP", "Prioritisation", "Social commerce", "Prototype"],
     href: "/v2/dm-confirmed-order",
@@ -62,6 +66,7 @@ const selectedWork = [
     status: "INDEPENDENT CASE STUDY",
     summary:
       "An independent teardown and working prototype focused on clearer transaction states, service recovery, balance confidence and recurring financial activity.",
+    proof: "Evidence: Published case study and interactive prototype using illustrative data; this is an independent concept, not a Kuda product release.",
     image: "/portfolio/full/kuda-confidence-layer.webp",
     tags: ["Product strategy", "Transaction confidence", "Service recovery", "State modelling", "UX systems", "Product metrics"],
     href: "https://kuda-confidence-layer.vercel.app",
@@ -74,6 +79,7 @@ const selectedWork = [
     status: "DEPLOYED BUILD",
     summary:
       "I’m building TradeFlow to connect product discovery, vendor storefronts, order handling and location-based delivery. Paystack remains in Test Mode while payment flows are validated.",
+    proof: "Evidence: Deployed working build; payment flows remain in Paystack Test Mode.",
     image: "/portfolio/full/tradeflow%20tablet%20mobile%20jpg.jpeg",
     tags: ["Buyer catalogue", "Vendor storefronts", "Delivery zones", "Order alerts", "Fulfilment", "Paystack test mode"],
     href: "/v2/tradeflow",
@@ -143,6 +149,7 @@ export default function PortfolioV2() {
       <section className="hero" id="top">
         <div className="hero-copy">
           <p className="hero-label">Product Manager · FinTech · eCommerce · iGaming</p>
+          <p className="hero-current"><strong>Currently:</strong> Leading product work at Siiqo · Open to remote Product Manager and Product Operations roles.</p>
           <h1>I turn complex product problems into <em>clear decisions and dependable delivery.</em></h1>
           <p className="hero-intro">
             I am <strong>Olusola Ayodeji Ezekiel</strong>. I work across product strategy, discovery and technical delivery, helping teams move from unclear problems to products people can actually use.
@@ -204,6 +211,7 @@ export default function PortfolioV2() {
               <div className="case-intro">
                 <h3>{item.title}</h3>
                 <p>{item.summary}</p>
+                <p className="case-proof">{item.proof}</p>
               </div>
               {item.image ? (
                 <div className="media-rail screenshots" aria-label={`${item.title} preview`}>
@@ -249,6 +257,8 @@ export default function PortfolioV2() {
               <div className="all-project-meta"><span>{String(index + 3).padStart(2, "0")}</span><span>{item.status}</span></div>
               <h3>{item.title}</h3>
               <p>{item.summary}</p>
+              <p className="all-project-proof">{item.proof}</p>
+              <div className="feature-tags">{item.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
               {item.liveUrl && <a className="all-project-card-link" href={item.liveUrl} target="_blank" rel="noreferrer">Visit {item.title} live <span aria-hidden="true">↗</span></a>}
               <a className="all-project-card-link" href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined}>{item.action} <span aria-hidden="true">↗</span></a>
             </article>
