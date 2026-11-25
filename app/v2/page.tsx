@@ -88,6 +88,20 @@ const selectedWork = [
     liveUrl: "https://tradeflow-commerce.vercel.app/",
     action: "View case study",
   },
+  {
+    number: "07",
+    title: "Football Fan Arena",
+    label: "Independently built · Football community · Web & Android",
+    status: "LIVE WEB APP · MVP",
+    summary:
+      "A global football supporter community built around club fanbases, fan discussion, free matchday predictions, banter groups and fan rankings. The MVP deliberately leaves out betting, payments and unverified live scores.",
+    proof: "Evidence: Deployed web app, Android client on a shared Firebase data contract and 36 approved Stitch screen designs; engagement metrics are not yet available.",
+    image: "/portfolio/full/ffa-welcome-feed-clubs.jpg",
+    tags: ["Club fanbases", "Matchday predictions", "Banter groups", "Fan rankings", "Moderation", "Web & Android"],
+    href: "/v2/football-fan-arena",
+    liveUrl: "https://football-fan-arena-web.vercel.app/",
+    action: "View case study",
+  },
 ];
 
 const practice = [

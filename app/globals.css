@@ -1574,3 +1574,6 @@ html[data-theme="navy"] #experience .experience-flip-front .experience-card-summ
  .hero-current{border-radius:12px;font-size:10px}
  .case-intro .case-proof{grid-column:1;margin:0}
 }
+
+.all-project-card-07{--project-accent:#1d7a3e;--project-tint:#e6f4ea}
+html[data-theme="navy"] .all-project-card-07{--project-accent:#5be38b;--project-tint:#123321}
