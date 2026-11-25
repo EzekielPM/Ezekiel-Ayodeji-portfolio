@@ -95,10 +95,10 @@ const selectedWork = [
     status: "LIVE WEB APP · MVP",
     summary:
       "A global football supporter community built around club fanbases, fan discussion, free matchday predictions, banter groups and fan rankings. The MVP deliberately leaves out betting, payments and unverified live scores.",
-    proof: "Evidence: Deployed web app, a master PRD, an Android client on a shared Firebase data contract and 36 approved Stitch screens; engagement metrics are not yet available.",
+    proof: "Evidence: Deployed web app, a working Android build on a shared Firebase data contract and 36 approved Stitch screens; engagement metrics are not yet available.",
     docUrl: "/documents/ffa-product-requirements.pdf",
     docLabel: "Read the PRD",
-    image: "/portfolio/full/ffa-welcome-feed-clubs.jpg",
+    image: "/portfolio/full/ffa-live-feed-predictions.jpg",
     tags: ["Club fanbases", "Matchday predictions", "Banter groups", "Fan rankings", "Moderation", "Web & Android"],
     href: "/v2/football-fan-arena",
     liveUrl: "https://football-fan-arena-web.vercel.app/",

@@ -51,7 +51,7 @@ export default function FootballFanArenaCaseStudy() {
             </p>
             <p className="case-disclaimer"><strong>My role:</strong> Product Builder &amp; Product Manager · Product vision, community model, screen design direction in Google Stitch, shared data contract and delivery across web and Android.</p>
             <p className="case-disclaimer">
-              Current status: the web app is deployed for review and an Android client shares the same Firebase data. The gallery shows the approved Stitch designs the apps are built from, and the linked PRD sets out the full scope. No user or engagement metrics are claimed.
+              Current status: the web app is deployed for review and an Android client shares the same Firebase data. The gallery leads with screenshots from the running Android app, followed by two of the approved Stitch designs; the linked PRD sets out the full scope. Club fan counts and group sizes in the app are seeded demo data. No user or engagement metrics are claimed.
             </p>
           </header>
 
@@ -64,30 +64,30 @@ export default function FootballFanArenaCaseStudy() {
               <article><span>01 · CHALLENGE</span><h3>Give fans one home</h3><p>Bring club allegiance, discussion, predictions and bragging rights into one community instead of scattered feeds and chats.</p></article>
               <article><span>02 · MY ROLE</span><h3>Product Builder &amp; Product Manager</h3><p>Set the product direction, approved the screen designs, defined the shared data contract and shaped delivery for web and Android.</p></article>
               <article><span>03 · KEY DECISIONS</span><h3>Fun without betting</h3><p>Free predictions with points, locked at kickoff. No betting, payments, private messaging, streaming or unverified live scores in the MVP.</p></article>
-              <article><span>04 · EVIDENCE</span><h3>Product and design</h3><p>Deployed web app, a master PRD, 36 approved Stitch screens and a documented data contract. Engagement impact is not yet measured.</p></article>
+              <article><span>04 · EVIDENCE</span><h3>Product and design</h3><p>Deployed web app, a working Android build, a master PRD, 36 approved Stitch screens and a documented data contract. Engagement impact is not yet measured.</p></article>
             </div>
           </section>
 
-          <div className="media-rail screenshots" aria-label="Football Fan Arena approved screen designs">
+          <div className="media-rail screenshots" aria-label="Football Fan Arena app screens">
             <div className="media-frame">
-              <Image src="/portfolio/full/ffa-welcome-feed-clubs.jpg" alt="Football Fan Arena welcome screen, home feed and club discovery screens" fill sizes="(max-width: 600px) 88vw, 500px" />
-              <span>Welcome, feed and clubs</span>
+              <Image src="/portfolio/full/ffa-live-feed-predictions.jpg" alt="Football Fan Arena running app: home feed with reposts and reactions, and the match predictions screen with 5, 3 and 0 point scoring" fill sizes="(max-width: 600px) 88vw, 500px" />
+              <span>Live app · Feed and match predictions</span>
             </div>
             <div className="media-frame">
-              <Image src="/portfolio/full/ffa-predictions-rankings.jpg" alt="Football Fan Arena matchday predictions, prediction history and notifications screens" fill sizes="(max-width: 600px) 88vw, 500px" />
-              <span>Predictions and notifications</span>
+              <Image src="/portfolio/full/ffa-live-clubs-banter.jpg" alt="Football Fan Arena running app: club communities list and fan banter groups" fill sizes="(max-width: 600px) 88vw, 500px" />
+              <span>Live app · Clubs and banter groups (demo data)</span>
             </div>
             <div className="media-frame">
-              <Image src="/portfolio/full/ffa-banter-community.jpg" alt="Football Fan Arena banter groups, post discussion and create post screens" fill sizes="(max-width: 600px) 88vw, 500px" />
-              <span>Banter groups and discussion</span>
+              <Image src="/portfolio/full/ffa-live-profile.jpg" alt="Football Fan Arena running app: supporter profile with prediction stats, club wallpapers, display mode and Google sign-in" fill sizes="(max-width: 600px) 88vw, 500px" />
+              <span>Live app · Supporter profile and settings</span>
             </div>
             <div className="media-frame">
-              <Image src="/portfolio/full/ffa-clubs-profile.jpg" alt="Football Fan Arena club fanbase, club details and supporter profile screens" fill sizes="(max-width: 600px) 88vw, 500px" />
-              <span>Club fanbase and profile</span>
+              <Image src="/portfolio/full/ffa-welcome-feed-clubs.jpg" alt="Football Fan Arena approved Stitch designs for the welcome screen, home feed and club discovery" fill sizes="(max-width: 600px) 88vw, 500px" />
+              <span>Approved design · Welcome, feed and clubs</span>
             </div>
             <div className="media-frame">
-              <Image src="/portfolio/full/ffa-admin-moderation.jpg" alt="Football Fan Arena administration and moderation dashboard for the web" fill sizes="(max-width: 600px) 88vw, 500px" />
-              <span>Moderation dashboard</span>
+              <Image src="/portfolio/full/ffa-admin-moderation.jpg" alt="Football Fan Arena approved design for the web moderation dashboard" fill sizes="(max-width: 600px) 88vw, 500px" />
+              <span>Approved design · Moderation dashboard</span>
             </div>
           </div>
 
@@ -210,7 +210,7 @@ export default function FootballFanArenaCaseStudy() {
               <span>10</span>
               <div>
                 <h3>Evidence of progress versus impact</h3>
-                <p>The documentation labels every feature by how far it has got: specified, designed, implemented or verified. That keeps this case study honest. The PRD shows what is specified, the 36 Stitch screens show what is designed, and the deployed web app and data contract show what is built. None of it shows how many fans use the product.</p>
+                <p>The documentation labels every feature by how far it has got: specified, designed, implemented or verified. That keeps this case study honest. The PRD shows what is specified, the 36 Stitch screens show what is designed, and the deployed web app, the running Android build and the data contract show what is built. None of it shows how many fans use the product.</p>
                 <p><strong>Evidence available now:</strong> master PRD, deployed web app, approved screen designs, shared data contract and automated build checks. <strong>Impact still to validate:</strong> active supporters, prediction participation, retention and moderation load once real fans are using the product.</p>
               </div>
             </section>
