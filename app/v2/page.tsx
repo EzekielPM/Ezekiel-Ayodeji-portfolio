@@ -37,7 +37,7 @@ const selectedWork = [
     title: "Wayagram",
     liveUrl: "https://wayagram.ng/",
     label: "FinTech · Technical Product Manager",
-    status: "PRODUCTION DELIVERY",
+    status: "CONTRACT · RELEASE SUPPORT",
     summary:
       "A social, marketplace and payments platform. During a brief engagement, I contributed to production migration activities, regression testing, team ceremonies and module reporting.",
     proof: "Evidence: Migration support and regression-testing contribution; release metrics were not available to quantify impact.",
@@ -76,14 +76,14 @@ const selectedWork = [
     number: "06",
     title: "TradeFlow Commerce",
     label: "Independently built · Multi-vendor commerce",
-    status: "DEPLOYED BUILD",
+    status: "LIVE DEMO · TEST PAYMENTS",
     summary:
       "I’m building TradeFlow to connect product discovery, vendor storefronts, order handling and location-based delivery. Paystack remains in Test Mode while payment flows are validated.",
     proof: "Evidence: Deployed working build; payment flows remain in Paystack Test Mode.",
     image: "/portfolio/full/tradeflow%20tablet%20mobile%20jpg.jpeg",
     tags: ["Buyer catalogue", "Vendor storefronts", "Delivery zones", "Order alerts", "Fulfilment", "Paystack test mode"],
     href: "/v2/tradeflow",
-    liveUrl: "https://orderflow-six-sage.vercel.app/",
+    liveUrl: "https://tradeflow-commerce.vercel.app/",
     action: "View case study",
   },
 ];
@@ -119,11 +119,11 @@ const insights = [
   { topic: "UX & empathy", title: "Product Managers Create Products People Understand", text: "A payment experience can work as designed and still leave people uncertain. Clear feedback and thoughtful user journeys matter just as much as the transaction itself.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-usercentric-uiux-activity-7484933393252700160-dq-m" },
   { topic: "UX & iGaming", title: "Becoming the User: A UX Lesson in iGaming", text: "Promotions can grab attention, but too many interruptions can get in the way of the task a user came to complete.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-igaming-userexperience-activity-7481301268641226753-etSu" },
   { topic: "Product discovery", title: "Product Managers Shouldn't Trust Feature Requests Alone", text: "A request is a useful starting point, not the whole problem. Understand the need behind it before committing to a solution.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-productdiscovery-userresearch-activity-7483500408246677504-iNQa" },
-  { topic: "Product strategy", title: "Optimizing vs Innovating: The PM's Dilemma", text: "Knowing when to improve an existing experience and when to explore something new is a product judgement call, not a default rule.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanagement-activity-7391033448427171840-kQuU" },
+  { topic: "Product strategy", title: "Optimising vs Innovating: The PM's Dilemma", text: "Knowing when to improve an existing experience and when to explore something new is a product judgement call, not a default rule.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanagement-activity-7391033448427171840-kQuU" },
   { topic: "Product documentation", title: "PRDs Are Just Bets, Not Guarantees", text: "Requirements make assumptions visible and give teams a shared direction. They still need validation, feedback and adjustment.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanagement-productmanager-productstrategy-activity-7479851658903076864-d9Er" },
   { topic: "Leadership", title: "Surviving Chaos in Product Management with Purpose", text: "When priorities and opinions collide, listening carefully and bringing the conversation back to user value helps restore direction.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-usercentric-problemsolving-activity-7494005541279539200-DIe6" },
   { topic: "Team alignment", title: "How to Use Meetings to Align and Decide", text: "Good meetings create shared understanding, clarify decisions and give the team a useful next step rather than more noise.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_planning-provides-the-direction-and-focus-activity-7376157467107393537-sG3N" },
-  { topic: "Building products", title: "Building SIIQO Marketplace for Safe and Easy Commerce", text: "A look at marketplace thinking through trust, commerce and the decisions that help buyers and vendors transact with more confidence.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_siiqo-ecommerce-marketplace-activity-7459969658050207744-LgKQ" },
+  { topic: "Building products", title: "Building the Siiqo Marketplace for Safe and Easy Commerce", text: "A look at marketplace thinking through trust, commerce and the decisions that help buyers and vendors transact with more confidence.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_siiqo-ecommerce-marketplace-activity-7459969658050207744-LgKQ" },
 ];
 
 export default function PortfolioV2() {

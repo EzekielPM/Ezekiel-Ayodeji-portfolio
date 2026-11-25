@@ -21,7 +21,7 @@ const experiences = [
   },
   {
     year: "Jan 2025 – Present",
-    name: "Siiqoo",
+    name: "Siiqo",
     category: "Lead Product Manager · Scrum Master",
     front: "Building trust into the buyer and vendor experience.",
     back: "Led product direction and sprint delivery across marketplace trust, protected payments, vendor tools, community features and prioritisation.",
