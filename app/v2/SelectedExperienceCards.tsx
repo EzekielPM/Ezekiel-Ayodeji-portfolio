@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const experiences = [
   {
-    year: "2024",
+    year: "Jan 2021 – Mar 2022",
     name: "BetBonanza",
     category: "Associate Product Manager · iGaming",
     front: "Supporting sportsbook journeys and focused product execution.",
@@ -12,7 +12,7 @@ const experiences = [
     number: "01",
   },
   {
-    year: "2025",
+    year: "Jun 2023 – Dec 2024",
     name: "Canvoy Payment",
     category: "Lead Product Manager · Scrum Master",
     front: "Defining a practical MVP for everyday digital payments.",
@@ -20,7 +20,7 @@ const experiences = [
     number: "02",
   },
   {
-    year: "2026",
+    year: "Jan 2026 – May 2026",
     name: "Wayagram",
     category: "Technical Product Manager · Social platform",
     front: "Supporting release readiness across connected product modules.",
