@@ -13,7 +13,9 @@ const selectedWork = [
     status: "LIVE PRODUCT",
     summary:
       "A trust-led marketplace for Nigerian buyers, vendors and service providers, combining verified sellers, protected payments and community-driven discovery.",
-    proof: "Evidence: Live marketplace, product gallery and supporting product document; business impact metrics are not yet verified.",
+    proof: "Evidence: Live marketplace, product gallery and a full product requirements document; business impact metrics are not yet verified.",
+    docUrl: "/documents/siiqo-product-requirements.pdf",
+    docLabel: "Read the PRD",
     image: "/portfolio/full/siiqo%20tablet%20mobile%20showcase%20jpg.jpeg",
     tags: ["Escrow payments", "Vendor storefronts", "Community", "E-bidding", "Disputes", "Rewards"],
     href: "/case-studies/siiqo",
@@ -233,6 +235,7 @@ export default function PortfolioV2() {
                 <a className="case-button" href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined}>
                   {item.action}<span>↗</span>
                 </a>
+                {item.docUrl && <a className="case-button" href={item.docUrl} target="_blank" rel="noreferrer">{item.docLabel}<span>↗</span></a>}
                 {item.title === "Wayagram" && <div className="hero-actions" style={{ marginTop: "0.75rem" }} aria-label="Download Wayagram app">
                   <a className="case-button" href="https://play.google.com/store/apps/details?id=ng.wayagram" target="_blank" rel="noreferrer">Google Play <span>↗</span></a>
                   <a className="case-button" href="https://apps.apple.com/ng/app/wayagram/id6444311693" target="_blank" rel="noreferrer">App Store <span>↗</span></a>
