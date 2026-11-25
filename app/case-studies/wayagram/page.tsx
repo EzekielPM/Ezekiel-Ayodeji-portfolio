@@ -83,8 +83,8 @@ export default function WayagramCaseStudy() {
               </a>
               <a href="/documents/wayagram-product-architecture.pdf" target="_blank" rel="noreferrer">
                 <span>
-                  <strong>Wayagram Product Architecture</strong>
-                  <small>A high-level view of the product areas and relationships documented for Wayagram.</small>
+                  <strong>Wayagram Product &amp; Technical Architecture</strong>
+                  <small>How the platform is built: customer journey and technical enablement, business model and KPIs, system layers, feature-by-feature engineering, security and roadmap.</small>
                 </span>
                 <b>View PDF ↗</b>
               </a>
