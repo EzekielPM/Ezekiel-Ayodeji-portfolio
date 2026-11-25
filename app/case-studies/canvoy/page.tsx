@@ -56,7 +56,7 @@ export default function CanvoyCaseStudy() {
               </video>
               <span>Canvoy product concept walkthrough</span>
             </div>
-            <a className="media-frame" href="/portfolio/full/canvoy-landing-desktop-mobile.jpg" target="_blank" rel="noreferrer"><img src="/portfolio/full/canvoy-landing-desktop-mobile.jpg" alt="Canvoy landing page designs for desktop and mobile" /><span>Landing page · desktop and mobile</span></a>
+            <a className="media-frame" href="/portfolio/full/canvoy-landing-desktop-mobile.jpg" target="_blank" rel="noreferrer"><img src="/portfolio/full/canvoy-landing-desktop-mobile.jpg" alt="Two versions of the Canvoy landing page design, each shown on desktop and mobile" /><span>Landing page · two design versions, desktop and mobile</span></a>
             <a className="media-frame" href="/portfolio/full/canvoy-figma-flows.jpg" target="_blank" rel="noreferrer"><img src="/portfolio/full/canvoy-figma-flows.jpg" alt="Figma board of Canvoy sign-up, verification, security, dashboard and profile screens" /><span>Figma · sign-up, security and dashboard flows</span></a>
             <a className="media-frame" href="/portfolio/full/canvoy-jira-backlog.jpg" target="_blank" rel="noreferrer"><img src="/portfolio/full/canvoy-jira-backlog.jpg" alt="Jira backlog showing Week 1 product discovery and Week 2 UI/UX sprints" /><span>Jira backlog · sprint plan</span></a>
             <a className="media-frame" href="/portfolio/full/canvoy-jira-summary.jpg" target="_blank" rel="noreferrer"><img src="/portfolio/full/canvoy-jira-summary.jpg" alt="Jira project summary showing 42 work items and their status" /><span>Jira summary · 42 work items tracked</span></a>
