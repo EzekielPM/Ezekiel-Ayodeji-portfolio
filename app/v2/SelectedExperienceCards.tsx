@@ -20,19 +20,19 @@ const experiences = [
     number: "02",
   },
   {
-    year: "Jan 2026 – May 2026",
-    name: "Wayagram",
-    category: "Technical Product Manager · Social platform",
-    front: "Supporting release readiness across connected product modules.",
-    back: "During a brief engagement, contributed to production migration activities, regression testing, stand-ups, demos and module reporting across a connected social, marketplace and payments product.",
-    number: "03",
-  },
-  {
     year: "Jan 2025 – Present",
     name: "Siiqoo",
     category: "Lead Product Manager · Scrum Master",
     front: "Building trust into the buyer and vendor experience.",
     back: "Led product direction and sprint delivery across marketplace trust, protected payments, vendor tools, community features and prioritisation.",
+    number: "03",
+  },
+  {
+    year: "Jan 2026 – May 2026",
+    name: "Wayagram",
+    category: "Technical Product Manager · Social platform",
+    front: "Supporting release readiness across connected product modules.",
+    back: "During a brief engagement, contributed to production migration activities, regression testing, stand-ups, demos and module reporting across a connected social, marketplace and payments product.",
     number: "04",
   },
   {
