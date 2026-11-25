@@ -27,7 +27,7 @@ const selectedWork = [
     summary:
       "An early-stage digital payments MVP focused on utility and everyday payment journeys, with work spanning requirements, Jira delivery planning and security and QA readiness.",
     proof: "Evidence: Eight-week MVP roadmap and Jira delivery structure; the MVP had not launched.",
-    image: "/portfolio/full/canvoy-1.jpg",
+    image: "/portfolio/full/canvoy-landing-desktop-mobile.jpg",
     tags: ["Utility payments", "MVP definition", "Jira planning", "Scrum", "Security and QA planning"],
     href: "/case-studies/canvoy",
     action: "View case study",
