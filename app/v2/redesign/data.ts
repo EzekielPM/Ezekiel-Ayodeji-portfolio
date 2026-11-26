@@ -62,7 +62,7 @@ export const projects: Project[] = [
   {
     slug: "siiqo",
     name: "Siiqo",
-    line: "A trust-led marketplace with verified vendors and protected payments. 500+ active vendors; sign-ups up to 35% in the first three months.",
+    line: "A trust-led marketplace with verified vendors and protected payments. 500+ active vendors; sign-ups 35% above forecast in the first three months.",
     status: "Live product",
     tone: "live",
     evidence: "siiqo.com",
@@ -122,7 +122,7 @@ export const projects: Project[] = [
   {
     slug: "betbonanza",
     name: "BetBonanza",
-    line: "Sportsbook journeys and a 12 Days of December campaign: sign-ups up 25%, DAU up to 65%, retention up to 80%.",
+    line: "Sportsbook journeys and a 12 Days of December campaign: sign-ups up 25%, daily active users up 35%, 52% retention.",
     status: "Past role",
     tone: "past",
     evidence: "Role experience",
@@ -154,7 +154,7 @@ export const slides: Slide[] = [
     slug: "siiqo",
     name: "Siiqo",
     tagline: "Buy and sell with people you can trust.",
-    summary: "A trust-led marketplace for Nigerian buyers, vendors and service providers: verified sellers, protected payments and community discovery. Over 500 active vendors, and sign-ups up to 35% in the first three months after going live.",
+    summary: "A trust-led marketplace for Nigerian buyers, vendors and service providers: verified sellers, protected payments and community discovery. Over 500 active vendors, and sign-ups 35% above forecast in the first three months after public launch.",
     brief: "A trust-led marketplace for Nigerian buyers, vendors and service providers: verified sellers, protected payments and community discovery.",
     chips: ["Live product", "Lead PM · Scrum Master", "Jan 2025 – Present"],
     image: "/portfolio/full/siiqo%20tablet%20mobile%20showcase%20jpg.jpeg",
@@ -241,7 +241,7 @@ export const slides: Slide[] = [
     slug: "betbonanza",
     name: "BetBonanza",
     tagline: "Sportsbook journeys and a 12 Days of December campaign.",
-    summary: "My first product role, in iGaming. I worked on sportsbook user journeys and prioritisation, and led the competitor analysis behind a 12 Days of December campaign: sign-ups up 25% from November to December, daily active users up to 65% and retention up to 80%.",
+    summary: "My first product role, in iGaming. I worked on sportsbook user journeys and prioritisation, and led the competitor analysis behind a 12 Days of December campaign: sign-ups up 25% from November to December, daily active users up 35% and 52% retention among bonus players.",
     chips: ["Past role", "Associate PM · iGaming", "Jan 2021 – Mar 2022"],
     image: "/portfolio/full/betbonanza-home.jpg",
     imageAlt: "BetBonanza sportsbook home on mobile",
@@ -349,9 +349,9 @@ export const practice = [
 
 export const releases = [
   { v: "v5.1", when: "Jan – May 2026 · Contract, alongside Siiqo", title: "Technical Product Manager · Wayagram", note: "Supported production migration, regression testing, stand-ups, demos and module reporting across a connected social, marketplace and payments product.", tone: "orange" },
-  { v: "v5.0", when: "Jan 2025 – Present", title: "Lead Product Manager · Scrum Master · Siiqo", note: "Leading product direction and sprint delivery across marketplace trust, protected payments, vendor tools and community features. 500+ active vendors, and sign-ups up to 35% in the first three months live.", tone: "navy" },
+  { v: "v5.0", when: "Jan 2025 – Present", title: "Lead Product Manager · Scrum Master · Siiqo", note: "Leading product direction and sprint delivery across marketplace trust, protected payments, vendor tools and community features. 500+ active vendors, and sign-ups 35% above forecast in the first three months live.", tone: "navy" },
   { v: "v4.0", when: "Jun 2022 – Dec 2024", title: "Lead Product Manager · Scrum Master · Canvoy Payment", note: "Shaped MVP scope, payment journeys, requirements and Jira delivery planning, while coordinating security and QA readiness. The MVP did not launch, for regulatory and business reasons.", tone: "teal" },
-  { v: "v3.0", when: "Jan 2021 – Mar 2022", title: "Associate Product Manager · BetBonanza (iGaming)", note: "Worked on sportsbook user journeys and prioritisation, and led the competitor analysis behind a 12 Days of December campaign: sign-ups up 25%, daily active users up to 65%, retention up to 80%.", tone: "violet" },
+  { v: "v3.0", when: "Jan 2021 – Mar 2022", title: "Associate Product Manager · BetBonanza (iGaming)", note: "Worked on sportsbook user journeys and prioritisation, and led the competitor analysis behind a 12 Days of December campaign: sign-ups up 25%, daily active users up 35%, 52% retention among bonus players.", tone: "violet" },
   { v: "v2.0", when: "10+ years", title: "Project leadership · Construction & infrastructure", note: "Led site and project delivery across residential, commercial and public-sector developments: risk, quality, dependencies and team coordination.", tone: "amber" },
   { v: "v1.0", when: "Training", title: "Product Management · Axia Africa School of Product", note: "Where the product practice took shape.", tone: "slate" },
 ];
@@ -362,7 +362,7 @@ export const values = [
   { value: "PRDs are bets, not guarantees", verb: "Tested in", where: "every PRD I write" },
   { value: "Protect the core journey", verb: "Validated at", where: "BetBonanza" },
   { value: "Start from the market", verb: "Proven by", where: "12 Days of December" },
-  { value: "Scope honestly, ship reliably", verb: "Shipped in", where: "Football Fan Arena" },
+  { value: "Scope honestly, ship reliably", verb: "Built in", where: "Football Fan Arena" },
   { value: "Build to learn", verb: "Tested in", where: "my independent builds" },
   { value: "Clarity over noise", verb: "Practised in", where: "sprint rituals" },
   { value: "Plan like a builder", verb: "Earned in", where: "10 years of construction" },
@@ -371,7 +371,7 @@ export const values = [
 // Quiet results line on the home page.
 export const homeResults = [
   { figure: "500+", label: "active vendors", where: "Siiqo", href: "/case-studies/siiqo" },
-  { figure: "Up to 35%", label: "more sign-ups, first 3 months", where: "Siiqo", href: "/case-studies/siiqo" },
+  { figure: "+35%", label: "sign-ups above forecast, first 3 months", where: "Siiqo", href: "/case-studies/siiqo" },
   { figure: "+25%", label: "sign-ups, Nov to Dec", where: "BetBonanza", href: "/case-studies/betbonanza" },
-  { figure: "Up to 65%", label: "more daily active users", where: "BetBonanza", href: "/case-studies/betbonanza" },
+  { figure: "+35%", label: "daily active users, 12 Days campaign", where: "BetBonanza", href: "/case-studies/betbonanza" },
 ];

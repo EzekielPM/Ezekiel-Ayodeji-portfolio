@@ -25,7 +25,7 @@ export default function BetBonanzaCaseStudy() {
         <header className="rd-case-hero" data-reveal>
           <p className="rd-case-kicker">Case study · iGaming · Sportsbook</p>
           <h1>BetBonanza: learning product on a sportsbook that never sleeps</h1>
-          <p className="rd-case-lead">My first product role. I worked on sportsbook user journeys at BetBonanza Nigeria, and led the competitor analysis behind a 12 Days of December campaign that lifted sign-ups by 25% and daily active users by up to 65%.</p>
+          <p className="rd-case-lead">My first product role. I worked on sportsbook user journeys at BetBonanza Nigeria, and led the competitor analysis behind a 12 Days of December campaign that lifted sign-ups by 25% and daily active users by 35%.</p>
           <dl className="rd-case-facts">
             <div><dt>Role</dt><dd>Associate Product Manager</dd></div>
             <div><dt>Dates</dt><dd>Jan 2021 – Mar 2022</dd></div>
@@ -74,8 +74,8 @@ export default function BetBonanzaCaseStudy() {
             <p>The campaign worked on both fronts: it brought new players in and kept existing ones coming back across the twelve days.</p>
             <dl className="rd-case-results">
               <div><dt>Sign-ups</dt><dd>+25%</dd><span>November to December</span></div>
-              <div><dt>Daily active users</dt><dd>up to 65%</dd><span>higher during the campaign</span></div>
-              <div><dt>Retention</dt><dd>up to 80%</dd><span>of players kept coming back</span></div>
+              <div><dt>Daily active users</dt><dd>+35%</dd><span>logins, deposits and withdrawals</span></div>
+              <div><dt>Retention</dt><dd>52%</dd><span>casino and new players on the bonuses</span></div>
             </dl>
           </div>
         </section>
@@ -103,7 +103,7 @@ export default function BetBonanzaCaseStudy() {
           </div>
         </section>
 
-        <p className="rd-case-note" data-reveal>About the figures: they cover the December campaign period and are rounded. Sign-ups compare December with November.</p>
+        <p className="rd-case-note" data-reveal>About the figures: they cover the December campaign and are rounded. Sign-ups compare December with November. Daily active users count players who logged in, deposited or withdrew. Retention is measured among casino players and new players on the welcome bonus and the 12 Days bonus.</p>
 
         <nav className="rd-case-next" aria-label="Next case study" data-reveal>
           <span>Next in my work</span>

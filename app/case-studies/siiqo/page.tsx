@@ -8,7 +8,7 @@ import { FloatingContact } from "../../v2/PortfolioControls";
 
 export const metadata: Metadata = {
   title: "Siiqo case study | Olusola Ayodeji Ezekiel",
-  description: "Lead Product Manager and Scrum Master at Siiqo, a trust-led marketplace for Nigerian buyers and vendors: 500+ active vendors and sign-ups up to 35% in the first three months.",
+  description: "Lead Product Manager and Scrum Master at Siiqo, a trust-led marketplace for Nigerian buyers and vendors: 500+ active vendors and sign-ups 35% above forecast in the first three months.",
   alternates: { canonical: "/case-studies/siiqo" },
 };
 
@@ -96,9 +96,10 @@ export default function SiiqoCaseStudy() {
           <div>
             <h2>Results so far</h2>
             <dl className="rd-case-results rd-case-results-2">
-              <div><dt>Active vendors</dt><dd>500+</dd><span>selling on the marketplace</span></div>
-              <div><dt>Sign-ups</dt><dd>up to 35%</dd><span>more in the first three months live</span></div>
+              <div><dt>Active vendors</dt><dd>500+</dd><span>buying and selling, with storefronts kept up to date</span></div>
+              <div><dt>Sign-ups</dt><dd>+35%</dd><span>above forecast, first three months after launch</span></div>
             </dl>
+            <p className="rd-case-note" style={{ marginTop: 16 }}>About the figures: an active vendor buys and sells on Siiqo, keeps their storefront updated and restocks regularly. Sign-ups are compared with our forecast for the first three months after public launch, which followed usability testing and real-world testing. Every feature on this page, including escrow, storefronts and disputes, is live.</p>
             <p style={{ marginTop: 16 }}>What I track next: checkout completion, dispute rate and resolution time, repeat purchases and active-vendor retention.</p>
           </div>
         </section>
