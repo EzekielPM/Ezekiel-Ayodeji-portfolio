@@ -6,6 +6,7 @@ import RdIntro from "./redesign/Intro";
 import RdStageTabs from "./redesign/StageTabs";
 import RdHeroStars from "./redesign/HeroStars";
 import RdInsightDeck from "./redesign/InsightDeck";
+import RdValueRibbons from "./redesign/ValueRibbons";
 import RdCarousel from "./redesign/Carousel";
 import RdProjectList from "./redesign/ProjectList";
 import RdYouTube from "./redesign/YouTubeLite";
@@ -53,6 +54,8 @@ export default function PortfolioHome() {
             </div>
           </div>
         </section>
+
+        <RdValueRibbons />
 
         <section className="rd-map rd-grid-bg" aria-labelledby="map-h">
           <div className="rd-wrap">

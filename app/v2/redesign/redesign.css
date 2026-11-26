@@ -737,3 +737,35 @@ html[data-theme="navy"] .rd-st-green{--st-tint:#0F2A1C;--st-border:#1E4A30;--st-
 .rd-stage-nav button{width:40px;height:40px}
 @media (max-width:960px){.rd-stage-copy{grid-template-columns:1fr}}
 @media (max-width:720px){.rd-stage-copy{padding:22px 20px 22px 26px}}
+
+/* ===== Core values: crossed ribbons ===== */
+.rd-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.rd .rd-values{background:var(--bg);padding:24px 0 8px;overflow:hidden}
+.rd-values-head{display:flex;flex-direction:column;gap:6px}
+.rd-values-kicker{font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.rd-values-lead{font-family:"Fraunces",Georgia,serif;font-size:clamp(22px,2.8vw,30px);line-height:1.25;max-width:720px}
+.rd-ribbons{position:relative;height:210px;margin-top:6px}
+.rd-ribbon{position:absolute;left:-60px;right:-60px;overflow:hidden}
+.rd-ribbon-a{top:34px;transform:rotate(-3deg);background:#3D5A2E;padding:16px 0;box-shadow:0 18px 30px -20px rgba(0,0,0,.5);z-index:1}
+.rd-ribbon-b{top:112px;transform:rotate(2.5deg);background:#121722;padding:12px 0}
+html[data-theme="navy"] .rd-ribbon-b{background:#020812;box-shadow:inset 0 0 0 1px #1E2D46}
+.rd-ribbon-track{display:flex;width:max-content}
+.rd-ribbon-left{animation:rdMqL 42s linear infinite}
+.rd-ribbon-right{animation:rdMqR 48s linear infinite}
+.rd-ribbons:hover .rd-ribbon-track{animation-play-state:paused}
+.rd-ribbon-a span{display:inline-flex;align-items:center;gap:20px;padding:0 26px;color:#fff;font-family:var(--display);font-size:clamp(22px,2.6vw,30px);font-weight:700;white-space:nowrap}
+.rd-ribbon-a i{font-style:normal;color:#B9D39A;font-size:.7em}
+.rd-ribbon-b span{display:inline-flex;align-items:center;gap:12px;padding:0 20px;color:#C3C9D4;font-size:15px;font-weight:600;white-space:nowrap}
+.rd-ribbon-b b{font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:400;font-size:19px;color:#FACC15}
+.rd-ribbon-b i{font-style:normal;color:#4A5262}
+@keyframes rdMqL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes rdMqR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@media (max-width:720px){
+  .rd .rd-values{padding-top:8px}
+  .rd-ribbons{height:170px}
+  .rd-ribbon-a{top:28px;padding:12px 0}
+  .rd-ribbon-b{top:92px;padding:10px 0}
+  .rd-ribbon-b span{font-size:13px}
+  .rd-ribbon-b b{font-size:16px}
+}
+@media (prefers-reduced-motion: reduce){.rd-ribbon-track{animation:none!important}}

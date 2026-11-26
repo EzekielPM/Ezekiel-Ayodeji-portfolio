@@ -314,3 +314,15 @@ export const releases = [
   { v: "v2.0", when: "10+ years", title: "Project leadership · Construction & infrastructure", note: "Led site and project delivery across residential, commercial and public-sector developments: risk, quality, dependencies and team coordination.", tone: "amber" },
   { v: "v1.0", when: "Training", title: "Product Management · Axia Africa School of Product", note: "Where the product practice took shape.", tone: "slate" },
 ];
+
+export const values = [
+  { value: "Problem before feature", where: "Discovery" },
+  { value: "Trust is the product", where: "Siiqo" },
+  { value: "PRDs are bets, not guarantees", where: "Writing" },
+  { value: "Protect the core journey", where: "BetBonanza" },
+  { value: "Start from the market", where: "12 Days of December" },
+  { value: "Scope honestly, ship reliably", where: "Football Fan Arena" },
+  { value: "Build to learn", where: "Independent builds" },
+  { value: "Clarity over noise", where: "Team rituals" },
+  { value: "Plan like a builder", where: "10 years in construction" },
+];
