@@ -7,6 +7,12 @@ export const YOUTUBE_CHANNEL = "https://www.youtube.com/@EraProductRoom";
 export const YOUTUBE_INTRO_ID = "epiyGrltK8Y";
 // Paste the Calendly event link here (e.g. https://calendly.com/name/30min) to embed booking in Contact.
 export const CALENDLY_URL = "";
+// Web3Forms access key: an alias for the inbox that receives call requests (safe to be public).
+export const WEB3FORMS_KEY = "1bf6e5a3-d33c-4793-b644-f2f74fded580";
+// Call availability, in Lagos time (WAT, UTC+1, no daylight saving).
+export const CALL_HOURS = [9, 10, 11, 12, 13, 14, 15, 16, 17];
+export const CALL_DAYS_AHEAD = 28;
+export const CALL_MIN_NOTICE_HOURS = 12;
 
 export const openRoles = ["Product Manager", "Product Operations", "Technical Product Manager", "Product Owner", "Scrum Master · Agile Delivery", "Technical Program Manager"];
 

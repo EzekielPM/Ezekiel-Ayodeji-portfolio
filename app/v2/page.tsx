@@ -12,10 +12,11 @@ import RdFeaturedWork from "./redesign/FeaturedWork";
 import RdYouTube from "./redesign/YouTubeLite";
 import RdFooter from "./redesign/Footer";
 import RdLagosNow from "./redesign/LagosNow";
+import RdBookCall from "./redesign/BookCall";
 import { CopyEmailButton, FloatingContact } from "./PortfolioControls";
 import {
   CONSTRUCTION_CV_URL, CV_URL, EMAIL, LINKEDIN, WHATSAPP, YOUTUBE_CHANNEL, YOUTUBE_INTRO_ID,
-  projects, slides, openRoles, CALENDLY_URL,
+  projects, slides, openRoles,
 } from "./redesign/data";
 
 export default function PortfolioHome() {
@@ -159,16 +160,7 @@ export default function PortfolioHome() {
                 </div>
               </div>
               <div className="rd-contact-book">
-                {CALENDLY_URL ? (
-                  <iframe title="Book a 30-minute call" src={`${CALENDLY_URL}?hide_gdpr_banner=1&background_color=ffffff&primary_color=3d5a2e`} loading="lazy" />
-                ) : (
-                  <div className="rd-book-fallback">
-                    <p className="rd-cta-kicker">Book a call</p>
-                    <h3>30-minute intro call</h3>
-                    <p>Tell me a little about the role or the product, and a couple of times that suit you. I&apos;ll confirm by email.</p>
-                    <a className="rd-btn rd-btn-accent" href={`mailto:${EMAIL}?subject=${encodeURIComponent("30-minute intro call")}`}>Request a call <span aria-hidden="true">→</span></a>
-                  </div>
-                )}
+                <RdBookCall />
               </div>
             </div>
           </div>
