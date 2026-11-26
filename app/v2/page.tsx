@@ -3,7 +3,7 @@ import "./redesign/redesign.css";
 import RdHeader from "./redesign/Header";
 import RdMotion from "./redesign/Motion";
 import RdIntro from "./redesign/Intro";
-import RdFlipSteps from "./redesign/FlipSteps";
+import RdStageTabs from "./redesign/StageTabs";
 import RdHeroStars from "./redesign/HeroStars";
 import RdInsightDeck from "./redesign/InsightDeck";
 import RdCarousel from "./redesign/Carousel";
@@ -58,9 +58,9 @@ export default function PortfolioHome() {
           <div className="rd-wrap">
             <div className="rd-map-head" data-reveal>
               <h2 id="map-h">How I move a product from idea to delivery</h2>
-              <p>Tap a card to see what each stage looks like in practice, and where I did it.</p>
+              <p>Pick a stage. The panel below shows what I do there, and the job where I did it.</p>
             </div>
-            <RdFlipSteps />
+            <RdStageTabs />
           </div>
         </section>
 

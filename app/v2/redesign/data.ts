@@ -233,28 +233,28 @@ export const steps = [
     front: "I understand the problem before discussing the feature.",
     points: ["Talk to users and map their current journey", "Check support issues, behaviour and market context", "Separate the observed problem from assumed solutions"],
     outcome: "A clearly evidenced problem worth solving.",
-    job: "From DM to Confirmed Order", href: "/case-studies/dm-confirmed-order",
+    job: "From DM to Confirmed Order", href: "/case-studies/dm-confirmed-order", image: "/portfolio/full/dm-confirmed-order-preview.webp",
   },
   {
     n: "02", name: "Define", tone: "violet",
     front: "I turn evidence into a clear product decision and workable scope.",
     points: ["Write the problem statement and desired outcome", "Map the key journey and edge cases", "Prioritise an MVP, document trade-offs and define success"],
     outcome: "A shared scope the team can build and validate.",
-    job: "Siiqo", href: "/case-studies/siiqo",
+    job: "Siiqo", href: "/case-studies/siiqo", image: "/portfolio/full/siiqo%20tablet%20mobile%20showcase%20jpg.jpeg",
   },
   {
     n: "03", name: "Deliver", tone: "amber",
     front: "I help the team move from requirements to reliable execution.",
     points: ["Break scope into stories with acceptance criteria", "Align sprint goals, owners and dependencies", "Work with design, engineering and QA through release"],
     outcome: "A usable release with quality and readiness checked.",
-    job: "Football Fan Arena", href: "/v2/football-fan-arena",
+    job: "Football Fan Arena", href: "/v2/football-fan-arena", image: "/portfolio/full/ffa-live-feed-predictions.jpg",
   },
   {
     n: "04", name: "Improve", tone: "green",
     front: "I use feedback and product signals to decide what deserves attention next.",
     points: ["Review adoption, completion and drop-off signals", "Listen for recurring feedback and support friction", "Run focused experiments and reprioritise from evidence"],
     outcome: "A clear next improvement tied to user and business value.",
-    job: "Kuda 3.0: Confidence Layer", href: "https://kuda-confidence-layer.vercel.app",
+    job: "Kuda 3.0: Confidence Layer", href: "https://kuda-confidence-layer.vercel.app", image: "/portfolio/full/kuda-confidence-layer.webp",
   },
 ];
 
