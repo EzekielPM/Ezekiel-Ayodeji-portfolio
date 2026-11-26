@@ -45,7 +45,7 @@ export default function WayagramCaseStudy() {
             <span>03</span>
             <h2>Wayagram</h2>
             <p className="journal-deck">
-              During my time with Wayagram, I contributed to production migration activities, regression testing, team ceremonies and module reporting. The engagement was brief, so this page documents the product context and the work I was able to contribute rather than claiming end-to-end ownership or outcomes I cannot verify.
+              During my time with Wayagram, I contributed to production migration activities, regression testing, team ceremonies and module reporting. It was a short contract alongside my role at Siiqo, so this page focuses on the parts I owned.
             </p>
           </header>
 

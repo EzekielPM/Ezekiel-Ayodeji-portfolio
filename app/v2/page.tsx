@@ -47,9 +47,7 @@ export default function PortfolioHome() {
               <a className="rd-btn rd-btn-ghost" href={CV_URL} download>Download CV <span aria-hidden="true">↓</span></a>
             </div>
             <p className="rd-hero-open" data-stars>Lagos, WAT (UTC+1). Open to Product Manager and Product Operations roles worldwide.</p>
-            <div className="rd-hero-tiles" data-star-unit>
-              <a href="/case-studies/siiqo" className="rd-tile rd-tile-green"><small>Now shipping</small><strong>Siiqo · Live marketplace</strong></a>
-              <a href="/v2/football-fan-arena" className="rd-tile rd-tile-amber"><small>Latest build</small><strong>Football Fan Arena · MVP</strong></a>
+            <div className="rd-hero-tiles rd-hero-tiles-one" data-star-unit>
               <a href="#watch" className="rd-tile rd-tile-violet"><small>Now streaming</small><strong>Product Room with ERA</strong></a>
             </div>
           </div>
@@ -62,12 +60,6 @@ export default function PortfolioHome() {
                 <h2 id="work-h" className="rd-display">My work</h2>
                 <p>Two products to start with: one I lead at work, one I built on my own. Each has its own page with the problem, the decisions and the results.</p>
               </div>
-              <dl className="rd-stats">
-                <div><dt>projects</dt><dd data-count="8">8</dd></div>
-                <div><dt>live products</dt><dd data-count="3">3</dd></div>
-                <div><dt>working demo</dt><dd data-count="1">1</dd></div>
-                <div><dt>years in product</dt><dd data-count="5" data-suffix="+">5+</dd></div>
-              </dl>
             </div>
             <RdFeaturedWork items={["siiqo", "ffa"].map((k) => slides.find((x) => x.slug === k)!)} total={projects.length} others={projects.filter((p) => p.slug !== "siiqo" && p.slug !== "ffa").map((p) => p.name.split(":")[0])} />
           </div>

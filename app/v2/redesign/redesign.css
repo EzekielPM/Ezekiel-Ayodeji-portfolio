@@ -918,3 +918,6 @@ html[data-theme="navy"] .rd .rd-folder{--folder:#13241A;--folder-edge:#223A2A}
   .rd-results li:nth-child(n+3){border-top:1px solid var(--line)}
 }
 @media (max-width:400px){.rd-results a{padding:14px 12px}.rd-results b{font-size:21px}}
+
+/* Hero: a single tile (the show), centred */
+.rd-hero-tiles.rd-hero-tiles-one{grid-template-columns:minmax(0,340px);justify-content:center}
