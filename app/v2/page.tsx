@@ -1,412 +1,227 @@
 import Image from "next/image";
-import MotionEnhancements from "./MotionEnhancements";
-import PracticeFlipCards from "./PracticeFlipCards";
-import SelectedExperienceCards from "./SelectedExperienceCards";
-import { CopyEmailButton, FloatingContact, V2HeaderControls } from "./PortfolioControls";
+import "./redesign/redesign.css";
+import RdHeader from "./redesign/Header";
+import RdMotion from "./redesign/Motion";
+import RdCarousel from "./redesign/Carousel";
+import RdProjectList from "./redesign/ProjectList";
+import RdYouTube from "./redesign/YouTubeLite";
+import RdFooter from "./redesign/Footer";
+import { CopyEmailButton, FloatingContact } from "./PortfolioControls";
+import {
+  CONSTRUCTION_CV_URL, CV_URL, EMAIL, LINKEDIN, WHATSAPP, YOUTUBE_CHANNEL, YOUTUBE_INTRO_ID,
+  documents, insights, projects, slides, steps,
+} from "./redesign/data";
 
-const selectedWork = [
-  {
-    number: "01",
-    title: "Siiqo",
-    liveUrl: "https://siiqo.com",
-    label: "Marketplace · Lead Product Manager · Scrum Master",
-    status: "LIVE PRODUCT",
-    summary:
-      "A trust-led marketplace for Nigerian buyers, vendors and service providers, combining verified sellers, protected payments and community-driven discovery.",
-    proof: "Evidence: Live marketplace, product gallery and a full product requirements document; business impact metrics are not yet verified.",
-    docUrl: "/documents/siiqo-product-requirements.pdf",
-    docLabel: "Read the PRD",
-    image: "/portfolio/full/siiqo%20tablet%20mobile%20showcase%20jpg.jpeg",
-    tags: ["Escrow payments", "Vendor storefronts", "Community", "E-bidding", "Disputes", "Rewards"],
-    href: "/case-studies/siiqo",
-    action: "View case study",
-  },
-  {
-    number: "02",
-    title: "Canvoy Payment",
-    label: "FinTech · Product Manager · Scrum Master",
-    status: "MVP PLANNING",
-    summary:
-      "An early-stage digital payments MVP focused on utility and everyday payment journeys, with work spanning requirements, Jira delivery planning and security and QA readiness.",
-    proof: "Evidence: Eight-week MVP roadmap and Jira delivery structure; the MVP had not launched.",
-    image: "/portfolio/full/canvoy-landing-desktop-mobile.jpg",
-    tags: ["Utility payments", "MVP definition", "Jira planning", "Scrum", "Security and QA planning"],
-    href: "/case-studies/canvoy",
-    action: "View case study",
-  },
-  {
-    number: "03",
-    title: "Wayagram",
-    liveUrl: "https://wayagram.ng/",
-    label: "FinTech · Technical Product Manager",
-    status: "CONTRACT · RELEASE SUPPORT",
-    summary:
-      "A social, marketplace and payments platform. During a brief engagement, I contributed to production migration activities, regression testing, team ceremonies and module reporting.",
-    proof: "Evidence: Migration support and regression-testing contribution; release metrics were not available to quantify impact.",
-    image: "/portfolio/full/wayagram-1.jpg",
-    tags: ["Migration support", "Regression testing", "Wallet", "Marketplace", "Delivery coordination"],
-    href: "/case-studies/wayagram",
-    action: "View case study",
-  },
-  {
-    number: "04",
-    title: "From DM to Confirmed Order",
-    label: "Social commerce · Product teardown · Working prototype",
-    status: "PRODUCT TEARDOWN",
-    summary:
-      "A focused product teardown exploring the messy step after a customer says ‘I want it’ on WhatsApp or Instagram, and how one structured checkout link could move the order from purchase intent to confirmation.",
-    proof: "Evidence: A documented problem teardown and working prototype of the order-confirmation journey.",
-    image: "/portfolio/full/dm-confirmed-order-preview.webp",
-    tags: ["Problem framing", "User flow", "MVP", "Prioritisation", "Social commerce", "Prototype"],
-    href: "/v2/dm-confirmed-order",
-    action: "View case study",
-  },
-  {
-    number: "05",
-    title: "Kuda 3.0: Confidence Layer",
-    label: "FinTech · Independent product case study",
-    status: "INDEPENDENT CASE STUDY",
-    summary:
-      "An independent teardown and working prototype focused on clearer transaction states, service recovery, balance confidence and recurring financial activity.",
-    proof: "Evidence: Published case study and interactive prototype using illustrative data; this is an independent concept, not a Kuda product release.",
-    image: "/portfolio/full/kuda-confidence-layer.webp",
-    tags: ["Product strategy", "Transaction confidence", "Service recovery", "State modelling", "UX systems", "Product metrics"],
-    href: "https://kuda-confidence-layer.vercel.app",
-    action: "Open live case study",
-  },
-  {
-    number: "06",
-    title: "TradeFlow Commerce",
-    label: "Independently built · Multi-vendor commerce",
-    status: "LIVE DEMO · TEST PAYMENTS",
-    summary:
-      "I’m building TradeFlow to connect product discovery, vendor storefronts, order handling and location-based delivery. Paystack remains in Test Mode while payment flows are validated.",
-    proof: "Evidence: Deployed working build; payment flows remain in Paystack Test Mode.",
-    image: "/portfolio/full/tradeflow%20tablet%20mobile%20jpg.jpeg",
-    tags: ["Buyer catalogue", "Vendor storefronts", "Delivery zones", "Order alerts", "Fulfilment", "Paystack test mode"],
-    href: "/v2/tradeflow",
-    liveUrl: "https://tradeflow-commerce.vercel.app/",
-    action: "View case study",
-  },
-  {
-    number: "07",
-    title: "Football Fan Arena",
-    label: "Independently built · Football community · Web & Android",
-    status: "LIVE WEB APP · MVP",
-    summary:
-      "A global football supporter community built around club fanbases, fan discussion, free matchday predictions, banter groups and fan rankings. The MVP deliberately leaves out betting, payments and unverified live scores.",
-    proof: "Evidence: Deployed web app, a working Android build on a shared Firebase data contract and 36 approved Stitch screens; engagement metrics are not yet available.",
-    docUrl: "/documents/ffa-product-requirements.pdf",
-    docLabel: "Read the PRD",
-    image: "/portfolio/full/ffa-live-feed-predictions.jpg",
-    tags: ["Club fanbases", "Matchday predictions", "Banter groups", "Fan rankings", "Moderation", "Web & Android"],
-    href: "/v2/football-fan-arena",
-    liveUrl: "https://football-fan-arena-web.vercel.app/",
-    action: "View case study",
-  },
-];
-
-const practice = [
-  {
-    number: "01",
-    title: "Discover",
-    statement: "I understand the problem before discussing the feature.",
-    detail: "User behaviour, evidence, market context and the real friction behind the request.",
-  },
-  {
-    number: "02",
-    title: "Define",
-    statement: "I turn evidence into a clear product decision and workable scope.",
-    detail: "Problem framing, journeys, requirements, trade-offs and the smallest useful version worth building.",
-  },
-  {
-    number: "03",
-    title: "Deliver",
-    statement: "I help the team move from requirements to reliable execution.",
-    detail: "Priorities, sprint goals, dependencies, acceptance criteria, QA and cross-functional alignment.",
-  },
-  {
-    number: "04",
-    title: "Improve",
-    statement: "I use feedback and product signals to decide what deserves attention next.",
-    detail: "Adoption, friction, support signals, product metrics and continuous improvement after launch.",
-  },
-];
-
-const insights = [
-  { topic: "UX & empathy", title: "Product Managers Create Products People Understand", text: "A payment experience can work as designed and still leave people uncertain. Clear feedback and thoughtful user journeys matter just as much as the transaction itself.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-usercentric-uiux-activity-7484933393252700160-dq-m" },
-  { topic: "UX & iGaming", title: "Becoming the User: A UX Lesson in iGaming", text: "Promotions can grab attention, but too many interruptions can get in the way of the task a user came to complete.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-igaming-userexperience-activity-7481301268641226753-etSu" },
-  { topic: "Product discovery", title: "Product Managers Shouldn't Trust Feature Requests Alone", text: "A request is a useful starting point, not the whole problem. Understand the need behind it before committing to a solution.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-productdiscovery-userresearch-activity-7483500408246677504-iNQa" },
-  { topic: "Product strategy", title: "Optimising vs Innovating: The PM's Dilemma", text: "Knowing when to improve an existing experience and when to explore something new is a product judgement call, not a default rule.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanagement-activity-7391033448427171840-kQuU" },
-  { topic: "Product documentation", title: "PRDs Are Just Bets, Not Guarantees", text: "Requirements make assumptions visible and give teams a shared direction. They still need validation, feedback and adjustment.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanagement-productmanager-productstrategy-activity-7479851658903076864-d9Er" },
-  { topic: "Leadership", title: "Surviving Chaos in Product Management with Purpose", text: "When priorities and opinions collide, listening carefully and bringing the conversation back to user value helps restore direction.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-usercentric-problemsolving-activity-7494005541279539200-DIe6" },
-  { topic: "Team alignment", title: "How to Use Meetings to Align and Decide", text: "Good meetings create shared understanding, clarify decisions and give the team a useful next step rather than more noise.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_planning-provides-the-direction-and-focus-activity-7376157467107393537-sG3N" },
-  { topic: "Building products", title: "Building the Siiqo Marketplace for Safe and Easy Commerce", text: "A look at marketplace thinking through trust, commerce and the decisions that help buyers and vendors transact with more confidence.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_siiqo-ecommerce-marketplace-activity-7459969658050207744-LgKQ" },
-];
-
-export default function PortfolioV2() {
+function Arrow({ className = "" }: { className?: string }) {
   return (
-    <main>
-      <MotionEnhancements />
-      <header className="site-header">
-        <a className="brand" href="#top">
-          <span>OLUSOLA AYODEJI EZEKIEL</span>
-          <small>Product Manager</small>
-        </a>
-        <nav className="site-nav">
-          <a className="desktop-nav-link" href="#products">Product work</a>
-          <a className="desktop-nav-link" href="#practice">Product practice</a>
-          <a className="desktop-nav-link" href="#experience">Experience</a>
-          <a className="desktop-nav-link" href="#insights">Insights</a>
-          <a className="desktop-nav-link" href="#about">About</a>
-          <V2HeaderControls />
-          <a className="nav-cta desktop-nav-link" href="#contact">Let&apos;s talk</a>
-        </nav>
-      </header>
+    <svg className={`rd-arrow ${className}`} viewBox="0 0 56 28" aria-hidden="true">
+      <path className="rd-arrow-line" d="M4 14 C18 2, 34 26, 46 14" />
+      <path className="rd-arrow-head" d="M40 8 L48 14 L40 20" />
+    </svg>
+  );
+}
 
-      <section className="hero" id="top">
-        <div className="hero-copy">
-          <p className="hero-label">Product Manager · FinTech · eCommerce · iGaming</p>
-          <p className="hero-current"><strong>Currently:</strong> Leading product work at Siiqo · Open to remote Product Manager and Product Operations roles.</p>
-          <h1>I turn complex product problems into <em>clear decisions and dependable delivery.</em></h1>
-          <p className="hero-intro">
-            I am <strong>Olusola Ayodeji Ezekiel</strong>. I work across product strategy, discovery and technical delivery, helping teams move from unclear problems to products people can actually use.
-          </p>
-          <div className="hero-actions">
-            <a className="button primary" href="#products">View product work <span>↘</span></a>
-            <a className="button text" href="#contact">Let&apos;s talk <span>↗</span></a>
-          </div>
-          <div className="hero-cv-actions">
-            <a href="/documents/olusola-ayodeji-product-manager-cv.pdf" download>
-              Download Product Manager CV <span>↓</span>
-            </a>
-            <a href="/documents/olusola-ayodeji-construction-cv.pdf" download>
-              Download Construction CV <span>↓</span>
-            </a>
-          </div>
-        </div>
-        <aside className="portrait-panel">
-          <div className="portrait-welcome">
-            <Image src="/portfolio/bio-portrait.webp" alt="Portrait of Olusola Ayodeji Ezekiel" width={1254} height={1254} sizes="(max-width: 850px) 100vw, 450px" priority />
-            <span className="welcome-message" aria-label="Welcome message">
-              <span className="wave-hand" aria-hidden="true">👋🏾</span>
-              <span><strong>Hi, welcome.</strong><small>I am Olusola Ayodeji Ezekiel.</small></span>
-            </span>
-          </div>
-          <div className="portrait-caption">
-            <strong>4+ years</strong><span>Product management</span>
-            <strong>10+ years</strong><span>Project leadership</span>
-          </div>
-        </aside>
-      </section>
+export default function PortfolioHome() {
+  return (
+    <div className="rd" id="top">
+      <RdMotion />
+      <RdHeader />
 
-      <section className="statement">
-        <p className="section-kicker">My point of view</p>
-        <blockquote>
-          Good product management creates enough clarity to solve the <em>right problem</em> and enough structure to deliver it well.
-        </blockquote>
-      </section>
+      <main>
+        <section className="rd-hero rd-grid-bg" aria-labelledby="hero-h">
+          <div className="rd-hero-card" data-reveal>
+            <p className="rd-sticky" aria-label="Current role">Currently: Lead PM &amp; Scrum Master at Siiqo</p>
+            <div className="rd-hero-hello">
+              <span className="rd-hero-avatar">
+                <Image src="/portfolio/bio-portrait.webp" alt="Portrait of Olusola Ayodeji Ezekiel" width={160} height={160} priority />
+              </span>
+              <span>Hi, I&apos;m <strong>Olusola Ayodeji Ezekiel</strong> <span className="rd-wave" aria-hidden="true">👋🏾</span></span>
+            </div>
+            <p className="rd-kicker">Lagos · Fintech · iGaming · Commerce</p>
+            <h1 id="hero-h">Product manager.</h1>
+            <p className="rd-hero-sub">I take <span className="rd-hl-blue">fintech</span>, <span className="rd-hl-green">iGaming</span> and <span className="rd-hl-pink">commerce</span> products from PRD to release, and write about what I learn.</p>
+            <div className="rd-hero-actions">
+              <a className="rd-btn rd-btn-dark" href="#work">See my work <span aria-hidden="true">↓</span></a>
+              <a className="rd-btn rd-btn-ghost" href={CV_URL} download>Download CV <span aria-hidden="true">↓</span></a>
+            </div>
+            <p className="rd-hero-open">Open to remote Product Manager and Product Operations roles.</p>
+            <div className="rd-hero-tiles">
+              <a href="/case-studies/siiqo" className="rd-tile rd-tile-green"><small>Now shipping</small><strong>Siiqo · Live marketplace</strong></a>
+              <a href="/v2/football-fan-arena" className="rd-tile rd-tile-amber"><small>Latest build</small><strong>Football Fan Arena · MVP</strong></a>
+              <a href="#watch" className="rd-tile rd-tile-violet"><small>Now streaming</small><strong>Product Room with ERA</strong></a>
+            </div>
+          </div>
+        </section>
 
-      <section className="section" id="products">
-        <div className="section-heading">
-          <div>
-            <p className="section-kicker">Selected product work</p>
-            <h2>Two projects. Different product challenges.</h2>
+        <section className="rd-map rd-grid-bg" aria-labelledby="map-h">
+          <div className="rd-wrap">
+            <div className="rd-map-head" data-reveal>
+              <h2 id="map-h">How I take a product from idea to release</h2>
+              <p>Each step links to the project that shows it best.</p>
+            </div>
+            <ol className="rd-steps">
+              {steps.map((s, i) => (
+                <li key={s.n} className="rd-step-item" data-reveal style={{ transitionDelay: `${i * 110}ms` }}>
+                  <a href={s.href} className={`rd-step rd-tone-${s.tone}`} target={s.href.endsWith(".pdf") ? "_blank" : undefined} rel={s.href.endsWith(".pdf") ? "noreferrer" : undefined}>
+                    <span className="rd-step-n">{s.n}</span>
+                    <strong>{s.name}</strong>
+                    <span className="rd-step-what">{s.what}</span>
+                    <span className="rd-step-proof">{s.proof} <span aria-hidden="true">→</span></span>
+                  </a>
+                  {i < steps.length - 1 && <Arrow />}
+                </li>
+              ))}
+            </ol>
           </div>
-          <div className="section-heading-actions">
-            <p>A focused look at two substantial commerce products: marketplace trust and the practical work of building a commerce experience.</p>
-            <a className="button text" href="#all-projects">View all projects <span>↗</span></a>
-          </div>
-        </div>
-        <div className="case-list">
-          {[selectedWork[0], selectedWork[5]].map((item, index) => (
-            <article className="case-card" key={item.title}>
-              <div className="case-top">
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <p>{item.label}</p>
-                <span className="case-status">{item.status}</span>
+        </section>
+
+        <section id="work" className="rd-section rd-soft" aria-labelledby="work-h">
+          <div className="rd-wrap">
+            <div className="rd-section-head" data-reveal>
+              <div>
+                <h2 id="work-h" className="rd-display">My work</h2>
+                <p>Products I&apos;ve led, shipped or taken apart, from the first requirement to release. Each one has its own page with the problem, the decisions and the evidence.</p>
               </div>
-              <div className="case-intro">
-                <h3>{item.title}</h3>
-                <p>{item.summary}</p>
-                <p className="case-proof">{item.proof}</p>
+              <dl className="rd-stats">
+                <div><dt>projects</dt><dd data-count="7">7</dd></div>
+                <div><dt>live apps</dt><dd data-count="3">3</dd></div>
+                <div><dt>PRDs &amp; papers</dt><dd data-count="3">3</dd></div>
+                <div><dt>years in product</dt><dd data-count="4" data-suffix="+">4+</dd></div>
+              </dl>
+            </div>
+            <RdCarousel slides={slides} />
+          </div>
+        </section>
+
+        <section className="rd-section rd-soft rd-section-tight" aria-labelledby="list-h">
+          <div className="rd-wrap">
+            <RdProjectList projects={projects} />
+          </div>
+        </section>
+
+        <section id="documents" className="rd-section" aria-labelledby="docs-h">
+          <div className="rd-wrap">
+            <div className="rd-section-head" data-reveal>
+              <div>
+                <h2 id="docs-h" className="rd-display">Documents</h2>
+                <p>The real working documents behind the products: requirements, architecture and my CV. Open any of them, no sign-up.</p>
               </div>
-              {item.image ? (
-                <div className="media-rail screenshots" aria-label={`${item.title} preview`}>
-                  <div className="media-frame">
-                    <Image src={item.image} alt={`${item.title} preview`} fill sizes="(max-width: 600px) 88vw, 500px" />
-                    <span>Featured work</span>
-                  </div>
-                </div>
-              ) : (
-                <div className="gallery-empty">
-                  Buyer says “I want it” → seller creates order → checkout link → buyer details → payment → confirmed order
-                </div>
-              )}
-              <div className="case-footer">
-                <div className="feature-tags">
-                  {item.tags.map((tag) => <span key={tag}>{tag}</span>)}
-                </div>
-                {item.liveUrl && <a className="case-button" href={item.liveUrl} target="_blank" rel="noreferrer">{item.title === "Siiqo" ? "Visit Siiqo" : item.title === "TradeFlow Commerce" ? "Visit TradeFlow" : `Visit ${item.title} live`} <span>↗</span></a>}
-                <a className="case-button" href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined}>
-                  {item.action}<span>↗</span>
+            </div>
+            <div className="rd-docs">
+              {documents.map((d, i) => (
+                <a key={d.name} href={d.href} target="_blank" rel="noreferrer" className="rd-doc" data-reveal data-tilt style={{ transitionDelay: `${i * 90}ms` }}>
+                  <span className="rd-doc-cover" style={{ background: d.bg }}>
+                    <span className="rd-doc-paper">
+                      <small style={d.accent ? { color: d.accent } : undefined}>{d.kicker}</small>
+                      <b>{d.short}</b>
+                      <i aria-hidden="true" /><i aria-hidden="true" /><i aria-hidden="true" />
+                    </span>
+                  </span>
+                  <span className="rd-doc-body">
+                    <span className="rd-doc-type">{d.type}</span>
+                    <strong>{d.name}</strong>
+                    <span>{d.line}</span>
+                    <span className="rd-doc-open">Open PDF <span aria-hidden="true">↗</span></span>
+                  </span>
                 </a>
-                {item.docUrl && <a className="case-button" href={item.docUrl} target="_blank" rel="noreferrer">{item.docLabel}<span>↗</span></a>}
-                {item.title === "Wayagram" && <div className="hero-actions" style={{ marginTop: "0.75rem" }} aria-label="Download Wayagram app">
-                  <a className="case-button" href="https://play.google.com/store/apps/details?id=ng.wayagram" target="_blank" rel="noreferrer">Google Play <span>↗</span></a>
-                  <a className="case-button" href="https://apps.apple.com/ng/app/wayagram/id6444311693" target="_blank" rel="noreferrer">App Store <span>↗</span></a>
-                </div>}
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="insights" className="rd-section rd-soft" aria-labelledby="ins-h">
+          <div className="rd-wrap rd-insights">
+            <div className="rd-insights-feature" data-reveal>
+              <h2 id="ins-h" className="rd-display">Insights</h2>
+              <a href={insights[0].href} target="_blank" rel="noreferrer" className="rd-feature-post">
+                <small>{insights[0].topic} · Featured</small>
+                <strong>{insights[0].title}</strong>
+                <span>{insights[0].text}</span>
+                <em>Read on LinkedIn <span aria-hidden="true">↗</span></em>
+              </a>
+            </div>
+            <div className="rd-latest" data-reveal>
+              <p className="rd-label">Latest</p>
+              <ul>
+                {insights.slice(1).map((post) => (
+                  <li key={post.href}>
+                    <a href={post.href} target="_blank" rel="noreferrer"><small>{post.topic}</small><strong>{post.title}</strong><span aria-hidden="true">↗</span></a>
+                  </li>
+                ))}
+              </ul>
+              <a className="rd-text-link" href={LINKEDIN} target="_blank" rel="noreferrer">Follow me on LinkedIn ↗</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="watch" className="rd-section" aria-labelledby="watch-h">
+          <div className="rd-wrap">
+            <div className="rd-section-head" data-reveal>
+              <div>
+                <h2 id="watch-h" className="rd-display">Watch</h2>
+                <p>Welcome to the Product Room with ERA. Behind every great app or failed feature is a messy story nobody puts on a slide deck. This is where we unpack it.</p>
+              </div>
+              <a className="rd-btn rd-btn-red" href={`${YOUTUBE_CHANNEL}?sub_confirmation=1`} target="_blank" rel="noreferrer">Subscribe on YouTube <span aria-hidden="true">↗</span></a>
+            </div>
+            <div className="rd-watch" data-reveal>
+              <RdYouTube id={YOUTUBE_INTRO_ID} title="Product Room with ERA: introduction" />
+              <div className="rd-watch-copy">
+                <span className="rd-watch-tag">YouTube channel</span>
+                <h3>Product Room with ERA</h3>
+                <p>The real side of product management, tech and building things people actually want, without the corporate jargon. Practical breakdowns, honest career lessons and behind-the-scenes conversations with the people in the trenches.</p>
+                <p className="rd-watch-meta">Hosted by Ezekiel and Era · New episodes weekly</p>
+                <div className="rd-watch-actions">
+                  <a className="rd-btn rd-btn-light" href={`https://youtu.be/${YOUTUBE_INTRO_ID}`} target="_blank" rel="noreferrer">Watch on YouTube <span aria-hidden="true">↗</span></a>
+                  <a className="rd-btn rd-btn-outline-light" href={YOUTUBE_CHANNEL} target="_blank" rel="noreferrer">Visit the channel <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="rd-section rd-soft rd-section-tight" aria-label="Beyond product">
+          <div className="rd-wrap rd-beyond">
+            <article className="rd-beyond-card rd-beyond-build" data-reveal>
+              <small>Construction background</small>
+              <h3>Ten years of delivery still shapes how I manage product work.</h3>
+              <p>Site and project leadership across residential, commercial and public-sector builds: risk, quality, dependencies and people. The full portfolio lives separately.</p>
+              <div className="rd-beyond-actions">
+                <a className="rd-btn rd-btn-dark" href="https://ezekiel-ayodeji-construction-portfo.vercel.app/" target="_blank" rel="noreferrer">Construction portfolio <span aria-hidden="true">↗</span></a>
+                <a className="rd-btn rd-btn-ghost" href={CONSTRUCTION_CV_URL} download>Construction CV <span aria-hidden="true">↓</span></a>
               </div>
             </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="all-projects section" id="all-projects">
-        <div className="section-heading">
-          <div>
-            <p className="section-kicker">Explore more</p>
-            <h2>All product projects.</h2>
-          </div>
-          <p>The featured work is only the starting point. Explore the other product case studies and independent explorations.</p>
-        </div>
-        <div className="all-projects-grid">
-          {selectedWork.filter((item) => item.title !== "Siiqo" && item.title !== "TradeFlow Commerce").map((item, index) => (
-            <article className={`all-project-card all-project-card-${item.number}`} key={item.title}>
-              <div className="all-project-meta"><span>{String(index + 3).padStart(2, "0")}</span><span>{item.status}</span></div>
-              <h3>{item.title}</h3>
-              <p>{item.summary}</p>
-              <p className="all-project-proof">{item.proof}</p>
-              <div className="feature-tags">{item.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-              {item.liveUrl && <a className="all-project-card-link" href={item.liveUrl} target="_blank" rel="noreferrer">Visit {item.title} live <span aria-hidden="true">↗</span></a>}
-              {item.docUrl && <a className="all-project-card-link" href={item.docUrl} target="_blank" rel="noreferrer">{item.docLabel} <span aria-hidden="true">↗</span></a>}
-              <a className="all-project-card-link" href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined}>{item.action} <span aria-hidden="true">↗</span></a>
+            <article className="rd-beyond-card rd-beyond-rough" data-reveal style={{ transitionDelay: "120ms" }}>
+              <small>Rough Space</small>
+              <h3>Not everything starts polished.</h3>
+              <p>Music, product experiments, unfinished thoughts and visual notes: what I make when I&apos;m exploring an idea without a PRD attached.</p>
+              <div className="rd-beyond-actions">
+                <a className="rd-btn rd-btn-light" href="/rough-space">Enter Rough Space <span aria-hidden="true">→</span></a>
+              </div>
             </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="capabilities section" id="practice">
-        <div className="section-heading compact">
-          <div>
-            <p className="section-kicker">My product practice</p>
-            <h2>How I actually move product work forward.</h2>
           </div>
-          <p>Less framework theatre. More clarity around what I do at each stage and why it matters.</p>
-        </div>
-        <PracticeFlipCards items={practice} />
-      </section>
+        </section>
 
-      <section className="experience section" id="experience">
-        <div className="section-heading compact">
-          <div>
-            <p className="section-kicker">Selected experience</p>
-            <h2>Product decisions, technical delivery and project leadership.</h2>
+        <section id="contact" className="rd-section rd-soft" aria-labelledby="contact-h">
+          <div className="rd-wrap">
+            <div className="rd-cta" data-reveal>
+              <div>
+                <p className="rd-cta-kicker">Lagos, Nigeria · Open to opportunities</p>
+                <h2 id="contact-h">Need a product shipped, or a PRD like these?</h2>
+                <p>Full-time roles, contracts or a single delivery plan. Tell me what you&apos;re building.</p>
+              </div>
+              <div className="rd-cta-actions contact-actions">
+                <a className="rd-btn rd-btn-yellow" href={`mailto:${EMAIL}`}>Email me <span aria-hidden="true">→</span></a>
+                <CopyEmailButton />
+                <a className="contact-icon outline" href={WHATSAPP} target="_blank" rel="noreferrer"><span>WhatsApp</span></a>
+                <a className="contact-icon outline" href={LINKEDIN} target="_blank" rel="noreferrer"><span>LinkedIn</span></a>
+              </div>
+            </div>
           </div>
-          <p>A snapshot of product roles and delivery work, alongside the construction leadership that shaped how I manage risk, dependencies and execution.</p>
-        </div>
-        <SelectedExperienceCards />
-      </section>
+        </section>
+      </main>
 
-      <section className="insights section" id="insights">
-        <div className="section-heading">
-          <div>
-            <p className="section-kicker">Insights · From LinkedIn</p>
-            <h2>The thinking behind the product.</h2>
-          </div>
-          <p>Practical lessons from product discovery, user experience, team alignment and building digital products. Curated from my writing on LinkedIn.</p>
-        </div>
-        <article className="insight-featured">
-          <div className="insight-featured-copy">
-            <div className="insight-meta"><span>FEATURED INSIGHT</span><small>{insights[0].topic}</small></div>
-            <h3>{insights[0].title}</h3>
-            <p>{insights[0].text}</p>
-            <a href={insights[0].href} target="_blank" rel="noreferrer">Read original post <span aria-hidden="true">↗</span></a>
-          </div>
-          <div className="insight-featured-mark" aria-hidden="true"><span>01</span><span>USER</span><span>FIRST</span></div>
-        </article>
-        <div className="insight-grid">
-          {insights.slice(1, 4).map((post, index) => (
-            <article key={post.href} className={"insight-card insight-card-" + (index + 1)}>
-              <div><span>0{index + 2}</span><small>{post.topic}</small></div>
-              <h3>{post.title}</h3>
-              <p>{post.text}</p>
-              <a href={post.href} target="_blank" rel="noreferrer">Read on LinkedIn <span aria-hidden="true">↗</span></a>
-            </article>
-          ))}
-        </div>
-        <details className="insight-archive">
-          <summary><span>View all insights</span><span className="insight-archive-count">+ {insights.length - 4} more posts</span></summary>
-          <div className="insight-archive-grid">
-            {insights.slice(4).map((post, index) => (
-              <article key={post.href}>
-                <div><span>0{index + 5}</span><small>{post.topic}</small></div>
-                <h3>{post.title}</h3>
-                <p>{post.text}</p>
-                <a href={post.href} target="_blank" rel="noreferrer">Read original post <span aria-hidden="true">↗</span></a>
-              </article>
-            ))}
-          </div>
-        </details>
-        <a className="linkedin-profile" href="https://www.linkedin.com/in/ayodeji-ezekiel-olusola/" target="_blank" rel="noreferrer">Explore my LinkedIn profile ↗</a>
-      </section>
-
-      <section className="construction construction-cta section" id="construction">
-        <div className="construction-cta-copy">
-          <p className="section-kicker">Construction background</p>
-          <h2>Ten years of delivery experience still shapes how I manage product work.</h2>
-          <p>The full civil engineering portfolio stays separate, so recruiters can explore it without interrupting the Product Manager journey.</p>
-        </div>
-        <a className="button primary" href="https://ezekiel-ayodeji-construction-portfo.vercel.app/" target="_blank" rel="noreferrer">
-          Explore construction portfolio <span>↗</span>
-        </a>
-      </section>
-
-      <section className="construction construction-cta section" id="rough-space">
-        <div className="construction-cta-copy">
-          <p className="section-kicker">Rough Space</p>
-          <h2>Not everything starts polished.</h2>
-          <p>Music, product experiments, unfinished thoughts, visual notes and the things I create when I am exploring an idea without a PRD attached to it.</p>
-        </div>
-        <a className="button primary" href="/rough-space">
-          Enter Rough Space <span>↗</span>
-        </a>
-      </section>
-
-      <section className="about section" id="about">
-        <div>
-          <p className="section-kicker">About</p>
-          <h2>Product thinking grounded in real-world delivery.</h2>
-        </div>
-        <div className="about-copy">
-          <p className="lead">
-            I am a Product Manager working across FinTech, digital payments, eCommerce and iGaming. I bring structured discovery, clear documentation, technical curiosity and cross-functional coordination to complex product work.
-          </p>
-          <p>
-            Before moving fully into digital products, I spent more than a decade delivering construction and infrastructure projects. That experience still shapes how I manage risk, dependencies, teams, quality and delivery today.
-          </p>
-          <div className="principles"><span>Clarity over noise</span><span>Users before assumptions</span><span>Outcomes over output</span></div>
-        </div>
-      </section>
-
-      <section className="contact section" id="contact">
-        <p className="section-kicker">Lagos, Nigeria · Open to opportunities and collaboration</p>
-        <h2>Have a product problem worth solving? Let&apos;s talk.</h2>
-        <p>I am open to Product Manager opportunities, product collaborations and meaningful product work with teams building useful things.</p>
-        <div className="contact-actions">
-          <a className="contact-icon light" href="mailto:Olusola40@gmail.com"><span>Email</span></a>
-          <CopyEmailButton />
-          <a className="contact-icon outline" href="https://wa.me/2349015934337" target="_blank" rel="noreferrer"><span>WhatsApp</span></a>
-          <a className="contact-icon outline" href="https://www.linkedin.com/in/ayodeji-ezekiel-olusola/" target="_blank" rel="noreferrer"><span>LinkedIn</span></a>
-        </div>
-      </section>
-
+      <RdFooter />
       <FloatingContact />
-
-      <footer>
-        <div className="brand"><span>OLUSOLA AYODEJI EZEKIEL</span><small>Product Manager · Technical Product Delivery</small></div>
-        <a href="#top">Back to top ↑</a>
-      </footer>
-    </main>
+    </div>
   );
 }

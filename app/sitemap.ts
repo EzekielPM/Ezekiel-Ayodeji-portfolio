@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/case-studies/wayagram", priority: 0.7 },
     { path: "/v2/tradeflow", priority: 0.8 },
     { path: "/v2/football-fan-arena", priority: 0.8 },
+    { path: "/about", priority: 0.7 },
     { path: "/v2/dm-confirmed-order", priority: 0.8 },
   ];
 
