@@ -769,3 +769,80 @@ html[data-theme="navy"] .rd-ribbon-b{background:#020812;box-shadow:inset 0 0 0 1
   .rd-ribbon-b b{font-size:16px}
 }
 @media (prefers-reduced-motion: reduce){.rd-ribbon-track{animation:none!important}}
+
+/* ---------- Documents library: filter chips + sliding folder + document cards ---------- */
+.rd .rd-lib-kicker{color:var(--accent);margin-bottom:10px}
+.rd .rd-lib-title{font-family:"Fraunces",Georgia,serif;font-weight:500;letter-spacing:-.01em}
+.rd-lib-chips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 30px}
+.rd-lib-chips button{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:600 14px/1.2 var(--body);cursor:pointer;transition:background-color .25s,color .25s,border-color .25s,transform .2s var(--ease)}
+.rd-lib-chips button b{font-size:12px;font-weight:700;opacity:.65}
+.rd-lib-chips button:hover{border-color:var(--accent);transform:translateY(-1px)}
+.rd-lib-chips button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.rd-lib{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:28px;align-items:start}
+
+/* Folder */
+.rd-folder{--folder:#E2EBD9;--folder-edge:#C9D8BC;position:relative;margin-top:16px;background:var(--folder);border:1px solid var(--folder-edge);border-radius:6px 22px 22px 22px;padding:22px 22px 20px;box-shadow:var(--shadow)}
+html[data-theme="navy"] .rd .rd-folder{--folder:#13241A;--folder-edge:#223A2A}
+.rd-folder-tab{position:absolute;left:-1px;top:-30px;height:31px;padding:7px 18px 0;background:var(--folder);border:1px solid var(--folder-edge);border-bottom:none;border-radius:12px 14px 0 0;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.rd-folder-stage{position:relative;height:300px;margin:4px -22px 18px;overflow:hidden;padding:0 22px}
+.rd-folder-page{position:absolute;left:50%;top:6px;width:212px;height:auto;aspect-ratio:527/682;background:#fff;border-radius:4px;box-shadow:0 18px 32px -18px rgba(18,23,34,.55);transform-origin:50% 100%;transition:transform .7s var(--ease),opacity .7s var(--ease)}
+.rd-folder-page.is-0{transform:translateX(-50%);opacity:1;z-index:4}
+.rd-folder-page.is-1{transform:translateX(-38%) rotate(4deg) scale(.96);opacity:1;z-index:3}
+.rd-folder-page.is-2{transform:translateX(-26%) rotate(8deg) scale(.92);opacity:.85;z-index:2}
+.rd-folder-page.is-out{transform:translateX(-120%) rotate(-8deg);opacity:0;z-index:5}
+.rd-folder-page.is-hidden{transform:translateX(-20%) rotate(10deg) scale(.9);opacity:0;z-index:1}
+.rd-folder-info{min-height:150px}
+.rd-folder-meta{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--muted)}
+.rd-folder-meta i{flex:none;width:9px;height:9px;border-radius:50%}
+.rd .rd-folder-info h3{margin-top:6px;font-family:"Fraunces",Georgia,serif;font-weight:500;font-size:24px;line-height:1.2;letter-spacing:0}
+.rd-folder-line{margin-top:6px!important;font-size:15px;color:var(--muted)}
+.rd-folder-open{margin-top:16px}
+.rd-folder-nav{display:flex;align-items:center;gap:8px;margin-top:18px;padding-top:16px;border-top:1px solid var(--folder-edge)}
+.rd-folder-count{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;min-width:54px}
+.rd-folder-count b{color:var(--ink)}
+.rd-folder-bar{flex:1;height:4px;border-radius:4px;background:var(--folder-edge);overflow:hidden;margin-right:6px}
+.rd-folder-bar span{display:block;height:100%;background:var(--accent);transition:width .6s var(--ease)}
+.rd-folder-nav button{width:36px;height:36px;border-radius:50%;border:1px solid var(--folder-edge);background:var(--surface);color:var(--ink);font-size:13px;cursor:pointer;transition:background-color .2s,color .2s}
+.rd-folder-nav button:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+
+/* Document cards */
+.rd-lib-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.rd-lib-grid li{animation:rdLibIn .55s var(--ease) both}
+@keyframes rdLibIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.rd-lib-card{display:flex;flex-direction:column;height:100%;background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s}
+.rd-lib-card:hover{transform:translateY(-4px);box-shadow:var(--card-shadow);border-color:var(--doc)}
+.rd-lib-thumb{height:160px;display:flex;justify-content:center;align-items:flex-start;padding-top:22px;overflow:hidden;background:var(--line-soft);border-bottom:3px solid var(--doc)}
+.rd-lib-thumb img{width:66%;height:auto;background:#fff;border-radius:3px;box-shadow:0 10px 22px -14px rgba(18,23,34,.6);transition:transform .4s var(--ease)}
+.rd-lib-card:hover .rd-lib-thumb img{transform:translateY(-6px) rotate(-1.5deg)}
+.rd-lib-meta{padding:14px 16px 0;font-size:12px;font-weight:600;color:var(--subtle)}
+.rd-lib-card strong{padding:4px 16px 0;font-size:15px;line-height:1.35;flex:1}
+.rd-lib-open{padding:10px 16px 16px;font-size:14px;font-weight:700;color:var(--accent);transition:letter-spacing .25s}
+.rd-lib-card:hover .rd-lib-open{letter-spacing:.01em}
+.rd-lib-more{display:block;margin:22px auto 0;padding:12px 20px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:700 14px/1.2 var(--body);cursor:pointer;transition:border-color .2s,color .2s}
+.rd-lib-more:hover{border-color:var(--accent);color:var(--accent)}
+
+@media (max-width:1024px){
+  .rd-lib{grid-template-columns:1fr;gap:36px}
+  .rd-folder{display:grid;grid-template-columns:300px 1fr;column-gap:24px;align-items:center}
+  .rd-folder-page{left:44%;width:196px}
+  .rd-folder-stage{height:300px;margin:0;padding:0;grid-row:1/3}
+  .rd-folder-nav{grid-column:2}
+}
+@media (max-width:720px){
+  .rd-lib-chips{flex-wrap:nowrap;overflow-x:auto;margin:0 -20px 24px;padding:2px 20px 6px;scrollbar-width:none}
+  .rd-lib-chips::-webkit-scrollbar{display:none}
+  .rd-lib-chips button{flex:none}
+  .rd-folder{display:block;padding:18px 18px 16px}
+  .rd-folder-stage{height:250px;margin:0 -18px 14px;padding:0 18px}
+  .rd-folder-page{width:176px}
+  .rd-folder-info{min-height:0}
+  .rd .rd-folder-info h3{font-size:21px}
+  .rd-lib-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .rd-lib-thumb{height:120px;padding-top:16px}
+  .rd-lib-meta{padding:10px 12px 0;font-size:11px}
+  .rd-lib-card strong{padding:3px 12px 0;font-size:14px}
+  .rd-lib-open{padding:8px 12px 12px;font-size:13px}
+}
+@media (prefers-reduced-motion: reduce){
+  .rd-folder-page,.rd-lib-grid li,.rd-lib-card,.rd-lib-thumb img,.rd-folder-bar span{transition:none!important;animation:none!important}
+}

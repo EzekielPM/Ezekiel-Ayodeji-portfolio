@@ -272,11 +272,40 @@ export const steps = [
   },
 ];
 
-export const documents = [
-  { name: "Siiqo PRD", line: "Scope, user groups and rules for the marketplace.", type: "PRD", kicker: "SIIQO", short: "Product Requirements", bg: "#0E1F57", href: "/documents/siiqo-product-requirements.pdf" },
-  { name: "Football Fan Arena PRD", line: "Feed, predictions, communities and moderation.", type: "PRD", kicker: "FOOTBALL FAN ARENA", short: "Product Requirements", bg: "#0B0F0C", accent: "#22C55E", href: "/documents/ffa-product-requirements.pdf" },
-  { name: "Wayagram architecture", line: "How the product and its services fit together.", type: "Architecture paper", kicker: "WAYAGRAM", short: "Product & Technical Architecture", bg: "#EA580C", href: "/documents/wayagram-product-architecture.pdf" },
-  { name: "Product Manager CV", line: "Two pages, recruiter-friendly and current.", type: "CV", kicker: "OLUSOLA AYODEJI EZEKIEL", short: "Product Manager CV", bg: "#121722", href: CV_URL },
+export type DocKind = "requirements" | "architecture" | "plans" | "cases" | "journals" | "cv";
+
+export const docKinds: { id: DocKind; label: string }[] = [
+  { id: "requirements", label: "Requirements" },
+  { id: "architecture", label: "Architecture" },
+  { id: "plans", label: "Plans & roadmaps" },
+  { id: "cases", label: "Product cases" },
+  { id: "journals", label: "Practice journals" },
+  { id: "cv", label: "CVs" },
+];
+
+const D = "/documents/";
+const P = "/portfolio/docs/";
+
+// Ordered the way a reviewer would want to read them.
+export const documents: { name: string; product: string; kind: DocKind; type: string; pages: number; line: string; color: string; href: string; image: string }[] = [
+  { name: "Siiqo PRD", product: "Siiqo", kind: "requirements", type: "PRD", pages: 8, line: "Scope, user groups and the trust rules for the marketplace.", color: "#1E3A8A", href: D + "siiqo-product-requirements.pdf", image: P + "siiqo-product-requirements.jpg" },
+  { name: "Football Fan Arena PRD", product: "Football Fan Arena", kind: "requirements", type: "PRD", pages: 6, line: "Feed, predictions, communities and moderation.", color: "#15803D", href: D + "ffa-product-requirements.pdf", image: P + "ffa-product-requirements.jpg" },
+  { name: "Wayagram architecture", product: "Wayagram", kind: "architecture", type: "Architecture paper", pages: 6, line: "How the product and its services fit together.", color: "#EA580C", href: D + "wayagram-product-architecture.pdf", image: P + "wayagram-product-architecture.jpg" },
+  { name: "Wayagram product overview", product: "Wayagram", kind: "architecture", type: "Product paper", pages: 6, line: "Social, marketplace and payments in one app, explained.", color: "#EA580C", href: D + "wayagram-product-paper.pdf", image: P + "wayagram-product-paper.jpg" },
+  { name: "Kuda 3.0 PRD: Confidence Layer", product: "Kuda 3.0 concept", kind: "requirements", type: "PRD", pages: 7, line: "A confidence layer that helps users trust each payment.", color: "#6D28D9", href: D + "Kuda_3_0_PRD_Confidence_Layer.pdf", image: P + "Kuda_3_0_PRD_Confidence_Layer.jpg" },
+  { name: "Kuda 3.0 feature specification", product: "Kuda 3.0 concept", kind: "requirements", type: "Feature spec", pages: 8, line: "Every feature with its rules and edge cases.", color: "#6D28D9", href: D + "Kuda_3_0_Feature_Specification_Document.pdf", image: P + "Kuda_3_0_Feature_Specification_Document.jpg" },
+  { name: "Kuda 3.0 90-day MVP plan", product: "Kuda 3.0 concept", kind: "plans", type: "MVP plan", pages: 5, line: "What ships in 90 days and how we would know it worked.", color: "#6D28D9", href: D + "Kuda_3_0_MVP_90_Day_Confidence_Plan.pdf", image: P + "Kuda_3_0_MVP_90_Day_Confidence_Plan.jpg" },
+  { name: "Canvoy MVP roadmap", product: "Canvoy Payment", kind: "plans", type: "Roadmap", pages: 3, line: "Two months from planning to a working MVP.", color: "#0F766E", href: D + "canvoy-mvp-roadmap.pdf", image: P + "canvoy-mvp-roadmap.jpg" },
+  { name: "DM to Confirmed Order: product case", product: "DM to Confirmed Order", kind: "cases", type: "Product case", pages: 3, line: "Why social sellers lose orders in the DMs.", color: "#B45309", href: D + "dm-confirmed-order-product-case.pdf", image: P + "dm-confirmed-order-product-case.jpg" },
+  { name: "DM to Confirmed Order: user flow", product: "DM to Confirmed Order", kind: "cases", type: "User flow", pages: 2, line: "The main MVP journey, step by step.", color: "#B45309", href: D + "dm-confirmed-order-user-flow.pdf", image: P + "dm-confirmed-order-user-flow.jpg" },
+  { name: "DM to Confirmed Order: MVP features", product: "DM to Confirmed Order", kind: "cases", type: "Feature list", pages: 2, line: "What made the cut, and what waited.", color: "#B45309", href: D + "dm-confirmed-order-mvp-feature-list.pdf", image: P + "dm-confirmed-order-mvp-feature-list.jpg" },
+  { name: "DM to Confirmed Order: one-pager", product: "DM to Confirmed Order", kind: "cases", type: "Summary", pages: 1, line: "The whole case on a single page.", color: "#B45309", href: D + "dm-confirmed-order-short-explanation.pdf", image: P + "dm-confirmed-order-short-explanation.jpg" },
+  { name: "Journal 01: Discover", product: "My product practice", kind: "journals", type: "Journal", pages: 3, line: "How I find the real problem before the feature.", color: "#3D5A2E", href: D + "discover-product-practice-journal.pdf", image: P + "discover-product-practice-journal.jpg" },
+  { name: "Journal 02: Define", product: "My product practice", kind: "journals", type: "Journal", pages: 3, line: "Turning evidence into a clear decision and scope.", color: "#3D5A2E", href: D + "define-product-practice-journal.pdf", image: P + "define-product-practice-journal.jpg" },
+  { name: "Journal 03: Deliver", product: "My product practice", kind: "journals", type: "Journal", pages: 3, line: "From requirements to a reliable release.", color: "#3D5A2E", href: D + "deliver-product-practice-journal.pdf", image: P + "deliver-product-practice-journal.jpg" },
+  { name: "Journal 04: Improve", product: "My product practice", kind: "journals", type: "Journal", pages: 3, line: "Reading product signals after launch.", color: "#3D5A2E", href: D + "improve-product-practice-journal.pdf", image: P + "improve-product-practice-journal.jpg" },
+  { name: "Product Manager CV", product: "Olusola Ayodeji Ezekiel", kind: "cv", type: "CV", pages: 2, line: "Two pages, recruiter-friendly and current.", color: "#334155", href: CV_URL, image: P + "olusola-ayodeji-product-manager-cv.jpg" },
+  { name: "Construction CV", product: "Olusola Ayodeji Ezekiel", kind: "cv", type: "CV", pages: 2, line: "Ten years of project and site delivery.", color: "#334155", href: CONSTRUCTION_CV_URL, image: P + "olusola-ayodeji-construction-cv.jpg" },
 ];
 
 export type InsightGroup = "discovery" | "strategy" | "delivery" | "leadership";

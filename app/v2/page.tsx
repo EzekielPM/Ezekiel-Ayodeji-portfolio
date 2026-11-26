@@ -6,6 +6,7 @@ import RdIntro from "./redesign/Intro";
 import RdStageTabs from "./redesign/StageTabs";
 import RdHeroStars from "./redesign/HeroStars";
 import RdInsightDeck from "./redesign/InsightDeck";
+import RdDocLibrary from "./redesign/DocLibrary";
 import RdValueRibbons from "./redesign/ValueRibbons";
 import RdCarousel from "./redesign/Carousel";
 import RdProjectList from "./redesign/ProjectList";
@@ -14,7 +15,7 @@ import RdFooter from "./redesign/Footer";
 import { CopyEmailButton, FloatingContact } from "./PortfolioControls";
 import {
   CONSTRUCTION_CV_URL, CV_URL, EMAIL, LINKEDIN, WHATSAPP, YOUTUBE_CHANNEL, YOUTUBE_INTRO_ID,
-  documents, projects, slides,
+  projects, slides,
 } from "./redesign/data";
 
 export default function PortfolioHome() {
@@ -93,33 +94,7 @@ export default function PortfolioHome() {
         </section>
 
         <section id="documents" className="rd-section" aria-labelledby="docs-h">
-          <div className="rd-wrap">
-            <div className="rd-section-head" data-reveal>
-              <div>
-                <h2 id="docs-h" className="rd-display">Documents</h2>
-                <p>The real working documents behind the products: requirements, architecture and my CV. Open any of them, no sign-up.</p>
-              </div>
-            </div>
-            <div className="rd-docs">
-              {documents.map((d, i) => (
-                <a key={d.name} href={d.href} target="_blank" rel="noreferrer" className="rd-doc" data-reveal data-tilt style={{ transitionDelay: `${i * 90}ms` }}>
-                  <span className="rd-doc-cover" style={{ background: d.bg }}>
-                    <span className="rd-doc-paper">
-                      <small style={d.accent ? { color: d.accent } : undefined}>{d.kicker}</small>
-                      <b>{d.short}</b>
-                      <i aria-hidden="true" /><i aria-hidden="true" /><i aria-hidden="true" />
-                    </span>
-                  </span>
-                  <span className="rd-doc-body">
-                    <span className="rd-doc-type">{d.type}</span>
-                    <strong>{d.name}</strong>
-                    <span>{d.line}</span>
-                    <span className="rd-doc-open">Open PDF <span aria-hidden="true">↗</span></span>
-                  </span>
-                </a>
-              ))}
-            </div>
-          </div>
+          <RdDocLibrary />
         </section>
 
         <section id="insights" className="rd-section rd-insights-band" aria-labelledby="ins-h">
