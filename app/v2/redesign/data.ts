@@ -128,6 +128,7 @@ export type Slide = {
   name: string;
   tagline: string;
   summary: string;
+  brief?: string; // shorter text for the home page card
   chips: string[];
   image: string;
   imageAlt: string;
@@ -144,6 +145,7 @@ export const slides: Slide[] = [
     name: "Siiqo",
     tagline: "Buy and sell with people you can trust.",
     summary: "A trust-led marketplace for Nigerian buyers, vendors and service providers: verified sellers, protected payments and community discovery. Over 500 active vendors, and sign-ups up to 35% in the first three months after going live.",
+    brief: "A trust-led marketplace for Nigerian buyers, vendors and service providers: verified sellers, protected payments and community discovery.",
     chips: ["Live product", "Lead PM · Scrum Master", "Jan 2025 – Present"],
     image: "/portfolio/full/siiqo%20tablet%20mobile%20showcase%20jpg.jpeg",
     imageAlt: "Siiqo marketplace on tablet and phone",
@@ -354,4 +356,12 @@ export const values = [
   { value: "Build to learn", verb: "Tested in", where: "my independent builds" },
   { value: "Clarity over noise", verb: "Practised in", where: "sprint rituals" },
   { value: "Plan like a builder", verb: "Earned in", where: "10 years of construction" },
+];
+
+// Quiet results line on the home page.
+export const homeResults = [
+  { figure: "500+", label: "active vendors", where: "Siiqo", href: "/case-studies/siiqo" },
+  { figure: "Up to 35%", label: "more sign-ups, first 3 months", where: "Siiqo", href: "/case-studies/siiqo" },
+  { figure: "+25%", label: "sign-ups, Nov to Dec", where: "BetBonanza", href: "/case-studies/betbonanza" },
+  { figure: "Up to 65%", label: "more daily active users", where: "BetBonanza", href: "/case-studies/betbonanza" },
 ];

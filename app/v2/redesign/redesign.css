@@ -903,3 +903,18 @@ html[data-theme="navy"] .rd .rd-folder{--folder:#13241A;--folder-edge:#223A2A}
   .rd-study-img{width:100%;aspect-ratio:16/9;min-height:0}
 }
 @media (prefers-reduced-motion: reduce){.rd-feat-card,.rd-feat-img img,.rd-study{transition:none!important}}
+
+/* Quiet results line under the featured work */
+.rd-results{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rd-results li+li{border-left:1px solid var(--line)}
+.rd-results a{display:flex;flex-direction:column;gap:2px;padding:16px 20px;transition:background-color .25s}
+.rd-results a:hover{background:var(--surface)}
+.rd-results b{font-family:var(--display);font-size:24px;font-weight:600;color:var(--accent);line-height:1.1}
+.rd-results span{font-size:14px;color:var(--ink)}
+.rd-results small{font-size:12px;color:var(--subtle);font-weight:600}
+@media (max-width:860px){
+  .rd-results{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rd-results li:nth-child(3){border-left:none}
+  .rd-results li:nth-child(n+3){border-top:1px solid var(--line)}
+}
+@media (max-width:400px){.rd-results a{padding:14px 12px}.rd-results b{font-size:21px}}

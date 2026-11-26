@@ -1,5 +1,5 @@
 import Image from "next/image";
-import type { Slide } from "./data";
+import { homeResults, type Slide } from "./data";
 
 // Two featured products on the home page; everything else lives on /work.
 export default function FeaturedWork({ items, total, others }: { items: Slide[]; total: number; others: string[] }) {
@@ -21,7 +21,7 @@ export default function FeaturedWork({ items, total, others }: { items: Slide[];
                   </span>
                   <h3>{s.name}</h3>
                   <span className="rd-feat-tag">{s.tagline}</span>
-                  <span className="rd-feat-sum">{s.summary}</span>
+                  <span className="rd-feat-sum">{s.brief ?? s.summary}</span>
                   <span className="rd-feat-foot">
                     <span>{s.chips[2] ?? ""}</span>
                     <b>{main.label} <span aria-hidden="true">→</span></b>
@@ -31,6 +31,19 @@ export default function FeaturedWork({ items, total, others }: { items: Slide[];
             </div>
           );
         })}
+      </div>
+      <div data-reveal>
+        <ul className="rd-results" aria-label="Results so far">
+          {homeResults.map((r) => (
+            <li key={r.figure + r.label}>
+              <a href={r.href}>
+                <b>{r.figure}</b>
+                <span>{r.label}</span>
+                <small>{r.where}</small>
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
       <div className="rd-feat-all" data-reveal>
         <a className="rd-btn rd-btn-accent" href="/work">See all {total} projects <span aria-hidden="true">→</span></a>
