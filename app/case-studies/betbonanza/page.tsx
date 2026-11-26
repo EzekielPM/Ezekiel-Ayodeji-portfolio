@@ -25,7 +25,7 @@ export default function BetBonanzaCaseStudy() {
         <header className="rd-case-hero" data-reveal>
           <p className="rd-case-kicker">Case study · iGaming · Sportsbook</p>
           <h1>BetBonanza: learning product on a sportsbook that never sleeps</h1>
-          <p className="rd-case-lead">My first product role. I worked on sportsbook user journeys at BetBonanza Nigeria, and led the competitor analysis behind a 12 Days of December bonus calendar that brought in new players and kept existing ones coming back.</p>
+          <p className="rd-case-lead">My first product role. I worked on sportsbook user journeys at BetBonanza Nigeria, and led the competitor analysis behind a 12 Days of December campaign that lifted sign-ups by 25% and daily active users by up to 65%.</p>
           <dl className="rd-case-facts">
             <div><dt>Role</dt><dd>Associate Product Manager</dd></div>
             <div><dt>Dates</dt><dd>Jan 2021 – Mar 2022</dd></div>
@@ -71,7 +71,12 @@ export default function BetBonanzaCaseStudy() {
               <li><b>Filled every day.</b> I used what I learned to make sure all twelve days carried a worthwhile bonus or engagement offer, so players had a reason to come back each day of the campaign.</li>
             </ul>
             <h3>How it turned out</h3>
-            <p>The campaign worked on both fronts: it attracted new players to sign up during the festive period and kept existing players returning across the twelve days.</p>
+            <p>The campaign worked on both fronts: it brought new players in and kept existing ones coming back across the twelve days.</p>
+            <dl className="rd-case-results">
+              <div><dt>Sign-ups</dt><dd>+25%</dd><span>November to December</span></div>
+              <div><dt>Daily active users</dt><dd>up to 65%</dd><span>higher during the campaign</span></div>
+              <div><dt>Retention</dt><dd>up to 80%</dd><span>of players kept coming back</span></div>
+            </dl>
           </div>
         </section>
 
@@ -98,7 +103,7 @@ export default function BetBonanzaCaseStudy() {
           </div>
         </section>
 
-        <p className="rd-case-note" data-reveal>About the evidence: this was an early role. The campaign results are described in words because I don&apos;t have figures I can share publicly.</p>
+        <p className="rd-case-note" data-reveal>About the figures: they cover the December campaign period and are rounded. Sign-ups compare December with November.</p>
 
         <nav className="rd-case-next" aria-label="Next case study" data-reveal>
           <span>Next in my journey</span>

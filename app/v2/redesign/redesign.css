@@ -846,3 +846,11 @@ html[data-theme="navy"] .rd .rd-folder{--folder:#13241A;--folder-edge:#223A2A}
 @media (prefers-reduced-motion: reduce){
   .rd-folder-page,.rd-lib-grid li,.rd-lib-card,.rd-lib-thumb img,.rd-folder-bar span{transition:none!important;animation:none!important}
 }
+
+/* Case study results row */
+.rd-case-results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0 0}
+.rd-case-results>div{padding:16px 16px 14px;border-radius:14px;background:var(--line-soft);display:flex;flex-direction:column;gap:2px}
+.rd-case-results dt{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--subtle)}
+.rd-case-results dd{margin:0;font-family:var(--display);font-size:30px;font-weight:700;color:var(--accent);line-height:1.15}
+.rd-case-results span{font-size:13px;color:var(--muted)}
+@media (max-width:720px){.rd-case-results{grid-template-columns:1fr}.rd-case-results dd{font-size:26px}}

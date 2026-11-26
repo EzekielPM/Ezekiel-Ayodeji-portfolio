@@ -47,7 +47,7 @@ export default function PortfolioHome() {
               <a className="rd-btn rd-btn-dark" href="#work">See my work <span aria-hidden="true">↓</span></a>
               <a className="rd-btn rd-btn-ghost" href={CV_URL} download>Download CV <span aria-hidden="true">↓</span></a>
             </div>
-            <p className="rd-hero-open" data-stars>Open to remote Product Manager and Product Operations roles.</p>
+            <p className="rd-hero-open" data-stars>Lagos, WAT (UTC+1). Open to Product Manager and Product Operations roles worldwide.</p>
             <div className="rd-hero-tiles" data-star-unit>
               <a href="/case-studies/siiqo" className="rd-tile rd-tile-green"><small>Now shipping</small><strong>Siiqo · Live marketplace</strong></a>
               <a href="/v2/football-fan-arena" className="rd-tile rd-tile-amber"><small>Latest build</small><strong>Football Fan Arena · MVP</strong></a>
@@ -79,7 +79,7 @@ export default function PortfolioHome() {
                 <div><dt>projects</dt><dd data-count="8">8</dd></div>
                 <div><dt>live products</dt><dd data-count="3">3</dd></div>
                 <div><dt>working demo</dt><dd data-count="1">1</dd></div>
-                <div><dt>PRDs &amp; papers</dt><dd data-count="3">3</dd></div>
+                <div><dt>documents</dt><dd data-count="18">18</dd></div>
                 <div><dt>years in product</dt><dd data-count="5" data-suffix="+">5+</dd></div>
               </dl>
             </div>
@@ -152,7 +152,7 @@ export default function PortfolioHome() {
           <div className="rd-wrap">
             <div className="rd-cta" data-reveal>
               <div>
-                <p className="rd-cta-kicker">Lagos, Nigeria · Open to opportunities</p>
+                <p className="rd-cta-kicker">Lagos, Nigeria · WAT (UTC+1) · Open to roles worldwide</p>
                 <h2 id="contact-h">Need a product shipped, or a PRD like these?</h2>
                 <p>Full-time roles, contracts or a single delivery plan. Tell me what you&apos;re building.</p>
               </div>
