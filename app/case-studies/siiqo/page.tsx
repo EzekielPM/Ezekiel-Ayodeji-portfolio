@@ -26,7 +26,7 @@ export default function SiiqoCaseStudy() {
       <RdMotion />
       <RdHeader base="/" />
       <main className="rd-case">
-        <a className="rd-case-back" href="/#work">← Back to my work</a>
+        <a className="rd-case-back" href="/work">← All projects</a>
 
         <header className="rd-case-hero" data-reveal>
           <p className="rd-case-kicker">Case study · Marketplace · Commerce</p>
@@ -131,7 +131,7 @@ export default function SiiqoCaseStudy() {
 
         <nav className="rd-case-next" aria-label="Next case study" data-reveal>
           <span>Next in my work</span>
-          <a href="/v2/football-fan-arena">Football Fan Arena: a home for football supporters →</a>
+          <a href="/v2/football-fan-arena">Football Fan Arena: one home for football supporters →</a>
         </nav>
       </main>
       <RdFooter base="/" />

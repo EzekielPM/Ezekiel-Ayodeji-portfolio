@@ -20,7 +20,7 @@ export default function BetBonanzaCaseStudy() {
       <RdMotion />
       <RdHeader base="/" />
       <main className="rd-case">
-        <a className="rd-case-back" href="/#work">← Back to my work</a>
+        <a className="rd-case-back" href="/work">← All projects</a>
 
         <header className="rd-case-hero" data-reveal>
           <p className="rd-case-kicker">Case study · iGaming · Sportsbook</p>
@@ -106,8 +106,8 @@ export default function BetBonanzaCaseStudy() {
         <p className="rd-case-note" data-reveal>About the figures: they cover the December campaign period and are rounded. Sign-ups compare December with November.</p>
 
         <nav className="rd-case-next" aria-label="Next case study" data-reveal>
-          <span>Next in my journey</span>
-          <a href="/case-studies/canvoy">Canvoy Payment: everyday payments, planned properly →</a>
+          <span>Next in my work</span>
+          <a href="/case-studies/siiqo">Siiqo: building trust into a marketplace →</a>
         </nav>
       </main>
       <RdFooter base="/" />

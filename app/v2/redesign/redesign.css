@@ -933,3 +933,21 @@ html[data-theme="navy"] .rd .rd-case-highlight-navy>div{border-left-color:#7C9BF
 .rd-case-gallery span{font-size:13px;color:var(--subtle);font-weight:600}
 .rd-case-actions{display:flex;flex-wrap:wrap;gap:12px}
 @media (max-width:720px){.rd-case-results.rd-case-results-2{grid-template-columns:1fr}.rd-case-gallery a{width:72vw}}
+.rd-case-video{width:100%;border-radius:20px;background:#0B0F14;box-shadow:var(--shadow);aspect-ratio:16/9}
+.rd-case-docs{display:flex;flex-direction:column;gap:10px}
+.rd-case-docs-label{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--subtle)}
+.rd-case-docs a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 18px;border-radius:16px;background:var(--surface);border:1px solid var(--line);transition:border-color .25s,transform .25s var(--ease)}
+.rd-case-docs a:hover{border-color:var(--accent);transform:translateY(-2px)}
+.rd-case-docs a>span{display:flex;flex-direction:column;gap:3px}
+.rd-case-docs strong{font-size:15px}
+.rd-case-docs small{font-size:13px;color:var(--muted);line-height:1.5}
+.rd-case-docs b{flex:none;font-size:14px;color:var(--accent)}
+.rd-case-highlight-teal>div{border-left-color:#0F766E}
+.rd-case-highlight-green>div{border-left-color:#16A34A}
+.rd-case-highlight-violet>div{border-left-color:#6D28D9}
+.rd-case-highlight-amber>div{border-left-color:#B45309}
+@media (max-width:720px){.rd-case-docs a{flex-direction:column;align-items:flex-start}}
+.rd-case-flow{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;counter-reset:f}
+.rd-case-flow li{counter-increment:f;display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:14px;font-weight:600}
+.rd-case-flow li::before{content:counter(f);display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--t-amber);color:var(--t-amber-ink);font-size:12px;font-weight:800}
+.rd-case-figure>img[src$=".svg"]{background:#fff;padding:12px}
