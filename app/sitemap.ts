@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/v2/tradeflow", priority: 0.8 },
     { path: "/v2/football-fan-arena", priority: 0.8 },
     { path: "/about", priority: 0.7 },
+    { path: "/book", priority: 0.6 },
     { path: "/work", priority: 0.8 },
     { path: "/case-studies/betbonanza", priority: 0.6 },
     { path: "/case-studies/dm-confirmed-order", priority: 0.8 },

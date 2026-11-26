@@ -1070,3 +1070,28 @@ html[data-theme="navy"] .rd .rd-stream-play{color:#1a1333}
   .rd-book-slots{max-height:none}
 }
 @media (prefers-reduced-motion: reduce){.rd-book-tick{animation:none}}
+
+/* Contact: white "Book a call now" card linking to /book */
+.rd-contact-cta{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:10px;padding:36px;border-radius:20px;background:#fff;color:#121722;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.rd-contact-cta:hover{transform:translateY(-4px);box-shadow:0 26px 50px -30px rgba(0,0,0,.6)}
+.rd-contact-cta-icon{display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:#E7F0E1;color:#3D5A2E}
+.rd-contact-cta-kicker{margin-top:6px;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#3D5A2E}
+.rd-contact-cta strong{font-family:"Fraunces",Georgia,serif;font-weight:500;font-size:clamp(30px,3.4vw,40px);line-height:1.05}
+.rd-contact-cta-sub{color:#4A5262;font-size:15px;max-width:380px}
+.rd-contact-cta-btn{display:inline-flex;align-items:center;gap:10px;margin-top:10px;padding:13px 20px;border-radius:12px;background:#3D5A2E;color:#fff;font-weight:700;font-size:15px;transition:gap .25s var(--ease)}
+.rd-contact-cta:hover .rd-contact-cta-btn{gap:14px}
+.rd-contact{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)!important;align-items:stretch}
+@media (max-width:900px){.rd-contact{grid-template-columns:1fr!important}.rd-contact-cta{padding:26px}}
+/* Booking page */
+.rd-bookpage{padding:28px 20px 90px}
+.rd-bookpage-wrap{max-width:1140px;margin:0 auto}
+.rd-bookpage-head{margin:18px 0 30px;max-width:720px}
+.rd .rd-bookpage-head h1{margin-top:8px;font-family:"Fraunces",Georgia,serif;font-weight:500;font-size:clamp(34px,5vw,52px);line-height:1.05;letter-spacing:-.01em}
+.rd-bookpage-head>p:not(.rd-kicker){margin-top:12px!important;font-size:17px;color:var(--muted)}
+.rd-bookpage-grid{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.5fr);gap:24px;align-items:start}
+.rd-bookpage-side{display:flex;flex-direction:column;gap:16px;position:sticky;top:96px}
+.rd-bookpage-side .rd-now{color:#fff}
+.rd-bookpage-list{list-style:none;margin:0;padding:18px 20px;border-radius:18px;background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;gap:12px;font-size:14px;color:var(--muted)}
+.rd-bookpage-list b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+.rd-bookpage-form{border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
+@media (max-width:900px){.rd-bookpage-grid{grid-template-columns:1fr}.rd-bookpage-side{position:static}}

@@ -12,7 +12,6 @@ import RdFeaturedWork from "./redesign/FeaturedWork";
 import RdYouTube from "./redesign/YouTubeLite";
 import RdFooter from "./redesign/Footer";
 import RdLagosNow from "./redesign/LagosNow";
-import RdBookCall from "./redesign/BookCall";
 import { CopyEmailButton, FloatingContact } from "./PortfolioControls";
 import {
   CONSTRUCTION_CV_URL, CV_URL, EMAIL, LINKEDIN, WHATSAPP, YOUTUBE_CHANNEL, YOUTUBE_INTRO_ID,
@@ -159,9 +158,15 @@ export default function PortfolioHome() {
                   <a className="contact-icon outline" href={LINKEDIN} target="_blank" rel="noreferrer"><span>LinkedIn</span></a>
                 </div>
               </div>
-              <div className="rd-contact-book">
-                <RdBookCall />
-              </div>
+              <a className="rd-contact-cta" href="/book">
+                <span className="rd-contact-cta-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="26" height="26"><rect x="3.5" y="5" width="17" height="15" rx="3" fill="none" stroke="currentColor" strokeWidth="1.8" /><path d="M3.5 10h17M8 3v4M16 3v4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" /><circle cx="12" cy="15" r="1.6" fill="currentColor" /></svg>
+                </span>
+                <span className="rd-contact-cta-kicker">30-minute intro call</span>
+                <strong>Book a call now</strong>
+                <span className="rd-contact-cta-sub">Pick a date and time that suits you. Times show in your own time zone.</span>
+                <span className="rd-contact-cta-btn">Book a call now <span aria-hidden="true">→</span></span>
+              </a>
             </div>
           </div>
         </section>
