@@ -13,11 +13,13 @@ export type Project = {
   name: string;
   line: string;
   status: string;
-  tone: "live" | "role" | "study" | "plan";
+  tone: "live" | "mvp" | "demo" | "plan" | "concept" | "past";
   evidence: string;
   role: string;
-  image: string;
+  image?: string;
+  mono?: { text: string; bg: string; ink: string };
   href: string;
+  docs?: { label: string; href: string }[];
   categories: ProjectCategory[];
 };
 
@@ -27,36 +29,39 @@ export const projects: Project[] = [
     slug: "ffa",
     name: "Football Fan Arena",
     line: "A football fan community: club fanbases, free matchday predictions, banter groups and fan rankings.",
-    status: "Live · MVP",
-    tone: "live",
+    status: "Live web app · MVP",
+    tone: "mvp",
     evidence: "Web app, Android build, PRD",
     role: "Product lead · Independent build",
     image: "/portfolio/full/ffa-live-feed-predictions.jpg",
     href: "/v2/football-fan-arena",
+    docs: [{ label: "PRD", href: "/documents/ffa-product-requirements.pdf" }],
     categories: ["live", "independent"],
   },
   {
     slug: "wayagram",
     name: "Wayagram",
     line: "Release support across a social, marketplace and payments platform, plus its architecture paper.",
-    status: "Contract",
-    tone: "role",
-    evidence: "Architecture paper",
+    status: "Live product",
+    tone: "live",
+    evidence: "Contract role · on Play and App Store",
     role: "Technical PM · Jan – May 2026",
     image: "/portfolio/full/wayagram-1.jpg",
     href: "/case-studies/wayagram",
-    categories: ["role"],
+    docs: [{ label: "Architecture paper", href: "/documents/wayagram-product-architecture.pdf" }],
+    categories: ["live", "role"],
   },
   {
     slug: "siiqo",
     name: "Siiqo",
     line: "A trust-led marketplace with verified vendors, protected payments and community discovery.",
-    status: "Live",
+    status: "Live product",
     tone: "live",
-    evidence: "siiqo.com, PRD",
+    evidence: "siiqo.com",
     role: "Lead PM · Jan 2025 – Present",
     image: "/portfolio/full/siiqo%20tablet%20mobile%20showcase%20jpg.jpeg",
     href: "/case-studies/siiqo",
+    docs: [{ label: "PRD", href: "/documents/siiqo-product-requirements.pdf" }],
     categories: ["live", "role"],
   },
   {
@@ -64,8 +69,8 @@ export const projects: Project[] = [
     name: "TradeFlow Commerce",
     line: "Multi-vendor commerce: storefronts, orders and delivery zones. Payments stay in Paystack test mode.",
     status: "Live demo",
-    tone: "live",
-    evidence: "Working build",
+    tone: "demo",
+    evidence: "Test payments · not a business",
     role: "Independent build",
     image: "/portfolio/full/tradeflow%20tablet%20mobile%20jpg.jpeg",
     href: "/v2/tradeflow",
@@ -75,9 +80,9 @@ export const projects: Project[] = [
     slug: "kuda",
     name: "Kuda 3.0: Confidence Layer",
     line: "Clearer transaction states, service recovery and balance confidence. An independent concept.",
-    status: "Case study",
-    tone: "study",
-    evidence: "Case study, prototype",
+    status: "Concept",
+    tone: "concept",
+    evidence: "Independent, not a Kuda release",
     role: "Independent study",
     image: "/portfolio/full/kuda-confidence-layer.webp",
     href: "https://kuda-confidence-layer.vercel.app",
@@ -87,9 +92,9 @@ export const projects: Project[] = [
     slug: "dm",
     name: "From DM to Confirmed Order",
     line: "Teardown and prototype: moving a WhatsApp or Instagram “I want it” to a confirmed order.",
-    status: "Teardown",
-    tone: "study",
-    evidence: "Teardown, prototype",
+    status: "Concept",
+    tone: "concept",
+    evidence: "Teardown and prototype",
     role: "Independent study",
     image: "/portfolio/full/dm-confirmed-order-preview.webp",
     href: "/case-studies/dm-confirmed-order",
@@ -99,12 +104,24 @@ export const projects: Project[] = [
     slug: "canvoy",
     name: "Canvoy Payment",
     line: "A utility and everyday payments MVP: scope, journeys, Jira delivery plan, security and QA readiness.",
-    status: "MVP planning",
+    status: "Planning · not launched",
     tone: "plan",
     evidence: "Roadmap, flows, backlog",
     role: "Lead PM · Jun 2022 – Dec 2024",
     image: "/portfolio/full/canvoy-landing-desktop-mobile.jpg",
     href: "/case-studies/canvoy",
+    categories: ["role"],
+  },
+  {
+    slug: "betbonanza",
+    name: "BetBonanza",
+    line: "Sportsbook user journeys, prioritisation and cross-functional delivery in a fast-paced iGaming product.",
+    status: "Past role",
+    tone: "past",
+    evidence: "Role experience",
+    role: "Associate PM · Jan 2021 – Mar 2022",
+    mono: { text: "BB", bg: "#14532D", ink: "#FACC15" },
+    href: "/case-studies/betbonanza",
     categories: ["role"],
   },
 ];
@@ -130,7 +147,7 @@ export const slides: Slide[] = [
     name: "Siiqo",
     tagline: "Buy and sell with people you can trust.",
     summary: "A trust-led marketplace for Nigerian buyers, vendors and service providers, combining verified sellers, protected payments and community-driven discovery.",
-    chips: ["Live", "Lead PM · Scrum Master", "Jan 2025 – Present"],
+    chips: ["Live product", "Lead PM · Scrum Master", "Jan 2025 – Present"],
     image: "/portfolio/full/siiqo%20tablet%20mobile%20showcase%20jpg.jpeg",
     imageAlt: "Siiqo marketplace on tablet and phone",
     bg: "#0E1F57",
@@ -166,7 +183,7 @@ export const slides: Slide[] = [
     name: "Wayagram",
     tagline: "Social, marketplace and payments in one app.",
     summary: "During a contract engagement I supported production migration, regression testing, team ceremonies and module reporting, and wrote up the product and technical architecture.",
-    chips: ["Contract", "Technical PM", "Jan – May 2026"],
+    chips: ["Live product", "Technical PM · Contract", "Jan – May 2026"],
     image: "/portfolio/full/wayagram-1.jpg",
     imageAlt: "Wayagram app screens",
     bg: "#EA580C",
@@ -185,7 +202,7 @@ export const slides: Slide[] = [
     name: "TradeFlow Commerce",
     tagline: "From product discovery to delivered order.",
     summary: "A multi-vendor commerce build connecting discovery, vendor storefronts, order handling and location-based delivery. Paystack stays in test mode while payment flows are validated.",
-    chips: ["Live demo", "Independent build", "Test payments"],
+    chips: ["Live demo · test payments", "Independent build"],
     image: "/portfolio/full/tradeflow%20tablet%20mobile%20jpg.jpeg",
     imageAlt: "TradeFlow Commerce on tablet and phone",
     bg: "#3B1A78",
@@ -202,7 +219,7 @@ export const slides: Slide[] = [
     name: "Canvoy Payment",
     tagline: "Everyday payments, planned properly.",
     summary: "An early-stage payments MVP for utility and everyday journeys: requirements, an eight-week roadmap, Jira delivery structure and security and QA readiness. The MVP had not launched.",
-    chips: ["MVP planning", "Lead PM · Scrum Master", "Jun 2022 – Dec 2024"],
+    chips: ["Planning · not launched", "Lead PM · Scrum Master", "Jun 2022 – Dec 2024"],
     image: "/portfolio/full/canvoy-landing-desktop-mobile.jpg",
     imageAlt: "Canvoy Payment landing page on desktop and mobile",
     bg: "#0F3D3A",
@@ -214,11 +231,34 @@ export const slides: Slide[] = [
 ];
 
 export const steps = [
-  { n: "01", name: "Discover", what: "Understand the problem before discussing the feature.", proof: "DM to Confirmed Order", href: "/case-studies/dm-confirmed-order", tone: "pink" },
-  { n: "02", name: "Define", what: "Turn evidence into a PRD, clear scope and honest trade-offs.", proof: "Siiqo PRD", href: "/documents/siiqo-product-requirements.pdf", tone: "violet" },
-  { n: "03", name: "Design", what: "Shape journeys with design and sign off the screens.", proof: "Canvoy flows", href: "/case-studies/canvoy", tone: "sky" },
-  { n: "04", name: "Deliver", what: "Run sprints, manage dependencies, keep QA and scope honest.", proof: "Football Fan Arena", href: "/v2/football-fan-arena", tone: "amber" },
-  { n: "05", name: "Improve", what: "Release, listen to product signals and decide what is next.", proof: "Siiqo, live", href: "/case-studies/siiqo", tone: "green" },
+  {
+    n: "01", name: "Discover", tone: "pink",
+    front: "I understand the problem before discussing the feature.",
+    points: ["Talk to users and map their current journey", "Check support issues, behaviour and market context", "Separate the observed problem from assumed solutions"],
+    outcome: "A clearly evidenced problem worth solving.",
+    job: "From DM to Confirmed Order", href: "/case-studies/dm-confirmed-order",
+  },
+  {
+    n: "02", name: "Define", tone: "violet",
+    front: "I turn evidence into a clear product decision and workable scope.",
+    points: ["Write the problem statement and desired outcome", "Map the key journey and edge cases", "Prioritise an MVP, document trade-offs and define success"],
+    outcome: "A shared scope the team can build and validate.",
+    job: "Siiqo", href: "/case-studies/siiqo",
+  },
+  {
+    n: "03", name: "Deliver", tone: "amber",
+    front: "I help the team move from requirements to reliable execution.",
+    points: ["Break scope into stories with acceptance criteria", "Align sprint goals, owners and dependencies", "Work with design, engineering and QA through release"],
+    outcome: "A usable release with quality and readiness checked.",
+    job: "Football Fan Arena", href: "/v2/football-fan-arena",
+  },
+  {
+    n: "04", name: "Improve", tone: "green",
+    front: "I use feedback and product signals to decide what deserves attention next.",
+    points: ["Review adoption, completion and drop-off signals", "Listen for recurring feedback and support friction", "Run focused experiments and reprioritise from evidence"],
+    outcome: "A clear next improvement tied to user and business value.",
+    job: "Kuda 3.0: Confidence Layer", href: "https://kuda-confidence-layer.vercel.app",
+  },
 ];
 
 export const documents = [

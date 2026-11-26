@@ -13,6 +13,15 @@ const filters: { id: Filter; label: string }[] = [
   { id: "independent", label: "Independent" },
 ];
 
+const legend = [
+  { tone: "live", label: "Live product", note: "Shipped and in use" },
+  { tone: "mvp", label: "Live · MVP", note: "Deployed first version" },
+  { tone: "demo", label: "Live demo", note: "Working build, test payments" },
+  { tone: "plan", label: "Planning", note: "Scoped, not launched" },
+  { tone: "concept", label: "Concept", note: "Independent study" },
+  { tone: "past", label: "Past role", note: "Earlier job" },
+];
+
 export default function RdProjectList({ projects }: { projects: Project[] }) {
   const [filter, setFilter] = useState<Filter>("all");
   const [version, setVersion] = useState(0);
@@ -37,15 +46,24 @@ export default function RdProjectList({ projects }: { projects: Project[] }) {
           ))}
         </div>
       </div>
+      <ul className="rd-legend" aria-label="What each status means" data-reveal>
+        {legend.map((l) => (
+          <li key={l.tone}><span className={`rd-chip rd-chip-${l.tone}`}>{l.label}</span>{l.note}</li>
+        ))}
+      </ul>
       <ul className="rd-list" key={version} aria-live="polite">
         {shown.map((p, i) => {
           const external = p.href.startsWith("http");
           return (
             <li key={p.slug} style={{ animationDelay: `${i * 55}ms` }}>
-              <a href={p.href} target={external ? "_blank" : undefined} rel={external ? "noreferrer" : undefined}>
-                <span className="rd-list-thumb"><Image src={p.image} alt="" fill sizes="140px" /></span>
+              <div className="rd-list-row">
+                <span className="rd-list-thumb" aria-hidden="true">
+                  {p.image
+                    ? <Image src={p.image} alt="" fill sizes="140px" />
+                    : <span className="rd-list-mono" style={{ background: p.mono?.bg, color: p.mono?.ink }}>{p.mono?.text}</span>}
+                </span>
                 <span className="rd-list-main">
-                  <strong>{p.name}</strong>
+                  <a className="rd-list-link" href={p.href} target={external ? "_blank" : undefined} rel={external ? "noreferrer" : undefined}>{p.name}</a>
                   <span>{p.line}</span>
                 </span>
                 <span className="rd-list-status">
@@ -53,8 +71,13 @@ export default function RdProjectList({ projects }: { projects: Project[] }) {
                   <small>{p.evidence}</small>
                 </span>
                 <span className="rd-list-role">{p.role}</span>
-                <span className="rd-list-arrow" aria-hidden="true">{external ? "↗" : "→"}</span>
-              </a>
+                <span className="rd-list-docs">
+                  {p.docs?.map((d) => (
+                    <a key={d.href} href={d.href} target="_blank" rel="noreferrer">{d.label} <span aria-hidden="true">↗</span></a>
+                  ))}
+                  <span className="rd-list-arrow" aria-hidden="true">{external ? "↗" : "→"}</span>
+                </span>
+              </div>
             </li>
           );
         })}

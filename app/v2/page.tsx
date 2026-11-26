@@ -2,6 +2,8 @@ import Image from "next/image";
 import "./redesign/redesign.css";
 import RdHeader from "./redesign/Header";
 import RdMotion from "./redesign/Motion";
+import RdIntro from "./redesign/Intro";
+import RdFlipSteps from "./redesign/FlipSteps";
 import RdCarousel from "./redesign/Carousel";
 import RdProjectList from "./redesign/ProjectList";
 import RdYouTube from "./redesign/YouTubeLite";
@@ -9,21 +11,13 @@ import RdFooter from "./redesign/Footer";
 import { CopyEmailButton, FloatingContact } from "./PortfolioControls";
 import {
   CONSTRUCTION_CV_URL, CV_URL, EMAIL, LINKEDIN, WHATSAPP, YOUTUBE_CHANNEL, YOUTUBE_INTRO_ID,
-  documents, insights, projects, slides, steps,
+  documents, insights, projects, slides,
 } from "./redesign/data";
-
-function Arrow({ className = "" }: { className?: string }) {
-  return (
-    <svg className={`rd-arrow ${className}`} viewBox="0 0 56 28" aria-hidden="true">
-      <path className="rd-arrow-line" d="M4 14 C18 2, 34 26, 46 14" />
-      <path className="rd-arrow-head" d="M40 8 L48 14 L40 20" />
-    </svg>
-  );
-}
 
 export default function PortfolioHome() {
   return (
     <div className="rd" id="top">
+      <RdIntro />
       <RdMotion />
       <RdHeader />
 
@@ -39,7 +33,7 @@ export default function PortfolioHome() {
             </div>
             <p className="rd-kicker">Lagos · Fintech · iGaming · Commerce</p>
             <h1 id="hero-h">Product manager.</h1>
-            <p className="rd-hero-sub">I take <span className="rd-hl-blue">fintech</span>, <span className="rd-hl-green">iGaming</span> and <span className="rd-hl-pink">commerce</span> products from PRD to release, and write about what I learn.</p>
+            <p className="rd-hero-sub">I take <span className="rd-hl-blue">fintech</span>, <span className="rd-hl-green">iGaming</span> and <span className="rd-hl-pink">commerce</span> products from discovery through delivery, and write about what I learn.</p>
             <div className="rd-hero-actions">
               <a className="rd-btn rd-btn-dark" href="#work">See my work <span aria-hidden="true">↓</span></a>
               <a className="rd-btn rd-btn-ghost" href={CV_URL} download>Download CV <span aria-hidden="true">↓</span></a>
@@ -56,22 +50,10 @@ export default function PortfolioHome() {
         <section className="rd-map rd-grid-bg" aria-labelledby="map-h">
           <div className="rd-wrap">
             <div className="rd-map-head" data-reveal>
-              <h2 id="map-h">How I take a product from idea to release</h2>
-              <p>Each step links to the project that shows it best.</p>
+              <h2 id="map-h">How I move a product from idea to delivery</h2>
+              <p>Tap a card to see what each stage looks like in practice, and where I did it.</p>
             </div>
-            <ol className="rd-steps">
-              {steps.map((s, i) => (
-                <li key={s.n} className="rd-step-item" data-reveal style={{ transitionDelay: `${i * 110}ms` }}>
-                  <a href={s.href} className={`rd-step rd-tone-${s.tone}`} target={s.href.endsWith(".pdf") ? "_blank" : undefined} rel={s.href.endsWith(".pdf") ? "noreferrer" : undefined}>
-                    <span className="rd-step-n">{s.n}</span>
-                    <strong>{s.name}</strong>
-                    <span className="rd-step-what">{s.what}</span>
-                    <span className="rd-step-proof">{s.proof} <span aria-hidden="true">→</span></span>
-                  </a>
-                  {i < steps.length - 1 && <Arrow />}
-                </li>
-              ))}
-            </ol>
+            <RdFlipSteps />
           </div>
         </section>
 
@@ -80,13 +62,13 @@ export default function PortfolioHome() {
             <div className="rd-section-head" data-reveal>
               <div>
                 <h2 id="work-h" className="rd-display">My work</h2>
-                <p>Products I&apos;ve led, shipped or taken apart, from the first requirement to release. Each one has its own page with the problem, the decisions and the evidence.</p>
+                <p>Products I&apos;ve led, shipped, planned or taken apart. Each one is labelled with how far it got, and has its own page with the problem, the decisions and the evidence.</p>
               </div>
               <dl className="rd-stats">
-                <div><dt>projects</dt><dd data-count="7">7</dd></div>
-                <div><dt>live apps</dt><dd data-count="3">3</dd></div>
+                <div><dt>projects</dt><dd data-count="8">8</dd></div>
+                <div><dt>live apps</dt><dd data-count="4">4</dd></div>
                 <div><dt>PRDs &amp; papers</dt><dd data-count="3">3</dd></div>
-                <div><dt>years in product</dt><dd data-count="4" data-suffix="+">4+</dd></div>
+                <div><dt>years in product</dt><dd data-count="5" data-suffix="+">5+</dd></div>
               </dl>
             </div>
             <RdCarousel slides={slides} />
