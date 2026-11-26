@@ -5,6 +5,7 @@ import RdMotion from "./redesign/Motion";
 import RdIntro from "./redesign/Intro";
 import RdFlipSteps from "./redesign/FlipSteps";
 import RdHeroStars from "./redesign/HeroStars";
+import RdInsightDeck from "./redesign/InsightDeck";
 import RdCarousel from "./redesign/Carousel";
 import RdProjectList from "./redesign/ProjectList";
 import RdYouTube from "./redesign/YouTubeLite";
@@ -12,7 +13,7 @@ import RdFooter from "./redesign/Footer";
 import { CopyEmailButton, FloatingContact } from "./PortfolioControls";
 import {
   CONSTRUCTION_CV_URL, CV_URL, EMAIL, LINKEDIN, WHATSAPP, YOUTUBE_CHANNEL, YOUTUBE_INTRO_ID,
-  documents, insights, projects, slides,
+  documents, projects, slides,
 } from "./redesign/data";
 
 export default function PortfolioHome() {
@@ -117,29 +118,8 @@ export default function PortfolioHome() {
           </div>
         </section>
 
-        <section id="insights" className="rd-section rd-soft" aria-labelledby="ins-h">
-          <div className="rd-wrap rd-insights">
-            <div className="rd-insights-feature" data-reveal>
-              <h2 id="ins-h" className="rd-display">Insights</h2>
-              <a href={insights[0].href} target="_blank" rel="noreferrer" className="rd-feature-post">
-                <small>{insights[0].topic} · Featured</small>
-                <strong>{insights[0].title}</strong>
-                <span>{insights[0].text}</span>
-                <em>Read on LinkedIn <span aria-hidden="true">↗</span></em>
-              </a>
-            </div>
-            <div className="rd-latest" data-reveal>
-              <p className="rd-label">Latest</p>
-              <ul>
-                {insights.slice(1).map((post) => (
-                  <li key={post.href}>
-                    <a href={post.href} target="_blank" rel="noreferrer"><small>{post.topic}</small><strong>{post.title}</strong><span aria-hidden="true">↗</span></a>
-                  </li>
-                ))}
-              </ul>
-              <a className="rd-text-link" href={LINKEDIN} target="_blank" rel="noreferrer">Follow me on LinkedIn ↗</a>
-            </div>
-          </div>
+        <section id="insights" className="rd-section rd-insights-band" aria-labelledby="ins-h">
+          <RdInsightDeck />
         </section>
 
         <section id="watch" className="rd-section" aria-labelledby="watch-h">

@@ -265,15 +265,24 @@ export const documents = [
   { name: "Product Manager CV", line: "Two pages, recruiter-friendly and current.", type: "CV", kicker: "OLUSOLA AYODEJI EZEKIEL", short: "Product Manager CV", bg: "#121722", href: CV_URL },
 ];
 
-export const insights = [
-  { topic: "Product documentation", title: "PRDs Are Just Bets, Not Guarantees", text: "Requirements make assumptions visible and give teams a shared direction. They still need validation, feedback and adjustment.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanagement-productmanager-productstrategy-activity-7479851658903076864-d9Er" },
-  { topic: "UX & empathy", title: "Product Managers Create Products People Understand", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-usercentric-uiux-activity-7484933393252700160-dq-m" },
-  { topic: "UX & iGaming", title: "Becoming the User: A UX Lesson in iGaming", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-igaming-userexperience-activity-7481301268641226753-etSu" },
-  { topic: "Product discovery", title: "Product Managers Shouldn't Trust Feature Requests Alone", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-productdiscovery-userresearch-activity-7483500408246677504-iNQa" },
-  { topic: "Product strategy", title: "Optimising vs Innovating: The PM's Dilemma", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanagement-activity-7391033448427171840-kQuU" },
-  { topic: "Leadership", title: "Surviving Chaos in Product Management with Purpose", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-usercentric-problemsolving-activity-7494005541279539200-DIe6" },
-  { topic: "Team alignment", title: "How to Use Meetings to Align and Decide", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_planning-provides-the-direction-and-focus-activity-7376157467107393537-sG3N" },
-  { topic: "Building products", title: "Building the Siiqo Marketplace for Safe and Easy Commerce", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_siiqo-ecommerce-marketplace-activity-7459969658050207744-LgKQ" },
+export type InsightGroup = "discovery" | "strategy" | "delivery" | "leadership";
+
+export const insightGroups: { id: InsightGroup; label: string }[] = [
+  { id: "discovery", label: "Discovery & UX" },
+  { id: "strategy", label: "Strategy" },
+  { id: "delivery", label: "Delivery" },
+  { id: "leadership", label: "Leadership" },
+];
+
+export const insights: { topic: string; title: string; text: string; group: InsightGroup; href: string }[] = [
+  { topic: "Product documentation", group: "strategy", title: "PRDs Are Just Bets, Not Guarantees", text: "Requirements make assumptions visible and give teams a shared direction. They still need validation, feedback and adjustment.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanagement-productmanager-productstrategy-activity-7479851658903076864-d9Er" },
+  { topic: "Product discovery", group: "discovery", title: "Product Managers Shouldn't Trust Feature Requests Alone", text: "A request is a useful starting point, not the whole problem. Understand the need behind it before committing to a solution.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-productdiscovery-userresearch-activity-7483500408246677504-iNQa" },
+  { topic: "UX & iGaming", group: "discovery", title: "Becoming the User: A UX Lesson in iGaming", text: "Promotions can grab attention, but too many interruptions get in the way of the task a user came to complete.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-igaming-userexperience-activity-7481301268641226753-etSu" },
+  { topic: "Team alignment", group: "delivery", title: "How to Use Meetings to Align and Decide", text: "Good meetings create shared understanding, clarify decisions and give the team a useful next step rather than more noise.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_planning-provides-the-direction-and-focus-activity-7376157467107393537-sG3N" },
+  { topic: "UX & empathy", group: "discovery", title: "Product Managers Create Products People Understand", text: "A payment can work as designed and still leave people uncertain. Clear feedback and thoughtful journeys matter as much as the transaction.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-usercentric-uiux-activity-7484933393252700160-dq-m" },
+  { topic: "Product strategy", group: "strategy", title: "Optimising vs Innovating: The PM's Dilemma", text: "Knowing when to improve what exists and when to explore something new is a product judgement call, not a default rule.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanagement-activity-7391033448427171840-kQuU" },
+  { topic: "Leadership", group: "leadership", title: "Surviving Chaos in Product Management with Purpose", text: "When priorities and opinions collide, listening carefully and bringing the conversation back to user value restores direction.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-usercentric-problemsolving-activity-7494005541279539200-DIe6" },
+  { topic: "Building products", group: "delivery", title: "Building the Siiqo Marketplace for Safe and Easy Commerce", text: "Marketplace thinking through trust, commerce and the decisions that help buyers and vendors transact with confidence.", href: "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_siiqo-ecommerce-marketplace-activity-7459969658050207744-LgKQ" },
 ];
 
 export const practice = [
