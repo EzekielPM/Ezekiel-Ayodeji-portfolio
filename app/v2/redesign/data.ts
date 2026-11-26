@@ -5,6 +5,10 @@ export const WHATSAPP = "https://wa.me/2349015934337";
 export const LINKEDIN = "https://www.linkedin.com/in/ayodeji-ezekiel-olusola/";
 export const YOUTUBE_CHANNEL = "https://www.youtube.com/@EraProductRoom";
 export const YOUTUBE_INTRO_ID = "epiyGrltK8Y";
+// Paste the Calendly event link here (e.g. https://calendly.com/name/30min) to embed booking in Contact.
+export const CALENDLY_URL = "";
+
+export const openRoles = ["Product Manager", "Product Operations", "Technical Product Manager", "Product Owner", "Scrum Master · Agile Delivery", "Technical Program Manager"];
 
 export type ProjectCategory = "live" | "role" | "independent";
 

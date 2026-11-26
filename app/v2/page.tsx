@@ -11,10 +11,11 @@ import RdValueRibbons from "./redesign/ValueRibbons";
 import RdFeaturedWork from "./redesign/FeaturedWork";
 import RdYouTube from "./redesign/YouTubeLite";
 import RdFooter from "./redesign/Footer";
+import RdLagosNow from "./redesign/LagosNow";
 import { CopyEmailButton, FloatingContact } from "./PortfolioControls";
 import {
   CONSTRUCTION_CV_URL, CV_URL, EMAIL, LINKEDIN, WHATSAPP, YOUTUBE_CHANNEL, YOUTUBE_INTRO_ID,
-  projects, slides,
+  projects, slides, openRoles, CALENDLY_URL,
 } from "./redesign/data";
 
 export default function PortfolioHome() {
@@ -46,9 +47,19 @@ export default function PortfolioHome() {
               <a className="rd-btn rd-btn-dark" href="#work">See my work <span aria-hidden="true">↓</span></a>
               <a className="rd-btn rd-btn-ghost" href={CV_URL} download>Download CV <span aria-hidden="true">↓</span></a>
             </div>
-            <p className="rd-hero-open" data-stars>Lagos, WAT (UTC+1). Open to Product Manager and Product Operations roles worldwide.</p>
+            <div className="rd-open" data-star-unit>
+              <p className="rd-open-pill">
+                <span className="rd-open-dot" aria-hidden="true" />
+                <b>Open to</b>
+                <span className="rd-open-roll" aria-hidden="true">
+                  <span>{[...openRoles, openRoles[0]].map((r, i) => <span key={i}>{r}</span>)}</span>
+                </span>
+                <span className="rd-sr">{openRoles.join(", ")} roles</span>
+              </p>
+              <p className="rd-open-where">Remote, hybrid, on-site or relocation, anywhere in the world.</p>
+            </div>
             <div className="rd-hero-tiles rd-hero-tiles-one" data-star-unit>
-              <a href="#watch" className="rd-tile rd-tile-violet"><small>Now streaming</small><strong>Product Room with ERA</strong></a>
+              <a href="#watch" className="rd-stream"><span className="rd-stream-play" aria-hidden="true">▶</span><small>Now streaming</small><strong>Product Room with ERA</strong></a>
             </div>
           </div>
         </section>
@@ -134,17 +145,30 @@ export default function PortfolioHome() {
 
         <section id="contact" className="rd-section rd-soft" aria-labelledby="contact-h">
           <div className="rd-wrap">
-            <div className="rd-cta" data-reveal>
-              <div>
-                <p className="rd-cta-kicker">Lagos, Nigeria · WAT (UTC+1) · Open to roles worldwide</p>
+            <div className="rd-contact" data-reveal>
+              <div className="rd-contact-left">
+                <p className="rd-cta-kicker">Contact · Open to roles worldwide</p>
                 <h2 id="contact-h">Need a product shipped, or a PRD like these?</h2>
-                <p>Full-time roles, contracts or a single delivery plan. Tell me what you&apos;re building.</p>
+                <p className="rd-contact-lead">Full-time roles, contracts or a single delivery plan. Book a 30-minute call, or reach me directly.</p>
+                <RdLagosNow />
+                <div className="rd-cta-actions contact-actions">
+                  <a className="rd-btn rd-btn-yellow" href={`mailto:${EMAIL}`}>Email me <span aria-hidden="true">→</span></a>
+                  <CopyEmailButton />
+                  <a className="contact-icon outline" href={WHATSAPP} target="_blank" rel="noreferrer"><span>WhatsApp</span></a>
+                  <a className="contact-icon outline" href={LINKEDIN} target="_blank" rel="noreferrer"><span>LinkedIn</span></a>
+                </div>
               </div>
-              <div className="rd-cta-actions contact-actions">
-                <a className="rd-btn rd-btn-yellow" href={`mailto:${EMAIL}`}>Email me <span aria-hidden="true">→</span></a>
-                <CopyEmailButton />
-                <a className="contact-icon outline" href={WHATSAPP} target="_blank" rel="noreferrer"><span>WhatsApp</span></a>
-                <a className="contact-icon outline" href={LINKEDIN} target="_blank" rel="noreferrer"><span>LinkedIn</span></a>
+              <div className="rd-contact-book">
+                {CALENDLY_URL ? (
+                  <iframe title="Book a 30-minute call" src={`${CALENDLY_URL}?hide_gdpr_banner=1&background_color=ffffff&primary_color=3d5a2e`} loading="lazy" />
+                ) : (
+                  <div className="rd-book-fallback">
+                    <p className="rd-cta-kicker">Book a call</p>
+                    <h3>30-minute intro call</h3>
+                    <p>Tell me a little about the role or the product, and a couple of times that suit you. I&apos;ll confirm by email.</p>
+                    <a className="rd-btn rd-btn-accent" href={`mailto:${EMAIL}?subject=${encodeURIComponent("30-minute intro call")}`}>Request a call <span aria-hidden="true">→</span></a>
+                  </div>
+                )}
               </div>
             </div>
           </div>
