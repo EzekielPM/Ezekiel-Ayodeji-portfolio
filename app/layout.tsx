@@ -8,16 +8,16 @@ const socialImage = `${siteUrl}/ezekiel-social-preview-20260916.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Olusola Ayodeji Ezekiel | Product Manager & Technical Product Delivery",
+  title: "Olusola Ayodeji Ezekiel | Product Manager · Fintech, iGaming, Commerce",
   description:
-    "Product Manager specialising in FinTech, digital payments, eCommerce and iGaming, combining product strategy, technical delivery and cross-functional leadership.",
+    "Lead Product Manager in Lagos. Fintech, iGaming and commerce products from discovery to delivery: Siiqo (500+ active vendors), BetBonanza and Canvoy, plus 18 PRDs, roadmaps and papers.",
   alternates: {
     canonical: siteUrl,
   },
   openGraph: {
-    title: "Olusola Ayodeji Ezekiel | Product Manager & Technical Product Delivery",
+    title: "Olusola Ayodeji Ezekiel | Product Manager · Fintech, iGaming, Commerce",
     description:
-      "Product strategy, technical delivery and cross-functional leadership across FinTech, digital payments, eCommerce and iGaming.",
+      "Lead PM at Siiqo. Fintech, iGaming and commerce products from discovery to delivery, with real results and 18 open product documents.",
     type: "website",
     url: siteUrl,
     siteName: "Olusola Ayodeji Ezekiel Portfolio",
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Olusola Ayodeji Ezekiel | Product Manager & Technical Product Delivery",
+    title: "Olusola Ayodeji Ezekiel | Product Manager · Fintech, iGaming, Commerce",
     description:
-      "Product strategy, technical delivery and cross-functional leadership across FinTech, digital payments, eCommerce and iGaming.",
+      "Lead PM at Siiqo. Fintech, iGaming and commerce products from discovery to delivery, with real results and 18 open product documents.",
     images: [socialImage],
   },
   icons: {

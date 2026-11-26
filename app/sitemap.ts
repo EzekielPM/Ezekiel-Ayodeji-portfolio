@@ -6,7 +6,7 @@ const siteUrl =
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
-    { path: "/v2", priority: 1.0 },
+    { path: "", priority: 1.0 },
     { path: "/rough-space", priority: 0.5 },
     { path: "/case-studies/siiqo", priority: 0.8 },
     { path: "/case-studies/canvoy", priority: 0.7 },
@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/about", priority: 0.7 },
     { path: "/work", priority: 0.8 },
     { path: "/case-studies/betbonanza", priority: 0.6 },
-    { path: "/v2/dm-confirmed-order", priority: 0.8 },
+    { path: "/case-studies/dm-confirmed-order", priority: 0.8 },
   ];
 
   return routes.map(({ path, priority }) => ({

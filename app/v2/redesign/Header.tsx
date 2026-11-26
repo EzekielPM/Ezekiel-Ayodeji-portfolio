@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { CV_URL } from "./data";
 
-type Props = { base?: string; current?: "about" };
+type Props = { base?: string; current?: "about" | "none" };
 
 export default function RdHeader({ base = "", current }: Props) {
   const [theme, setTheme] = useState<"light" | "navy">("light");

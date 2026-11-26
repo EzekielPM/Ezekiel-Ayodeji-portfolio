@@ -1577,3 +1577,7 @@ html[data-theme="navy"] #experience .experience-flip-front .experience-card-summ
 
 .all-project-card-07{--project-accent:#1d7a3e;--project-tint:#e6f4ea}
 html[data-theme="navy"] .all-project-card-07{--project-accent:#5be38b;--project-tint:#123321}
+
+/* Rough Space: readable intro and card titles */
+section.rough-space .section-heading>p{color:#c5d0cc}
+.rough-space .film-card .rough-card-heading h3,.rough-space .notebook-card .rough-card-heading h3{color:#121722}

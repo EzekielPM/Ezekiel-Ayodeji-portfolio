@@ -951,3 +951,13 @@ html[data-theme="navy"] .rd .rd-case-highlight-navy>div{border-left-color:#7C9BF
 .rd-case-flow li{counter-increment:f;display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:14px;font-weight:600}
 .rd-case-flow li::before{content:counter(f);display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--t-amber);color:var(--t-amber-ink);font-size:12px;font-weight:800}
 .rd-case-figure>img[src$=".svg"]{background:#fff;padding:12px}
+
+/* New header/footer on pages that keep their own body styles (Rough Space) */
+.rd.rd-chrome{min-height:0;background:transparent}
+.rd.rd-chrome-top{position:sticky;top:0;z-index:60}
+.rd.rd-chrome-top .rd-header{position:relative}
+.rd-404{min-height:70vh;display:grid;place-items:center;padding:64px 20px}
+.rd-404-card{max-width:560px;text-align:center;background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:48px 36px;box-shadow:var(--shadow)}
+.rd .rd-404-card h1{margin-top:10px;font-family:"Fraunces",Georgia,serif;font-weight:500;font-size:clamp(30px,5vw,42px);line-height:1.1;letter-spacing:-.01em}
+.rd-404-card>p:not(.rd-kicker){margin-top:12px!important;color:var(--muted)}
+.rd-404-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:26px}

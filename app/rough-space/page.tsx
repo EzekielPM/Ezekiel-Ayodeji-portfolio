@@ -1,6 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import "../v2/redesign/redesign.css";
+import RdHeader from "../v2/redesign/Header";
+import RdFooter from "../v2/redesign/Footer";
 
 const notes = [
   { src: "/rough-space/insurpe-exploration.jpg", alt: "Insurpe product flow exploration", title: "Insurpe exploration" },
@@ -30,15 +33,7 @@ export default function RoughSpacePage() {
 
   return (
     <main>
-      <header className="site-header">
-        <a className="brand" href="/v2">
-          <span>OLUSOLA AYODEJI EZEKIEL</span>
-          <small>Product Manager</small>
-        </a>
-        <nav className="site-nav">
-          <a className="nav-cta desktop-nav-link" href="/v2">Return to portfolio</a>
-        </nav>
-      </header>
+      <div className="rd rd-chrome rd-chrome-top"><RdHeader base="/" current="none" /></div>
 
       <section className="rough-space section" id="top">
         <div className="section-heading">
@@ -156,13 +151,7 @@ export default function RoughSpacePage() {
         </blockquote>
       </section>
 
-      <footer>
-        <div className="brand"><span>OLUSOLA AYODEJI EZEKIEL</span><small>Product Manager · Rough Space</small></div>
-        <div className="hero-actions">
-          <a className="button text" href="/v2">Return to portfolio <span>↖</span></a>
-          <a href="#top">Back to top ↑</a>
-        </div>
-      </footer>
+      <div className="rd rd-chrome"><RdFooter base="/" /></div>
 
       {zoom && (
         <div className="lightbox" role="dialog" aria-modal="true" aria-label="Expanded image" onClick={() => setZoom(null)}>
