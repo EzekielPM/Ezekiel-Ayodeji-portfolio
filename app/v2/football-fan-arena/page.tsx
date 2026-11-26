@@ -175,7 +175,7 @@ export default function FootballFanArenaCaseStudy() {
               <div>
                 <h3>Trust, safety and running cost</h3>
                 <p>
-                  A fan community lives or dies on how it handles rivalry. The design includes privacy and moderation controls for supporters and a dedicated moderation dashboard for administrators. Cost is a hard constraint too: the PRD keeps FFA on Firebase’s free Spark plan, with no paid services. Likes, reactions and reposts already run as atomic database transactions protected by security rules, which keeps counts accurate within that plan. Comment creation still relies on Cloud Functions, which need a paid plan, so moving comments to a free-plan approach is an open item.
+                  A fan community lives or dies on how it handles rivalry. The design includes privacy and moderation controls for supporters and a dedicated moderation dashboard for administrators. Cost is a hard constraint too: the PRD keeps FFA on Firebase’s free Spark plan, with no paid services. Likes, reactions, reposts and comments all run as atomic database transactions protected by security rules, which keeps counts accurate within that plan. Comments were the last piece to move: each comment and its count are now written together in one transaction, and the rules check the author, the length and the count change, so commenting no longer needs paid Cloud Functions.
                 </p>
               </div>
             </section>

@@ -73,7 +73,8 @@ export default function PortfolioHome() {
               </div>
               <dl className="rd-stats">
                 <div><dt>projects</dt><dd data-count="8">8</dd></div>
-                <div><dt>live apps</dt><dd data-count="4">4</dd></div>
+                <div><dt>live products</dt><dd data-count="3">3</dd></div>
+                <div><dt>working demo</dt><dd data-count="1">1</dd></div>
                 <div><dt>PRDs &amp; papers</dt><dd data-count="3">3</dd></div>
                 <div><dt>years in product</dt><dd data-count="5" data-suffix="+">5+</dd></div>
               </dl>

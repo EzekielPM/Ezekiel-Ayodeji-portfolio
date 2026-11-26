@@ -709,3 +709,4 @@ html[data-theme="navy"] .rd-st-green{--st-tint:#0F2A1C;--st-border:#1E4A30;--st-
   .rd-stage-seen strong{font-size:17px}
   .rd-stage-seen em{padding:8px 10px;font-size:13px}
 }
+.rd-stats{align-items:flex-start}.rd-stats>div{flex-direction:column;justify-content:flex-start}.rd-stats dd{order:-1}
