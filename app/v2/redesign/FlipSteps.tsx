@@ -25,21 +25,23 @@ export default function RdFlipSteps() {
           <li key={s.n} className="rd-step-item" data-reveal style={{ transitionDelay: `${i * 110}ms` }}>
             <div className={`rd-flip rd-tone-${s.tone}${isFlipped ? " is-flipped" : ""}`}>
               <div className="rd-flip-inner">
-                <button type="button" className="rd-flip-face rd-flip-front" onClick={() => toggle(s.n)} aria-expanded={isFlipped} aria-label={`${s.name}: ${s.front} Tap to read more.`} tabIndex={isFlipped ? -1 : 0}>
+                <div className="rd-flip-face rd-flip-front" aria-hidden={isFlipped}>
                   <span className="rd-step-n">{s.n}</span>
                   <strong>{s.name}</strong>
                   <span className="rd-step-what">{s.front}</span>
-                  <span className="rd-flip-btn" aria-hidden="true">Tap to read more <span>↻</span></span>
-                </button>
+                  <a href={s.href} className="rd-flip-job" target={external ? "_blank" : undefined} rel={external ? "noreferrer" : undefined} tabIndex={isFlipped ? -1 : 0}>
+                    <small>Seen at</small> {s.job} <span aria-hidden="true">{external ? "↗" : "→"}</span>
+                  </a>
+                  <button type="button" className="rd-flip-btn rd-flip-stretch" onClick={() => toggle(s.n)} aria-expanded={isFlipped} tabIndex={isFlipped ? -1 : 0}>
+                    Tap to read more <span aria-hidden="true">↻</span>
+                  </button>
+                </div>
                 <div className="rd-flip-face rd-flip-back" aria-hidden={!isFlipped} onClick={(e) => { if (!(e.target as HTMLElement).closest("a,button")) toggle(s.n); }}>
                   <span className="rd-flip-kicker">{s.name} · in practice</span>
                   <ul>
                     {s.points.map((p) => <li key={p}>{p}</li>)}
                   </ul>
                   <p className="rd-flip-outcome"><b>Outcome:</b> {s.outcome}</p>
-                  <a href={s.href} className="rd-flip-job" target={external ? "_blank" : undefined} rel={external ? "noreferrer" : undefined} tabIndex={isFlipped ? 0 : -1}>
-                    <small>Seen at</small> {s.job} <span aria-hidden="true">{external ? "↗" : "→"}</span>
-                  </a>
                   <button type="button" className="rd-flip-close" onClick={() => toggle(s.n)} tabIndex={isFlipped ? 0 : -1} aria-label={`Flip ${s.name} card back`}>
                     <span aria-hidden="true">↺</span>
                   </button>

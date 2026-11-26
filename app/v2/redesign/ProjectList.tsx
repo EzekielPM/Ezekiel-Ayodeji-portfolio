@@ -72,9 +72,6 @@ export default function RdProjectList({ projects }: { projects: Project[] }) {
                 </span>
                 <span className="rd-list-role">{p.role}</span>
                 <span className="rd-list-docs">
-                  {p.docs?.map((d) => (
-                    <a key={d.href} href={d.href} target="_blank" rel="noreferrer">{d.label} <span aria-hidden="true">↗</span></a>
-                  ))}
                   <span className="rd-list-arrow" aria-hidden="true">{external ? "↗" : "→"}</span>
                 </span>
               </div>

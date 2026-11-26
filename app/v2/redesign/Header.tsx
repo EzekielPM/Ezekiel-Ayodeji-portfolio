@@ -50,7 +50,7 @@ export default function RdHeader({ base = "", current }: Props) {
   };
 
   const links = [
-    { label: "Work", href: `${base}#work` },
+    { label: "Work", href: `${base}#work`, active: current === undefined },
     { label: "Documents", href: `${base}#documents` },
     { label: "Insights", href: `${base}#insights` },
     { label: "Watch", href: `${base}#watch` },

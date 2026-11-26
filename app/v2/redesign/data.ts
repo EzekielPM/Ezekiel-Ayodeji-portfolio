@@ -35,7 +35,6 @@ export const projects: Project[] = [
     role: "Product lead · Independent build",
     image: "/portfolio/full/ffa-live-feed-predictions.jpg",
     href: "/v2/football-fan-arena",
-    docs: [{ label: "PRD", href: "/documents/ffa-product-requirements.pdf" }],
     categories: ["live", "independent"],
   },
   {
@@ -48,7 +47,6 @@ export const projects: Project[] = [
     role: "Technical PM · Jan – May 2026",
     image: "/portfolio/full/wayagram-1.jpg",
     href: "/case-studies/wayagram",
-    docs: [{ label: "Architecture paper", href: "/documents/wayagram-product-architecture.pdf" }],
     categories: ["live", "role"],
   },
   {
@@ -61,7 +59,6 @@ export const projects: Project[] = [
     role: "Lead PM · Jan 2025 – Present",
     image: "/portfolio/full/siiqo%20tablet%20mobile%20showcase%20jpg.jpeg",
     href: "/case-studies/siiqo",
-    docs: [{ label: "PRD", href: "/documents/siiqo-product-requirements.pdf" }],
     categories: ["live", "role"],
   },
   {
@@ -115,12 +112,12 @@ export const projects: Project[] = [
   {
     slug: "betbonanza",
     name: "BetBonanza",
-    line: "Sportsbook user journeys, prioritisation and cross-functional delivery in a fast-paced iGaming product.",
+    line: "Sportsbook journeys and a 12 Days of December bonus calendar shaped by competitor analysis.",
     status: "Past role",
     tone: "past",
     evidence: "Role experience",
     role: "Associate PM · Jan 2021 – Mar 2022",
-    mono: { text: "BB", bg: "#14532D", ink: "#FACC15" },
+    image: "/portfolio/full/betbonanza-thumb.jpg",
     href: "/case-studies/betbonanza",
     categories: ["role"],
   },
@@ -290,7 +287,7 @@ export const releases = [
   { v: "v5.1", when: "Jan – May 2026 · Contract", title: "Technical Product Manager · Wayagram", note: "Supported production migration, regression testing, stand-ups, demos and module reporting across a connected social, marketplace and payments product.", tone: "orange" },
   { v: "v5.0", when: "Jan 2025 – Present", title: "Lead Product Manager · Scrum Master · Siiqo", note: "Leading product direction and sprint delivery across marketplace trust, protected payments, vendor tools, community features and prioritisation.", tone: "navy" },
   { v: "v4.0", when: "Jun 2022 – Dec 2024", title: "Lead Product Manager · Scrum Master · Canvoy Payment", note: "Shaped MVP scope, payment journeys, requirements and Jira delivery planning, while coordinating security and QA readiness.", tone: "teal" },
-  { v: "v3.0", when: "Jan 2021 – Mar 2022", title: "Associate Product Manager · BetBonanza (iGaming)", note: "Contributed to sportsbook user journeys, prioritisation and cross-functional delivery in a fast-paced iGaming environment.", tone: "violet" },
+  { v: "v3.0", when: "Jan 2021 – Mar 2022", title: "Associate Product Manager · BetBonanza (iGaming)", note: "Worked on sportsbook user journeys and prioritisation, and led the competitor analysis behind a 12 Days of December bonus calendar that drew new players and kept existing ones engaged.", tone: "violet" },
   { v: "v2.0", when: "10+ years", title: "Project leadership · Construction & infrastructure", note: "Led site and project delivery across residential, commercial and public-sector developments: risk, quality, dependencies and team coordination.", tone: "amber" },
   { v: "v1.0", when: "Training", title: "Product Management · Axia Africa School of Product", note: "Where the product practice took shape.", tone: "slate" },
 ];

@@ -4,6 +4,7 @@ import RdHeader from "./redesign/Header";
 import RdMotion from "./redesign/Motion";
 import RdIntro from "./redesign/Intro";
 import RdFlipSteps from "./redesign/FlipSteps";
+import RdHeroStars from "./redesign/HeroStars";
 import RdCarousel from "./redesign/Carousel";
 import RdProjectList from "./redesign/ProjectList";
 import RdYouTube from "./redesign/YouTubeLite";
@@ -18,28 +19,33 @@ export default function PortfolioHome() {
   return (
     <div className="rd" id="top">
       <RdIntro />
+      <RdHeroStars />
       <RdMotion />
       <RdHeader />
 
       <main>
         <section className="rd-hero rd-grid-bg" aria-labelledby="hero-h">
           <div className="rd-hero-card" data-reveal>
-            <p className="rd-sticky" aria-label="Current role">Currently: Lead PM &amp; Scrum Master at Siiqo</p>
-            <div className="rd-hero-hello">
+            <p className="rd-sticky" aria-label="Current role" data-star-unit>Currently: Lead PM &amp; Scrum Master at Siiqo</p>
+            <div className="rd-hero-hello" data-star-unit>
               <span className="rd-hero-avatar">
                 <Image src="/portfolio/bio-portrait.webp" alt="Portrait of Olusola Ayodeji Ezekiel" width={160} height={160} priority />
               </span>
               <span>Hi, I&apos;m <strong>Olusola Ayodeji Ezekiel</strong> <span className="rd-wave" aria-hidden="true">👋🏾</span></span>
             </div>
-            <p className="rd-kicker">Lagos · Fintech · iGaming · Commerce</p>
-            <h1 id="hero-h">Product manager.</h1>
-            <p className="rd-hero-sub">I take <span className="rd-hl-blue">fintech</span>, <span className="rd-hl-green">iGaming</span> and <span className="rd-hl-pink">commerce</span> products from discovery through delivery, and write about what I learn.</p>
-            <div className="rd-hero-actions">
+            <p className="rd-kicker" data-stars>Lagos · Fintech · iGaming · Commerce</p>
+            <h1 id="hero-h" data-stars>Product manager.</h1>
+            <p className="rd-hero-sub" data-stars>I take{" "}
+              <span className="rd-hl rd-hl-blue" data-star-unit><svg className="rd-hl-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5" /><path d="M2.5 10h19M6.5 15h4" /></svg>fintech</span>,{" "}
+              <span className="rd-hl rd-hl-green" data-star-unit><svg className="rd-hl-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="3.5" /><circle cx="8.5" cy="8.5" r="1.2" fill="currentColor" /><circle cx="15.5" cy="15.5" r="1.2" fill="currentColor" /><circle cx="15.5" cy="8.5" r="1.2" fill="currentColor" /><circle cx="8.5" cy="15.5" r="1.2" fill="currentColor" /><circle cx="12" cy="12" r="1.2" fill="currentColor" /></svg>iGaming</span> and{" "}
+              <span className="rd-hl rd-hl-pink" data-star-unit><svg className="rd-hl-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.5a1.5 1.5 0 0 1-1.5 1.5H7.7a1.5 1.5 0 0 1-1.5-1.5z" /><path d="M9 8V6.5a3 3 0 0 1 6 0V8" /></svg>commerce</span>{" "}
+              products from discovery through delivery, and write about what I learn.</p>
+            <div className="rd-hero-actions" data-star-unit>
               <a className="rd-btn rd-btn-dark" href="#work">See my work <span aria-hidden="true">↓</span></a>
               <a className="rd-btn rd-btn-ghost" href={CV_URL} download>Download CV <span aria-hidden="true">↓</span></a>
             </div>
-            <p className="rd-hero-open">Open to remote Product Manager and Product Operations roles.</p>
-            <div className="rd-hero-tiles">
+            <p className="rd-hero-open" data-stars>Open to remote Product Manager and Product Operations roles.</p>
+            <div className="rd-hero-tiles" data-star-unit>
               <a href="/case-studies/siiqo" className="rd-tile rd-tile-green"><small>Now shipping</small><strong>Siiqo · Live marketplace</strong></a>
               <a href="/v2/football-fan-arena" className="rd-tile rd-tile-amber"><small>Latest build</small><strong>Football Fan Arena · MVP</strong></a>
               <a href="#watch" className="rd-tile rd-tile-violet"><small>Now streaming</small><strong>Product Room with ERA</strong></a>
