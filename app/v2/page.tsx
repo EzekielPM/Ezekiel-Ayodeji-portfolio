@@ -85,7 +85,7 @@ export default function PortfolioHome() {
 
         <section className="rd-section rd-soft rd-section-tight" aria-labelledby="list-h">
           <div className="rd-wrap">
-            <RdProjectList projects={projects} />
+            <RdProjectList projects={projects} limit={2} />
           </div>
         </section>
 

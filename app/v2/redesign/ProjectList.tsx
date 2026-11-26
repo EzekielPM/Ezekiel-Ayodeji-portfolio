@@ -29,15 +29,18 @@ function Card({ p, i }: { p: Project; i: number }) {
   );
 }
 
-export default function RdProjectList({ projects }: { projects: Project[] }) {
-  const roles = projects.filter((p) => p.categories.includes("role"));
-  const builds = projects.filter((p) => !p.categories.includes("role"));
+export default function RdProjectList({ projects, limit, headingLevel = "h2" }: { projects: Project[]; limit?: number; headingLevel?: "h1" | "h2" }) {
+  const allRoles = projects.filter((p) => p.categories.includes("role"));
+  const allBuilds = projects.filter((p) => !p.categories.includes("role"));
+  const roles = limit ? allRoles.slice(0, limit) : allRoles;
+  const builds = limit ? allBuilds.slice(0, limit) : allBuilds;
+  const Heading = headingLevel;
 
   return (
     <div className="rd-list-wrap">
       <div className="rd-list-head" data-reveal>
         <div>
-          <h2 id="list-h">Jobs and builds</h2>
+          <Heading id="list-h" className="rd-list-title">Jobs and builds</Heading>
           <p className="rd-list-intro">Left: roles I held at companies. Right: products I built or studied on my own. Every card says how far it got.</p>
         </div>
       </div>
@@ -48,14 +51,20 @@ export default function RdProjectList({ projects }: { projects: Project[] }) {
       </ul>
       <div className="rd-tracks">
         <section className="rd-track" aria-labelledby="track-roles">
-          <div className="rd-track-head" data-reveal><h3 id="track-roles">Roles I held</h3><span>{roles.length} companies, newest first</span></div>
+          <div className="rd-track-head" data-reveal><h3 id="track-roles">Roles I held</h3><span>{limit ? `Latest ${roles.length} of ${allRoles.length}` : `${allRoles.length} companies, newest first`}</span></div>
           <ul>{roles.map((p, i) => <Card key={p.slug} p={p} i={i} />)}</ul>
         </section>
         <section className="rd-track" aria-labelledby="track-builds">
-          <div className="rd-track-head" data-reveal><h3 id="track-builds">Things I built</h3><span>{builds.length} independent, newest first</span></div>
+          <div className="rd-track-head" data-reveal><h3 id="track-builds">Things I built</h3><span>{limit ? `Latest ${builds.length} of ${allBuilds.length}` : `${allBuilds.length} independent, newest first`}</span></div>
           <ul>{builds.map((p, i) => <Card key={p.slug} p={p} i={i} />)}</ul>
         </section>
       </div>
+      {limit && (
+        <div className="rd-see-all" data-reveal>
+          <a className="rd-btn rd-btn-dark" href="/work">See all {projects.length} projects <span aria-hidden="true">→</span></a>
+          <span>Including Canvoy, BetBonanza, Kuda 3.0 and DM to Confirmed Order.</span>
+        </div>
+      )}
     </div>
   );
 }
