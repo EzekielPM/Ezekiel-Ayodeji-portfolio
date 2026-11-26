@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { CALL_DAYS_AHEAD, CALL_HOURS, CALL_MIN_NOTICE_HOURS, EMAIL, WEB3FORMS_KEY } from "./data";
 
-const TOPICS = ["Full-time role", "Contract", "Product advice", "Something else"];
+const TOPICS = ["Full-time role", "Contract", "Collaboration", "Product advice", "Something else"];
 const MAX = 500;
 const DOW = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"];
 
