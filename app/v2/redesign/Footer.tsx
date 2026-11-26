@@ -5,7 +5,7 @@ export default function RdFooter({ base = "" }: { base?: string }) {
     <footer className="rd-footer">
       <div className="rd-wrap rd-footer-grid">
         <div>
-          <p className="rd-footer-name"><span className="rd-brand-mark" aria-hidden="true" />Olusola Ayodeji Ezekiel</p>
+          <p className="rd-footer-name"><span className="rd-monogram" aria-hidden="true">OE</span>Olusola Ayodeji Ezekiel</p>
           <p className="rd-footer-tag">Product Manager · Fintech, iGaming and commerce · Lagos</p>
         </div>
         <nav aria-label="Explore">

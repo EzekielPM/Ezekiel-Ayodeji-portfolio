@@ -25,15 +25,15 @@ export default function AboutPage() {
               <Image src="/portfolio/bio-portrait.webp" alt="Portrait of Olusola Ayodeji Ezekiel" width={240} height={240} priority />
             </span>
             <div>
-              <h1>Hey, I&apos;m Ezekiel <span className="rd-wave" aria-hidden="true">👋🏾</span></h1>
+              <h1>Hey, I&apos;m <em>Ezekiel</em>.</h1>
               <p className="rd-about-role">Product Manager · Fintech · iGaming · Commerce · Lagos</p>
             </div>
           </div>
           <p className="rd-about-lead">I turn complex product problems into clear decisions and dependable delivery. I work across product strategy, discovery and technical delivery, helping teams move from unclear problems to products people can actually use.</p>
           <p>Right now I&apos;m Lead Product Manager and Scrum Master at <strong>Siiqo</strong>, a trust-led marketplace. Before that I worked on payments at Canvoy and sportsbook journeys at BetBonanza, and I spent more than a decade leading construction and infrastructure projects. That background still shapes how I manage risk, dependencies, quality and teams.</p>
           <div className="rd-about-duo">
-            <div><strong>The product manager</strong><span>Discovery, PRDs, priorities and releases across fintech, iGaming and commerce.</span></div>
-            <div><strong>The builder</strong><span>Independent apps, teardowns and a YouTube show, Product Room with ERA.</span></div>
+            <div className="rd-duo-dark"><small>At work</small><strong>The product manager</strong><span>Discovery, PRDs, priorities and releases across fintech, iGaming and commerce.</span></div>
+            <div className="rd-duo-green"><small>After hours</small><strong>The builder</strong><span>Independent apps, teardowns and a YouTube show, Product Room with ERA.</span></div>
           </div>
         </section>
 
@@ -41,8 +41,8 @@ export default function AboutPage() {
           <h2 id="how-h" data-reveal>How I work</h2>
           <div className="rd-practice">
             {practice.map((p, i) => (
-              <article key={p.n} className="rd-practice-card" data-reveal data-tilt style={{ transitionDelay: `${i * 90}ms` }}>
-                <span className="rd-practice-n">{p.n}</span>
+              <article key={p.n} className={`rd-practice-card rd-pc-${i}`} data-reveal data-tilt style={{ transitionDelay: `${i * 90}ms` }}>
+                <span className="rd-practice-n">Step {p.n}</span>
                 <h3>{p.title}</h3>
                 <p className="rd-practice-statement">{p.statement}</p>
                 <p>{p.detail}</p>

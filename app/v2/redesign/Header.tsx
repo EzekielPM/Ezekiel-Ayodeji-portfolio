@@ -63,7 +63,7 @@ export default function RdHeader({ base = "", current }: Props) {
     <header className={`rd-header${scrolled ? " is-scrolled" : ""}`}>
       <div className="rd-header-inner">
         <a className="rd-brand" href={base || "#top"}>
-          <span className="rd-brand-mark" aria-hidden="true" />
+          <span className="rd-monogram" aria-hidden="true">OE</span>
           <span className="rd-brand-name">Olusola Ayodeji Ezekiel</span>
         </a>
         <nav className="rd-pills" aria-label="Main">

@@ -1,17 +1,5 @@
-"use client";
-
 import Image from "next/image";
-import { useState } from "react";
-import type { Project, ProjectCategory } from "./data";
-
-type Filter = "all" | ProjectCategory;
-
-const filters: { id: Filter; label: string }[] = [
-  { id: "all", label: "All" },
-  { id: "live", label: "Live" },
-  { id: "role", label: "Roles" },
-  { id: "independent", label: "Independent" },
-];
+import type { Project } from "./data";
 
 const legend = [
   { tone: "live", label: "Live product", note: "Shipped and in use" },
@@ -22,28 +10,35 @@ const legend = [
   { tone: "past", label: "Past role", note: "Earlier job" },
 ];
 
+function Card({ p, i }: { p: Project; i: number }) {
+  const external = p.href.startsWith("http");
+  return (
+    <li className="rd-track-item" data-reveal style={{ transitionDelay: `${i * 80}ms` }}>
+      <a className="rd-track-card" href={p.href} target={external ? "_blank" : undefined} rel={external ? "noreferrer" : undefined}>
+        <span className="rd-track-media">
+          {p.image ? <Image src={p.image} alt="" fill sizes="(max-width: 860px) 92vw, 540px" /> : null}
+          <span className={`rd-chip rd-chip-${p.tone}`}>{p.status}</span>
+        </span>
+        <span className="rd-track-body">
+          <strong>{p.name} <span aria-hidden="true">{external ? "↗" : "→"}</span></strong>
+          <span className="rd-track-line">{p.line}</span>
+          <span className="rd-track-meta">{p.role}<em>{p.evidence}</em></span>
+        </span>
+      </a>
+    </li>
+  );
+}
+
 export default function RdProjectList({ projects }: { projects: Project[] }) {
-  const [filter, setFilter] = useState<Filter>("all");
-  const [version, setVersion] = useState(0);
-  const count = (f: Filter) => (f === "all" ? projects.length : projects.filter((p) => p.categories.includes(f)).length);
-  const shown = projects.filter((p) => filter === "all" || p.categories.includes(filter));
+  const roles = projects.filter((p) => p.categories.includes("role"));
+  const builds = projects.filter((p) => !p.categories.includes("role"));
 
   return (
     <div className="rd-list-wrap">
       <div className="rd-list-head" data-reveal>
-        <h2 id="list-h">Everything, newest first</h2>
-        <div className="rd-filters" role="group" aria-label="Filter projects">
-          {filters.map((f) => (
-            <button
-              key={f.id}
-              type="button"
-              aria-pressed={filter === f.id}
-              className={filter === f.id ? "is-active" : undefined}
-              onClick={() => { setFilter(f.id); setVersion((v) => v + 1); }}
-            >
-              {f.label} <span>{count(f.id)}</span>
-            </button>
-          ))}
+        <div>
+          <h2 id="list-h">Jobs and builds</h2>
+          <p className="rd-list-intro">Left: roles I held at companies. Right: products I built or studied on my own. Every card says how far it got.</p>
         </div>
       </div>
       <ul className="rd-legend" aria-label="What each status means" data-reveal>
@@ -51,34 +46,16 @@ export default function RdProjectList({ projects }: { projects: Project[] }) {
           <li key={l.tone}><span className={`rd-chip rd-chip-${l.tone}`}>{l.label}</span>{l.note}</li>
         ))}
       </ul>
-      <ul className="rd-list" key={version} aria-live="polite">
-        {shown.map((p, i) => {
-          const external = p.href.startsWith("http");
-          return (
-            <li key={p.slug} style={{ animationDelay: `${i * 55}ms` }}>
-              <div className="rd-list-row">
-                <span className="rd-list-thumb" aria-hidden="true">
-                  {p.image
-                    ? <Image src={p.image} alt="" fill sizes="140px" />
-                    : <span className="rd-list-mono" style={{ background: p.mono?.bg, color: p.mono?.ink }}>{p.mono?.text}</span>}
-                </span>
-                <span className="rd-list-main">
-                  <a className="rd-list-link" href={p.href} target={external ? "_blank" : undefined} rel={external ? "noreferrer" : undefined}>{p.name}</a>
-                  <span>{p.line}</span>
-                </span>
-                <span className="rd-list-status">
-                  <span className={`rd-chip rd-chip-${p.tone}`}>{p.status}</span>
-                  <small>{p.evidence}</small>
-                </span>
-                <span className="rd-list-role">{p.role}</span>
-                <span className="rd-list-docs">
-                  <span className="rd-list-arrow" aria-hidden="true">{external ? "↗" : "→"}</span>
-                </span>
-              </div>
-            </li>
-          );
-        })}
-      </ul>
+      <div className="rd-tracks">
+        <section className="rd-track" aria-labelledby="track-roles">
+          <div className="rd-track-head" data-reveal><h3 id="track-roles">Roles I held</h3><span>{roles.length} companies, newest first</span></div>
+          <ul>{roles.map((p, i) => <Card key={p.slug} p={p} i={i} />)}</ul>
+        </section>
+        <section className="rd-track" aria-labelledby="track-builds">
+          <div className="rd-track-head" data-reveal><h3 id="track-builds">Things I built</h3><span>{builds.length} independent, newest first</span></div>
+          <ul>{builds.map((p, i) => <Card key={p.slug} p={p} i={i} />)}</ul>
+        </section>
+      </div>
     </div>
   );
 }
