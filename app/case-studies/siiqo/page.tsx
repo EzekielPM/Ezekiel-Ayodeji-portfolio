@@ -1,125 +1,141 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import "../../v2/redesign/redesign.css";
+import RdHeader from "../../v2/redesign/Header";
+import RdMotion from "../../v2/redesign/Motion";
+import RdFooter from "../../v2/redesign/Footer";
+import { FloatingContact } from "../../v2/PortfolioControls";
 
 export const metadata: Metadata = {
-  title: "Siiqo Marketplace Case Study | Olusola Ayodeji Ezekiel",
-  description:
-    "A marketplace product management case study covering buyer trust, protected payments, seller tools, community and product prioritisation.",
+  title: "Siiqo case study | Olusola Ayodeji Ezekiel",
+  description: "Lead Product Manager and Scrum Master at Siiqo, a trust-led marketplace for Nigerian buyers and vendors: 500+ active vendors and sign-ups up to 35% in the first three months.",
   alternates: { canonical: "/case-studies/siiqo" },
-  openGraph: {
-    title: "Siiqo Marketplace Case Study | Olusola Ayodeji Ezekiel",
-    description:
-      "How product decisions around marketplace trust, protected transactions and seller support shaped the Siiqo experience.",
-    type: "article",
-    url: "/case-studies/siiqo",
-  },
 };
+
+const gallery = [
+  { src: "/portfolio/full/siiqo-1.jpg", label: "Marketplace home" },
+  { src: "/portfolio/full/siiqo-2.jpg", label: "Product experience" },
+  { src: "/portfolio/full/siiqo-3.jpg", label: "Marketplace journey" },
+  { src: "/portfolio/full/siiqo-4.jpg", label: "Seller and buyer flow" },
+  { src: "/portfolio/full/siiqo-5.jpg", label: "Product detail" },
+];
 
 export default function SiiqoCaseStudy() {
   return (
-    <main>
-      <header className="site-header">
-        <a className="brand" href="/v2">
-          <span>OLUSOLA AYODEJI EZEKIEL</span>
-          <small>Product Manager</small>
-        </a>
-        <nav className="site-nav">
-          <a className="nav-cta desktop-nav-link" href="/v2#products">Return to portfolio</a>
-        </nav>
-      </header>
+    <div className="rd" id="top">
+      <RdMotion />
+      <RdHeader base="/" />
+      <main className="rd-case">
+        <a className="rd-case-back" href="/#work">← Back to my work</a>
 
-      <section className="section" id="top">
-        <div className="section-heading">
+        <header className="rd-case-hero" data-reveal>
+          <p className="rd-case-kicker">Case study · Marketplace · Commerce</p>
+          <h1>Siiqo: building trust into a marketplace</h1>
+          <p className="rd-case-lead">I lead product at Siiqo, a marketplace where Nigerian buyers, vendors and service providers trade with less risk. We put trust first, before features, and the marketplace grew to more than 500 active vendors.</p>
+          <dl className="rd-case-facts">
+            <div><dt>Role</dt><dd>Lead PM · Scrum Master</dd></div>
+            <div><dt>Dates</dt><dd>Jan 2025 – Present</dd></div>
+            <div><dt>Domain</dt><dd>Marketplace · Payments</dd></div>
+            <div><dt>Status</dt><dd><span className="rd-chip rd-chip-live">Live product</span></dd></div>
+          </dl>
+        </header>
+
+        <figure className="rd-case-figure" data-reveal>
+          <Image src="/portfolio/full/siiqo%20tablet%20mobile%20showcase%20jpg.jpeg" alt="Siiqo marketplace on a tablet and a phone" width={1600} height={1000} sizes="(max-width: 900px) 100vw, 860px" priority />
+          <figcaption>Siiqo on tablet and mobile: verified stores up front, protected payment on every order.</figcaption>
+        </figure>
+
+        <section className="rd-case-block" data-reveal>
+          <span className="rd-case-n">01</span>
           <div>
-            <p className="section-kicker">Featured product case study</p>
-            <h2>Siiqo Marketplace</h2>
+            <h2>The problem</h2>
+            <p>Buying from a stranger online in Nigeria carries real risk. Buyers need to know a seller is genuine, that the product matches the listing and that their money is safe if something goes wrong. Sellers need visibility, simple storefront tools and a reliable way to manage orders.</p>
+            <p>Siiqo had to work for both sides without weakening buyer protection.</p>
           </div>
-          <p>
-            A live multi-sided marketplace case covering trust, protected payments, seller tools, community, delivery structure and the product decisions behind the experience.
-          </p>
+        </section>
+
+        <section className="rd-case-block" data-reveal>
+          <span className="rd-case-n">02</span>
+          <div>
+            <h2>What I own</h2>
+            <ul>
+              <li>Product direction: what to build first and why.</li>
+              <li>Discovery and journeys for buyers, vendors and service providers.</li>
+              <li>PRDs, user stories and acceptance criteria the team builds from.</li>
+              <li>Sprint planning, stand-ups and reviews as Scrum Master, across design, engineering and QA.</li>
+            </ul>
+            <a className="rd-text-link" href="/documents/siiqo-product-requirements.pdf" target="_blank" rel="noreferrer">Read the Siiqo PRD (8 pages) ↗</a>
+          </div>
+        </section>
+
+        <section className="rd-case-block rd-case-highlight rd-case-highlight-navy" data-reveal>
+          <span className="rd-case-n">03</span>
+          <div>
+            <h2>The key decision: trust before breadth</h2>
+            <p>We could have launched with community, referrals and rewards. But those features matter less if a buyer can&apos;t trust the seller or doesn&apos;t know what happens after paying.</p>
+            <h3>What we built first</h3>
+            <ul>
+              <li><b>Verified sellers</b>, so buyers can judge credibility before they pay.</li>
+              <li><b>Escrow and pay-on-delivery</b>, so money moves only when the order is right.</li>
+              <li><b>Clear dispute paths</b>, so both sides know what happens when something goes wrong.</li>
+            </ul>
+            <p>Vendor storefronts, listings, order management, chat, community, referrals and rewards were then built around that core.</p>
+          </div>
+        </section>
+
+        <section className="rd-case-block" data-reveal>
+          <span className="rd-case-n">04</span>
+          <div>
+            <h2>How we deliver</h2>
+            <p>I break the work into modules the team can test on their own, each with a clear sprint goal and acceptance criteria. Feedback from vendors and buyers decides what we fix or improve next, and regular product reviews and QA keep the marketplace, community and payment journeys consistent.</p>
+          </div>
+        </section>
+
+        <section className="rd-case-block" data-reveal>
+          <span className="rd-case-n">05</span>
+          <div>
+            <h2>Results so far</h2>
+            <dl className="rd-case-results rd-case-results-2">
+              <div><dt>Active vendors</dt><dd>500+</dd><span>selling on the marketplace</span></div>
+              <div><dt>Sign-ups</dt><dd>up to 35%</dd><span>more in the first three months live</span></div>
+            </dl>
+            <p style={{ marginTop: 16 }}>What I track next: checkout completion, dispute rate and resolution time, repeat purchases and active-vendor retention.</p>
+          </div>
+        </section>
+
+        <section className="rd-case-block" data-reveal>
+          <span className="rd-case-n">06</span>
+          <div>
+            <h2>What it taught me</h2>
+            <ul>
+              <li>Marketplace growth isn&apos;t only about adding inventory. It depends on credibility and safe transactions.</li>
+              <li>Sequencing is a product decision: reduce uncertainty in the transaction before adding reasons to return.</li>
+              <li>Trust has to be visible in the interface, not just written in the terms.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section className="rd-case-gallery" data-reveal aria-label="Siiqo screens">
+          {gallery.map((g) => (
+            <a key={g.src} href={g.src} target="_blank" rel="noreferrer">
+              <Image src={g.src} alt={`Siiqo: ${g.label}`} width={800} height={600} sizes="(max-width: 720px) 70vw, 280px" />
+              <span>{g.label}</span>
+            </a>
+          ))}
+        </section>
+
+        <div className="rd-case-actions" data-reveal>
+          <a className="rd-btn rd-btn-accent" href="https://siiqo.com" target="_blank" rel="noreferrer">Visit siiqo.com <span aria-hidden="true">↗</span></a>
+          <a className="rd-btn rd-btn-ghost" href="/documents/siiqo-product-requirements.pdf" target="_blank" rel="noreferrer">Siiqo PRD <span aria-hidden="true">↗</span></a>
         </div>
 
-        <article className="journal">
-          <header className="journal-header">
-            <p>Marketplace · Lead Product Manager · Scrum Master</p>
-            <span>01</span>
-            <h2>Siiqo</h2>
-            <p className="journal-deck">
-              I worked on Siiqo as a marketplace where trust needed to be designed into the core journey, not added as a supporting feature. My focus was connecting buyer protection, seller tools and payments while keeping the wider community experience aligned with the marketplace’s purpose.
-            </p>
-          </header>
-
-          <section className="siiqo-overview" aria-label="Siiqo project overview">
-            <div className="siiqo-overview-heading">
-              <p className="section-kicker">Project overview</p>
-              <p>A quick view of the challenge, my contribution, the key product decisions and the evidence available.</p>
-            </div>
-            <div className="siiqo-overview-grid">
-              <article><span>01 · CHALLENGE</span><h3>Build buyer trust</h3><p>Help buyers assess seller credibility, pay with confidence and understand what happens if an order goes wrong.</p></article>
-              <article><span>02 · MY ROLE</span><h3>Product leadership</h3><p>Lead Product Manager and Scrum Master, connecting discovery, requirements, backlog priorities and sprint execution.</p></article>
-              <article><span>03 · KEY DECISIONS</span><h3>Trust before breadth</h3><p>Prioritise seller verification, protected transactions, order handling and dispute paths before expanding engagement features.</p></article>
-              <article><span>04 · RESULTS</span><h3>500+ active vendors</h3><p>Over 500 active vendors on the marketplace, and sign-ups up to 35% in the first three months after going live.</p></article>
-            </div>
-          </section>
-
-          <div className="media-rail screenshots" aria-label="Siiqo product gallery">
-            <a className="media-frame" href="/portfolio/full/siiqo-1.jpg" target="_blank" rel="noreferrer"><img src="/portfolio/full/siiqo-1.jpg" alt="Siiqo marketplace visual 1" /><span>Marketplace experience</span></a>
-            <a className="media-frame" href="/portfolio/full/siiqo-2.jpg" target="_blank" rel="noreferrer"><img src="/portfolio/full/siiqo-2.jpg" alt="Siiqo marketplace visual 2" /><span>Product experience</span></a>
-            <a className="media-frame" href="/portfolio/full/siiqo-3.jpg" target="_blank" rel="noreferrer"><img src="/portfolio/full/siiqo-3.jpg" alt="Siiqo marketplace visual 3" /><span>Marketplace journey</span></a>
-            <a className="media-frame" href="/portfolio/full/siiqo-4.jpg" target="_blank" rel="noreferrer"><img src="/portfolio/full/siiqo-4.jpg" alt="Siiqo marketplace visual 4" /><span>Seller and buyer flow</span></a>
-            <a className="media-frame" href="/portfolio/full/siiqo-5.jpg" target="_blank" rel="noreferrer"><img src="/portfolio/full/siiqo-5.jpg" alt="Siiqo marketplace visual 5" /><span>Product detail</span></a>
-          </div>
-
-          <div className="hero-actions" style={{ marginTop: "1.25rem" }}><a className="case-button" href="https://siiqo.com" target="_blank" rel="noreferrer">Visit Siiqo live <span>↗</span></a></div>
-
-          <div className="feature-tags" aria-label="Siiqo product areas">
-            <span>Escrow payments</span><span>Vendor storefronts</span><span>Community</span><span>E-bidding</span><span>Disputes</span><span>Rewards</span>
-          </div>
-
-          <section className="resource-panel">
-            <p>Supporting product work</p>
-            <div>
-              <a href="/documents/siiqo-product-requirements.pdf" target="_blank" rel="noreferrer">
-                <span>
-                  <strong>Siiqo Product Requirements Document</strong>
-                  <small>Problem, goals and KPIs, personas and journeys, functional requirements, integrations, system architecture, make-vs-buy decisions and compliance readiness.</small>
-                </span>
-                <b>View PDF ↗</b>
-              </a>
-            </div>
-          </section>
-
-          <div className="journal-body">
-            <section><span>01</span><div><h3>Where Siiqo started</h3><p>I saw Siiqo as more than a marketplace listing products. The bigger opportunity was to build a dependable commerce environment where buyers could discover products and services, judge whether a seller was credible, pay with confidence and still feel protected after payment.</p></div></section>
-            <section><span>02</span><div><h3>The trust problem we had to solve</h3><p>Trust was the hard part. Buyers needed confidence that sellers were genuine, products matched expectations and payments would not leave them exposed. Sellers, meanwhile, needed visibility, practical storefront tools and a reliable way to manage orders. The product had to support both sides without weakening buyer protection.</p></div></section>
-            <section><span>03</span><div><h3>What I owned</h3><p>As Lead Product Manager and Scrum Master, I connected product direction to execution. I led discovery and journey definition, translated requirements into PRDs and user stories, set acceptance criteria, prioritised the backlog and coordinated sprint planning across design, engineering and QA. My contribution was not only defining what to build, but making the work clear enough for the team to deliver and validate.</p></div></section>
-            <section><span>04</span><div><h3>How I shaped the product</h3><p>I centred the experience on trust first: verified sellers, escrow-secured orders and clear dispute paths. Around that foundation, we built vendor storefronts, product and service listings, order management, community content, referrals, rewards and chat. Each feature had to strengthen the marketplace rather than simply add more functionality.</p></div></section>
-            <section><span>05</span><div><h3>How we delivered it</h3><p>I broke the work into connected but independently testable modules, with clear sprint goals and acceptance criteria to reduce ambiguity. Feedback from vendors and buyers informed iteration, while regular product reviews and QA helped protect consistency across marketplace, community and payment journeys.</p></div></section>
-            <section><span>06</span><div><h3>Trade-offs and prioritisation</h3><p>The key trade-off was breadth versus confidence. The product could add community, referrals and rewards, but those features would matter less if buyers could not trust the seller or understand what happened after payment. I therefore prioritised seller credibility, protected transactions, order handling and dispute paths as the foundation, with engagement features built around that core. This was a sequencing decision: reduce uncertainty in the transaction journey before expanding the reasons to return.</p></div></section>
-            <section><span>07</span><div><h3>What the numbers show</h3><p>Two early signals say the trust-first approach landed. More than 500 vendors are active on the marketplace, and sign-ups grew by up to 35% in the first three months after going live.</p><p>What I track next: checkout completion, dispute rate and resolution time, repeat purchases and active-vendor retention.</p></div></section>
-            <section><span>08</span><div><h3>What the project taught me</h3><p>Siiqo progressed into a live multi-sided marketplace with a clear trust proposition. The project reinforced something I carry into other product work: marketplace growth is not only about adding inventory. It depends on credibility, safe transactions, seller support and an experience that makes those values visible to users.</p></div></section>
-            <section><span>09</span><div><h3>Evidence of delivery and impact</h3><p>The evidence available for review includes the marketplace experience shown in the product gallery, the linked Siiqo Product Requirements Document, and the product scope described above: seller verification, escrow-oriented transactions, vendor storefronts, order handling and dispute paths. Together, these demonstrate the product direction and the work translated into a coherent marketplace experience. The early results back this up: 500+ active vendors and sign-ups up to 35% in the first three months live.</p><p><strong>Evidence to review:</strong> live product, screenshots and the PRD. <strong>Next measures:</strong> checkout completion, dispute rate and resolution time, repeat purchase rate and active-vendor retention.</p></div></section>
-          </div>
-
-          <nav className="case-study-next" aria-label="Explore other case studies">
-            <span>Explore another case study</span>
-            <a href="/case-studies/canvoy">Canvoy Payment <b>↗</b></a>
-            <a href="/case-studies/wayagram">Wayagram <b>↗</b></a>
-          </nav>
-          <footer className="journal-footer">
-            <p>Olusola Ayodeji Ezekiel · Product case study</p>
-            <div className="hero-actions">
-              <a className="button text" href="/v2#products">Return to portfolio <span>↖</span></a>
-              <a className="case-button" href="/documents/siiqo-product-requirements.pdf" target="_blank" rel="noreferrer">Open PRD <span>↗</span></a>
-              <a className="case-contact-link" href="/v2#contact">Let’s talk about product <span>↗</span></a>
-            </div>
-          </footer>
-        </article>
-      </section>
-
-      <footer>
-        <div className="brand"><span>OLUSOLA AYODEJI EZEKIEL</span><small>Product Manager · Technical Product Delivery</small></div>
-        <a href="/v2#products">Return to portfolio ↑</a>
-      </footer>
-    </main>
+        <nav className="rd-case-next" aria-label="Next case study" data-reveal>
+          <span>Next in my work</span>
+          <a href="/v2/football-fan-arena">Football Fan Arena: a home for football supporters →</a>
+        </nav>
+      </main>
+      <RdFooter base="/" />
+      <FloatingContact />
+    </div>
   );
 }

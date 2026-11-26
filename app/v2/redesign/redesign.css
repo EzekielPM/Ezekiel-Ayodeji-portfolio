@@ -921,3 +921,15 @@ html[data-theme="navy"] .rd .rd-folder{--folder:#13241A;--folder-edge:#223A2A}
 
 /* Hero: a single tile (the show), centred */
 .rd-hero-tiles.rd-hero-tiles-one{grid-template-columns:minmax(0,340px);justify-content:center}
+
+/* Case study extras: navy highlight, 2-up results, gallery, actions */
+.rd-case-highlight-navy>div{border-left-color:#1E3A8A}
+html[data-theme="navy"] .rd .rd-case-highlight-navy>div{border-left-color:#7C9BFF}
+.rd-case-results.rd-case-results-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.rd-case-gallery{display:flex;gap:14px;overflow-x:auto;padding:4px 2px 12px;scroll-snap-type:x mandatory;scrollbar-width:thin}
+.rd-case-gallery a{flex:none;width:260px;scroll-snap-align:start;display:flex;flex-direction:column;gap:8px}
+.rd-case-gallery img{width:100%;height:190px;object-fit:cover;border-radius:14px;border:1px solid var(--line);transition:transform .35s var(--ease)}
+.rd-case-gallery a:hover img{transform:translateY(-3px)}
+.rd-case-gallery span{font-size:13px;color:var(--subtle);font-weight:600}
+.rd-case-actions{display:flex;flex-wrap:wrap;gap:12px}
+@media (max-width:720px){.rd-case-results.rd-case-results-2{grid-template-columns:1fr}.rd-case-gallery a{width:72vw}}
