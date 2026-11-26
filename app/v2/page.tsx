@@ -8,8 +8,7 @@ import RdHeroStars from "./redesign/HeroStars";
 import RdInsightDeck from "./redesign/InsightDeck";
 import RdDocLibrary from "./redesign/DocLibrary";
 import RdValueRibbons from "./redesign/ValueRibbons";
-import RdCarousel from "./redesign/Carousel";
-import RdProjectList from "./redesign/ProjectList";
+import RdFeaturedWork from "./redesign/FeaturedWork";
 import RdYouTube from "./redesign/YouTubeLite";
 import RdFooter from "./redesign/Footer";
 import { CopyEmailButton, FloatingContact } from "./PortfolioControls";
@@ -56,7 +55,29 @@ export default function PortfolioHome() {
           </div>
         </section>
 
+        <section id="work" className="rd-section rd-soft" aria-labelledby="work-h">
+          <div className="rd-wrap">
+            <div className="rd-section-head" data-reveal>
+              <div>
+                <h2 id="work-h" className="rd-display">My work</h2>
+                <p>Two products to start with: one I lead at work, one I built on my own. Each has its own page with the problem, the decisions and the results.</p>
+              </div>
+              <dl className="rd-stats">
+                <div><dt>projects</dt><dd data-count="8">8</dd></div>
+                <div><dt>live products</dt><dd data-count="3">3</dd></div>
+                <div><dt>working demo</dt><dd data-count="1">1</dd></div>
+                <div><dt>years in product</dt><dd data-count="5" data-suffix="+">5+</dd></div>
+              </dl>
+            </div>
+            <RdFeaturedWork items={["siiqo", "ffa"].map((k) => slides.find((x) => x.slug === k)!)} total={projects.length} others={projects.filter((p) => p.slug !== "siiqo" && p.slug !== "ffa").map((p) => p.name.split(":")[0])} />
+          </div>
+        </section>
+
         <RdValueRibbons />
+
+        <section id="documents" className="rd-section" aria-labelledby="docs-h">
+          <RdDocLibrary />
+        </section>
 
         <section className="rd-map rd-grid-bg" aria-labelledby="map-h">
           <div className="rd-wrap">
@@ -66,35 +87,6 @@ export default function PortfolioHome() {
             </div>
             <RdStageTabs />
           </div>
-        </section>
-
-        <section id="work" className="rd-section rd-soft" aria-labelledby="work-h">
-          <div className="rd-wrap">
-            <div className="rd-section-head" data-reveal>
-              <div>
-                <h2 id="work-h" className="rd-display">My work</h2>
-                <p>Products I&apos;ve led, shipped, planned or taken apart. Each one is labelled with how far it got, and has its own page with the problem, the decisions and the evidence.</p>
-              </div>
-              <dl className="rd-stats">
-                <div><dt>projects</dt><dd data-count="8">8</dd></div>
-                <div><dt>live products</dt><dd data-count="3">3</dd></div>
-                <div><dt>working demo</dt><dd data-count="1">1</dd></div>
-                <div><dt>documents</dt><dd data-count="18">18</dd></div>
-                <div><dt>years in product</dt><dd data-count="5" data-suffix="+">5+</dd></div>
-              </dl>
-            </div>
-            <RdCarousel slides={slides} />
-          </div>
-        </section>
-
-        <section className="rd-section rd-soft rd-section-tight" aria-labelledby="list-h">
-          <div className="rd-wrap">
-            <RdProjectList projects={projects} limit={2} />
-          </div>
-        </section>
-
-        <section id="documents" className="rd-section" aria-labelledby="docs-h">
-          <RdDocLibrary />
         </section>
 
         <section id="insights" className="rd-section rd-insights-band" aria-labelledby="ins-h">
