@@ -316,13 +316,13 @@ export const releases = [
 ];
 
 export const values = [
-  { value: "Problem before feature", where: "Discovery" },
-  { value: "Trust is the product", where: "Siiqo" },
-  { value: "PRDs are bets, not guarantees", where: "Writing" },
-  { value: "Protect the core journey", where: "BetBonanza" },
-  { value: "Start from the market", where: "12 Days of December" },
-  { value: "Scope honestly, ship reliably", where: "Football Fan Arena" },
-  { value: "Build to learn", where: "Independent builds" },
-  { value: "Clarity over noise", where: "Team rituals" },
-  { value: "Plan like a builder", where: "10 years in construction" },
+  { value: "Problem before feature", verb: "Proven in", where: "user discovery" },
+  { value: "Trust is the product", verb: "Shipped at", where: "Siiqo" },
+  { value: "PRDs are bets, not guarantees", verb: "Tested in", where: "every PRD I write" },
+  { value: "Protect the core journey", verb: "Validated at", where: "BetBonanza" },
+  { value: "Start from the market", verb: "Proven by", where: "12 Days of December" },
+  { value: "Scope honestly, ship reliably", verb: "Shipped in", where: "Football Fan Arena" },
+  { value: "Build to learn", verb: "Tested in", where: "my independent builds" },
+  { value: "Clarity over noise", verb: "Practised in", where: "sprint rituals" },
+  { value: "Plan like a builder", verb: "Earned in", where: "10 years of construction" },
 ];
