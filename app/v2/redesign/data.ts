@@ -225,6 +225,20 @@ export const slides: Slide[] = [
     chipInk: "#042F2C",
     actions: [{ label: "Read the case study", href: "/case-studies/canvoy", primary: true }],
   },
+  {
+    slug: "betbonanza",
+    name: "BetBonanza",
+    tagline: "Sportsbook journeys and a 12 Days of December campaign.",
+    summary: "My first product role, in iGaming. I worked on sportsbook user journeys and prioritisation, and led the competitor analysis behind a 12 Days of December bonus calendar that drew in new players and kept existing ones coming back.",
+    chips: ["Past role", "Associate PM · iGaming", "Jan 2021 – Mar 2022"],
+    image: "/portfolio/full/betbonanza-home.jpg",
+    imageAlt: "BetBonanza sportsbook home on mobile",
+    bg: "#1F4A57",
+    ink: "#FFFFFF",
+    chipBg: "#F28C28",
+    chipInk: "#2A1300",
+    actions: [{ label: "Read the case study", href: "/case-studies/betbonanza", primary: true }],
+  },
 ];
 
 export const steps = [
