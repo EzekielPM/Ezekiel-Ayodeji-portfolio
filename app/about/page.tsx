@@ -30,7 +30,7 @@ export default function AboutPage() {
             </div>
           </div>
           <p className="rd-about-lead">I turn complex product problems into clear decisions and dependable delivery. I work across product strategy, discovery and technical delivery, helping teams move from unclear problems to products people can actually use.</p>
-          <p>Right now I&apos;m Lead Product Manager and Scrum Master at <strong>Siiqo</strong>, a trust-led marketplace. Before that I worked on payments at Canvoy and sportsbook journeys at BetBonanza, and I spent more than a decade leading construction and infrastructure projects. That background still shapes how I manage risk, dependencies, quality and teams.</p>
+          <p>Right now I&apos;m Lead Product Manager and Scrum Master at <strong>Siiqo</strong>, a trust-led marketplace. Before that I worked on payments at Canvoy and sportsbook journeys at BetBonanza, and I spent 10+ years leading construction and infrastructure projects. That background still shapes how I manage risk, dependencies, quality and teams.</p>
           <div className="rd-about-duo">
             <div className="rd-duo-dark"><small>At work</small><strong>The product manager</strong><span>Discovery, PRDs, priorities and releases across fintech, iGaming and commerce.</span></div>
             <div className="rd-duo-green"><small>After hours</small><strong>The builder</strong><span>Independent apps, teardowns and a YouTube show, Product Room with ERA.</span></div>

@@ -1152,3 +1152,8 @@ html[data-theme="navy"] .rd .rd-stream-play{color:#1a1333}
 @keyframes rdCvDropHover{0%,100%{transform:none}50%{transform:translateY(3px)}}
 @keyframes rdCvGlow{0%,25%,100%{box-shadow:0 0 0 0 rgba(61,90,46,0)}10%{box-shadow:0 0 0 6px rgba(61,90,46,.18)}}
 @media (prefers-reduced-motion: reduce){.rd-cv-glow,.rd-cv-glow::after,.rd-cv-arrow{animation:none!important}}
+
+/* Footer links: comfortable tap targets */
+.rd .rd-footer nav a{display:inline-block;padding:5px 0;min-height:28px}
+@media (max-width:720px){.rd .rd-footer nav a{padding:7px 0;min-height:34px}}
+.rd .rd-footer-base a{display:inline-block;padding:6px 0;min-height:30px}

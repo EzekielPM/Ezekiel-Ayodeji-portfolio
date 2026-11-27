@@ -36,7 +36,7 @@ export default function PortfolioHome() {
               </span>
               <span>Hi, I&apos;m <strong>Olusola Ayodeji Ezekiel</strong> <span className="rd-wave" aria-hidden="true">👋🏾</span></span>
             </div>
-            <p className="rd-kicker" data-stars>Lagos · Fintech · iGaming · Commerce</p>
+            <p className="rd-kicker" data-stars>Lagos · 5+ years · Fintech · iGaming · Commerce</p>
             <h1 id="hero-h" data-stars>Product manager.</h1>
             <p className="rd-hero-sub" data-stars>I take{" "}
               <span className="rd-hl rd-hl-blue" data-star-unit><svg className="rd-hl-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5" /><path d="M2.5 10h19M6.5 15h4" /></svg>fintech</span>,{" "}

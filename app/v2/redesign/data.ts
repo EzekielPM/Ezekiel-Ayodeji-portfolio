@@ -366,7 +366,7 @@ export const values = [
   { value: "Scope honestly, ship reliably", verb: "Built in", where: "Football Fan Arena" },
   { value: "Build to learn", verb: "Tested in", where: "my independent builds" },
   { value: "Clarity over noise", verb: "Practised in", where: "sprint rituals" },
-  { value: "Plan like a builder", verb: "Earned in", where: "10 years of construction" },
+  { value: "Plan like a builder", verb: "Earned in", where: "10+ years of construction" },
 ];
 
 // Quiet results line on the home page.

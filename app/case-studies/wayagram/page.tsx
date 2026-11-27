@@ -37,7 +37,7 @@ export default function WayagramCaseStudy() {
           </dl>
         </header>
 
-        <CaseVideo src="/product-media/wayagram-demo-web.mp4" caption="Wayagram product walkthrough." />
+        <CaseVideo src="/product-media/wayagram-demo-web.mp4" poster="/product-media/wayagram-demo-poster.jpg" caption="Wayagram product walkthrough." />
 
         <section className="rd-case-block" data-reveal>
           <span className="rd-case-n">01</span>
@@ -87,6 +87,7 @@ export default function WayagramCaseStudy() {
         ]} />
 
         <div className="rd-case-actions" data-reveal>
+          <a className="rd-btn rd-btn-accent" href="https://wayagram.ng" target="_blank" rel="noreferrer">Visit wayagram.ng <span aria-hidden="true">↗</span></a>
           <a className="rd-btn rd-btn-ghost" href="https://play.google.com/store/apps/details?id=ng.wayagram" target="_blank" rel="noreferrer">Google Play <span aria-hidden="true">↗</span></a>
           <a className="rd-btn rd-btn-ghost" href="https://apps.apple.com/ng/app/wayagram/id6444311693" target="_blank" rel="noreferrer">App Store <span aria-hidden="true">↗</span></a>
         </div>

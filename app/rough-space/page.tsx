@@ -33,6 +33,7 @@ export default function RoughSpacePage() {
 
   return (
     <main>
+        <h1 className="rd-sr">Rough Space: music, product experiments and visual notes by Olusola Ayodeji Ezekiel</h1>
       <div className="rd rd-chrome rd-chrome-top"><RdHeader base="/" current="none" /></div>
 
       <section className="rough-space section" id="top">
