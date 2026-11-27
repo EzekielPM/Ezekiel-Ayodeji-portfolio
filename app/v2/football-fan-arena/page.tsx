@@ -105,6 +105,7 @@ export default function FootballFanArenaCaseStudy() {
           <div>
             <h2>What it taught me</h2>
             <p>Saying no is a product decision. Leaving out betting, payments and live scores made the MVP smaller, safer and easier to explain, and kept the focus on what brings fans back: belonging to a fanbase and being proved right on matchday.</p>
+            <a className="rd-text-link" href="https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_footballfanarena-productmanagement-buildinpublic-activity-7532029124572413952-BFU6" target="_blank" rel="noreferrer">Read my post: How Football Fan Arena went from idea to MVP ↗</a>
           </div>
         </section>
 
