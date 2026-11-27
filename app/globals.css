@@ -1581,3 +1581,8 @@ html[data-theme="navy"] .all-project-card-07{--project-accent:#5be38b;--project-
 /* Rough Space: readable intro and card titles */
 section.rough-space .section-heading>p{color:#c5d0cc}
 .rough-space .film-card .rough-card-heading h3,.rough-space .notebook-card .rough-card-heading h3{color:#121722}
+
+/* Opening screen: hide the page until the intro appears (home page, first visit only) */
+html.rd-intro-pending{background:#F6F1E7}
+html.rd-intro-pending.rd-intro-pending-navy{background:#0B1220}
+html.rd-intro-pending body{visibility:hidden}

@@ -50,7 +50,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Keeps the home page under the opening screen until it starts, so the site doesn't flash first. */}
+        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var d=document.documentElement;if(location.pathname!=="/")return;if(window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;if(sessionStorage.getItem("rd-intro-seen"))return;var n=false;try{var t=localStorage.getItem("portfolio-theme");n=t?t==="navy":matchMedia("(prefers-color-scheme: dark)").matches}catch(e){}d.classList.add("rd-intro-pending");if(n)d.classList.add("rd-intro-pending-navy");setTimeout(function(){d.classList.remove("rd-intro-pending","rd-intro-pending-navy")},4000)}catch(e){}})();` }} />
+      </head>
       <body className="antialiased">{children}</body>
     </html>
   );
