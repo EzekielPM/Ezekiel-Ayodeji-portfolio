@@ -1158,3 +1158,6 @@ html[data-theme="navy"] .rd .rd-stream-play{color:#1a1333}
 @media (max-width:720px){.rd .rd-footer nav a{padding:7px 0;min-height:34px}}
 .rd .rd-footer-base a{display:inline-block;padding:6px 0;min-height:30px}
 .rd-open-clone::before{content:attr(data-text)}
+/* Back links and the Insights follow link: comfortable tap targets */
+.rd .rd-case-back{display:inline-flex;align-items:center;min-height:32px;padding:4px 0}
+.rd-deck-follow a,.rd .rd-insights-band a[href*="linkedin.com/in"]{display:inline-flex;align-items:center;min-height:32px;padding:4px 0}
