@@ -14,7 +14,7 @@ import RdFooter from "./redesign/Footer";
 import RdLagosNow from "./redesign/LagosNow";
 import { CopyEmailButton, FloatingContact } from "./PortfolioControls";
 import {
-  CONSTRUCTION_CV_URL, CV_URL, CV_FILENAME, EMAIL, LINKEDIN, WHATSAPP, YOUTUBE_CHANNEL, YOUTUBE_INTRO_ID,
+  CONSTRUCTION_CV_URL, CV_URL, EMAIL, LINKEDIN, WHATSAPP, YOUTUBE_CHANNEL, YOUTUBE_INTRO_ID,
   projects, slides, openRoles,
 } from "./redesign/data";
 
@@ -45,7 +45,7 @@ export default function PortfolioHome() {
               products from discovery through delivery, and write about what I learn.</p>
             <div className="rd-hero-actions" data-star-unit>
               <a className="rd-btn rd-btn-dark" href="#work">See my work <span aria-hidden="true">↓</span></a>
-              <a className="rd-btn rd-btn-ghost" href={CV_URL} download={CV_FILENAME}>Download CV <span aria-hidden="true">↓</span></a>
+              <a className="rd-btn rd-btn-ghost rd-hero-book" href="/book"><svg aria-hidden="true" viewBox="0 0 24 24" width="17" height="17"><rect x="3.5" y="5" width="17" height="15" rx="3" fill="none" stroke="currentColor" strokeWidth="1.9" /><path d="M3.5 10h17M8 3v4M16 3v4" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" /></svg>Book a call <span aria-hidden="true">→</span></a>
             </div>
             <div className="rd-open" data-star-unit>
               <p className="rd-open-pill">

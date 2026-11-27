@@ -129,7 +129,7 @@ export default function RdHeader({ base = "", current }: Props) {
             </span>
             <span className="theme-toggle-thumb" aria-hidden="true"/>
           </button>
-          <a className="rd-btn rd-btn-accent rd-header-cv" href={CV_URL} download={CV_FILENAME}>Download CV</a>
+          <a className="rd-btn rd-btn-accent rd-header-cv rd-cv-glow" href={CV_URL} download={CV_FILENAME}>Download CV <span className="rd-cv-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="15" height="15"><path d="M12 4v12M6.5 10.5 12 16l5.5-5.5M5 20h14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg></span></a>
           <button
             ref={toggleRef}
             className={`rd-menu-toggle${open ? " is-open" : ""}`}
