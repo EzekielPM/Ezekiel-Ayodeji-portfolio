@@ -5,7 +5,7 @@ import RdHeader from "../v2/redesign/Header";
 import RdMotion from "../v2/redesign/Motion";
 import RdFooter from "../v2/redesign/Footer";
 import { FloatingContact } from "../v2/PortfolioControls";
-import { CV_URL, EMAIL, practice, releases } from "../v2/redesign/data";
+import { CV_URL, CV_FILENAME, EMAIL, practice, releases } from "../v2/redesign/data";
 
 export const metadata: Metadata = {
   title: "About | Olusola Ayodeji Ezekiel, Product Manager",
@@ -73,7 +73,7 @@ export default function AboutPage() {
           </div>
           <div className="rd-cta-actions">
             <a className="rd-btn rd-btn-yellow" href={`mailto:${EMAIL}`}>Let&apos;s talk <span aria-hidden="true">→</span></a>
-            <a className="rd-btn rd-btn-outline-light" href={CV_URL} download>Download CV <span aria-hidden="true">↓</span></a>
+            <a className="rd-btn rd-btn-outline-light" href={CV_URL} download={CV_FILENAME}>Download CV <span aria-hidden="true">↓</span></a>
           </div>
         </section>
       </main>

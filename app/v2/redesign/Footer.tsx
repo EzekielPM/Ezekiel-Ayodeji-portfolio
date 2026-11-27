@@ -1,4 +1,4 @@
-import { CV_URL, CONSTRUCTION_CV_URL, EMAIL, LINKEDIN, YOUTUBE_CHANNEL } from "./data";
+import { CV_URL, CV_FILENAME, CONSTRUCTION_CV_URL, EMAIL, LINKEDIN, YOUTUBE_CHANNEL } from "./data";
 
 export default function RdFooter({ base = "" }: { base?: string }) {
   return (
@@ -24,7 +24,7 @@ export default function RdFooter({ base = "" }: { base?: string }) {
         </nav>
         <nav aria-label="Hire">
           <p>Hire</p>
-          <a href={CV_URL} download>Product Manager CV</a>
+          <a href={CV_URL} download={CV_FILENAME}>Product Manager CV</a>
           <a href={CONSTRUCTION_CV_URL} download>Construction CV</a>
           <a href={`mailto:${EMAIL}`}>Email me</a>
         </nav>

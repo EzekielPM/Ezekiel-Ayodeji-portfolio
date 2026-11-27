@@ -1095,3 +1095,43 @@ html[data-theme="navy"] .rd .rd-stream-play{color:#1a1333}
 .rd-bookpage-list b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
 .rd-bookpage-form{border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
 @media (max-width:900px){.rd-bookpage-grid{grid-template-columns:1fr}.rd-bookpage-side{position:static}}
+
+/* Nav: sliding highlight that follows the section in view */
+.rd .rd-pills{position:relative}
+.rd .rd-pills a{position:relative;z-index:1}
+.rd-pills-ink{position:absolute;left:0;top:4px;bottom:4px;border-radius:999px;background:var(--ink);transition:transform .45s cubic-bezier(.3,.8,.25,1),width .45s cubic-bezier(.3,.8,.25,1),opacity .2s;z-index:0;pointer-events:none}
+.rd .rd-pills a.is-active{background:transparent;color:var(--bg);transition:color .3s ease}
+.rd .rd-pills a.is-active:hover{background:transparent}
+@media (prefers-reduced-motion: reduce){.rd-pills-ink{transition:none}}
+
+/* Phone menu: mark the current section */
+@media (max-width:760px){.rd .rd-mobile-menu nav a.is-active{color:var(--accent)}.rd .rd-mobile-menu nav a.is-active span{color:var(--accent)}.rd .rd-mobile-menu nav a.is-active::before{content:"";position:absolute;left:-14px;top:50%;width:4px;height:22px;margin-top:-11px;border-radius:4px;background:var(--accent)}.rd .rd-mobile-menu nav a{position:relative}}
+
+/* "Currently" tag: live dot, gentle sway and a light sweep */
+.rd-sticky{overflow:hidden}
+.rd-sticky-now{display:flex;align-items:center;gap:6px;margin-bottom:3px;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#8A6500}
+.rd-sticky-now i{width:7px;height:7px;border-radius:50%;background:#16A34A;animation:rdPulse 1.8s infinite}
+.rd-sticky b{color:#1E3A8A;font-weight:800}
+.rd-sticky::after{content:"";position:absolute;inset:-20% auto -20% -60%;width:45%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.75),transparent);transform:skewX(-18deg);animation:rdSheen 5s ease-in-out 3s infinite;pointer-events:none}
+@keyframes rdSheen{0%{left:-60%}35%,100%{left:130%}}
+.rd-hero-card.rd-stars-go .rd-sticky{animation:rdSway 5.5s ease-in-out 2.5s infinite}
+@keyframes rdSway{0%,100%{rotate:0deg;translate:0 0}50%{rotate:2.5deg;translate:0 -2px}}
+.rd-sticky:hover{rotate:3deg}
+
+/* Streaming tag: play badge, live bars and words that ripple */
+.rd-stream{padding:7px 16px 7px 7px;gap:9px}
+.rd-stream-play{position:relative;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#E11D2E!important;color:#fff!important}
+.rd-stream-play::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid rgba(225,29,46,.45);animation:rdRing 2.2s ease-out infinite}
+@keyframes rdRing{0%{transform:scale(.85);opacity:1}100%{transform:scale(1.35);opacity:0}}
+.rd-stream-play svg{margin-left:2px}
+.rd-stream-eq{display:inline-flex;align-items:flex-end;gap:2px;height:14px}
+.rd-stream-eq i{width:3px;border-radius:2px;background:#E11D2E;animation:rdEq 1s ease-in-out infinite}
+.rd-stream-eq i:nth-child(1){height:6px;animation-delay:-.2s}.rd-stream-eq i:nth-child(2){height:12px;animation-delay:-.5s}.rd-stream-eq i:nth-child(3){height:8px;animation-delay:-.1s}.rd-stream-eq i:nth-child(4){height:11px;animation-delay:-.7s}
+@keyframes rdEq{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
+.rd-stream-eq i{transform-origin:bottom}
+.rd-stream strong{display:inline-flex;gap:.28em}
+.rd-stream strong span{display:inline-block;animation:rdWave 4.5s ease-in-out infinite;animation-delay:calc(var(--i) * .14s)}
+@keyframes rdWave{0%,18%,100%{transform:none;color:inherit}8%{transform:translateY(-3px);color:#E11D2E}}
+@media (prefers-reduced-motion: reduce){.rd-sticky,.rd-sticky::after,.rd-sticky-now i,.rd-stream-play::after,.rd-stream-eq i,.rd-stream strong span{animation:none!important}}
+.rd-open-pill b{white-space:nowrap}
+@media (max-width:400px){.rd-open-pill{font-size:13px;gap:7px;padding:8px 12px 8px 10px}.rd-open-roll{min-width:186px}}

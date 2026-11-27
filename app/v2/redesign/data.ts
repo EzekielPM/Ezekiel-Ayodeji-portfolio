@@ -1,4 +1,5 @@
-export const CV_URL = "/documents/olusola-ayodeji-product-manager-cv.pdf";
+export const CV_FILENAME = "Ezekiel O AYODEJI.pdf";
+export const CV_URL = "/documents/Ezekiel%20O%20AYODEJI.pdf";
 export const CONSTRUCTION_CV_URL = "/documents/olusola-ayodeji-construction-cv.pdf";
 export const EMAIL = "Olusola40@gmail.com";
 export const WHATSAPP = "https://wa.me/2349015934337";

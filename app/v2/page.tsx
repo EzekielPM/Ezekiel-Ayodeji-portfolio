@@ -14,7 +14,7 @@ import RdFooter from "./redesign/Footer";
 import RdLagosNow from "./redesign/LagosNow";
 import { CopyEmailButton, FloatingContact } from "./PortfolioControls";
 import {
-  CONSTRUCTION_CV_URL, CV_URL, EMAIL, LINKEDIN, WHATSAPP, YOUTUBE_CHANNEL, YOUTUBE_INTRO_ID,
+  CONSTRUCTION_CV_URL, CV_URL, CV_FILENAME, EMAIL, LINKEDIN, WHATSAPP, YOUTUBE_CHANNEL, YOUTUBE_INTRO_ID,
   projects, slides, openRoles,
 } from "./redesign/data";
 
@@ -29,7 +29,7 @@ export default function PortfolioHome() {
       <main>
         <section className="rd-hero rd-grid-bg" aria-labelledby="hero-h">
           <div className="rd-hero-card" data-reveal>
-            <p className="rd-sticky" aria-label="Current role" data-star-unit>Currently: Lead PM &amp; Scrum Master at Siiqo</p>
+            <p className="rd-sticky" aria-label="Currently Lead PM and Scrum Master at Siiqo" data-star-unit><span className="rd-sticky-now"><i aria-hidden="true" />Currently</span>Lead PM &amp; Scrum Master at <b>Siiqo</b></p>
             <div className="rd-hero-hello" data-star-unit>
               <span className="rd-hero-avatar">
                 <Image src="/portfolio/bio-portrait.webp" alt="Portrait of Olusola Ayodeji Ezekiel" width={160} height={160} priority />
@@ -45,7 +45,7 @@ export default function PortfolioHome() {
               products from discovery through delivery, and write about what I learn.</p>
             <div className="rd-hero-actions" data-star-unit>
               <a className="rd-btn rd-btn-dark" href="#work">See my work <span aria-hidden="true">↓</span></a>
-              <a className="rd-btn rd-btn-ghost" href={CV_URL} download>Download CV <span aria-hidden="true">↓</span></a>
+              <a className="rd-btn rd-btn-ghost" href={CV_URL} download={CV_FILENAME}>Download CV <span aria-hidden="true">↓</span></a>
             </div>
             <div className="rd-open" data-star-unit>
               <p className="rd-open-pill">
@@ -59,7 +59,12 @@ export default function PortfolioHome() {
               <p className="rd-open-where">Remote, hybrid, on-site or relocation, anywhere in the world.</p>
             </div>
             <div className="rd-hero-tiles rd-hero-tiles-one" data-star-unit>
-              <a href="#watch" className="rd-stream"><span className="rd-stream-play" aria-hidden="true">▶</span><small>Now streaming</small><strong>Product Room with ERA</strong></a>
+              <a href="#watch" className="rd-stream" aria-label="Now streaming: Product Room with ERA">
+                <span className="rd-stream-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor" /></svg></span>
+                <span className="rd-stream-eq" aria-hidden="true"><i /><i /><i /><i /></span>
+                <small aria-hidden="true">Now streaming</small>
+                <strong aria-hidden="true">{["Product", "Room", "with", "ERA"].map((w, i) => <span key={w} style={{ ["--i" as string]: i }}>{w}</span>)}</strong>
+              </a>
             </div>
           </div>
         </section>
