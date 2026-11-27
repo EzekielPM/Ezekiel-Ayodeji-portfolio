@@ -74,8 +74,8 @@ export default function BetBonanzaCaseStudy() {
             <p>The campaign worked on both fronts: it brought new players in and kept existing ones coming back across the twelve days.</p>
             <dl className="rd-case-results">
               <div><dt>Sign-ups</dt><dd>+25%</dd><span>November to December</span></div>
-              <div><dt>Daily active users</dt><dd>+35%</dd><span>logins, deposits and withdrawals</span></div>
-              <div><dt>Retention</dt><dd>52%</dd><span>casino and new players on the bonuses</span></div>
+              <div><dt>Daily active users</dt><dd>+35%</dd><span>vs November daily average</span></div>
+              <div><dt>30-day retention</dt><dd>52%</dd><span>casino and new players on the bonuses</span></div>
             </dl>
           </div>
         </section>
@@ -103,7 +103,7 @@ export default function BetBonanzaCaseStudy() {
           </div>
         </section>
 
-        <p className="rd-case-note" data-reveal>About the figures: they cover the December campaign and are rounded. Sign-ups compare December with November. Daily active users count players who logged in, deposited or withdrew. Retention is measured among casino players and new players on the welcome bonus and the 12 Days bonus.</p>
+        <p className="rd-case-note" data-reveal>About the figures: they cover the December campaign and are rounded. Sign-ups compare December with November. Daily active users are unique players who logged in, deposited or withdrew on a given day, compared with November's daily average. Retention is the share of casino players and new players on the welcome bonus and the 12 Days bonus who were still active 30 days later.</p>
 
         <nav className="rd-case-next" aria-label="Next case study" data-reveal>
           <span>Next in my work</span>

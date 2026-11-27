@@ -9,7 +9,7 @@ import { FloatingContact } from "../PortfolioControls";
 
 export const metadata: Metadata = {
   title: "Football Fan Arena case study | Olusola Ayodeji Ezekiel",
-  description: "An independently built football fan community: club fanbases, free matchday predictions, banter groups and fan rankings, on web and Android. The MVP deliberately leaves out betting and payments.",
+  description: "An independently built football fan community: club fanbases, free matchday predictions, banter groups and fan rankings, on web, with an Android test build. The MVP deliberately leaves out betting and payments.",
   alternates: { canonical: "/v2/football-fan-arena" },
 };
 
@@ -38,7 +38,7 @@ export default function FootballFanArenaCaseStudy() {
           <p className="rd-case-lead">Fans already talk about their clubs everywhere, but the conversation is scattered across feeds, group chats and prediction games that drift towards betting. I&apos;m building one place to join a club fanbase, debate the game, make free predictions and climb a fan ranking.</p>
           <dl className="rd-case-facts">
             <div><dt>Role</dt><dd>Product lead · Independent build</dd></div>
-            <div><dt>Platforms</dt><dd>Web · Android</dd></div>
+            <div><dt>Platforms</dt><dd>Web (live) · Android (test build)</dd></div>
             <div><dt>Domain</dt><dd>Fan community</dd></div>
             <div><dt>Status</dt><dd><span className="rd-chip rd-chip-mvp">Live web app · MVP</span></dd></div>
           </dl>
@@ -95,7 +95,7 @@ export default function FootballFanArenaCaseStudy() {
           <span className="rd-case-n">05</span>
           <div>
             <h2>Where it stands</h2>
-            <p>The web app is live and the Android app shares the same data. Club fan counts in the app are seeded demo data, so there are no usage figures yet.</p>
+            <p>The web app is live. The Android app is a working test build, not yet on Google Play, and shares the same data. Club fan counts in the app are seeded demo data, so there are no usage figures yet.</p>
             <p>Next: a verified source for fixtures and results, a moderation workflow tested with real reports, and onboarding tested with fans of more than one club. Then I&apos;ll measure weekly active supporters, predictions per matchday and day-7 and day-30 retention.</p>
           </div>
         </section>
