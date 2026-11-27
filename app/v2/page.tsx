@@ -29,7 +29,7 @@ export default function PortfolioHome() {
       <main>
         <section className="rd-hero rd-grid-bg" aria-labelledby="hero-h">
           <div className="rd-hero-card" data-reveal>
-            <p className="rd-sticky" aria-label="Currently Lead PM and Scrum Master at Siiqo" data-star-unit><span className="rd-sticky-now"><i aria-hidden="true" />Currently</span>Lead PM &amp; Scrum Master at <b>Siiqo</b></p>
+            <p className="rd-sticky" aria-label="Currently Lead PM and Scrum Master at Siiqo" data-star-unit><span className="rd-sticky-now"><i aria-hidden="true" />Currently</span>{" "}Lead PM &amp; Scrum Master at <b>Siiqo</b></p>
             <div className="rd-hero-hello" data-star-unit>
               <span className="rd-hero-avatar">
                 <Image src="/portfolio/bio-portrait.webp" alt="Portrait of Olusola Ayodeji Ezekiel" width={160} height={160} priority />
@@ -50,11 +50,14 @@ export default function PortfolioHome() {
             <div className="rd-open" data-star-unit>
               <p className="rd-open-pill">
                 <span className="rd-open-dot" aria-hidden="true" />
-                <b>Open to</b>
-                <span className="rd-open-roll" aria-hidden="true">
-                  <span>{[...openRoles, openRoles[0]].map((r, i) => <span key={i}>{r}</span>)}</span>
+                <b>Open to</b>{" "}
+                <span className="rd-open-roll">
+                  <span>
+                    {openRoles.map((r, i) => <span key={r}>{r}{i < openRoles.length - 1 ? <span className="rd-sr">, </span> : <span className="rd-sr"> roles</span>}</span>)}
+                    {/* Loop copy drawn by CSS only, so it isn't read twice. */}
+                    <span className="rd-open-clone" data-text={openRoles[0]} aria-hidden="true" />
+                  </span>
                 </span>
-                <span className="rd-sr">{openRoles.join(", ")} roles</span>
               </p>
               <p className="rd-open-where">Remote, hybrid, on-site or relocation, anywhere in the world.</p>
             </div>
@@ -62,8 +65,8 @@ export default function PortfolioHome() {
               <a href="#watch" className="rd-stream" aria-label="Now streaming: Product Room with ERA">
                 <span className="rd-stream-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor" /></svg></span>
                 <span className="rd-stream-eq" aria-hidden="true"><i /><i /><i /><i /></span>
-                <small aria-hidden="true">Now streaming</small>
-                <strong aria-hidden="true">{["Product", "Room", "with", "ERA"].map((w, i) => <span key={w} style={{ ["--i" as string]: i }}>{w}</span>)}</strong>
+                <small aria-hidden="true">Now streaming</small>{" "}
+                <strong aria-hidden="true">{["Product", "Room", "with", "ERA"].map((w, i) => <span key={w} style={{ ["--i" as string]: i }}>{w}{i < 3 ? " " : ""}</span>)}</strong>
               </a>
             </div>
           </div>
