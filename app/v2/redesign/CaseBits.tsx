@@ -6,7 +6,7 @@ export function CaseGallery({ items, label }: { items: { src: string; label: str
     <section className="rd-case-gallery" data-reveal aria-label={label}>
       {items.map((g) => (
         <a key={g.src} href={g.src} target="_blank" rel="noreferrer">
-          <Image src={g.src} alt={g.label} width={800} height={600} sizes="(max-width: 720px) 72vw, 280px" />
+          <Image src={g.src} alt="" width={800} height={600} sizes="(max-width: 720px) 72vw, 280px" />
           <span>{g.label}</span>
         </a>
       ))}

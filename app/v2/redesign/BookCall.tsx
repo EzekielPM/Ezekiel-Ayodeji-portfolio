@@ -128,7 +128,7 @@ export default function BookCall() {
     return (
       <div className="rd-book rd-book-done" role="status">
         <span className="rd-book-tick" aria-hidden="true">✓</span>
-        <h3>Request sent, {form.name.split(" ")[0]}.</h3>
+        <h2>Request sent, {form.name.split(" ")[0]}.</h2>
         <p>
           {fmtLocal(slot.start, { weekday: "short", day: "numeric", month: "short" })} · {fmtLocal(slot.start, timeOpts)} your time ({fmtLagos(slot.start, timeOpts)} in Lagos).<br />
           I&apos;ll confirm by email within a day, with a Google Meet link.
@@ -159,7 +159,7 @@ export default function BookCall() {
     <form className="rd-book" onSubmit={submit} noValidate>
       <div className="rd-book-head">
         <p className="rd-book-kicker">Book a 30-minute call</p>
-        <h3>Tell me a little, then pick a time</h3>
+        <h2>Tell me a little, then pick a time</h2>
       </div>
 
       <div className="rd-book-grid">
@@ -191,10 +191,10 @@ export default function BookCall() {
               <button type="button" onClick={() => move(1)} disabled={!canNext} aria-label="Next month">›</button>
             </span>
           </div>
-          <div className="rd-book-days" role="grid" aria-label={monthLabel}>
+          <div className="rd-book-days" role="group" aria-label={monthLabel}>
             {DOW.map((d) => <span key={d} className="rd-book-dow">{d}</span>)}
             {grid.map((c, i) => c === null ? <span key={i} /> : "off" in c ? (
-              <span key={i} className="rd-book-off">{c.d}</span>
+              <button key={i} type="button" className="rd-book-off" disabled aria-label={`${c.d}, not available`}>{c.d}</button>
             ) : (
               <button key={i} type="button" aria-pressed={dayKey === key(c.y, c.m, c.d)} onClick={() => { setDayKey(key(c.y, c.m, c.d)); setSlot(null); }}>{c.d}</button>
             ))}

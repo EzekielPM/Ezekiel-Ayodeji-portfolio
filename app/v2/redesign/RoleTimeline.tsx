@@ -10,7 +10,7 @@ export default function RoleTimeline({ heading = "Every role, at a glance", head
       <ol className="rd-roles-list">
         {roles.map((r) => (
           <li key={r.slug} className="rd-role">
-            <a href={r.href} aria-label={`${r.company}: ${r.title}, ${r.dates}. Read the case study`}>
+            <a href={r.href}>
               <span className="rd-role-dot" aria-hidden="true" />
               <span className="rd-role-dates">{r.dates}</span>
               <strong className="rd-role-co">{r.company}</strong>

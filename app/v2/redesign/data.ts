@@ -6,8 +6,6 @@ export const WHATSAPP = "https://wa.me/2349015934337";
 export const LINKEDIN = "https://www.linkedin.com/in/ayodeji-ezekiel-olusola/";
 export const YOUTUBE_CHANNEL = "https://www.youtube.com/@EraProductRoom";
 export const YOUTUBE_INTRO_ID = "epiyGrltK8Y";
-// Paste the Calendly event link here (e.g. https://calendly.com/name/30min) to embed booking in Contact.
-export const CALENDLY_URL = "";
 // Web3Forms access key: an alias for the inbox that receives call requests (safe to be public).
 export const WEB3FORMS_KEY = "1bf6e5a3-d33c-4793-b644-f2f74fded580";
 // Call availability, in Lagos time (WAT, UTC+1, no daylight saving).

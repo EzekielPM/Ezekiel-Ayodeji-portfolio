@@ -21,7 +21,7 @@ export default function BookPage() {
     <div className="rd" id="top">
       <RdMotion />
       <RdHeader base="/" current="none" />
-      <main className="rd-bookpage rd-grid-bg">
+      <main id="main" className="rd-bookpage rd-grid-bg">
         <div className="rd-bookpage-wrap">
           <a className="rd-case-back" href="/#contact">← Back to contact</a>
           <header className="rd-bookpage-head" data-reveal>

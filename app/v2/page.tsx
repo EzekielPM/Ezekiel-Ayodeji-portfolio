@@ -42,7 +42,7 @@ export default function PortfolioHome() {
       <RdMotion />
       <RdHeader />
 
-      <main>
+      <main id="main">
         <section className="rd-hero rd-grid-bg" aria-labelledby="hero-h">
           <div className="rd-hero-card" data-reveal>
             <p className="rd-sticky" aria-label="Currently Lead PM and Scrum Master at Siiqo" data-star-unit><span className="rd-sticky-now"><i aria-hidden="true" />Currently</span>{" "}Lead PM &amp; Scrum Master at <b>Siiqo</b></p>

@@ -21,7 +21,7 @@ export default function AboutPage() {
     <div className="rd" id="top">
       <RdMotion />
       <RdHeader base="/" current="about" />
-      <main className="rd-about">
+      <main id="main" className="rd-about">
         <section className="rd-about-intro" data-reveal>
           <div className="rd-about-hello">
             <span className="rd-about-avatar">

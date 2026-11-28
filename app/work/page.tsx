@@ -25,7 +25,7 @@ export default function WorkPage() {
     <div className="rd" id="top">
       <RdMotion />
       <RdHeader base="/" />
-      <main className="rd-work-page rd-soft">
+      <main id="main" className="rd-work-page rd-soft">
         <div className="rd-wrap">
           <a className="rd-case-back" href="/#work">← Back to home</a>
           <div data-reveal>

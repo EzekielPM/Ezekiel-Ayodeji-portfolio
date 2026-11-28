@@ -19,7 +19,7 @@ export default function RdYouTube({ id, title }: { id: string; title: string }) 
     );
   }
   return (
-    <button type="button" className={`rd-video rd-video-poster${broken ? " is-broken" : ""}`} onClick={() => setPlay(true)} aria-label={`Play: ${title}`}>
+    <button type="button" className={`rd-video rd-video-poster${broken ? " is-broken" : ""}`} onClick={() => setPlay(true)} aria-label={`Intro video: play ${title}`}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`} alt="" loading="lazy" onError={() => setBroken(true)} />
       <span className="rd-video-badge">Intro video</span>

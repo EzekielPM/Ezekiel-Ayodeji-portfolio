@@ -30,7 +30,7 @@ export default function SiiqoCaseStudy() {
     <div className="rd" id="top">
       <RdMotion />
       <RdHeader base="/" />
-      <main className="rd-case">
+      <main id="main" className="rd-case">
         <a className="rd-case-back" href="/work">← All projects</a>
 
         <header className="rd-case-hero" data-reveal>
@@ -103,8 +103,8 @@ export default function SiiqoCaseStudy() {
           <div>
             <h2>Results so far</h2>
             <dl className="rd-case-results rd-case-results-2">
-              <div><dt>Active vendors</dt><dd>500+</dd><span>buying and selling, with storefronts kept up to date</span></div>
-              <div><dt>Sign-ups</dt><dd>+35%</dd><span>above forecast, first three months after launch</span></div>
+              <div><dt>Active vendors</dt><dd>500+</dd><dd className="rd-res-note">buying and selling, with storefronts kept up to date</dd></div>
+              <div><dt>Sign-ups</dt><dd>+35%</dd><dd className="rd-res-note">above forecast, first three months after launch</dd></div>
             </dl>
             <p className="rd-case-note" style={{ marginTop: 16 }}>About the figures: an active vendor buys and sells on Siiqo, keeps their storefront updated and restocks regularly. Sign-ups are compared with our forecast for the first three months after public launch, which followed usability testing and real-world testing. Every feature on this page, including escrow, storefronts and disputes, is live.</p>
             <p style={{ marginTop: 16 }}>What I track next: checkout completion, dispute rate and resolution time, repeat purchases and active-vendor retention.</p>

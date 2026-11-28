@@ -115,7 +115,7 @@ function DocFolder() {
           const pos = off === 0 ? "is-0" : off === 1 ? "is-1" : off === 2 ? "is-2" : off === n - 1 ? "is-out" : "is-hidden";
           return (
             // eslint-disable-next-line @next/next/no-img-element
-            <img key={doc.href} src={doc.image} alt="" className={`rd-folder-page ${pos}`} width={527} height={682} loading={off < 3 ? "eager" : "lazy"} />
+            <img key={doc.href} src={doc.image} alt="" className={`rd-folder-page ${pos}`} width={527} height={682} loading="lazy" />
           );
         })}
       </div>

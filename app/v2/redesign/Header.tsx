@@ -101,6 +101,8 @@ export default function RdHeader({ base = "", current }: Props) {
   const close = () => setOpen(false);
 
   return (
+    <>
+    <a className="rd-skip" href="#main">Skip to content</a>
     <header className={`rd-header${scrolled ? " is-scrolled" : ""}`}>
       <div className="rd-header-inner">
         <a className="rd-brand" href={base || "#top"}>
@@ -152,5 +154,6 @@ export default function RdHeader({ base = "", current }: Props) {
         </nav>
       </div>
     </header>
+    </>
   );
 }

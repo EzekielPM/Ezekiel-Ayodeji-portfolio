@@ -1595,3 +1595,4 @@ html.rd-intro-pending body{visibility:hidden}
 .audio-list small,.studio-video-grid figcaption small{font-size:12px}
 .note-gallery span{font-size:12px}
 .handbook-card>p{font-size:15px;line-height:1.7}
+html:not([data-theme="navy"]) .statement .section-kicker{color:#1F6650}

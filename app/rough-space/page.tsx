@@ -32,7 +32,7 @@ export default function RoughSpacePage() {
   }, [zoom]);
 
   return (
-    <main>
+    <main id="main">
         <h1 className="rd-sr">Rough Space: music, product experiments and visual notes by Olusola Ayodeji Ezekiel</h1>
       <div className="rd rd-chrome rd-chrome-top"><RdHeader base="/" current="none" /></div>
 
@@ -118,7 +118,7 @@ export default function RoughSpacePage() {
             </div>
             <div className="note-gallery">
               {notes.map((note) => (
-                <button key={note.src} type="button" onClick={() => setZoom({ src: note.src, alt: note.alt })} aria-label={`Open ${note.alt}`}>
+                <button key={note.src} type="button" onClick={() => setZoom({ src: note.src, alt: note.alt })}>
                   <img src={note.src} alt={note.alt} />
                   <span>{note.title}</span>
                 </button>

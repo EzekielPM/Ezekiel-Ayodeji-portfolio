@@ -32,7 +32,7 @@ export default function TradeFlowCaseStudy() {
     <div className="rd" id="top">
       <RdMotion />
       <RdHeader base="/" />
-      <main className="rd-case">
+      <main id="main" className="rd-case">
         <a className="rd-case-back" href="/work">← All projects</a>
 
         <header className="rd-case-hero" data-reveal>

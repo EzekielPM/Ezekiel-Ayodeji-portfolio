@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <div className="rd" id="top">
       <RdHeader base="/" current="none" />
-      <main className="rd-404 rd-grid-bg">
+      <main id="main" className="rd-404 rd-grid-bg">
         <div className="rd-404-card">
           <p className="rd-kicker">Error 404</p>
           <h1>This page isn&apos;t in the folder.</h1>

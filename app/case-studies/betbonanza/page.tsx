@@ -24,7 +24,7 @@ export default function BetBonanzaCaseStudy() {
     <div className="rd" id="top">
       <RdMotion />
       <RdHeader base="/" />
-      <main className="rd-case">
+      <main id="main" className="rd-case">
         <a className="rd-case-back" href="/work">← All projects</a>
 
         <header className="rd-case-hero" data-reveal>
@@ -80,9 +80,9 @@ export default function BetBonanzaCaseStudy() {
             <h3>How it turned out</h3>
             <p>The campaign worked on both fronts: it brought new players in and kept existing ones coming back across the twelve days.</p>
             <dl className="rd-case-results">
-              <div><dt>Sign-ups</dt><dd>+25%</dd><span>November to December</span></div>
-              <div><dt>Daily active users</dt><dd>+35%</dd><span>vs November daily average</span></div>
-              <div><dt>30-day retention</dt><dd>52%</dd><span>casino and new players on the bonuses</span></div>
+              <div><dt>Sign-ups</dt><dd>+25%</dd><dd className="rd-res-note">November to December</dd></div>
+              <div><dt>Daily active users</dt><dd>+35%</dd><dd className="rd-res-note">vs November daily average</dd></div>
+              <div><dt>30-day retention</dt><dd>52%</dd><dd className="rd-res-note">casino and new players on the bonuses</dd></div>
             </dl>
           </div>
         </section>
