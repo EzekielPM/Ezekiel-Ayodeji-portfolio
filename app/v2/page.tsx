@@ -12,7 +12,6 @@ import RdFeaturedWork from "./redesign/FeaturedWork";
 import RdYouTube from "./redesign/YouTubeLite";
 import RdFooter from "./redesign/Footer";
 import RdLagosNow from "./redesign/LagosNow";
-import RdHeroClock from "./redesign/HeroClock";
 import { CopyEmailButton, FloatingContact } from "./PortfolioControls";
 import {
   CONSTRUCTION_CV_URL, CV_URL, EMAIL, LINKEDIN, WHATSAPP, YOUTUBE_CHANNEL, YOUTUBE_INTRO_ID,
@@ -29,65 +28,47 @@ export default function PortfolioHome() {
 
       <main>
         <section className="rd-hero rd-grid-bg" aria-labelledby="hero-h">
-          <div className="rd-sheet rd-hero-card" data-reveal>
-            <div className="rd-sheet-frame">
-              <div className="rd-sheet-main">
-                <span className="rd-sheet-corner" aria-hidden="true" />
-                <span className="rd-sheet-label" aria-hidden="true">Sheet 01 · Intro</span>
-                <div className="rd-sheet-body">
-                  <p className="rd-sticky" aria-label="Currently Lead PM and Scrum Master at Siiqo" data-star-unit><span className="rd-sticky-now"><i aria-hidden="true" />Currently</span>{" "}Lead PM &amp; Scrum Master at <b>Siiqo</b></p>
-                  <p className="rd-sheet-hello" data-stars>Hi, I&apos;m <strong>Olusola Ayodeji Ezekiel</strong> <span className="rd-wave" aria-hidden="true">👋🏾</span></p>
-                  <p className="rd-sheet-dim"><span className="rd-sheet-dim-line" aria-hidden="true" /><span className="rd-sheet-dim-text">5+ yrs · Lagos · WAT</span><span className="rd-sheet-dim-line" aria-hidden="true" /></p>
-                  <h1 id="hero-h" className="rd-sheet-h1"><span>Product</span>{" "}<span className="rd-sheet-uline">manager<span className="rd-sheet-stop">.</span><svg viewBox="0 0 420 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4 18C80 6 170 4 250 10s120 10 166 2" /></svg></span></h1>
-                  <p className="rd-hero-sub rd-sheet-sub" data-stars>I take{" "}
-                    <span className="rd-hl rd-hl-blue" data-star-unit><svg className="rd-hl-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5" /><path d="M2.5 10h19M6.5 15h4" /></svg>fintech</span>,{" "}
-                    <span className="rd-hl rd-hl-green" data-star-unit><svg className="rd-hl-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="3.5" /><circle cx="8.5" cy="8.5" r="1.2" fill="currentColor" /><circle cx="15.5" cy="15.5" r="1.2" fill="currentColor" /><circle cx="15.5" cy="8.5" r="1.2" fill="currentColor" /><circle cx="8.5" cy="15.5" r="1.2" fill="currentColor" /><circle cx="12" cy="12" r="1.2" fill="currentColor" /></svg>iGaming</span> and{" "}
-                    <span className="rd-hl rd-hl-pink" data-star-unit><svg className="rd-hl-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.5a1.5 1.5 0 0 1-1.5 1.5H7.7a1.5 1.5 0 0 1-1.5-1.5z" /><path d="M9 8V6.5a3 3 0 0 1 6 0V8" /></svg>commerce</span>{" "}
-                    products from discovery through delivery, and write about what I learn.</p>
-                  <div className="rd-hero-actions rd-sheet-actions" data-star-unit>
-                    <a className="rd-btn rd-btn-dark" href="#work">See my work <span aria-hidden="true">↓</span></a>
-                    <a className="rd-btn rd-btn-ghost rd-hero-book" href="/book"><svg aria-hidden="true" viewBox="0 0 24 24" width="17" height="17"><rect x="3.5" y="5" width="17" height="15" rx="3" fill="none" stroke="currentColor" strokeWidth="1.9" /><path d="M3.5 10h17M8 3v4M16 3v4" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" /></svg>Book a call <span aria-hidden="true">→</span></a>
-                  </div>
-                </div>
-                <div className="rd-sheet-block">
-                  <a href="#watch" className="rd-sheet-cell rd-sheet-stream" aria-label="Now streaming: Product Room with ERA">
-                    <span className="rd-stream-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor" /></svg></span>
-                    <span><span className="rd-sheet-cell-label">Now streaming</span><span className="rd-sheet-cell-value">Product Room with ERA</span></span>
-                  </a>
-                  <div className="rd-sheet-cell">
-                    <span className="rd-sheet-clock" aria-hidden="true"><svg viewBox="0 0 24 24" width="15" height="15"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg></span>
-                    <span><span className="rd-sheet-cell-label">In Lagos now</span><RdHeroClock /></span>
-                  </div>
-                </div>
-              </div>
-              <aside className="rd-pass" aria-label="Work pass">
-                <p className="rd-pass-top" aria-hidden="true"><span>Work pass</span><span>Nº 2026</span></p>
-                <div className="rd-pass-stamp">
-                  <svg className="rd-pass-ring" viewBox="0 0 300 300" aria-hidden="true">
-                    <defs><path id="rd-pass-circle" d="M150 150m-132 0a132 132 0 1 1 264 0a132 132 0 1 1-264 0" /></defs>
-                    <text><textPath href="#rd-pass-circle" textLength="815" lengthAdjust="spacing">PRODUCT MANAGER • FINTECH • iGAMING • COMMERCE • LAGOS •</textPath></text>
-                  </svg>
-                  <Image className="rd-pass-photo" src="/portfolio/bio-portrait.webp" alt="Portrait of Olusola Ayodeji Ezekiel" width={340} height={340} priority />
-                </div>
-                <div className="rd-pass-open">
-                  <p className="rd-pass-label">Open to · anywhere</p>
-                  <p className="rd-pass-role">
-                    <span className="rd-open-dot" aria-hidden="true" />
-                    <span className="rd-open-roll">
-                      <span>
-                        {openRoles.map((r, i) => <span key={r}>{r}{i < openRoles.length - 1 ? <span className="rd-sr">, </span> : <span className="rd-sr"> roles</span>}</span>)}
-                        {/* Loop copy drawn by CSS only, so it isn't read twice. */}
-                        <span className="rd-open-clone" data-text={openRoles[0]} aria-hidden="true" />
-                      </span>
-                    </span>
-                  </p>
-                  <p className="rd-pass-where">Remote · hybrid · on-site · relocation</p>
-                  <a className="rd-pass-mail" href={`mailto:${EMAIL}`}><span aria-hidden="true">✉</span> {EMAIL.toLowerCase()}</a>
-                </div>
-              </aside>
+          <div className="rd-hero-card" data-reveal>
+            <p className="rd-sticky" aria-label="Currently Lead PM and Scrum Master at Siiqo" data-star-unit><span className="rd-sticky-now"><i aria-hidden="true" />Currently</span>{" "}Lead PM &amp; Scrum Master at <b>Siiqo</b></p>
+            <div className="rd-hero-hello" data-star-unit>
+              <span className="rd-hero-avatar">
+                <Image src="/portfolio/bio-portrait.webp" alt="Portrait of Olusola Ayodeji Ezekiel" width={160} height={160} priority />
+              </span>
+              <span>Hi, I&apos;m <strong>Olusola Ayodeji Ezekiel</strong> <span className="rd-wave" aria-hidden="true">👋🏾</span></span>
             </div>
-            <span className="rd-sheet-notch rd-sheet-notch-top" aria-hidden="true" />
-            <span className="rd-sheet-notch rd-sheet-notch-bottom" aria-hidden="true" />
+            <p className="rd-kicker" data-stars>Lagos · 5+ years · Fintech · iGaming · Commerce</p>
+            <h1 id="hero-h" data-stars>Product manager.</h1>
+            <p className="rd-hero-sub" data-stars>I take{" "}
+              <span className="rd-hl rd-hl-blue" data-star-unit><svg className="rd-hl-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5" /><path d="M2.5 10h19M6.5 15h4" /></svg>fintech</span>,{" "}
+              <span className="rd-hl rd-hl-green" data-star-unit><svg className="rd-hl-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="3.5" /><circle cx="8.5" cy="8.5" r="1.2" fill="currentColor" /><circle cx="15.5" cy="15.5" r="1.2" fill="currentColor" /><circle cx="15.5" cy="8.5" r="1.2" fill="currentColor" /><circle cx="8.5" cy="15.5" r="1.2" fill="currentColor" /><circle cx="12" cy="12" r="1.2" fill="currentColor" /></svg>iGaming</span> and{" "}
+              <span className="rd-hl rd-hl-pink" data-star-unit><svg className="rd-hl-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.5a1.5 1.5 0 0 1-1.5 1.5H7.7a1.5 1.5 0 0 1-1.5-1.5z" /><path d="M9 8V6.5a3 3 0 0 1 6 0V8" /></svg>commerce</span>{" "}
+              products from discovery through delivery, and write about what I learn.</p>
+            <div className="rd-hero-actions" data-star-unit>
+              <a className="rd-btn rd-btn-dark" href="#work">See my work <span aria-hidden="true">↓</span></a>
+              <a className="rd-btn rd-btn-ghost rd-hero-book" href="/book"><svg aria-hidden="true" viewBox="0 0 24 24" width="17" height="17"><rect x="3.5" y="5" width="17" height="15" rx="3" fill="none" stroke="currentColor" strokeWidth="1.9" /><path d="M3.5 10h17M8 3v4M16 3v4" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" /></svg>Book a call <span aria-hidden="true">→</span></a>
+            </div>
+            <div className="rd-open" data-star-unit>
+              <p className="rd-open-pill">
+                <span className="rd-open-dot" aria-hidden="true" />
+                <b>Open to</b>{" "}
+                <span className="rd-open-roll">
+                  <span>
+                    {openRoles.map((r, i) => <span key={r}>{r}{i < openRoles.length - 1 ? <span className="rd-sr">, </span> : <span className="rd-sr"> roles</span>}</span>)}
+                    {/* Loop copy drawn by CSS only, so it isn't read twice. */}
+                    <span className="rd-open-clone" data-text={openRoles[0]} aria-hidden="true" />
+                  </span>
+                </span>
+              </p>
+              <p className="rd-open-where">Remote, hybrid, on-site or relocation, anywhere in the world.</p>
+            </div>
+            <div className="rd-hero-tiles rd-hero-tiles-one" data-star-unit>
+              <a href="#watch" className="rd-stream" aria-label="Now streaming: Product Room with ERA">
+                <span className="rd-stream-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor" /></svg></span>
+                <span className="rd-stream-eq" aria-hidden="true"><i /><i /><i /><i /></span>
+                <small aria-hidden="true">Now streaming</small>{" "}
+                <strong aria-hidden="true">{["Product", "Room", "with", "ERA"].map((w, i) => <span key={w} style={{ ["--i" as string]: i }}>{w}{i < 3 ? " " : ""}</span>)}</strong>
+              </a>
+            </div>
           </div>
         </section>
 
