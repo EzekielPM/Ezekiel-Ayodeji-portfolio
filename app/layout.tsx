@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Olusola Ayodeji Ezekiel | Product Manager · Fintech, iGaming, Commerce",
   description:
-    "Lead Product Manager in Lagos. Fintech, iGaming and commerce products from discovery to delivery: Siiqo (500+ active vendors), BetBonanza and Canvoy, plus 18 PRDs, roadmaps and papers.",
+    "Lead Product Manager in Lagos for fintech, iGaming and commerce: Siiqo (500+ active vendors), BetBonanza and Canvoy, plus 18 PRDs, roadmaps and papers.",
   alternates: {
     canonical: siteUrl,
   },
@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     type: "website",
     url: siteUrl,
     siteName: "Olusola Ayodeji Ezekiel Portfolio",
+    locale: "en_GB",
     images: [
       {
         url: socialImage,

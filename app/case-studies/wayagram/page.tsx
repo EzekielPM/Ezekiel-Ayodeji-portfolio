@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
+import { pageMeta } from "../../seo";
 import "../../v2/redesign/redesign.css";
 import RdHeader from "../../v2/redesign/Header";
 import RdMotion from "../../v2/redesign/Motion";
 import RdFooter from "../../v2/redesign/Footer";
-import { CaseDocs, CaseGallery, CaseNext, CaseVideo } from "../../v2/redesign/CaseBits";
+import { CaseDocs, CaseGallery, CaseNext, CaseVideo, CaseMyPart } from "../../v2/redesign/CaseBits";
 import { FloatingContact } from "../../v2/PortfolioControls";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Wayagram case study | Olusola Ayodeji Ezekiel",
-  description: "Technical Product Manager on a contract at Wayagram, a social, marketplace and payments app: production migration, regression testing, ceremonies and module reporting.",
-  alternates: { canonical: "/case-studies/wayagram" },
-};
+  description: "Technical PM on a contract at Wayagram, a social, marketplace and payments app: production migration, regression testing and module reporting.",
+  path: "/case-studies/wayagram",
+  image: "/og/wayagram.jpg",
+  alt: "Wayagram case study",
+  article: true,
+});
 
 const gallery = [
   { src: "/portfolio/full/wayagram-1.jpg", label: "Marketplace and RFQ" },
@@ -50,13 +54,16 @@ export default function WayagramCaseStudy() {
         <section className="rd-case-block" data-reveal>
           <span className="rd-case-n">02</span>
           <div>
-            <h2>What I owned</h2>
-            <ul>
-              <li>Production migration support on the live platform.</li>
-              <li>Regression testing, so existing features kept working through the change.</li>
-              <li>Stand-ups and demos, plus module-by-module progress reports for stakeholders.</li>
-              <li>The product overview and the product and technical architecture papers.</li>
-            </ul>
+            <CaseMyPart
+              owned={[
+              { verb: "Coordinated", text: "regression testing, so existing features kept working through the migration." },
+              { verb: "Ran", text: "stand-ups and demos for the team." },
+              { verb: "Reported", text: "progress module by module, so stakeholders could see where things stood." },
+              { verb: "Wrote", text: "the product overview and the product and technical architecture papers." },
+              ]}
+              team="A short contract alongside Siiqo. I joined to help the existing team through a live migration, focused on testing, delivery rhythm and reporting."
+              proof={[{ label: "Architecture paper", href: "/documents/wayagram-product-architecture.pdf" }]}
+            />
           </div>
         </section>
 

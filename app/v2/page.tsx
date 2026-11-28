@@ -18,9 +18,25 @@ import {
   projects, slides, openRoles,
 } from "./redesign/data";
 
+// Structured data so search engines know who this site is about.
+const personLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Olusola Ayodeji Ezekiel",
+  jobTitle: "Product Manager",
+  url: "https://ezekiel-ayodeji-portfolio.vercel.app",
+  image: "https://ezekiel-ayodeji-portfolio.vercel.app/portfolio/bio-portrait.webp",
+  email: `mailto:${EMAIL}`,
+  address: { "@type": "PostalAddress", addressLocality: "Lagos", addressCountry: "NG" },
+  worksFor: { "@type": "Organization", name: "Siiqo", url: "https://siiqo.com" },
+  knowsAbout: ["Product management", "Fintech", "iGaming", "E-commerce", "Scrum", "Payments"],
+  sameAs: [LINKEDIN, YOUTUBE_CHANNEL],
+};
+
 export default function PortfolioHome() {
   return (
     <div className="rd" id="top">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }} />
       <RdIntro />
       <RdHeroStars />
       <RdMotion />

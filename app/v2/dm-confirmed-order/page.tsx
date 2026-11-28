@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "../../seo";
 import Image from "next/image";
 import "../redesign/redesign.css";
 import RdHeader from "../redesign/Header";
@@ -7,11 +8,14 @@ import RdFooter from "../redesign/Footer";
 import { CaseDocs, CaseNext } from "../redesign/CaseBits";
 import { FloatingContact } from "../PortfolioControls";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "From DM to Confirmed Order | Olusola Ayodeji Ezekiel",
   description: "An independent social-commerce teardown and working prototype: turning a WhatsApp or Instagram “I want it” into a confirmed, trackable order.",
-  alternates: { canonical: "/case-studies/dm-confirmed-order" },
-};
+  path: "/case-studies/dm-confirmed-order",
+  image: "/og/dm-confirmed-order.jpg",
+  alt: "From DM to Confirmed Order case study",
+  article: true,
+});
 
 const PROTOTYPE = "https://social-order-checkout-assessment.lovable.app";
 const flow = ["Agreed sale", "Create order", "Share checkout link", "Buyer details + payment", "Confirmed order", "Seller fulfils"];

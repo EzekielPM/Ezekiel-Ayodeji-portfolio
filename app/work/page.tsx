@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "../seo";
 import Image from "next/image";
 import "../v2/redesign/redesign.css";
 import RdHeader from "../v2/redesign/Header";
@@ -7,12 +8,15 @@ import RdFooter from "../v2/redesign/Footer";
 import RdCarousel from "../v2/redesign/Carousel";
 import { FloatingContact } from "../v2/PortfolioControls";
 import { projects, slides } from "../v2/redesign/data";
+import RdRoleTimeline from "../v2/redesign/RoleTimeline";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "All projects | Olusola Ayodeji Ezekiel, Product Manager",
   description: "Every role and independent build: Siiqo, Football Fan Arena, Wayagram, TradeFlow, Canvoy, BetBonanza, Kuda 3.0 and DM to Confirmed Order.",
-  alternates: { canonical: "/work" },
-};
+  path: "/work",
+  image: "/og/work.jpg",
+  alt: "All projects by Olusola Ayodeji Ezekiel",
+});
 
 export default function WorkPage() {
   const inCarousel = new Set(slides.map((s) => s.slug));
@@ -29,7 +33,9 @@ export default function WorkPage() {
             <p className="rd-work-lead">Products I&apos;ve led, shipped, planned or taken apart. Each one is labelled with how far it got, and has its own page with the problem, the decisions and the evidence.</p>
           </div>
 
-          <p className="rd-work-label" data-reveal>Products · {slides.length}</p>
+          <RdRoleTimeline heading="Professional roles · 4" headingLevel={2} />
+
+          <p className="rd-work-label rd-work-label-gap" data-reveal>Products · {slides.length}</p>
           <RdCarousel slides={slides} />
 
           <p className="rd-work-label rd-work-label-gap" data-reveal>Independent studies · {studies.length}</p>

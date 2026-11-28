@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
+import { pageMeta } from "../../seo";
 import "../../v2/redesign/redesign.css";
 import RdHeader from "../../v2/redesign/Header";
 import RdMotion from "../../v2/redesign/Motion";
 import RdFooter from "../../v2/redesign/Footer";
-import { CaseDocs, CaseGallery, CaseNext, CaseVideo } from "../../v2/redesign/CaseBits";
+import { CaseDocs, CaseGallery, CaseNext, CaseVideo, CaseMyPart } from "../../v2/redesign/CaseBits";
 import { FloatingContact } from "../../v2/PortfolioControls";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Canvoy Payment case study | Olusola Ayodeji Ezekiel",
-  description: "Lead Product Manager and Scrum Master on Canvoy Payment, a utility payments MVP: scope, journeys, an eight-week roadmap and a Jira delivery plan. Why it did not launch.",
-  alternates: { canonical: "/case-studies/canvoy" },
-};
+  description: "Lead PM and Scrum Master on Canvoy Payment, a utility payments MVP: scope, an eight-week roadmap, a Jira plan, and why it did not launch.",
+  path: "/case-studies/canvoy",
+  image: "/og/canvoy.jpg",
+  alt: "Canvoy Payment case study",
+  article: true,
+});
 
 const gallery = [
   { src: "/portfolio/full/canvoy-landing-desktop-mobile.jpg", label: "Landing page · two versions" },
@@ -55,13 +59,16 @@ export default function CanvoyCaseStudy() {
         <section className="rd-case-block" data-reveal>
           <span className="rd-case-n">02</span>
           <div>
-            <h2>What I owned</h2>
-            <ul>
-              <li>Discovery, MVP definition, requirements and prioritisation.</li>
-              <li>Scope: authentication, verification, account recovery, dashboards, payment flows, transaction feedback and profiles.</li>
-              <li>An eight-week MVP roadmap and the Jira workspace: epics, sprint backlogs, stories and acceptance criteria.</li>
-              <li>Scrum ceremonies, with security and QA brought into planning early rather than left to the end.</li>
-            </ul>
+            <CaseMyPart
+              owned={[
+              { verb: "Defined", text: "the MVP scope: sign-in, verification, recovery, payment flows, transaction feedback and profiles." },
+              { verb: "Wrote", text: "the requirements and user stories, then the eight-week MVP roadmap and the Jira delivery plan." },
+              { verb: "Ran", text: "Scrum ceremonies, with security and QA brought into planning early." },
+              { verb: "Set up", text: "the documentation and routines that kept business and technical people on the same page." },
+              ]}
+              team="Lead PM on an early-stage team. The MVP did not launch, following payment-service regulation and a business decision by the company."
+              proof={[{ label: "Canvoy MVP roadmap", href: "/documents/canvoy-mvp-roadmap.pdf" }]}
+            />
           </div>
         </section>
 

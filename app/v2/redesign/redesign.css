@@ -1161,3 +1161,56 @@ html[data-theme="navy"] .rd .rd-stream-play{color:#1a1333}
 /* Back links and the Insights follow link: comfortable tap targets */
 .rd .rd-case-back{display:inline-flex;align-items:center;min-height:32px;padding:4px 0}
 .rd-deck-follow a,.rd .rd-insights-band a[href*="linkedin.com/in"]{display:inline-flex;align-items:center;min-height:32px;padding:4px 0}
+
+/* ===== Professional roles timeline (home + /work) ===== */
+.rd-roles{margin-top:40px}
+.rd .rd-roles-h{font-family:var(--body);font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 6px}
+.rd-roles-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;position:relative}
+.rd-roles-list::before{content:"";position:absolute;left:8px;right:8px;top:22px;height:2px;background:var(--line)}
+.rd-role a{position:relative;display:flex;flex-direction:column;gap:3px;height:100%;padding:44px 18px 16px;border-radius:16px;transition:background-color .25s var(--ease),transform .25s var(--ease)}
+.rd-role a:hover{background:var(--surface);transform:translateY(-2px)}
+.rd-role-dot{position:absolute;left:18px;top:16px;width:14px;height:14px;border-radius:50%;background:var(--surface);border:3px solid var(--accent)}
+.rd-role:first-child .rd-role-dot{background:var(--accent);box-shadow:0 0 0 5px color-mix(in srgb,var(--accent) 18%,transparent)}
+.rd-role-dates{font-size:13px;font-weight:600;color:var(--subtle)}
+.rd-role-co{font-family:var(--display);font-size:21px;font-weight:700;line-height:1.15}
+.rd-role-title{font-size:14.5px;font-weight:600}
+.rd-role-sector{font-size:13.5px;color:var(--subtle)}
+.rd-role-out{margin-top:6px;font-size:14.5px;line-height:1.45;color:var(--muted)}
+.rd-role-more{margin-top:auto;padding-top:10px;font-size:14px;font-weight:700;color:var(--accent)}
+.rd-role-more span{display:inline-block;transition:transform .25s var(--ease)}
+.rd-role a:hover .rd-role-more span{transform:translateX(3px)}
+@media (max-width:900px){
+  .rd-roles-list{grid-template-columns:1fr;gap:4px}
+  .rd-roles-list::before{left:24px;right:auto;top:20px;bottom:20px;width:2px;height:auto}
+  .rd-role a{padding:14px 14px 14px 50px}
+  .rd-role-dot{left:18px;top:18px}
+  .rd-role-more{padding-top:6px}
+}
+
+/* ===== Case studies: "My part" ===== */
+.rd-case-block ul.rd-mypart{list-style:none;padding-left:0;gap:10px}
+.rd-mypart li{position:relative;padding-left:22px}
+.rd-mypart li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:10px;border-radius:3px;background:var(--accent)}
+.rd-case-block .rd-mypart b{color:var(--ink);font-weight:800}
+.rd-case-block p.rd-mypart-team{margin:18px 0 0;padding:14px 16px;border-radius:12px;background:var(--soft);border:1px solid var(--line);font-size:15.5px;color:var(--muted)}
+.rd-mypart-team span{display:block;margin-bottom:4px;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--subtle)}
+.rd-case-block p.rd-mypart-proof{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin:14px 0 0;font-size:15px}
+.rd-mypart-proof>span{color:var(--subtle)}
+
+/* ===== Readability + touch targets (mobile review, Nov 2026) ===== */
+.rd .rd-sticky-now,.rd .rd-deck-topic{font-size:12px}
+.rd .rd-feat-status,.rd .rd-feat-kind,.rd .rd-lib-meta,.rd .rd-stage-job small,.rd .rd-study small,.rd .rd-book-dow,.rd .rd-case-facts dt,.rd .rd-chip{font-size:12px}
+.rd-results small{font-size:12.5px}
+.rd .rd-text-link{padding:8px 0}
+.rd .rd-mypart-proof .rd-text-link{margin-top:0}
+.rd-stage-job{padding:6px 0}
+.rd-book-cal-head button{width:40px;height:40px;font-size:16px}
+/* the theme switch keeps its look but gets a 44px-tall touch area */
+.rd .theme-toggle{position:relative}
+.rd .theme-toggle::after{content:"";position:absolute;left:-4px;right:-4px;top:-8px;bottom:-8px}
+@media (max-width:620px){
+  .rd .rd-case-block p,.rd .rd-case-block ul{font-size:16px}
+  .rd .rd-case{gap:34px;padding-left:20px;padding-right:20px}
+  .rd .rd-case-block{grid-template-columns:1fr;gap:6px}
+  .rd .rd-case-facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+}

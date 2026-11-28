@@ -1,24 +1,13 @@
 import type { Metadata } from "next";
+import { pageMeta } from "../seo";
 
-export const metadata: Metadata = {
-  title: "Rough Space | Product Thinking & Experiments",
-  description:
-    "A working space for product explorations, interface studies, validation notes and experiments by Olusola Ayodeji Ezekiel.",
-  alternates: { canonical: "/rough-space" },
-  openGraph: {
-    title: "Rough Space | Product Thinking & Experiments",
-    description:
-      "Explore product notes, interface studies and experiments before they become polished work.",
-    type: "website",
-    url: "/rough-space",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Rough Space | Product Thinking & Experiments",
-    description:
-      "Explore product notes, interface studies and experiments before they become polished work.",
-  },
-};
+export const metadata: Metadata = pageMeta({
+  title: "Rough Space | Olusola Ayodeji Ezekiel",
+  description: "A working space for product explorations, interface studies, validation notes and experiments by Olusola Ayodeji Ezekiel.",
+  path: "/rough-space",
+  image: "/og/rough-space.jpg",
+  alt: "Rough Space by Olusola Ayodeji Ezekiel",
+});
 
 export default function RoughSpaceLayout({
   children,

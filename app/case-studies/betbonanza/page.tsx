@@ -1,16 +1,21 @@
 import type { Metadata } from "next";
+import { pageMeta } from "../../seo";
 import Image from "next/image";
 import "../../v2/redesign/redesign.css";
 import RdHeader from "../../v2/redesign/Header";
 import RdMotion from "../../v2/redesign/Motion";
 import RdFooter from "../../v2/redesign/Footer";
 import { FloatingContact } from "../../v2/PortfolioControls";
+import { CaseMyPart } from "../../v2/redesign/CaseBits";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "BetBonanza case study | Olusola Ayodeji Ezekiel",
-  description: "Associate Product Manager in iGaming at BetBonanza Nigeria: sportsbook journeys and a 12 Days of December bonus calendar shaped by competitor analysis.",
-  alternates: { canonical: "/case-studies/betbonanza" },
-};
+  description: "Associate PM in iGaming at BetBonanza: sportsbook journeys and a 12 Days of December campaign. Sign-ups +25%, daily active users +35%.",
+  path: "/case-studies/betbonanza",
+  image: "/og/betbonanza.jpg",
+  alt: "BetBonanza case study",
+  article: true,
+});
 
 const IGAMING_POST = "https://www.linkedin.com/posts/ayodeji-ezekiel-olusola_productmanager-igaming-userexperience-activity-7481301268641226753-etSu";
 
@@ -50,13 +55,15 @@ export default function BetBonanzaCaseStudy() {
         <section className="rd-case-block" data-reveal>
           <span className="rd-case-n">02</span>
           <div>
-            <h2>What I owned</h2>
-            <ul>
-              <li>Contributing to sportsbook user journeys, from finding an event to placing a bet.</li>
-              <li>Helping prioritise requests from across the business into a workable order for the team.</li>
-              <li>Keeping cross-functional delivery organised and moving with engineering, design and operations.</li>
-              <li>Shaping seasonal bonus and engagement offers, starting from what competitors were already giving players.</li>
-            </ul>
+            <CaseMyPart
+              owned={[
+              { verb: "Led", text: "the competitor analysis behind the 12 Days of December campaign." },
+              { verb: "Wrote", text: "requirements, user stories and a prioritised backlog from customer and business needs." },
+              { verb: "Worked on", text: "sportsbook journeys, from finding an event to placing a bet, with engineering, design and operations." },
+              { verb: "Weighed", text: "commercial targets, player experience, regulation and technical limits in everyday product calls." },
+              ]}
+              team="Associate PM. The campaign results belong to the whole team; my part was the competitor analysis and the requirements behind the offer."
+            />
           </div>
         </section>
 

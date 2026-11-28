@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "../seo";
 import "../v2/redesign/redesign.css";
 import RdHeader from "../v2/redesign/Header";
 import RdMotion from "../v2/redesign/Motion";
@@ -7,11 +8,13 @@ import RdBookCall from "../v2/redesign/BookCall";
 import RdLagosNow from "../v2/redesign/LagosNow";
 import { FloatingContact } from "../v2/PortfolioControls";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Book a call | Olusola Ayodeji Ezekiel",
   description: "Book a 30-minute intro call with Olusola Ayodeji Ezekiel, Product Manager. Pick a date and time in your own time zone.",
-  alternates: { canonical: "/book" },
-};
+  path: "/book",
+  image: "/og/book.jpg",
+  alt: "Book a call with Olusola Ayodeji Ezekiel",
+});
 
 export default function BookPage() {
   return (

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "../seo";
 import Image from "next/image";
 import "../v2/redesign/redesign.css";
 import RdHeader from "../v2/redesign/Header";
@@ -7,11 +8,13 @@ import RdFooter from "../v2/redesign/Footer";
 import { FloatingContact } from "../v2/PortfolioControls";
 import { CV_URL, CV_FILENAME, EMAIL, practice, releases } from "../v2/redesign/data";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "About | Olusola Ayodeji Ezekiel, Product Manager",
   description: "Product Manager across fintech, iGaming and commerce. How I work with teams, and my career as release notes.",
-  alternates: { canonical: "/about" },
-};
+  path: "/about",
+  image: "/og/about.jpg",
+  alt: "Portrait of Olusola Ayodeji Ezekiel",
+});
 
 export default function AboutPage() {
   return (

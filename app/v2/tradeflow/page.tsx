@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "../../seo";
 import "../redesign/redesign.css";
 import RdHeader from "../redesign/Header";
 import RdMotion from "../redesign/Motion";
@@ -6,11 +7,14 @@ import RdFooter from "../redesign/Footer";
 import { CaseGallery, CaseNext } from "../redesign/CaseBits";
 import { FloatingContact } from "../PortfolioControls";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "TradeFlow Commerce case study | Olusola Ayodeji Ezekiel",
   description: "An independently built multi-vendor commerce product: buyer shop, vendor workspace, delivery zones and order alerts. Paystack stays in test mode.",
-  alternates: { canonical: "/v2/tradeflow" },
-};
+  path: "/v2/tradeflow",
+  image: "/og/tradeflow.jpg",
+  alt: "TradeFlow Commerce case study",
+  article: true,
+});
 
 const SHOP_URL = "https://tradeflow-commerce.vercel.app/";
 
@@ -66,6 +70,7 @@ export default function TradeFlowCaseStudy() {
               <li>A separate vendor workspace for storefronts, products, delivery areas and incoming orders.</li>
               <li>Checkout with location-based delivery pricing and Paystack in test mode.</li>
             </ul>
+            <p className="rd-mypart-team"><span>Me and the team</span>A solo build: I scoped, designed and built it on my own. It is not a business, and payments stay in Paystack test mode.</p>
           </div>
         </section>
 

@@ -1,16 +1,21 @@
 import type { Metadata } from "next";
+import { pageMeta } from "../../seo";
 import Image from "next/image";
 import "../../v2/redesign/redesign.css";
 import RdHeader from "../../v2/redesign/Header";
 import RdMotion from "../../v2/redesign/Motion";
 import RdFooter from "../../v2/redesign/Footer";
 import { FloatingContact } from "../../v2/PortfolioControls";
+import { CaseMyPart } from "../../v2/redesign/CaseBits";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Siiqo case study | Olusola Ayodeji Ezekiel",
-  description: "Lead Product Manager and Scrum Master at Siiqo, a trust-led marketplace for Nigerian buyers and vendors: 500+ active vendors and sign-ups 35% above forecast in the first three months.",
-  alternates: { canonical: "/case-studies/siiqo" },
-};
+  description: "Lead PM and Scrum Master at Siiqo, a trust-led Nigerian marketplace: 500+ active vendors and sign-ups 35% above forecast in the first three months.",
+  path: "/case-studies/siiqo",
+  image: "/og/siiqo.jpg",
+  alt: "Siiqo case study",
+  article: true,
+});
 
 const gallery = [
   { src: "/portfolio/full/siiqo-1.jpg", label: "Marketplace home" },
@@ -57,14 +62,16 @@ export default function SiiqoCaseStudy() {
         <section className="rd-case-block" data-reveal>
           <span className="rd-case-n">02</span>
           <div>
-            <h2>What I own</h2>
-            <ul>
-              <li>Product direction: what to build first and why.</li>
-              <li>Discovery and journeys for buyers, vendors and service providers.</li>
-              <li>PRDs, user stories and acceptance criteria the team builds from.</li>
-              <li>Sprint planning, stand-ups and reviews as Scrum Master, across design, engineering and QA.</li>
-            </ul>
-            <a className="rd-text-link" href="/documents/siiqo-product-requirements.pdf" target="_blank" rel="noreferrer">Read the Siiqo PRD (8 pages) ↗</a>
+            <CaseMyPart
+              owned={[
+              { verb: "Decided", text: "the build order: escrow, pay-on-delivery, verified storefronts and dispute handling first; community, referrals and rewards after." },
+              { verb: "Wrote", text: "the PRDs, user journeys and acceptance criteria that design and engineering build from." },
+              { verb: "Ran", text: "sprint planning, stand-ups and reviews as Scrum Master." },
+              { verb: "Prioritised", text: "what to fix or improve next, from buyer and vendor feedback." },
+              ]}
+              team="Design, engineering and QA design, build and test the product. I set the direction and scope, and run the sprints."
+              proof={[{ label: "Siiqo PRD, 8 pages", href: "/documents/siiqo-product-requirements.pdf" }]}
+            />
           </div>
         </section>
 

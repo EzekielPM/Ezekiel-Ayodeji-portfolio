@@ -1586,3 +1586,12 @@ section.rough-space .section-heading>p{color:#c5d0cc}
 html.rd-intro-pending{background:#F6F1E7}
 html.rd-intro-pending.rd-intro-pending-navy{background:#0B1220}
 html.rd-intro-pending body{visibility:hidden}
+
+/* Rough Space readability: no text under 12px, sentences in sentence case */
+.rough-space .section-kicker,.statement .section-kicker{font-size:12px}
+.rough-card-heading p{font-size:12px}
+.rough-card-heading h3+p{margin:12px 0 0;font-size:15px;font-weight:500;letter-spacing:0;text-transform:none;line-height:1.55;opacity:.9}
+.audio-list strong,.studio-video-grid figcaption strong{font-size:14px}
+.audio-list small,.studio-video-grid figcaption small{font-size:12px}
+.note-gallery span{font-size:12px}
+.handbook-card>p{font-size:15px;line-height:1.7}

@@ -371,6 +371,14 @@ export const values = [
 ];
 
 // Quiet results line on the home page.
+// Professional roles, current first. Outcomes use only figures confirmed on the CV.
+export const roles = [
+  { slug: "siiqo", company: "Siiqo", title: "Lead PM & Scrum Master", dates: "Jan 2025 – Present", sector: "E-commerce marketplace", outcome: "500+ active vendors; sign-ups 35% above forecast in the first three months.", href: "/case-studies/siiqo" },
+  { slug: "wayagram", company: "Wayagram", title: "Technical PM (contract)", dates: "Jan – May 2026", sector: "Social, marketplace and payments", outcome: "Kept existing features working through a production migration on a live platform.", href: "/case-studies/wayagram" },
+  { slug: "canvoy", company: "Canvoy Payment", title: "Lead PM & Scrum Master", dates: "Jun 2022 – Dec 2024", sector: "Utility bill payments", outcome: "Discovery to a defined MVP and eight-week roadmap. Did not launch, for regulatory and business reasons.", href: "/case-studies/canvoy" },
+  { slug: "betbonanza", company: "BetBonanza", title: "Associate PM", dates: "Jan 2021 – Mar 2022", sector: "Sports betting and gaming", outcome: "12 Days of December: sign-ups +25%, daily active users +35%, 52% 30-day retention.", href: "/case-studies/betbonanza" },
+];
+
 export const homeResults = [
   { figure: "500+", label: "active vendors", where: "Siiqo", href: "/case-studies/siiqo" },
   { figure: "+35%", label: "sign-ups above forecast, first 3 months", where: "Siiqo", href: "/case-studies/siiqo" },

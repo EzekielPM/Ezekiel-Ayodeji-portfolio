@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "../../seo";
 import Image from "next/image";
 import "../redesign/redesign.css";
 import RdHeader from "../redesign/Header";
@@ -7,11 +8,14 @@ import RdFooter from "../redesign/Footer";
 import { CaseDocs, CaseGallery, CaseNext } from "../redesign/CaseBits";
 import { FloatingContact } from "../PortfolioControls";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Football Fan Arena case study | Olusola Ayodeji Ezekiel",
-  description: "An independently built football fan community: club fanbases, free matchday predictions, banter groups and fan rankings, on web, with an Android test build. The MVP deliberately leaves out betting and payments.",
-  alternates: { canonical: "/v2/football-fan-arena" },
-};
+  description: "An independently built football fan community with club fanbases, free match predictions and banter groups. Web live, Android test build, no betting.",
+  path: "/v2/football-fan-arena",
+  image: "/og/football-fan-arena.jpg",
+  alt: "Football Fan Arena case study",
+  article: true,
+});
 
 const LIVE_URL = "https://football-fan-arena-web.vercel.app/";
 

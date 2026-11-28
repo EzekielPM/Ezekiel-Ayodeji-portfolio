@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { homeResults, type Slide } from "./data";
+import RoleTimeline from "./RoleTimeline";
 
 // Two featured products on the home page; everything else lives on /work.
 export default function FeaturedWork({ items, total, others }: { items: Slide[]; total: number; others: string[] }) {
@@ -45,6 +46,7 @@ export default function FeaturedWork({ items, total, others }: { items: Slide[];
           ))}
         </ul>
       </div>
+      <RoleTimeline />
       <div className="rd-feat-all" data-reveal>
         <a className="rd-btn rd-btn-accent" href="/work">See all {total} projects <span aria-hidden="true">→</span></a>
         <span>{others.join(", ").replace(/, ([^,]*)$/, " and $1")}</span>
